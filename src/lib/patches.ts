@@ -1,6 +1,7 @@
 import { guideOf, type ChangelogEntry, type ContentGraph, type PatchView } from '../content-core';
 import { sectionPath } from './content';
 import { guideEntry, guideTitle } from './guides';
+import { diffStats, hunks, lineDiff, type Hunk } from './diff';
 
 export interface PatchTarget {
   id: string;
@@ -31,7 +32,7 @@ export function patchTargets(content: ContentGraph, sectionId?: string): PatchTa
 export interface ChangelogGroup {
   guide: string;
   title: string;
-  entries: (ChangelogEntry & { href?: string })[];
+  entries: (ChangelogEntry & { href?: string; diff: Hunk[]; added: number; removed: number })[];
 }
 
 /**
@@ -45,7 +46,15 @@ export function changelogGroups(content: ContentGraph, patch: PatchView): Change
     const guide = guideOf(entry.sectionId);
     const group = groups.get(guide) ?? { guide, title: guideTitle(entry.kind === 'removed' && parent ? parent : patch, guide), entries: [] };
     const linkPatch = entry.kind === 'removed' ? parent : patch;
-    group.entries.push({ ...entry, href: linkPatch && `/${linkPatch.meta.id}/${sectionPath(entry.sectionId)}` });
+    const before = parent?.sections.find((s) => s.id === entry.sectionId)?.body ?? '';
+    const after = entry.kind === 'removed' ? '' : (patch.sections.find((s) => s.id === entry.sectionId)?.body ?? '');
+    const lines = lineDiff(before, after);
+    group.entries.push({
+      ...entry,
+      href: linkPatch && `/${linkPatch.meta.id}/${sectionPath(entry.sectionId)}`,
+      diff: hunks(lines),
+      ...diffStats(lines),
+    });
     groups.set(guide, group);
   }
   return [...groups.values()].sort((a, b) => a.guide.localeCompare(b.guide));

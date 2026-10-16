@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import { ComparePatches } from '@/components/site/compare-patches';
+import { getContent } from '../lib/content';
+import { patchNav } from '../lib/patches';
+import { withBase } from '../lib/url';
+
+const content = await getContent();
+const patches = [...content.patches].reverse().map((p) => ({ id: p.meta.id, title: p.meta.title }));
+---
+<Base title="Compare patches" patch={content.defaultPatch && patchNav(content, content.defaultPatch, undefined, withBase)}>
+  <h1 class="text-3xl font-semibold tracking-tight">Compare patches</h1>
+  <p class="mt-2 mb-8 text-muted-foreground">Every guide section whose text differs between two patches.</p>
+  <ComparePatches client:load patches={patches} />
+</Base>

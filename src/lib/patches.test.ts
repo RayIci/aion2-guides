@@ -42,5 +42,9 @@ describe('changelogGroups', () => {
       ['added', '/1.1/classes/gladiator/new'],
       ['removed', '/1.0/classes/gladiator/old'],
     ]);
+    expect(group.entries.map((e) => [e.added, e.removed])).toEqual([
+      [1, 0],
+      [0, 1],
+    ]);
   });
 });

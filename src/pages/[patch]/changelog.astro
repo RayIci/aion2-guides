@@ -6,6 +6,7 @@ import SourceList from '../../components/SourceList.astro';
 import { Badge } from '@/components/ui/badge';
 import { Empty, EmptyDescription, EmptyHeader, EmptyTitle } from '@/components/ui/empty';
 import { Separator } from '@/components/ui/separator';
+import { ChangelogDiff } from '@/components/site/changelog-diff';
 import type { PatchView } from '../../content-core';
 import { getContent } from '../../lib/content';
 import { changelogGroups, patchNav } from '../../lib/patches';
@@ -35,6 +36,11 @@ const KIND = {
     <p class="flex flex-wrap gap-x-3 text-sm text-muted-foreground">
       {patch.meta.released && <span>Released {patch.meta.released}</span>}
       {parent ? <span>Changes since {parent.meta.title}</span> : <span>Baseline patch: the first one documented in full</span>}
+      {parent && (
+        <a class="underline underline-offset-4 hover:text-foreground" href={withBase(`/compare?from=${parent.meta.id}&to=${patch.meta.id}`)}>
+          Compare any two patches
+        </a>
+      )}
     </p>
     {
       patch.officialNotes.length > 0 && (
@@ -102,6 +108,7 @@ const KIND = {
                       </>
                     )}
                   </dl>
+                  <ChangelogDiff client:visible hunks={e.diff} added={e.added} removed={e.removed} />
                 </li>
               ))}
             </ol>
