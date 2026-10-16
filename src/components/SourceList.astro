@@ -12,7 +12,7 @@ const TYPE = { official: 'Official', data: 'Data', creator: 'Creator', community
 {
   sources.length > 0 && (
     <section aria-labelledby="sources-heading" class="mt-16 flex flex-col gap-4 bg-muted p-6">
-      <h2 id="sources-heading" class="font-heading text-xl font-bold">Sources</h2>
+      <h2 id="sources-heading" class="text-lg font-semibold">Sources</h2>
       <ol class="flex flex-col gap-3 text-base">
         {sources.map((s, i) => (
           <li id={`src-${i + 1}`} class="flex gap-3 rounded-md target:bg-muted">

@@ -1,15 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-@import "@fontsource-variable/alegreya";
-@import "@fontsource/alegreya-sc/500.css";
-@import "@fontsource/alegreya-sc/700.css";
-@import "@fontsource/alegreya-sc/800.css";
 @plugin "@tailwindcss/typography";
 
-/* Night Rulebook: a tabletop rulebook in a dark edition (charcoal stock, paper ink, crimson
-   rules, gold and slate-blue as the two other inks). Dark is the default theme (the site is read
-   next to the game); `.dark` on <html> is set before first paint by Base.astro. */
+/* Plain, readable UI. Dark is the default theme (the site is read next to the game);
+   `.dark` on <html> is set before first paint by Base.astro. */
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -91,9 +86,8 @@
 }
 
 @theme inline {
-  --font-heading: var(--font-display);
-  --font-sans: 'Alegreya Variable', Georgia, serif;
-  --font-display: 'Alegreya SC', 'Alegreya Variable', Georgia, serif;
+  --font-heading: var(--font-sans);
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --color-gold: var(--community);
   --color-slate: var(--verified);
   --color-verified: var(--verified);

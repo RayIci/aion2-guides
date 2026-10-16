@@ -15,7 +15,7 @@ const STATUS = {
 } as const;
 ---
 <Base title="Patches" patch={content.defaultPatch && patchNav(content, content.defaultPatch, undefined, withBase)}>
-  <h1 class="font-heading text-[clamp(2.5rem,4.5vw,4rem)] leading-[0.95] font-extrabold tracking-[-0.02em] text-balance">Patches</h1>
+  <h1 class="text-3xl font-semibold tracking-tight text-balance">Patches</h1>
   <p class="mt-2 text-muted-foreground">Every patch this site documents, newest first. Each one lists what changed in the guides and why.</p>
   {
     patches.length === 0 ? (

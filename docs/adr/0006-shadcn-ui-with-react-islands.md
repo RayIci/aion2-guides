@@ -4,7 +4,7 @@ The owner asked for shadcn/ui to be used wherever possible. The site therefore a
 
 ## Consequences
 
-- Update 2026-10-16: shadcn is the base, not a cage. Where a shadcn component doesn't fit the design, build a custom component in `src/components/site/`. Design direction comes from the `design-taste-frontend` skill.
+- Update 2026-10-16: shadcn is the base, not a cage. Where a shadcn component doesn't fit the design, build a custom component in `src/components/site/`. The owner wants a plain, utilitarian UI: no decorative design.
 
 - Restyle by editing the theme tokens in `src/styles/global.css` and the `cva` variants in `src/components/ui/*`. Avoid overriding component colors with `className`.
 - Astro can't pass JSX elements (e.g. `render={<a/>}`) to React components. Any composition that needs one lives in a `.tsx` wrapper under `src/components/site/` and takes plain data.

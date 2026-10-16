@@ -87,7 +87,7 @@ if (section) {
       <span hidden data-pagefind-meta="patch[data-value]" data-value={patch.meta.title}></span>
       <span hidden data-pagefind-meta="guide[data-value]" data-value={guideView.title}></span>
       <header class="flex flex-col gap-3">
-        <h1 class="font-heading text-[clamp(2.75rem,5vw,4.5rem)] leading-[0.95] font-extrabold tracking-[-0.02em] text-balance" data-pagefind-meta="title">{section.title}</h1>
+        <h1 class="text-3xl font-semibold tracking-tight text-balance" data-pagefind-meta="title">{section.title}</h1>
         <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted-foreground" data-pagefind-ignore>
           <Badge variant={STATUS[section.status].variant}>{STATUS[section.status].label}</Badge>
           <span>
@@ -113,7 +113,7 @@ if (section) {
           <AlertDescription>This section hasn't been researched yet. Treat it as a placeholder.</AlertDescription>
         </Alert>
       )}
-      <div class="prose prose-neutral prose-lg mt-8 max-w-none dark:prose-invert" data-section-id={section.id} set:html={section.html} />
+      <div class="prose prose-neutral mt-6 max-w-none dark:prose-invert" data-section-id={section.id} set:html={section.html} />
       </div>
       <div data-pagefind-ignore>
         <SourceList sources={section.sources} />
@@ -123,7 +123,7 @@ if (section) {
     <Base title={patch.meta.title} patch={headerPatch}>
       <PatchNotice patch={patch} liveHref={liveHref} />
       <div class="flex flex-col gap-2">
-        <h1 class="font-heading text-[clamp(2.5rem,4.5vw,4rem)] leading-[0.95] font-extrabold tracking-[-0.02em] text-balance">{patch.meta.title}</h1>
+        <h1 class="text-3xl font-semibold tracking-tight text-balance">{patch.meta.title}</h1>
         <p class="flex flex-wrap gap-x-3 text-sm text-muted-foreground">
           <span>{PATCH_STATUS[patch.meta.status]}</span>
           {patch.meta.released && <span>Released {patch.meta.released}</span>}
@@ -135,7 +135,7 @@ if (section) {
           </a>
         </p>
       </div>
-      {patch.overview && <div class="prose prose-neutral prose-lg mt-8 max-w-none dark:prose-invert" set:html={patch.overviewHtml} />}
+      {patch.overview && <div class="prose prose-neutral mt-6 max-w-none dark:prose-invert" set:html={patch.overviewHtml} />}
       <h2 class="mt-10 mb-4 text-lg font-semibold">Guides</h2>
       <GuideList patch={patch} prefixed />
       <SourceList sources={patch.overviewSources} />

@@ -68,7 +68,7 @@ export function GuideShell({ siteHref, guideTitle, patchLabel, items, crumbs, pa
             <SidebarMenuItem>
               <SidebarMenuButton size="lg" render={<a href={siteHref} />}>
                 <div className="flex flex-col gap-0.5 leading-none">
-                  <span className="font-heading text-base font-bold">AION 2 Guides</span>
+                  <span className="font-semibold">AION 2 Guides</span>
                   <span className="text-xs text-muted-foreground">{patchLabel}</span>
                 </div>
               </SidebarMenuButton>

@@ -31,7 +31,7 @@ const KIND = {
 <Base title={`Changelog · ${patch.meta.title}`} patch={patchNav(content, patch, undefined, withBase)}>
   <PatchNotice patch={patch} liveHref={liveHref} />
   <div class="flex flex-col gap-2">
-    <h1 class="font-heading text-[clamp(2.5rem,4.5vw,4rem)] leading-[0.95] font-extrabold tracking-[-0.02em] text-balance">Changelog: {patch.meta.title}</h1>
+    <h1 class="text-3xl font-semibold tracking-tight text-balance">Changelog: {patch.meta.title}</h1>
     <p class="flex flex-wrap gap-x-3 text-sm text-muted-foreground">
       {patch.meta.released && <span>Released {patch.meta.released}</span>}
       {parent ? <span>Changes since {parent.meta.title}</span> : <span>Baseline patch: the first one documented in full</span>}
