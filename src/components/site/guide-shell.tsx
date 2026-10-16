@@ -28,7 +28,7 @@ import {
   SidebarRail,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
-import { ModeToggle } from "@/components/site/mode-toggle"
+import { HeaderControls, type PatchNav } from "@/components/site/site-header"
 
 /** One entry in the guide navigation; built at build time from the section tree (src/lib/nav.ts). */
 export interface NavItem {
@@ -53,10 +53,11 @@ interface GuideShellProps {
   patchLabel: string
   items: NavItem[]
   crumbs: Crumb[]
+  patch: PatchNav
   children?: React.ReactNode
 }
 
-export function GuideShell({ siteHref, guideTitle, patchLabel, items, crumbs, children }: GuideShellProps) {
+export function GuideShell({ siteHref, guideTitle, patchLabel, items, crumbs, patch, children }: GuideShellProps) {
   return (
     <SidebarProvider>
       <Sidebar>
@@ -104,7 +105,7 @@ export function GuideShell({ siteHref, guideTitle, patchLabel, items, crumbs, ch
               ))}
             </BreadcrumbList>
           </Breadcrumb>
-          <ModeToggle />
+          <HeaderControls patch={patch} />
         </header>
         <div className="mx-auto w-full max-w-3xl px-4 py-8 md:px-8">{children}</div>
       </SidebarInset>

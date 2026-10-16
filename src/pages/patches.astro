@@ -1,0 +1,50 @@
+---
+import Base from '../layouts/Base.astro';
+import { Badge } from '@/components/ui/badge';
+import { Empty, EmptyDescription, EmptyHeader, EmptyTitle } from '@/components/ui/empty';
+import { getContent } from '../lib/content';
+import { patchNav } from '../lib/patches';
+import { withBase } from '../lib/url';
+
+const content = await getContent();
+const patches = [...content.patches].reverse();
+const STATUS = {
+  staged: { label: 'Staged', variant: 'outline' },
+  live: { label: 'Live', variant: 'default' },
+  superseded: { label: 'Older', variant: 'secondary' },
+} as const;
+---
+<Base title="Patches" patch={content.defaultPatch && patchNav(content, content.defaultPatch, undefined, withBase)}>
+  <h1 class="text-3xl font-semibold tracking-tight">Patches</h1>
+  <p class="mt-2 text-muted-foreground">Every patch this site documents, newest first. Each one lists what changed in the guides and why.</p>
+  {
+    patches.length === 0 ? (
+      <Empty className="mt-8 border">
+        <EmptyHeader>
+          <EmptyTitle>No patches documented yet</EmptyTitle>
+          <EmptyDescription>The Baseline patch appears here once it's written.</EmptyDescription>
+        </EmptyHeader>
+      </Empty>
+    ) : (
+      <ol class="mt-8 flex flex-col divide-y rounded-xl border">
+        {patches.map((p) => (
+          <li class="flex flex-wrap items-center gap-x-4 gap-y-2 p-4">
+            <div class="flex min-w-0 flex-1 flex-col gap-1">
+              <a class="font-medium underline-offset-4 hover:underline" href={withBase(`/${p.meta.id}`)}>
+                {p.meta.title}
+              </a>
+              <span class="text-sm text-muted-foreground">
+                {p.meta.released ? `Released ${p.meta.released}` : 'Not released yet'} · {p.changelog.length} guide{' '}
+                {p.changelog.length === 1 ? 'change' : 'changes'}
+              </span>
+            </div>
+            <Badge variant={STATUS[p.meta.status].variant}>{STATUS[p.meta.status].label}</Badge>
+            <a class="text-sm underline underline-offset-4" href={withBase(`/${p.meta.id}/changelog`)}>
+              Changelog
+            </a>
+          </li>
+        ))}
+      </ol>
+    )
+  }
+</Base>

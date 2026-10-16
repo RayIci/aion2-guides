@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { ModeToggle } from '@/components/site/mode-toggle';
+import { HeaderControls, type PatchNav } from '@/components/site/site-header';
 import { withBase } from '../lib/url';
 
 interface Props {
@@ -8,9 +8,11 @@ interface Props {
   description?: string;
   /** Pages with their own shell (guide pages) skip the simple site header. */
   bare?: boolean;
+  /** Patch switcher and changelog link for the header. */
+  patch?: PatchNav;
 }
 
-const { title, description = 'Patch-versioned, source-cited AION 2 guides for Global / NA-EU.', bare = false } = Astro.props;
+const { title, description = 'Patch-versioned, source-cited AION 2 guides for Global / NA-EU.', bare = false, patch } = Astro.props;
 const fullTitle = title === 'AION 2 Guides' ? title : `${title} · AION 2 Guides`;
 ---
 <!doctype html>
@@ -37,9 +39,7 @@ const fullTitle = title === 'AION 2 Guides' ? title : `${title} · AION 2 Guides
         <>
           <header class="sticky top-0 z-10 flex h-14 items-center gap-4 border-b bg-background px-4 md:px-8">
             <a class="font-semibold" href={withBase('/')}>AION 2 Guides</a>
-            <div class="ml-auto">
-              <ModeToggle client:load />
-            </div>
+            <HeaderControls client:load patch={patch} />
           </header>
           <main class="mx-auto w-full max-w-3xl px-4 py-10 md:px-8">
             <slot />

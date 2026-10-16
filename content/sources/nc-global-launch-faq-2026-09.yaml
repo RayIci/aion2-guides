@@ -1,0 +1,11 @@
+id: nc-global-launch-faq-2026-09
+title: "Launch FAQ"
+url: "https://aion2.plaync.com/en-us/board/notice/view?articleId=6ab83e52d97eae18cc40e12b"
+type: official
+author: "NCSOFT"
+language: en
+region: global
+published: 2026-09-30
+accessed: 2026-10-16
+derived_from: []
+notes: "Read via the board API the page itself calls (the page renders with JavaScript)."

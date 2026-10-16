@@ -49,6 +49,10 @@ export interface CoverageRow {
 export interface PatchView {
   meta: PatchMeta;
   overview: string;
+  /** The overview rendered like a section body (citations included). */
+  overviewHtml: string;
+  /** Sources cited in the overview, in citation-number order. */
+  overviewSources: Source[];
   officialNotes: Source[];
   /** Resolved guide, sorted by section id. */
   sections: ResolvedSection[];
@@ -133,9 +137,14 @@ export async function buildContent(contentDir: string): Promise<ContentGraph> {
       .map(({ section, origin }) => toResolved(section, origin, origin === patch.meta.id, rendered.get(section)!, sources))
       .sort((a, b) => a.id.localeCompare(b.id));
 
+    const overview = await renderSection(patch.overview, { sources, sectionSources: [] });
+    for (const issue of overview.issues) errors.push({ file: patch.file, message: issue });
+
     views.push({
       meta: patch.meta,
       overview: patch.overview,
+      overviewHtml: overview.html,
+      overviewSources: overview.sourceOrder.flatMap((id) => sources.get(id) ?? []),
       officialNotes: lookupSources(patch.meta.official_notes, patch.file, 'official_notes'),
       sections,
       changelog: changelog.sort((a, b) => a.sectionId.localeCompare(b.sectionId)),

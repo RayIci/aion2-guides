@@ -100,6 +100,19 @@ describe('patch chain with overrides and a removal', () => {
   });
 });
 
+describe('patch overview', () => {
+  it('renders citations in the overview and validates them', async () => {
+    const files = {
+      'sources/n.yaml': source('n', { type: 'official' }),
+      'patches/1.0/patch.md': patch('1.0').replace('Overview of 1.0.', 'Abyss time is 7 h [@n]. Typo [@missing].'),
+    };
+    const g = await build(files);
+    expect(g.defaultPatch!.overviewHtml).toContain('cite--verified');
+    expect(g.defaultPatch!.overviewSources.map((s) => s.id)).toEqual(['n']);
+    expect(errorsOf(g).join('\n')).toMatch(/patches\/1.0\/patch.md: unknown source id "missing"/);
+  });
+});
+
 describe('validation', () => {
   const base = {
     'patches/1.0/patch.md': patch('1.0'),

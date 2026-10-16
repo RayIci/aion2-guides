@@ -1,6 +1,7 @@
 ---
 import Base from './Base.astro';
 import { GuideShell, type Crumb } from '@/components/site/guide-shell';
+import type { PatchNav } from '@/components/site/site-header';
 import type { NavItemData } from '../lib/nav';
 import { withBase } from '../lib/url';
 
@@ -10,12 +11,13 @@ interface Props {
   patchLabel: string;
   items: NavItemData[];
   crumbs: Crumb[];
+  patch: PatchNav;
 }
 
-const { title, guideTitle, patchLabel, items, crumbs } = Astro.props;
+const { title, guideTitle, patchLabel, items, crumbs, patch } = Astro.props;
 ---
 <Base title={`${title} · ${guideTitle}`} bare>
-  <GuideShell client:load siteHref={withBase('/')} guideTitle={guideTitle} patchLabel={patchLabel} items={items} crumbs={crumbs}>
+  <GuideShell client:load siteHref={withBase('/')} guideTitle={guideTitle} patchLabel={patchLabel} items={items} crumbs={crumbs} patch={patch}>
     <slot />
   </GuideShell>
 </Base>

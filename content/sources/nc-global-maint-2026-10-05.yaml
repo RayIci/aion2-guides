@@ -1,0 +1,11 @@
+id: nc-global-maint-2026-10-05
+title: "Scheduled Maintenance Sun Oct 4 / Mon Oct 5 (commercial launch)"
+url: "https://aion2.plaync.com/en-us/board/notice/view?articleId=6abfbd8abcc86319892235c4"
+type: official
+author: "NCSOFT"
+language: en
+region: global
+published: 2026-10-04
+accessed: 2026-10-16
+derived_from: []
+notes: "Read via the board API the page itself calls (the page renders with JavaScript)."

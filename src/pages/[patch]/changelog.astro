@@ -1,0 +1,114 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Base from '../../layouts/Base.astro';
+import PatchNotice from '../../components/PatchNotice.astro';
+import SourceList from '../../components/SourceList.astro';
+import { Badge } from '@/components/ui/badge';
+import { Empty, EmptyDescription, EmptyHeader, EmptyTitle } from '@/components/ui/empty';
+import { Separator } from '@/components/ui/separator';
+import type { PatchView } from '../../content-core';
+import { getContent } from '../../lib/content';
+import { changelogGroups, patchNav } from '../../lib/patches';
+import { withBase } from '../../lib/url';
+
+export const getStaticPaths = (async () => {
+  const content = await getContent();
+  return content.patches.map((patch) => ({ params: { patch: patch.meta.id }, props: { patch } }));
+}) satisfies GetStaticPaths;
+
+const { patch } = Astro.props as { patch: PatchView };
+const content = await getContent();
+const groups = changelogGroups(content, patch);
+const parent = content.patches.find((p) => p.meta.id === patch.meta.parent);
+const live = content.defaultPatch;
+const liveHref = live && live !== patch ? withBase(`/${live.meta.id}/changelog`) : undefined;
+const KIND = {
+  changed: { label: 'Changed', variant: 'secondary' },
+  added: { label: 'Added', variant: 'default' },
+  removed: { label: 'Removed', variant: 'outline' },
+} as const;
+---
+<Base title={`Changelog · ${patch.meta.title}`} patch={patchNav(content, patch, undefined, withBase)}>
+  <PatchNotice patch={patch} liveHref={liveHref} />
+  <div class="flex flex-col gap-2">
+    <h1 class="text-3xl font-semibold tracking-tight text-balance">Changelog: {patch.meta.title}</h1>
+    <p class="flex flex-wrap gap-x-3 text-sm text-muted-foreground">
+      {patch.meta.released && <span>Released {patch.meta.released}</span>}
+      {parent ? <span>Changes since {parent.meta.title}</span> : <span>Baseline patch: the first one documented in full</span>}
+    </p>
+    {
+      patch.officialNotes.length > 0 && (
+        <p class="flex flex-wrap gap-x-3 text-sm">
+          <span class="text-muted-foreground">Official notes:</span>
+          {patch.officialNotes.map((s) => (
+            <a class="underline underline-offset-4" href={s.url} rel="noopener" target="_blank">
+              {s.title}
+            </a>
+          ))}
+        </p>
+      )
+    }
+  </div>
+
+  {patch.overview && <div class="prose prose-neutral mt-8 max-w-none dark:prose-invert" set:html={patch.overviewHtml} />}
+
+  <h2 class="mt-12 mb-4 text-lg font-semibold">Guide changes</h2>
+  {
+    groups.length === 0 ? (
+      <Empty className="border">
+        <EmptyHeader>
+          <EmptyTitle>{parent ? 'No guide sections changed' : 'Nothing to compare yet'}</EmptyTitle>
+          <EmptyDescription>
+            {parent
+              ? 'Every section reads the same as in the previous patch.'
+              : 'This is the Baseline patch. Later patches list each section they change here.'}
+          </EmptyDescription>
+        </EmptyHeader>
+      </Empty>
+    ) : (
+      <div class="flex flex-col gap-10">
+        {groups.map((group) => (
+          <section class="flex flex-col gap-4">
+            <h3 class="font-semibold">{group.title}</h3>
+            <ol class="flex flex-col gap-6">
+              {group.entries.map((e, i) => (
+                <li class="flex flex-col gap-2">
+                  {i > 0 && <Separator className="mb-4" />}
+                  <div class="flex flex-wrap items-center gap-2">
+                    <Badge variant={KIND[e.kind].variant}>{KIND[e.kind].label}</Badge>
+                    {e.href ? (
+                      <a class="font-medium underline-offset-4 hover:underline" href={withBase(e.href)}>
+                        {e.title}
+                      </a>
+                    ) : (
+                      <span class="font-medium">{e.title}</span>
+                    )}
+                  </div>
+                  <dl class="grid gap-1 text-sm sm:grid-cols-[8rem_1fr]">
+                    <dt class="text-muted-foreground">In the game</dt>
+                    <dd>{e.gameChange}</dd>
+                    <dt class="text-muted-foreground">In the guide</dt>
+                    <dd>{e.reason}</dd>
+                    {e.sources.length > 0 && (
+                      <>
+                        <dt class="text-muted-foreground">Sources</dt>
+                        <dd class="flex flex-wrap gap-x-3">
+                          {e.sources.map((s) => (
+                            <a class="underline underline-offset-4" href={s.url} rel="noopener" target="_blank">
+                              {s.title}
+                            </a>
+                          ))}
+                        </dd>
+                      </>
+                    )}
+                  </dl>
+                </li>
+              ))}
+            </ol>
+          </section>
+        ))}
+      </div>
+    )
+  }
+  <SourceList sources={patch.overviewSources} />
+</Base>

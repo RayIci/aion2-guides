@@ -5,6 +5,7 @@ import Base from '../layouts/Base.astro';
 import Guide from '../layouts/Guide.astro';
 import GuideList from '../components/GuideList.astro';
 import SourceList from '../components/SourceList.astro';
+import PatchNotice from '../components/PatchNotice.astro';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Badge } from '@/components/ui/badge';
 import type { PatchView, ResolvedSection } from '../content-core';
@@ -12,6 +13,7 @@ import { guideOf } from '../content-core';
 import { getContent, sectionPath } from '../lib/content';
 import { guideEntry, guideTitle } from '../lib/guides';
 import { buildNav, label, toNavItems, type NavNode } from '../lib/nav';
+import { patchNav, patchTargets } from '../lib/patches';
 import { withBase } from '../lib/url';
 
 type Props = { patch: PatchView; section?: ResolvedSection; prefixed: boolean };
@@ -32,6 +34,11 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 const { patch, section } = Astro.props;
+const content = await getContent();
+const headerPatch = patchNav(content, patch, section?.id, withBase);
+const live = content.defaultPatch;
+const liveTarget = live && live !== patch ? patchTargets(content, section?.id).find((t) => t.id === live.meta.id) : undefined;
+const liveHref = liveTarget && withBase(liveTarget.href);
 const CONFIDENCE = { verified: 'Verified', community: 'Community', unverified: 'Unverified' } as const;
 const STATUS = {
   draft: { label: 'Draft', variant: 'outline' },
@@ -67,7 +74,9 @@ if (section) {
       patchLabel={`Patch ${patch.meta.id}`}
       items={guideView.items}
       crumbs={guideView.crumbs}
+      patch={headerPatch}
     >
+      <PatchNotice patch={patch} liveHref={liveHref} />
       <header class="flex flex-col gap-3">
         <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted-foreground">
           <Badge variant={STATUS[section.status].variant}>{STATUS[section.status].label}</Badge>
@@ -99,16 +108,22 @@ if (section) {
       <SourceList sources={section.sources} />
     </Guide>
   ) : (
-    <Base title={patch.meta.title}>
+    <Base title={patch.meta.title} patch={headerPatch}>
+      <PatchNotice patch={patch} liveHref={liveHref} />
       <div class="flex flex-col gap-2">
-        <h1 class="text-3xl font-semibold tracking-tight">{patch.meta.title}</h1>
-        <p class="text-sm text-muted-foreground">
-          {PATCH_STATUS[patch.meta.status]}
-          {patch.meta.released && <> · released {patch.meta.released}</>}
+        <h1 class="text-3xl font-semibold tracking-tight text-balance">{patch.meta.title}</h1>
+        <p class="flex flex-wrap gap-x-3 text-sm text-muted-foreground">
+          <span>{PATCH_STATUS[patch.meta.status]}</span>
+          {patch.meta.released && <span>Released {patch.meta.released}</span>}
+          <a class="underline underline-offset-4 hover:text-foreground" href={withBase(`/${patch.meta.id}/changelog`)}>
+            Changelog
+          </a>
         </p>
       </div>
+      {patch.overview && <div class="prose prose-neutral mt-8 max-w-none dark:prose-invert" set:html={patch.overviewHtml} />}
       <h2 class="mt-10 mb-4 text-lg font-semibold">Guides</h2>
       <GuideList patch={patch} prefixed />
+      <SourceList sources={patch.overviewSources} />
     </Base>
   )
 }
