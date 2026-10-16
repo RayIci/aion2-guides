@@ -198,3 +198,76 @@
     scroll-margin-top: 5rem;
   }
 }
+
+/* Content blocks from the renderer (docs/content-model.md), styled to match shadcn's
+   Alert (conflict), Button outline xs (macro copy) and Checkbox (checklists). Behaviour is
+   in src/scripts/enhance.ts. Unlayered on purpose: these must beat Tailwind Typography's
+   prose margins, which sit in a later layer. */
+.prose {
+  --tw-prose-pre-bg: transparent;
+  --tw-prose-pre-code: var(--foreground);
+}
+
+.conflict {
+  @apply my-6 flex flex-col gap-1 rounded-xl border border-community/40 bg-community/5 px-4 py-3 text-sm;
+}
+.conflict > * {
+  @apply my-0;
+}
+.conflict ul {
+  @apply my-1;
+}
+.conflict__title {
+  @apply font-medium text-community;
+}
+
+.macro {
+  @apply my-6 overflow-hidden rounded-xl border bg-muted/40;
+}
+.macro__caption {
+  @apply m-0 flex items-center justify-between gap-2 border-b px-3 py-1.5 text-xs font-medium text-muted-foreground;
+}
+.macro pre {
+  @apply m-0 rounded-none p-3 text-sm leading-relaxed;
+}
+.macro__copy,
+.checklist__reset {
+  @apply inline-flex h-6 cursor-pointer items-center rounded-md border border-border bg-background px-2 text-xs font-medium text-foreground transition-colors hover:bg-muted focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none dark:border-input dark:bg-input/30 dark:hover:bg-input/50;
+}
+
+.checklist {
+  @apply my-6 flex flex-col gap-2 rounded-xl border px-4 py-3;
+}
+.checklist > * {
+  @apply my-0;
+}
+.checklist__title {
+  @apply font-medium;
+}
+.checklist ul {
+  @apply m-0 flex list-none flex-col gap-1.5 p-0;
+}
+.checklist li {
+  @apply m-0 flex cursor-pointer items-start gap-2.5 p-0;
+}
+.checklist li::marker {
+  content: none;
+}
+.checklist li:has(input:checked) {
+  @apply text-muted-foreground line-through decoration-muted-foreground/60;
+}
+.checklist input[type='checkbox'] {
+  @apply mt-[0.3em] size-4 shrink-0 cursor-pointer appearance-none rounded-[4px] border border-input bg-background shadow-xs transition-colors focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none disabled:cursor-default dark:bg-input/30;
+}
+.checklist input[type='checkbox']:checked {
+  @apply border-primary bg-primary bg-center bg-no-repeat;
+  background-size: 0.75rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fafafa' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+}
+.dark .checklist input[type='checkbox']:checked {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23262626' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+}
+.checklist__footer {
+  @apply flex items-center justify-between gap-2 border-t pt-2 text-xs text-muted-foreground tabular-nums;
+}
+

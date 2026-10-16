@@ -50,6 +50,7 @@ export async function renderSection(
     .use(() => (tree: Root) => {
       transformCitations(tree, ctx.sources, state, numberOf);
       collectChecklists(tree, state);
+      renderBlocks(tree, body, state);
       restoreStrayDirectives(tree);
     })
     .use(remarkRehype)
@@ -162,6 +163,70 @@ function collectChecklists(tree: Root, state: RenderResult) {
       item.data = { ...item.data, hProperties: { ...(item.data?.hProperties ?? {}), dataChecklistId: id } };
       state.checklistIds.push(id);
     });
+  });
+}
+
+const BLOCKS = new Set(['conflict', 'checklist', 'play', 'macro']);
+
+/**
+ * The container blocks from docs/content-model.md, turned into plain semantic HTML.
+ * The site styles and enhances them (copy buttons, persistent checkboxes); the core stays UI-free.
+ */
+function renderBlocks(tree: Root, body: string, state: RenderResult) {
+  visit(tree, (node) => {
+    if (node.type !== 'containerDirective') return;
+    const attrs = node.attributes ?? {};
+    if (!BLOCKS.has(node.name)) {
+      state.issues.push(`unknown block ":::${node.name}" (expected one of ${[...BLOCKS].join(', ')})`);
+      return;
+    }
+    if (node.name === 'conflict') {
+      const heading: Paragraph = {
+        type: 'paragraph',
+        data: { hProperties: { className: ['conflict__title'] } },
+        children: [{ type: 'text', value: attrs.topic ? `Sources disagree: ${attrs.topic}` : 'Sources disagree' }],
+      };
+      node.children.unshift(heading);
+      node.data = { hName: 'aside', hProperties: { className: ['conflict'], dataConflict: '' } };
+    } else if (node.name === 'checklist') {
+      if (attrs.title) {
+        node.children.unshift({
+          type: 'paragraph',
+          data: { hProperties: { className: ['checklist__title'] } },
+          children: [{ type: 'text', value: attrs.title }],
+        });
+      }
+      node.data = { hName: 'div', hProperties: { className: ['checklist'], dataChecklist: attrs.id ?? '' } };
+    } else if (node.name === 'play') {
+      node.data = { hName: 'div', hProperties: { className: ['play-block'], dataPlay: '' } };
+    } else if (node.name === 'macro') {
+      // Keep the macro text exactly as written: the source lines between the fences.
+      const start = node.position?.start.offset ?? 0;
+      const end = node.position?.end.offset ?? 0;
+      const lines = body.slice(start, end).split(/\r?\n/);
+      const text = lines.slice(1, lines.at(-1)?.trim().startsWith(':::') ? -1 : undefined).join('\n').trim();
+      const name = attrs.name ?? 'Macro';
+      node.children = [
+        {
+          type: 'paragraph',
+          data: { hName: 'figcaption', hProperties: { className: ['macro__caption'] } },
+          children: [
+            { type: 'text', value: name },
+            {
+              type: 'text',
+              value: '',
+              data: {
+                hName: 'button',
+                hProperties: { type: 'button', className: ['macro__copy'], dataCopyMacro: '' },
+                hChildren: [{ type: 'text', value: 'Copy' }],
+              },
+            } as unknown as PhrasingContent,
+          ],
+        },
+        { type: 'code', value: text },
+      ] as typeof node.children;
+      node.data = { hName: 'figure', hProperties: { className: ['macro'], dataMacro: name } };
+    }
   });
 }
 

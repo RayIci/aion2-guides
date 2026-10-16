@@ -112,7 +112,7 @@ if (section) {
           <AlertDescription>This section hasn't been researched yet. Treat it as a placeholder.</AlertDescription>
         </Alert>
       )}
-      <div class="prose prose-neutral mt-8 max-w-none dark:prose-invert" set:html={section.html} />
+      <div class="prose prose-neutral mt-8 max-w-none dark:prose-invert" data-section-id={section.id} set:html={section.html} />
       </div>
       <div data-pagefind-ignore>
         <SourceList sources={section.sources} />

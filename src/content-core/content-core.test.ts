@@ -236,6 +236,49 @@ describe('coverage', () => {
   });
 });
 
+describe('blocks', () => {
+  const render = async (body: string, extra: Record<string, string> = {}) => {
+    const g = await build({
+      'sources/a.yaml': source('a', { type: 'official' }),
+      'sources/b.yaml': source('b'),
+      ...extra,
+      'patches/1.0/patch.md': patch('1.0'),
+      'patches/1.0/sections/s.md': section({ title: 'S' }, body),
+    });
+    return { html: g.defaultPatch?.sections[0]?.html ?? '', errors: errorsOf(g) };
+  };
+
+  it('renders a conflict with each alternative keeping its own citations', async () => {
+    const { html, errors } = await render(':::conflict{topic="Stat priority"}\n- Crit first [@a]\n- Accuracy first [@b]\n:::');
+    expect(errors).toEqual([]);
+    expect(html).toContain('<aside class="conflict" data-conflict="">');
+    expect(html).toContain('Sources disagree: Stat priority');
+    expect(html).toContain('cite--verified');
+    expect(html).toContain('cite--community');
+  });
+
+  it('keeps macro text verbatim with a copy button', async () => {
+    const { html, errors } = await render(':::macro{name="Burst"}\n/skill Keen Strike\n/wait 0.3\n\n/skill Rupture Strike\n:::');
+    expect(errors).toEqual([]);
+    expect(html).toContain('<figure class="macro" data-macro="Burst">');
+    expect(html).toContain('<button type="button" class="macro__copy" data-copy-macro="">Copy</button>');
+    expect(html).toContain('<code>/skill Keen Strike\n/wait 0.3\n\n/skill Rupture Strike\n</code>');
+  });
+
+  it('marks play blocks and checklists for the site to enhance', async () => {
+    const { html } = await render(':::play\nOpener\n:::\n\n:::checklist{id="exit" title="Before Lv 10"}\n- [ ] Wings {#wings}\n:::');
+    expect(html).toContain('<div class="play-block" data-play="">');
+    expect(html).toContain('<div class="checklist" data-checklist="exit">');
+    expect(html).toContain('Before Lv 10');
+    expect(html).toContain('data-checklist-id="wings"');
+  });
+
+  it('reports unknown blocks', async () => {
+    const { errors } = await render(':::tip\nhello\n:::');
+    expect(errors.join('\n')).toMatch(/unknown block ":::tip"/);
+  });
+});
+
 describe('markdown', () => {
   it('flags claims backed only by KR/TW sources', async () => {
     const g = await build({

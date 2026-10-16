@@ -106,7 +106,9 @@ Opener: A → B → C …
 - **conflict**: shows every alternative with its own citations. Never pick one silently. Any pick of our own is marked `[!opinion]` or cited.
 - **checklist**: the item id defaults to a slug of the text. Give an explicit `{#id}` when the wording might change but the target stays the same. Browser storage keys progress by section id + item id and ignores the patch, so progress carries across patch switches.
 - **play**: shows up in playing mode. Every rotation, macro and current-stage checklist should be inside a `play` block or a section with `play: true`.
-- **macro**: rendered as monospace with a copy button.
+- **macro**: rendered as monospace with a copy button. The text between the fences is copied exactly as written.
+- **Nesting:** to put a block inside another (e.g. a `macro` inside a `play` block), give the outer fence more colons: `::::play` … `::::`. Otherwise the inner `:::` closes the outer block.
+- Any other `:::name` is a build error.
 
 ## Sources (`content/sources/<id>.yaml`)
 
