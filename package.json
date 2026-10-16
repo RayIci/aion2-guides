@@ -1,0 +1,19 @@
+{
+  "name": "aion2-guides",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^8.1.0",
+    "astro": "^7.4.0"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.5"
+  }
+}

@@ -1,0 +1,54 @@
+---
+import '../styles/global.css';
+import { withBase } from '../lib/url';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Patch-versioned, source-cited AION 2 guides for Global / NA-EU.' } = Astro.props;
+const fullTitle = title === 'AION 2 Guides' ? title : `${title} · AION 2 Guides`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{fullTitle}</title>
+    <script is:inline>
+      // Apply the saved theme before first paint; dark is the default.
+      try {
+        if (localStorage.getItem('theme') === 'light') document.documentElement.dataset.theme = 'light';
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={withBase('/')}>AION 2 Guides</a>
+      <nav aria-label="Main">
+        <a href={withBase('/')}>Home</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Toggle light/dark theme">Theme</button>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      Fan-made guide for AION 2 (Global / NA-EU). Not affiliated with NCSoft. Every claim links to its source.
+    </footer>
+    <script>
+      const toggle = document.querySelector<HTMLButtonElement>('.theme-toggle');
+      toggle?.addEventListener('click', () => {
+        const root = document.documentElement;
+        const light = root.dataset.theme !== 'light';
+        if (light) root.dataset.theme = 'light';
+        else delete root.dataset.theme;
+        try {
+          localStorage.setItem('theme', light ? 'light' : 'dark');
+        } catch {}
+      });
+    </script>
+  </body>
+</html>
