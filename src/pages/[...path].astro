@@ -1,0 +1,79 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Base from '../layouts/Base.astro';
+import Guide from '../layouts/Guide.astro';
+import GuideList from '../components/GuideList.astro';
+import SourceList from '../components/SourceList.astro';
+import type { PatchView, ResolvedSection } from '../content-core';
+import { getContent, sectionPath } from '../lib/content';
+import { guideEntry, guideTitle } from '../lib/guides';
+import { buildNav } from '../lib/nav';
+import { guideOf } from '../content-core';
+
+type Props = { patch: PatchView; section?: ResolvedSection; prefixed: boolean };
+
+export const getStaticPaths = (async () => {
+  const content = await getContent();
+  const paths: { params: { path: string }; props: Props }[] = [];
+  for (const patch of content.patches) {
+    paths.push({ params: { path: patch.meta.id }, props: { patch, prefixed: true } });
+    for (const section of patch.sections) {
+      paths.push({ params: { path: `${patch.meta.id}/${sectionPath(section.id)}` }, props: { patch, section, prefixed: true } });
+      if (patch === content.defaultPatch) {
+        paths.push({ params: { path: sectionPath(section.id) }, props: { patch, section, prefixed: false } });
+      }
+    }
+  }
+  return paths;
+}) satisfies GetStaticPaths;
+
+const { patch, section } = Astro.props;
+const LABEL = { verified: 'Verified', community: 'Community', unverified: 'Unverified' } as const;
+const STATUS = { draft: 'Draft', researched: 'Researched', reviewed: 'Reviewed' } as const;
+
+const guide = section && guideOf(section.id);
+const nav = guide && buildNav(patch.sections, guide);
+---
+{
+  section && guide && nav ? (
+    <Guide
+      title={section.title}
+      guideTitle={guideTitle(patch, guide)}
+      guideHref={`/${patch.meta.id}/${guideEntry(patch, guide)}`}
+      nav={nav}
+      patchId={patch.meta.id}
+      currentId={section.id}
+    >
+      <header class="section-header">
+        <p class="section-meta">
+          <span class={`status status--${section.status}`}>{STATUS[section.status]}</span>
+          <span>Patch {patch.meta.id}</span>
+          {section.changedHere ? (
+            <span>{patch.meta.parent ? 'Changed in this patch' : 'Written for this patch'}</span>
+          ) : (
+            <span>Unchanged since patch {section.originPatch}</span>
+          )}
+          {section.lastChecked && <span>Last checked {section.lastChecked}</span>}
+        </p>
+        <h1>{section.title}</h1>
+        {section.sectionConfidence && (
+          <p class="section-confidence">
+            Section sources: <span class={`cite cite--${section.sectionConfidence}`}><span class="cite__badge">{LABEL[section.sectionConfidence]}</span></span>
+          </p>
+        )}
+      </header>
+      <div class="prose" set:html={section.html} />
+      <SourceList sources={section.sources} />
+    </Guide>
+  ) : (
+    <Base title={patch.meta.title}>
+      <h1>{patch.meta.title}</h1>
+      <p class="muted">
+        {patch.meta.status === 'staged' ? 'Staged, not released on Global yet' : patch.meta.status === 'live' ? 'Live' : 'Superseded'}
+        {patch.meta.released && <> · released {patch.meta.released}</>}
+      </p>
+      <h2>Guides</h2>
+      <GuideList patch={patch} prefixed />
+    </Base>
+  )
+}

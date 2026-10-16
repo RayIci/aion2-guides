@@ -1,0 +1,37 @@
+---
+import type { PatchView } from '../content-core';
+import { guidesIn } from '../lib/nav';
+import { guideTitle, guideEntry } from '../lib/guides';
+import { withBase } from '../lib/url';
+
+interface Props {
+  patch: PatchView;
+  prefixed: boolean;
+}
+
+const { patch, prefixed } = Astro.props;
+const guides = guidesIn(patch.sections);
+---
+{
+  guides.length === 0 ? (
+    <p class="muted">No guides in this patch yet.</p>
+  ) : (
+    <ul class="guide-list">
+      {guides.map((g) => {
+        const entry = guideEntry(patch, g)!;
+        const row = patch.coverage.find((c) => c.guide === g);
+        return (
+          <li>
+            <a href={withBase(prefixed ? `/${patch.meta.id}/${entry}` : `/${entry}`)}>{guideTitle(patch, g)}</a>
+            {row && (
+              <span class="muted">
+                {' '}· {row.sections} sections ({row.drafts} draft) · {row.claims.verified} verified / {row.claims.community} community /{' '}
+                {row.claims.unverified} unverified claims
+              </span>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  )
+}

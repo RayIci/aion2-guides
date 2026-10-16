@@ -1,5 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
+import GuideList from '../components/GuideList.astro';
+import { getContent } from '../lib/content';
+import { withBase } from '../lib/url';
+
+const content = await getContent();
+const patch = content.defaultPatch;
 ---
 <Base title="AION 2 Guides">
   <h1>AION 2 Guides</h1>
@@ -7,5 +13,16 @@ import Base from '../layouts/Base.astro';
     Class guides and farming &amp; crafting guides for AION 2 on the Global / NA-EU servers.
     Every page is versioned by patch, and every claim links to the source it came from.
   </p>
-  <p>The site is under construction: Gladiator and Assassin guides are coming first.</p>
+  {
+    patch ? (
+      <>
+        <h2>
+          Guides for <a href={withBase(`/${patch.meta.id}`)}>{patch.meta.title}</a>
+        </h2>
+        <GuideList patch={patch} prefixed={false} />
+      </>
+    ) : (
+      <p class="muted">No patches have been documented yet.</p>
+    )
+  }
 </Base>

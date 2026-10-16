@@ -5,9 +5,11 @@ import { withBase } from '../lib/url';
 interface Props {
   title: string;
   description?: string;
+  /** Wider main column for pages with a sidebar. */
+  wide?: boolean;
 }
 
-const { title, description = 'Patch-versioned, source-cited AION 2 guides for Global / NA-EU.' } = Astro.props;
+const { title, description = 'Patch-versioned, source-cited AION 2 guides for Global / NA-EU.', wide = false } = Astro.props;
 const fullTitle = title === 'AION 2 Guides' ? title : `${title} · AION 2 Guides`;
 ---
 <!doctype html>
@@ -32,7 +34,7 @@ const fullTitle = title === 'AION 2 Guides' ? title : `${title} · AION 2 Guides
       </nav>
       <button class="theme-toggle" type="button" aria-label="Toggle light/dark theme">Theme</button>
     </header>
-    <main>
+    <main class:list={{ wide }}>
       <slot />
     </main>
     <footer class="site-footer">

@@ -74,6 +74,8 @@ removed: false                # true = Removal; the body may be empty
 - A claim with no inline citation takes the section-level `sources`. If there are none, it is Unverified.
 - Confidence is derived from the sources (rule in `docs/sourcing.md`). Authors can only lower it.
 - Each citation renders as a confidence badge plus numbered links. Each section ends with its list of sources.
+- A citation whose sources are all KR/TW gets a "KR only" / "TW only" tag on its badge (ADR-0003).
+- For the coverage report, each inline citation marker counts as one claim, and a section's `sources` list counts as one more claim at its own derived confidence.
 
 ## Blocks
 
@@ -129,11 +131,14 @@ notes: "Translated with machine translation, checked against in-game screenshots
 
 ## Build validation (fails the build)
 
+`npm run build` runs these through the content core and stops with the list of errors. `CONTENT_DIR=<dir>` points the build at another content folder, and `npm run dev:demo` / `build:demo` use the fixture in `tests/fixtures/demo/`.
+
 1. Every cited source id exists in the registry.
 2. The patch graph has exactly one Baseline, has no cycles, and has at most one `live` patch.
 3. Every file outside the Baseline has `change.reason` and `change.game_change`.
 4. A Removal targets a section that exists somewhere up the chain.
 5. Every `researched`/`reviewed` section has at least one citation or `[!opinion]` marker.
 6. Every checklist item id is unique within its section.
+7. Every file matches its frontmatter/YAML shape above, ids are unique, and every `derived_from` id exists.
 
 Reported, not failing: confidence coverage per guide (share of claims that are Verified / Community / Unverified), sections still in `draft`, and sources with no `archived_url`.

@@ -1,0 +1,30 @@
+---
+import Base from './Base.astro';
+import NavTree from '../components/NavTree.astro';
+import type { NavNode } from '../lib/nav';
+import { withBase } from '../lib/url';
+
+interface Props {
+  title: string;
+  guideTitle: string;
+  guideHref: string;
+  nav: NavNode;
+  patchId: string;
+  currentId: string;
+}
+
+const { title, guideTitle, guideHref, nav, patchId, currentId } = Astro.props;
+---
+<Base title={`${title} · ${guideTitle}`} wide>
+  <div class="guide">
+    <aside class="guide-nav">
+      <details open>
+        <summary><a href={withBase(guideHref)}>{guideTitle}</a></summary>
+        <NavTree node={nav} patchId={patchId} currentId={currentId} />
+      </details>
+    </aside>
+    <article class="guide-body">
+      <slot />
+    </article>
+  </div>
+</Base>

@@ -1,0 +1,9 @@
+id: demo-kr-forum
+title: "DEMO: KR forum thread (fixture, not real)"
+url: https://example.com/demo/kr-thread
+type: community
+author: "demo-kr-user"
+language: ko
+region: kr
+accessed: 2026-10-16
+notes: "Machine-translated."
