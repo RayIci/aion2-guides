@@ -12,7 +12,7 @@ What this patch changed that matters to the guides:
 - **No Gladiator or Assassin balance changes.** The class fixes were for Spiritmaster and Sorcerer.
 - **Abyss:** maximum stored Abyss entry time is now 7 hours, and two Season Missions now reward Abyss Entry Stones.
 - **Battlefield:** standard stats were adjusted to lengthen fights.
-- **Economy:** market listings of gathering materials are restricted based on gameplay history, and the Odyle Energy (Bound) weekly limits in the server-transfer shop were loosened.
+- **Economy:** market listings of gathering materials are restricted based on gameplay history, and during the server transfer period the Odyle Energy (Bound) weekly limits were loosened.
 - **Event:** the Halloween "Trick or Treat" event runs until the Nov. 3 (PST) / Nov. 4 (CET) maintenance.
 
 Not live on Global yet: the Sanctuary raid Ludra was removed from the launch build and has no return date yet.
