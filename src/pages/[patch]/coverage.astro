@@ -1,0 +1,112 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Base from '../../layouts/Base.astro';
+import { Badge } from '@/components/ui/badge';
+import { Empty, EmptyDescription, EmptyHeader, EmptyTitle } from '@/components/ui/empty';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import type { PatchView } from '../../content-core';
+import { guideOf } from '../../content-core';
+import { getContent, sectionPath } from '../../lib/content';
+import { guideTitle } from '../../lib/guides';
+import { patchNav } from '../../lib/patches';
+import { withBase } from '../../lib/url';
+
+export const getStaticPaths = (async () => {
+  const content = await getContent();
+  return content.patches.map((patch) => ({ params: { patch: patch.meta.id }, props: { patch } }));
+}) satisfies GetStaticPaths;
+
+const { patch } = Astro.props as { patch: PatchView };
+const content = await getContent();
+const rows = patch.coverage.map((r) => {
+  const total = r.claims.verified + r.claims.community + r.claims.unverified;
+  return { ...r, title: guideTitle(patch, r.guide), total, share: total ? Math.round((r.claims.verified / total) * 100) : null };
+});
+const drafts = patch.sections.filter((s) => s.status === 'draft');
+const nav = patchNav(content, patch, undefined, withBase);
+nav.options = nav.options.map((o) => ({ ...o, href: withBase(`/${o.id}/coverage`) }));
+---
+<Base title={`Coverage · ${patch.meta.title}`} patch={nav}>
+  <h1 class="text-3xl font-semibold tracking-tight text-balance">Source coverage</h1>
+  <p class="mt-2 text-muted-foreground">
+    How well each guide in {patch.meta.title} is backed by sources. A claim is each inline citation, plus one per section-level
+    source list. The goal is mostly Verified.
+  </p>
+
+  {
+    rows.length === 0 ? (
+      <Empty className="mt-8 border">
+        <EmptyHeader>
+          <EmptyTitle>No guide sections yet</EmptyTitle>
+          <EmptyDescription>Coverage appears once the first sections are written.</EmptyDescription>
+        </EmptyHeader>
+      </Empty>
+    ) : (
+      <div class="mt-8 overflow-x-auto rounded-xl border">
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>Guide</TableHead>
+              <TableHead className="text-right">Sections</TableHead>
+              <TableHead className="text-right">Draft</TableHead>
+              <TableHead className="text-right">Verified</TableHead>
+              <TableHead className="text-right">Community</TableHead>
+              <TableHead className="text-right">Unverified</TableHead>
+              <TableHead className="text-right">Verified share</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {rows.map((r) => (
+              <TableRow>
+                <TableCell className="font-medium">{r.title}</TableCell>
+                <TableCell className="text-right tabular-nums">{r.sections}</TableCell>
+                <TableCell className="text-right tabular-nums">{r.drafts}</TableCell>
+                <TableCell className="text-right tabular-nums text-verified">{r.claims.verified}</TableCell>
+                <TableCell className="text-right tabular-nums text-community">{r.claims.community}</TableCell>
+                <TableCell className="text-right tabular-nums text-unverified">{r.claims.unverified}</TableCell>
+                <TableCell className="text-right tabular-nums">{r.share === null ? '–' : `${r.share}%`}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+    )
+  }
+
+  {
+    drafts.length > 0 && (
+      <section class="mt-12 flex flex-col gap-3">
+        <h2 class="text-lg font-semibold">Still in draft ({drafts.length})</h2>
+        <ul class="flex flex-col gap-1 text-sm">
+          {drafts.map((s) => (
+            <li>
+              <a class="underline-offset-4 hover:underline" href={withBase(`/${patch.meta.id}/${sectionPath(s.id)}`)}>
+                {s.title}
+              </a>
+              <span class="text-muted-foreground"> · {guideTitle(patch, guideOf(s.id))}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  {
+    content.sourcesWithoutArchive.length > 0 && (
+      <section class="mt-12 flex flex-col gap-3">
+        <h2 class="text-lg font-semibold">Sources without an archived copy ({content.sourcesWithoutArchive.length})</h2>
+        <p class="text-sm text-muted-foreground">If these posts disappear, the claims citing them can't be checked anymore.</p>
+        <ul class="flex flex-col gap-1 text-sm">
+          {content.sourcesWithoutArchive.map((s) => (
+            <li class="flex flex-wrap items-center gap-2">
+              <Badge variant="outline">{s.type}</Badge>
+              <a class="underline-offset-4 hover:underline" href={s.url} rel="noopener" target="_blank">
+                {s.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+</Base>

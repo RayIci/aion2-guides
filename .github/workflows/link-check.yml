@@ -1,0 +1,23 @@
+name: Source link check
+
+# Weekly check that every cited source (and its archived copy) still resolves.
+# A failed run means dead links; GitHub emails the owner, and the run summary lists them.
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: node scripts/check-links.mjs

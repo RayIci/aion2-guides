@@ -130,6 +130,9 @@ if (section) {
           <a class="underline underline-offset-4 hover:text-foreground" href={withBase(`/${patch.meta.id}/changelog`)}>
             Changelog
           </a>
+          <a class="underline underline-offset-4 hover:text-foreground" href={withBase(`/${patch.meta.id}/coverage`)}>
+            Source coverage
+          </a>
         </p>
       </div>
       {patch.overview && <div class="prose prose-neutral mt-8 max-w-none dark:prose-invert" set:html={patch.overviewHtml} />}
