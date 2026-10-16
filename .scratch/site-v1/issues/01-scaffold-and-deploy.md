@@ -4,13 +4,15 @@
 
 **Blocked by:** None (can start immediately). The owner has to create the public GitHub repo and enable Pages (Settings → Pages → GitHub Actions). That step is `ready-for-human`.
 
-**Status:** ready-for-agent
+**Status:** done
 
 - [x] `npm run build` produces a static site; `npm run dev` serves it locally
-- [ ] Push to `main` deploys to Pages; the home page loads at the Pages URL
+- [x] Push to `main` deploys to Pages; the home page loads at the Pages URL
 - [x] Dark theme by default, light toggle, readable at 400px width
 - [x] Vitest configured with one passing placeholder test
 
 ## Comments
 
 2026-10-16: Scaffold done (commit c6e81cf). `npm run build`, `npm run dev` and `npm test` all work. A build with `BASE_PATH=/aion2-guides` gives correctly prefixed links. The deploy workflow is at `.github/workflows/deploy.yml`. Still open: create the public GitHub repo, push, and set Settings → Pages → Source = GitHub Actions. Then confirm the Pages URL loads.
+
+2026-10-16: Created the public repo https://github.com/RayIci/aion2-guides, enabled Pages (build_type=workflow) and pushed. The deploy succeeded, and https://rayici.github.io/aion2-guides/ returns 200. Workflow actions bumped to current majors (checkout v7, setup-node v7, configure-pages v6, upload-pages-artifact v5, deploy-pages v5) to get off Node 20. Done.
