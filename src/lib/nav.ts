@@ -44,11 +44,39 @@ function sortTree(node: NavNode) {
   node.children.forEach(sortTree);
 }
 
+const FOLDER_LABELS: Record<string, string> = { pve: 'PvE', pvp: 'PvP' };
+
 export function label(node: NavNode): string {
-  return node.section?.title ?? node.name.replace(/-/g, ' ').replace(/^\w/, (c) => c.toUpperCase());
+  return node.section?.title ?? FOLDER_LABELS[node.name] ?? node.name.replace(/-/g, ' ').replace(/^\w/, (c) => c.toUpperCase());
 }
 
 /** Distinct guides present in a patch, e.g. `classes/gladiator`, `world`. */
 export function guidesIn(sections: { id: string }[]): string[] {
   return [...new Set(sections.map((s) => guideOf(s.id)))].sort();
+}
+
+/** Serializable nav items for the GuideShell island: hrefs resolved, current page and its folders marked. */
+export interface NavItemData {
+  title: string;
+  href?: string;
+  active?: boolean;
+  changed?: boolean;
+  open?: boolean;
+  children: NavItemData[];
+}
+
+export function toNavItems(root: NavNode, hrefFor: (sectionId: string) => string, currentId: string): NavItemData[] {
+  const convert = (node: NavNode): NavItemData => {
+    const children = node.children.map(convert);
+    const active = node.section?.id === currentId;
+    return {
+      title: label(node),
+      href: node.section && hrefFor(node.section.id),
+      active,
+      changed: node.section?.changedHere,
+      open: active || children.some((c) => c.active || c.open),
+      children,
+    };
+  };
+  return root.children.map(convert);
 }

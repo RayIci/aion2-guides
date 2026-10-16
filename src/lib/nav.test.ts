@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { buildNav, guidesIn, label } from './nav';
+import { buildNav, guidesIn, label, toNavItems } from './nav';
 
 const s = (id: string, order = 0, title = id.split('/').at(-1)!) => ({ id, title, order });
 
@@ -28,5 +28,25 @@ describe('buildNav', () => {
       'classes/gladiator',
       'world',
     ]);
+  });
+});
+
+describe('toNavItems', () => {
+  it('resolves hrefs and opens the folders above the current page', () => {
+    const tree = buildNav(
+      [
+        { id: 'classes/gladiator/overview', title: 'Overview', order: 0 },
+        { id: 'classes/gladiator/systems/skills/whirlwind', title: 'Whirlwind', order: 0, changedHere: true },
+        { id: 'classes/gladiator/pve/rotation', title: 'Rotation', order: 0 },
+      ],
+      'classes/gladiator',
+    );
+    const items = toNavItems(tree, (id) => `/p/${id}`, 'classes/gladiator/systems/skills/whirlwind');
+    const systems = items.find((i) => i.title === 'Systems')!;
+    expect(systems.open).toBe(true);
+    expect(systems.href).toBeUndefined();
+    const whirlwind = systems.children[0].children[0];
+    expect(whirlwind).toMatchObject({ title: 'Whirlwind', href: '/p/classes/gladiator/systems/skills/whirlwind', active: true, changed: true });
+    expect(items.find((i) => i.title === 'PvE')!.open).toBe(false);
   });
 });

@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import GuideList from '../components/GuideList.astro';
+import { Empty, EmptyDescription, EmptyHeader, EmptyTitle } from '@/components/ui/empty';
 import { getContent } from '../lib/content';
 import { withBase } from '../lib/url';
 
@@ -8,21 +9,31 @@ const content = await getContent();
 const patch = content.defaultPatch;
 ---
 <Base title="AION 2 Guides">
-  <h1>AION 2 Guides</h1>
-  <p>
-    Class guides and farming &amp; crafting guides for AION 2 on the Global / NA-EU servers.
-    Every page is versioned by patch, and every claim links to the source it came from.
-  </p>
+  <div class="flex flex-col gap-3">
+    <h1 class="text-3xl font-semibold tracking-tight text-balance">AION 2 Guides</h1>
+    <p class="max-w-prose text-muted-foreground">
+      Class guides and farming &amp; crafting guides for AION 2 on the Global / NA-EU servers. Every page is versioned by patch, and
+      every claim links to the source it came from.
+    </p>
+  </div>
   {
     patch ? (
-      <>
-        <h2>
-          Guides for <a href={withBase(`/${patch.meta.id}`)}>{patch.meta.title}</a>
+      <section class="mt-10 flex flex-col gap-4">
+        <h2 class="text-lg font-semibold">
+          Guides for{' '}
+          <a class="underline-offset-4 hover:underline" href={withBase(`/${patch.meta.id}`)}>
+            {patch.meta.title}
+          </a>
         </h2>
         <GuideList patch={patch} prefixed={false} />
-      </>
+      </section>
     ) : (
-      <p class="muted">No patches have been documented yet.</p>
+      <Empty className="mt-10 border">
+        <EmptyHeader>
+          <EmptyTitle>No patches documented yet</EmptyTitle>
+          <EmptyDescription>The first guides will appear here once the Baseline patch is written.</EmptyDescription>
+        </EmptyHeader>
+      </Empty>
     )
   }
 </Base>

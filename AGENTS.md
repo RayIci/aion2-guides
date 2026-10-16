@@ -17,6 +17,7 @@ Product spec: `.scratch/site-v1/spec.md`. Vocabulary: `GLOSSARY.md`; use its ter
 - **Cite or mark.** Every claim gets `[@source-id]` or an honest `[!opinion]` / `[!unverified]`. Show disagreements as `:::conflict`. Never settle one silently.
 - **Global first.** KR/TW-only evidence is capped at Community confidence (ADR-0003).
 - **No game assets.** Text and outbound links only (ADR-0005).
+- **UI is shadcn/ui.** Build UI from shadcn components (`src/components/ui`). Load the `shadcn` and `impeccable` skills before UI work, and `design-taste-frontend` for public-facing pages such as the home page. Interactive parts are React islands (ADR-0006).
 - **The build must pass.** The content validator runs on every build. Fix every error it reports rather than suppressing it.
 
 ## Skills

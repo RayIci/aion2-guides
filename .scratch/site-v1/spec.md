@@ -96,6 +96,7 @@ All research and writing is done by agents. The repo ships its own skills and ru
 - **Search**: Pagefind, indexed per patch, defaulting to the patch being viewed.
 - **Checklists**: progress is kept in browser storage, keyed by section id + item id, ignoring the patch (all access wrapped in try/catch).
 - **Playing mode**: a separate compact route per class that pulls the `play` blocks and `play: true` sections for a chosen mode + stage, and remembers that choice in browser storage.
+- **UI components** (ADR-0006): shadcn/ui on Base UI. Guide nav = `Sidebar` (+ `Collapsible`, mobile `Sheet`); theme = `DropdownMenu`; status/confidence = `Badge`; draft/staged notices = `Alert`; guide lists = `Item`; empty states = `Empty`. Planned: patch switcher = `Select`; search = `Command` in a `Dialog`; checklists = `Checkbox`; diff view = `Tabs`; macro copy = `Button`; conflict alternatives = `Card` or `Tabs`; playing-mode stage picker = `ToggleGroup`.
 - **Region and language**: Global / NA-EU, English only (ADR-0003). No game assets (ADR-0005).
 - **Agent tooling**: `AGENTS.md` (with `CLAUDE.md` importing it), plus the project skills `research-section`, `verify-claim` and `new-patch`. Rules shared by these skills live in `docs/sourcing.md` and `docs/content-model.md`, not inside the skills.
 - **Phasing**: (1) skeleton, patch system, all site features, baseline patch, (2) Gladiator, (3) Assassin, (4) farming/crafting/economy. The owner reviews after each phase. Tickets live in `.scratch/site-v1/issues/`.

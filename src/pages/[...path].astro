@@ -1,14 +1,18 @@
 ---
 import type { GetStaticPaths } from 'astro';
+import { InfoIcon } from 'lucide-react';
 import Base from '../layouts/Base.astro';
 import Guide from '../layouts/Guide.astro';
 import GuideList from '../components/GuideList.astro';
 import SourceList from '../components/SourceList.astro';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { Badge } from '@/components/ui/badge';
 import type { PatchView, ResolvedSection } from '../content-core';
+import { guideOf } from '../content-core';
 import { getContent, sectionPath } from '../lib/content';
 import { guideEntry, guideTitle } from '../lib/guides';
-import { buildNav } from '../lib/nav';
-import { guideOf } from '../content-core';
+import { buildNav, label, toNavItems, type NavNode } from '../lib/nav';
+import { withBase } from '../lib/url';
 
 type Props = { patch: PatchView; section?: ResolvedSection; prefixed: boolean };
 
@@ -28,51 +32,82 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 const { patch, section } = Astro.props;
-const LABEL = { verified: 'Verified', community: 'Community', unverified: 'Unverified' } as const;
-const STATUS = { draft: 'Draft', researched: 'Researched', reviewed: 'Reviewed' } as const;
+const CONFIDENCE = { verified: 'Verified', community: 'Community', unverified: 'Unverified' } as const;
+const STATUS = {
+  draft: { label: 'Draft', variant: 'outline' },
+  researched: { label: 'Researched', variant: 'secondary' },
+  reviewed: { label: 'Reviewed', variant: 'default' },
+} as const;
+const PATCH_STATUS = { staged: 'Staged, not released on Global yet', live: 'Live', superseded: 'Superseded' } as const;
 
-const guide = section && guideOf(section.id);
-const nav = guide && buildNav(patch.sections, guide);
+const href = (id: string) => withBase(`/${patch.meta.id}/${sectionPath(id)}`);
+
+let guideView: { title: string; items: ReturnType<typeof toNavItems>; crumbs: { title: string; href?: string }[] } | undefined;
+if (section) {
+  const guide = guideOf(section.id);
+  const nav = buildNav(patch.sections, guide);
+  const title = guideTitle(patch, guide);
+  // Breadcrumbs: guide, then each folder on the way down (linked when it has an index page), then the section.
+  const crumbs: { title: string; href?: string }[] = [{ title, href: withBase(`/${patch.meta.id}/${guideEntry(patch, guide)}`) }];
+  let node: NavNode | undefined = nav;
+  const parts = section.id.slice(guide.length + 1).split('/').filter((p) => p && p !== 'index');
+  for (const part of parts) {
+    node = node?.children.find((c) => c.name === part);
+    if (!node) break;
+    crumbs.push({ title: label(node), href: node.section ? href(node.section.id) : undefined });
+  }
+  guideView = { title, items: toNavItems(nav, href, section.id), crumbs };
+}
 ---
 {
-  section && guide && nav ? (
+  section && guideView ? (
     <Guide
       title={section.title}
-      guideTitle={guideTitle(patch, guide)}
-      guideHref={`/${patch.meta.id}/${guideEntry(patch, guide)}`}
-      nav={nav}
-      patchId={patch.meta.id}
-      currentId={section.id}
+      guideTitle={guideView.title}
+      patchLabel={`Patch ${patch.meta.id}`}
+      items={guideView.items}
+      crumbs={guideView.crumbs}
     >
-      <header class="section-header">
-        <p class="section-meta">
-          <span class={`status status--${section.status}`}>{STATUS[section.status]}</span>
-          <span>Patch {patch.meta.id}</span>
-          {section.changedHere ? (
-            <span>{patch.meta.parent ? 'Changed in this patch' : 'Written for this patch'}</span>
-          ) : (
-            <span>Unchanged since patch {section.originPatch}</span>
-          )}
+      <header class="flex flex-col gap-3">
+        <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted-foreground">
+          <Badge variant={STATUS[section.status].variant}>{STATUS[section.status].label}</Badge>
+          <span>
+            {section.changedHere
+              ? patch.meta.parent
+                ? `Changed in patch ${patch.meta.id}`
+                : `Written for patch ${patch.meta.id}`
+              : `Unchanged since patch ${section.originPatch}`}
+          </span>
           {section.lastChecked && <span>Last checked {section.lastChecked}</span>}
-        </p>
-        <h1>{section.title}</h1>
+        </div>
+        <h1 class="text-3xl font-semibold tracking-tight text-balance">{section.title}</h1>
         {section.sectionConfidence && (
-          <p class="section-confidence">
-            Section sources: <span class={`cite cite--${section.sectionConfidence}`}><span class="cite__badge">{LABEL[section.sectionConfidence]}</span></span>
+          <p class="flex items-center gap-2 text-sm text-muted-foreground">
+            Section sources
+            <Badge variant={section.sectionConfidence}>{CONFIDENCE[section.sectionConfidence]}</Badge>
           </p>
         )}
       </header>
-      <div class="prose" set:html={section.html} />
+      {section.status === 'draft' && (
+        <Alert className="mt-6">
+          <InfoIcon />
+          <AlertTitle>Draft</AlertTitle>
+          <AlertDescription>This section hasn't been researched yet. Treat it as a placeholder.</AlertDescription>
+        </Alert>
+      )}
+      <div class="prose prose-neutral mt-8 max-w-none dark:prose-invert" set:html={section.html} />
       <SourceList sources={section.sources} />
     </Guide>
   ) : (
     <Base title={patch.meta.title}>
-      <h1>{patch.meta.title}</h1>
-      <p class="muted">
-        {patch.meta.status === 'staged' ? 'Staged, not released on Global yet' : patch.meta.status === 'live' ? 'Live' : 'Superseded'}
-        {patch.meta.released && <> · released {patch.meta.released}</>}
-      </p>
-      <h2>Guides</h2>
+      <div class="flex flex-col gap-2">
+        <h1 class="text-3xl font-semibold tracking-tight">{patch.meta.title}</h1>
+        <p class="text-sm text-muted-foreground">
+          {PATCH_STATUS[patch.meta.status]}
+          {patch.meta.released && <> · released {patch.meta.released}</>}
+        </p>
+      </div>
+      <h2 class="mt-10 mb-4 text-lg font-semibold">Guides</h2>
       <GuideList patch={patch} prefixed />
     </Base>
   )

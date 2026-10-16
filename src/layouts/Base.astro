@@ -1,56 +1,54 @@
 ---
 import '../styles/global.css';
+import { ModeToggle } from '@/components/site/mode-toggle';
 import { withBase } from '../lib/url';
 
 interface Props {
   title: string;
   description?: string;
-  /** Wider main column for pages with a sidebar. */
-  wide?: boolean;
+  /** Pages with their own shell (guide pages) skip the simple site header. */
+  bare?: boolean;
 }
 
-const { title, description = 'Patch-versioned, source-cited AION 2 guides for Global / NA-EU.', wide = false } = Astro.props;
+const { title, description = 'Patch-versioned, source-cited AION 2 guides for Global / NA-EU.', bare = false } = Astro.props;
 const fullTitle = title === 'AION 2 Guides' ? title : `${title} · AION 2 Guides`;
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <title>{fullTitle}</title>
     <script is:inline>
-      // Apply the saved theme before first paint; dark is the default.
+      // Apply the saved theme before first paint. Dark is the default; same rule as ModeToggle.
       try {
-        if (localStorage.getItem('theme') === 'light') document.documentElement.dataset.theme = 'light';
+        const t = localStorage.getItem('theme');
+        const dark = t === 'light' ? false : t === 'system' ? matchMedia('(prefers-color-scheme: dark)').matches : true;
+        document.documentElement.classList.toggle('dark', dark);
       } catch {}
     </script>
   </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href={withBase('/')}>AION 2 Guides</a>
-      <nav aria-label="Main">
-        <a href={withBase('/')}>Home</a>
-      </nav>
-      <button class="theme-toggle" type="button" aria-label="Toggle light/dark theme">Theme</button>
-    </header>
-    <main class:list={{ wide }}>
-      <slot />
-    </main>
-    <footer class="site-footer">
-      Fan-made guide for AION 2 (Global / NA-EU). Not affiliated with NCSoft. Every claim links to its source.
-    </footer>
-    <script>
-      const toggle = document.querySelector<HTMLButtonElement>('.theme-toggle');
-      toggle?.addEventListener('click', () => {
-        const root = document.documentElement;
-        const light = root.dataset.theme !== 'light';
-        if (light) root.dataset.theme = 'light';
-        else delete root.dataset.theme;
-        try {
-          localStorage.setItem('theme', light ? 'light' : 'dark');
-        } catch {}
-      });
-    </script>
+  <body class="min-h-svh">
+    {
+      bare ? (
+        <slot />
+      ) : (
+        <>
+          <header class="sticky top-0 z-10 flex h-14 items-center gap-4 border-b bg-background px-4 md:px-8">
+            <a class="font-semibold" href={withBase('/')}>AION 2 Guides</a>
+            <div class="ml-auto">
+              <ModeToggle client:load />
+            </div>
+          </header>
+          <main class="mx-auto w-full max-w-3xl px-4 py-10 md:px-8">
+            <slot />
+          </main>
+          <footer class="mx-auto w-full max-w-3xl px-4 pb-10 text-sm text-muted-foreground md:px-8">
+            Fan-made guide for AION 2 (Global / NA-EU). Not affiliated with NCSOFT. Every claim links to its source.
+          </footer>
+        </>
+      )
+    }
   </body>
 </html>

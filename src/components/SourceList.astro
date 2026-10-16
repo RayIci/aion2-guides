@@ -1,5 +1,7 @@
 ---
 import type { Source } from '../content-core';
+import { Badge } from '@/components/ui/badge';
+import { Separator } from '@/components/ui/separator';
 
 interface Props {
   sources: Source[];
@@ -10,22 +12,30 @@ const TYPE = { official: 'Official', data: 'Data', creator: 'Creator', community
 ---
 {
   sources.length > 0 && (
-    <section class="sources" aria-labelledby="sources-heading">
-      <h2 id="sources-heading">Sources</h2>
-      <ol>
+    <section aria-labelledby="sources-heading" class="mt-12 flex flex-col gap-4">
+      <Separator />
+      <h2 id="sources-heading" class="text-base font-semibold">Sources</h2>
+      <ol class="flex flex-col gap-3 text-sm">
         {sources.map((s, i) => (
-          <li id={`src-${i + 1}`}>
-            <a href={s.url} rel="noopener" target="_blank">{s.title}</a>
-            {s.author && <span> · {s.author}</span>}
-            <span class="source-meta">
-              {' '}· {TYPE[s.type]} · {s.region.toUpperCase()}
-              {s.about_patch && <> · about {s.about_patch}</>} · accessed {s.accessed}
-            </span>
-            {s.archived_url && (
-              <>
-                {' '}· <a href={s.archived_url} rel="noopener" target="_blank">archived</a>
-              </>
-            )}
+          <li id={`src-${i + 1}`} class="flex gap-3 rounded-md target:bg-muted">
+            <span class="w-5 shrink-0 text-right text-muted-foreground tabular-nums">{i + 1}.</span>
+            <div class="flex min-w-0 flex-col gap-1">
+              <a href={s.url} rel="noopener" target="_blank" class="font-medium underline-offset-4 hover:underline">
+                {s.title}
+              </a>
+              <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-muted-foreground">
+                <Badge variant="outline">{TYPE[s.type]}</Badge>
+                <span>{s.region.toUpperCase()}</span>
+                {s.author && <span>{s.author}</span>}
+                {s.about_patch && <span>about {s.about_patch}</span>}
+                <span>accessed {s.accessed}</span>
+                {s.archived_url && (
+                  <a href={s.archived_url} rel="noopener" target="_blank" class="underline underline-offset-4 hover:text-foreground">
+                    archived copy
+                  </a>
+                )}
+              </div>
+            </div>
           </li>
         ))}
       </ol>

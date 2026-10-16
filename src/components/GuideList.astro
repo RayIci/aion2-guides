@@ -1,5 +1,6 @@
 ---
 import type { PatchView } from '../content-core';
+import { GuideList, type GuideListEntry } from '@/components/site/guide-list';
 import { guidesIn } from '../lib/nav';
 import { guideTitle, guideEntry } from '../lib/guides';
 import { withBase } from '../lib/url';
@@ -10,28 +11,16 @@ interface Props {
 }
 
 const { patch, prefixed } = Astro.props;
-const guides = guidesIn(patch.sections);
+const guides: GuideListEntry[] = guidesIn(patch.sections).map((g) => {
+  const row = patch.coverage.find((c) => c.guide === g);
+  return {
+    id: g,
+    title: guideTitle(patch, g),
+    href: withBase(prefixed ? `/${patch.meta.id}/${guideEntry(patch, g)}` : `/${guideEntry(patch, g)}`),
+    sections: row?.sections,
+    drafts: row?.drafts,
+    claims: row?.claims,
+  };
+});
 ---
-{
-  guides.length === 0 ? (
-    <p class="muted">No guides in this patch yet.</p>
-  ) : (
-    <ul class="guide-list">
-      {guides.map((g) => {
-        const entry = guideEntry(patch, g)!;
-        const row = patch.coverage.find((c) => c.guide === g);
-        return (
-          <li>
-            <a href={withBase(prefixed ? `/${patch.meta.id}/${entry}` : `/${entry}`)}>{guideTitle(patch, g)}</a>
-            {row && (
-              <span class="muted">
-                {' '}· {row.sections} sections ({row.drafts} draft) · {row.claims.verified} verified / {row.claims.community} community /{' '}
-                {row.claims.unverified} unverified claims
-              </span>
-            )}
-          </li>
-        );
-      })}
-    </ul>
-  )
-}
+<GuideList guides={guides} />
