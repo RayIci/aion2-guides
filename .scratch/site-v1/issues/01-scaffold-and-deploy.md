@@ -6,7 +6,11 @@
 
 **Status:** ready-for-agent
 
-- [ ] `npm run build` produces a static site; `npm run dev` serves it locally
+- [x] `npm run build` produces a static site; `npm run dev` serves it locally
 - [ ] Push to `main` deploys to Pages; the home page loads at the Pages URL
-- [ ] Dark theme by default, light toggle, readable at 400px width
-- [ ] Vitest configured with one passing placeholder test
+- [x] Dark theme by default, light toggle, readable at 400px width
+- [x] Vitest configured with one passing placeholder test
+
+## Comments
+
+2026-10-16: Scaffold done (commit c6e81cf). `npm run build`, `npm run dev` and `npm test` all work. A build with `BASE_PATH=/aion2-guides` gives correctly prefixed links. The deploy workflow is at `.github/workflows/deploy.yml`. Still open: create the public GitHub repo, push, and set Settings → Pages → Source = GitHub Actions. Then confirm the Pages URL loads.
