@@ -8,7 +8,7 @@ export function DiffView({ hunks }: { hunks: Hunk[] }) {
   return (
     <div className="flex flex-col gap-2">
       {hunks.map((hunk, i) => (
-        <pre key={i} className="overflow-x-auto rounded-lg border bg-muted/40 py-2 font-mono text-xs leading-relaxed">
+        <pre key={i} className="overflow-x-auto bg-muted py-2 font-mono text-sm leading-relaxed" data-ui>
           {hunk.map((line, j) => (
             <div
               key={j}

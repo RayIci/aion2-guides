@@ -10,7 +10,6 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
-import { Separator } from "@/components/ui/separator"
 import {
   Sidebar,
   SidebarContent,
@@ -69,7 +68,7 @@ export function GuideShell({ siteHref, guideTitle, patchLabel, items, crumbs, pa
             <SidebarMenuItem>
               <SidebarMenuButton size="lg" render={<a href={siteHref} />}>
                 <div className="flex flex-col gap-0.5 leading-none">
-                  <span className="font-semibold">AION 2 Guides</span>
+                  <span className="font-heading text-base font-bold">AION 2 Guides</span>
                   <span className="text-xs text-muted-foreground">{patchLabel}</span>
                 </div>
               </SidebarMenuButton>
@@ -99,9 +98,8 @@ export function GuideShell({ siteHref, guideTitle, patchLabel, items, crumbs, pa
         <SidebarRail />
       </Sidebar>
       <SidebarInset>
-        <header className="sticky top-0 z-10 flex h-14 shrink-0 items-center gap-2 border-b bg-background px-4">
+        <header className="sticky top-0 z-10 flex h-14 shrink-0 items-center gap-2 bg-background px-4">
           <SidebarTrigger className="-ml-1" />
-          <Separator orientation="vertical" className="mr-2 data-vertical:h-4 data-vertical:self-center" />
           <Breadcrumb className="min-w-0 flex-1">
             <BreadcrumbList>
               {crumbs.map((crumb, i) => (
@@ -120,7 +118,7 @@ export function GuideShell({ siteHref, guideTitle, patchLabel, items, crumbs, pa
           </Breadcrumb>
           <HeaderControls patch={patch} />
         </header>
-        <div className="mx-auto w-full max-w-3xl px-4 py-8 md:px-8">{children}</div>
+        <div className="mx-auto w-full max-w-3xl px-4 py-10 md:px-8">{children}</div>
       </SidebarInset>
     </SidebarProvider>
   )

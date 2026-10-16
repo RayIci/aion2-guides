@@ -15,7 +15,7 @@ export interface PatchNav {
 export function HeaderControls({ patch }: { patch?: PatchNav }) {
   const currentTitle = patch?.options.find((o) => o.id === patch.current)?.title ?? patch?.current
   return (
-    <div className="ml-auto flex items-center gap-1">
+    <div className="ml-auto flex items-center gap-1" data-ui>
       {patch && (
         <>
           <SearchDialog patchId={patch.current} patchTitle={currentTitle ?? ""} />

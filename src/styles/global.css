@@ -1,94 +1,101 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-@import "@fontsource-variable/geist";
+@import "@fontsource-variable/alegreya";
+@import "@fontsource/alegreya-sc/500.css";
+@import "@fontsource/alegreya-sc/700.css";
+@import "@fontsource/alegreya-sc/800.css";
 @plugin "@tailwindcss/typography";
 
-/* Dark is the default theme (the site is read next to the game); `.dark` on <html> is set
-   before first paint by Base.astro and removed only when the visitor picks light. */
+/* Night Rulebook: a tabletop rulebook in a dark edition (charcoal stock, paper ink, crimson
+   rules, gold and slate-blue as the two other inks). Dark is the default theme (the site is read
+   next to the game); `.dark` on <html> is set before first paint by Base.astro. */
 @custom-variant dark (&:is(.dark *));
 
 :root {
   color-scheme: light;
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --background: oklch(0.972 0.004 85);
+  --foreground: oklch(0.2 0.006 60);
+  --card: oklch(0.945 0.006 85);
+  --card-foreground: oklch(0.2 0.006 60);
+  --popover: oklch(0.985 0.003 85);
+  --popover-foreground: oklch(0.2 0.006 60);
+  --primary: oklch(0.5 0.15 27);
+  --primary-foreground: oklch(0.985 0.003 85);
+  --secondary: oklch(0.925 0.008 85);
+  --secondary-foreground: oklch(0.2 0.006 60);
+  --muted: oklch(0.935 0.007 85);
+  --muted-foreground: oklch(0.45 0.012 70);
+  --accent: oklch(0.925 0.008 85);
+  --accent-foreground: oklch(0.2 0.006 60);
+  --destructive: oklch(0.5 0.17 27);
+  --border: oklch(0.89 0.008 85);
+  --input: oklch(0.86 0.01 85);
+  --ring: oklch(0.62 0.09 80);
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar: oklch(0.945 0.006 85);
+  --sidebar-foreground: oklch(0.2 0.006 60);
+  --sidebar-primary: oklch(0.5 0.15 27);
+  --sidebar-primary-foreground: oklch(0.985 0.003 85);
+  --sidebar-accent: oklch(0.91 0.009 85);
+  --sidebar-accent-foreground: oklch(0.2 0.006 60);
+  --sidebar-border: oklch(0.89 0.008 85);
+  --sidebar-ring: oklch(0.62 0.09 80);
   /* Confidence (docs/sourcing.md): text-safe on --background in each theme. */
-  --verified: oklch(0.52 0.13 155);
-  --community: oklch(0.55 0.12 75);
-  --unverified: oklch(0.55 0.19 27);
+  --verified: oklch(0.45 0.08 245);
+  --community: oklch(0.5 0.09 75);
+  --unverified: oklch(0.5 0.15 27);
 }
 
 .dark {
   color-scheme: dark;
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
+  --background: oklch(0.2 0.005 270);
+  --foreground: oklch(0.93 0.006 90);
+  --card: oklch(0.235 0.006 270);
+  --card-foreground: oklch(0.93 0.006 90);
+  --popover: oklch(0.255 0.006 270);
+  --popover-foreground: oklch(0.93 0.006 90);
+  --primary: oklch(0.64 0.14 27);
+  --primary-foreground: oklch(0.18 0.005 270);
+  --secondary: oklch(0.27 0.006 270);
+  --secondary-foreground: oklch(0.93 0.006 90);
+  --muted: oklch(0.255 0.006 270);
+  --muted-foreground: oklch(0.72 0.02 80);
+  --accent: oklch(0.285 0.007 270);
+  --accent-foreground: oklch(0.93 0.006 90);
+  --destructive: oklch(0.64 0.14 27);
+  --border: oklch(0.3 0.006 270);
+  --input: oklch(0.33 0.007 270);
+  --ring: oklch(0.74 0.09 80);
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
-  --verified: oklch(0.78 0.14 155);
-  --community: oklch(0.82 0.13 85);
-  --unverified: oklch(0.72 0.16 25);
+  --sidebar: oklch(0.175 0.005 270);
+  --sidebar-foreground: oklch(0.93 0.006 90);
+  --sidebar-primary: oklch(0.64 0.14 27);
+  --sidebar-primary-foreground: oklch(0.18 0.005 270);
+  --sidebar-accent: oklch(0.255 0.006 270);
+  --sidebar-accent-foreground: oklch(0.93 0.006 90);
+  --sidebar-border: oklch(0.255 0.006 270);
+  --sidebar-ring: oklch(0.74 0.09 80);
+  --verified: oklch(0.75 0.07 245);
+  --community: oklch(0.78 0.09 80);
+  --unverified: oklch(0.7 0.13 27);
 }
 
 @theme inline {
-  --font-heading: var(--font-sans);
-  --font-sans: 'Geist Variable', sans-serif;
+  --font-heading: var(--font-display);
+  --font-sans: 'Alegreya Variable', Georgia, serif;
+  --font-display: 'Alegreya SC', 'Alegreya Variable', Georgia, serif;
+  --color-gold: var(--community);
+  --color-slate: var(--verified);
   --color-verified: var(--verified);
   --color-community: var(--community);
   --color-unverified: var(--unverified);
@@ -177,16 +184,16 @@
     @apply whitespace-nowrap;
   }
   .cite__badge {
-    @apply ms-1 inline-flex h-5 w-fit items-center rounded-4xl border px-2 align-[0.1em] text-xs leading-none font-medium whitespace-nowrap;
+    @apply ms-1 inline-flex h-6 w-fit items-center rounded-4xl px-2.5 align-[0.05em] text-[13px] leading-none font-semibold whitespace-nowrap;
   }
   .cite--verified .cite__badge {
-    @apply border-verified/40 text-verified;
+    @apply bg-verified/15 text-verified;
   }
   .cite--community .cite__badge {
-    @apply border-community/40 text-community;
+    @apply bg-community/15 text-community;
   }
   .cite--unverified .cite__badge {
-    @apply border-unverified/40 text-unverified;
+    @apply bg-unverified/15 text-unverified;
   }
   .cite__refs {
     @apply ms-0.5 text-[0.7em] font-medium;
@@ -209,7 +216,7 @@
 }
 
 .conflict {
-  @apply my-6 flex flex-col gap-1 rounded-xl border border-community/40 bg-community/5 px-4 py-3 text-sm;
+  @apply my-8 flex flex-col gap-2 bg-community/10 px-6 py-5 text-base;
 }
 .conflict > * {
   @apply my-0;
@@ -222,21 +229,21 @@
 }
 
 .macro {
-  @apply my-6 overflow-hidden rounded-xl border bg-muted/40;
+  @apply my-8 overflow-hidden bg-muted;
 }
 .macro__caption {
-  @apply m-0 flex items-center justify-between gap-2 border-b px-3 py-1.5 text-xs font-medium text-muted-foreground;
+  @apply m-0 flex items-center justify-between gap-2 bg-secondary px-4 py-2 text-[15px] font-semibold text-foreground;
 }
 .macro pre {
   @apply m-0 rounded-none p-3 text-sm leading-relaxed;
 }
 .macro__copy,
 .checklist__reset {
-  @apply inline-flex h-6 cursor-pointer items-center rounded-md border border-border bg-background px-2 text-xs font-medium text-foreground transition-colors hover:bg-muted focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none dark:border-input dark:bg-input/30 dark:hover:bg-input/50;
+  @apply inline-flex h-8 cursor-pointer items-center bg-primary px-3 text-[14px] font-semibold text-primary-foreground transition-[background-color,transform] hover:bg-primary/85 active:translate-y-px focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none;
 }
 
 .checklist {
-  @apply my-6 flex flex-col gap-2 rounded-xl border px-4 py-3;
+  @apply my-8 flex flex-col gap-3 bg-muted px-6 py-5;
 }
 .checklist > * {
   @apply my-0;
@@ -257,7 +264,7 @@
   @apply text-muted-foreground line-through decoration-muted-foreground/60;
 }
 .checklist input[type='checkbox'] {
-  @apply mt-[0.3em] size-4 shrink-0 cursor-pointer appearance-none rounded-[4px] border border-input bg-background shadow-xs transition-colors focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none disabled:cursor-default dark:bg-input/30;
+  @apply mt-[0.35em] size-[18px] shrink-0 cursor-pointer appearance-none rounded-[4px] border-2 border-muted-foreground/70 bg-background transition-colors focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none disabled:cursor-default dark:bg-input/30;
 }
 .checklist input[type='checkbox']:checked {
   @apply border-primary bg-primary bg-center bg-no-repeat;
@@ -268,6 +275,6 @@
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23262626' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
 }
 .checklist__footer {
-  @apply flex items-center justify-between gap-2 border-t pt-2 text-xs text-muted-foreground tabular-nums;
+  @apply mt-1 flex items-center justify-between gap-2 text-[15px] text-muted-foreground tabular-nums;
 }
 

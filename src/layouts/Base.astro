@@ -37,8 +37,8 @@ const fullTitle = title === 'AION 2 Guides' ? title : `${title} · AION 2 Guides
         <slot />
       ) : (
         <>
-          <header class="sticky top-0 z-10 flex h-14 items-center gap-4 border-b bg-background px-4 md:px-8">
-            <a class="font-semibold" href={withBase('/')}>AION 2 Guides</a>
+          <header class="sticky top-0 z-10 flex h-14 items-center gap-4 bg-background px-4 md:px-8">
+            <a class="font-heading text-lg font-bold" href={withBase('/')}>AION 2 Guides</a>
             <HeaderControls client:load patch={patch} />
           </header>
           <main class="mx-auto w-full max-w-3xl px-4 py-10 md:px-8">

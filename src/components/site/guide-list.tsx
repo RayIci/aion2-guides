@@ -16,7 +16,7 @@ export interface GuideListEntry {
 export function GuideList({ guides }: { guides: GuideListEntry[] }) {
   if (guides.length === 0) {
     return (
-      <Empty className="border">
+      <Empty className="bg-muted">
         <EmptyHeader>
           <EmptyTitle>No guides in this patch yet</EmptyTitle>
           <EmptyDescription>Guides appear here once their first section is written.</EmptyDescription>

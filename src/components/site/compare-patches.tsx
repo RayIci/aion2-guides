@@ -129,7 +129,7 @@ export function ComparePatches({ patches }: { patches: PatchRef[] }) {
         </div>
       )}
       {state.kind === "error" && (
-        <Empty className="border">
+        <Empty className="bg-muted">
           <EmptyHeader>
             <EmptyTitle>Couldn't load the patches</EmptyTitle>
             <EmptyDescription>Reload the page to try again.</EmptyDescription>
@@ -137,7 +137,7 @@ export function ComparePatches({ patches }: { patches: PatchRef[] }) {
         </Empty>
       )}
       {state.kind === "done" && rows.length === 0 && (
-        <Empty className="border">
+        <Empty className="bg-muted">
           <EmptyHeader>
             <EmptyTitle>{from === to ? "Pick two different patches" : "No differences"}</EmptyTitle>
             <EmptyDescription>
@@ -147,9 +147,9 @@ export function ComparePatches({ patches }: { patches: PatchRef[] }) {
         </Empty>
       )}
       {state.kind === "done" && rows.length > 0 && (
-        <ol className="flex flex-col divide-y rounded-xl border">
+        <ol className="flex flex-col gap-1.5">
           {rows.map((row) => (
-            <li key={row.id} className="flex flex-col gap-1 p-4">
+            <li key={row.id} className="flex flex-col gap-1 bg-muted p-4">
               <div className="flex flex-wrap items-center gap-2">
                 <Badge variant={KIND[row.kind].variant}>{KIND[row.kind].label}</Badge>
                 <a className="font-medium underline-offset-4 hover:underline" href={row.href}>

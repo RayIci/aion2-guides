@@ -27,7 +27,7 @@ const nav = patchNav(content, patch, undefined, withBase);
 nav.options = nav.options.map((o) => ({ ...o, href: withBase(`/${o.id}/coverage`) }));
 ---
 <Base title={`Coverage · ${patch.meta.title}`} patch={nav}>
-  <h1 class="text-3xl font-semibold tracking-tight text-balance">Source coverage</h1>
+  <h1 class="font-heading text-[clamp(2.5rem,4.5vw,4rem)] leading-[0.95] font-extrabold tracking-[-0.02em] text-balance">Source coverage</h1>
   <p class="mt-2 text-muted-foreground">
     How well each guide in {patch.meta.title} is backed by sources. A claim is each inline citation, plus one per section-level
     source list. The goal is mostly Verified.
@@ -35,14 +35,14 @@ nav.options = nav.options.map((o) => ({ ...o, href: withBase(`/${o.id}/coverage`
 
   {
     rows.length === 0 ? (
-      <Empty className="mt-8 border">
+      <Empty className="mt-8 bg-muted">
         <EmptyHeader>
           <EmptyTitle>No guide sections yet</EmptyTitle>
           <EmptyDescription>Coverage appears once the first sections are written.</EmptyDescription>
         </EmptyHeader>
       </Empty>
     ) : (
-      <div class="mt-8 overflow-x-auto rounded-xl border">
+      <div class="mt-8 overflow-x-auto bg-muted px-2">
         <Table>
           <TableHeader>
             <TableRow>

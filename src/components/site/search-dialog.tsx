@@ -99,7 +99,7 @@ export function SearchDialog({ patchId, patchTitle }: { patchId: string; patchTi
       <CommandDialog open={open} onOpenChange={setOpen} title="Search guides" description="Search every guide section in this patch.">
         <Command shouldFilter={false}>
           <CommandInput placeholder="Search skills, materials, maps…" value={query} onValueChange={setQuery} />
-          <div className="flex items-center gap-2 border-b px-3 py-2">
+          <div className="flex items-center gap-2 px-3 py-2">
             <Switch id="search-all-patches" size="sm" checked={allPatches} onCheckedChange={setAllPatches} />
             <Label htmlFor="search-all-patches" className="text-xs font-normal text-muted-foreground">
               {allPatches ? "Searching all patches" : `Only ${patchTitle}`}

@@ -5,7 +5,6 @@ import PatchNotice from '../../components/PatchNotice.astro';
 import SourceList from '../../components/SourceList.astro';
 import { Badge } from '@/components/ui/badge';
 import { Empty, EmptyDescription, EmptyHeader, EmptyTitle } from '@/components/ui/empty';
-import { Separator } from '@/components/ui/separator';
 import { ChangelogDiff } from '@/components/site/changelog-diff';
 import type { PatchView } from '../../content-core';
 import { getContent } from '../../lib/content';
@@ -32,7 +31,7 @@ const KIND = {
 <Base title={`Changelog · ${patch.meta.title}`} patch={patchNav(content, patch, undefined, withBase)}>
   <PatchNotice patch={patch} liveHref={liveHref} />
   <div class="flex flex-col gap-2">
-    <h1 class="text-3xl font-semibold tracking-tight text-balance">Changelog: {patch.meta.title}</h1>
+    <h1 class="font-heading text-[clamp(2.5rem,4.5vw,4rem)] leading-[0.95] font-extrabold tracking-[-0.02em] text-balance">Changelog: {patch.meta.title}</h1>
     <p class="flex flex-wrap gap-x-3 text-sm text-muted-foreground">
       {patch.meta.released && <span>Released {patch.meta.released}</span>}
       {parent ? <span>Changes since {parent.meta.title}</span> : <span>Baseline patch: the first one documented in full</span>}
@@ -61,7 +60,7 @@ const KIND = {
   <h2 class="mt-12 mb-4 text-lg font-semibold">Guide changes</h2>
   {
     groups.length === 0 ? (
-      <Empty className="border">
+      <Empty className="bg-muted">
         <EmptyHeader>
           <EmptyTitle>{parent ? 'No guide sections changed' : 'Nothing to compare yet'}</EmptyTitle>
           <EmptyDescription>
@@ -76,10 +75,9 @@ const KIND = {
         {groups.map((group) => (
           <section class="flex flex-col gap-4">
             <h3 class="font-semibold">{group.title}</h3>
-            <ol class="flex flex-col gap-6">
+            <ol class="flex flex-col gap-1.5">
               {group.entries.map((e, i) => (
-                <li class="flex flex-col gap-2">
-                  {i > 0 && <Separator className="mb-4" />}
+                <li class="flex flex-col gap-2 bg-muted p-5">
                   <div class="flex flex-wrap items-center gap-2">
                     <Badge variant={KIND[e.kind].variant}>{KIND[e.kind].label}</Badge>
                     {e.href ? (
