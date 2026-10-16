@@ -4,6 +4,10 @@
 
 **Blocked by:** 01, 02, 03, 04, 05, 06, 07, 08, 09, 10
 
-**Status:** ready-for-human
+**Status:** done
 
-- [ ] Owner approves the site and the outline as confirmed by ticket 10
+- [x] Owner approves the site and the outline as confirmed by ticket 10
+
+## Comments
+
+2026-10-16: Approved by the owner ("go ahead"), after the UI was simplified to plain text at their request.
