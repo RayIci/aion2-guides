@@ -1,5 +1,5 @@
 import * as React from "react"
-import { ChevronRightIcon, CircleDotIcon } from "lucide-react"
+import { ChevronRightIcon, CircleDotIcon, Gamepad2Icon } from "lucide-react"
 
 import {
   Breadcrumb,
@@ -14,6 +14,7 @@ import { Separator } from "@/components/ui/separator"
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarGroup,
   SidebarGroupLabel,
   SidebarHeader,
@@ -54,10 +55,12 @@ interface GuideShellProps {
   items: NavItem[]
   crumbs: Crumb[]
   patch: PatchNav
+  /** Playing mode for this guide in the viewed patch. */
+  playHref: string
   children?: React.ReactNode
 }
 
-export function GuideShell({ siteHref, guideTitle, patchLabel, items, crumbs, patch, children }: GuideShellProps) {
+export function GuideShell({ siteHref, guideTitle, patchLabel, items, crumbs, patch, playHref, children }: GuideShellProps) {
   return (
     <SidebarProvider>
       <Sidebar>
@@ -83,6 +86,16 @@ export function GuideShell({ siteHref, guideTitle, patchLabel, items, crumbs, pa
             </SidebarMenu>
           </SidebarGroup>
         </SidebarContent>
+        <SidebarFooter>
+          <SidebarMenu>
+            <SidebarMenuItem>
+              <SidebarMenuButton render={<a href={playHref} />}>
+                <Gamepad2Icon />
+                <span>Playing mode</span>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          </SidebarMenu>
+        </SidebarFooter>
         <SidebarRail />
       </Sidebar>
       <SidebarInset>

@@ -273,6 +273,19 @@ describe('blocks', () => {
     expect(html).toContain('data-checklist-id="wings"');
   });
 
+  it('exposes play blocks separately, or the whole body for play: true sections', async () => {
+    const g = await build({
+      'patches/1.0/patch.md': patch('1.0'),
+      'patches/1.0/sections/a.md': section({ title: 'A' }, 'intro\n\n:::play\nOpener\n:::\n\nmore\n\n:::play\nBurst\n:::'),
+      'patches/1.0/sections/b.md': section({ title: 'B', play: true }, 'all of it'),
+    });
+    const [a, b] = g.defaultPatch!.sections;
+    expect(a.playBlocks).toHaveLength(2);
+    expect(a.playBlocks[0]).toContain('Opener');
+    expect(a.playBlocks[0]).not.toContain('intro');
+    expect(b.playBlocks).toEqual([b.html]);
+  });
+
   it('reports unknown blocks', async () => {
     const { errors } = await render(':::tip\nhello\n:::');
     expect(errors.join('\n')).toMatch(/unknown block ":::tip"/);

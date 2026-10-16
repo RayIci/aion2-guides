@@ -12,12 +12,13 @@ interface Props {
   items: NavItemData[];
   crumbs: Crumb[];
   patch: PatchNav;
+  playHref: string;
 }
 
-const { title, guideTitle, patchLabel, items, crumbs, patch } = Astro.props;
+const { title, guideTitle, patchLabel, items, crumbs, patch, playHref } = Astro.props;
 ---
 <Base title={`${title} · ${guideTitle}`} bare>
-  <GuideShell client:load siteHref={withBase('/')} guideTitle={guideTitle} patchLabel={patchLabel} items={items} crumbs={crumbs} patch={patch}>
+  <GuideShell client:load siteHref={withBase('/')} guideTitle={guideTitle} patchLabel={patchLabel} items={items} crumbs={crumbs} patch={patch} playHref={playHref}>
     <slot />
   </GuideShell>
 </Base>

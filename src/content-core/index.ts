@@ -16,6 +16,8 @@ export interface ResolvedSection {
   status: 'draft' | 'researched' | 'reviewed';
   lastChecked?: string;
   play: boolean;
+  /** HTML of the section's `:::play` blocks (the whole body counts when `play` is true). */
+  playBlocks: string[];
   /** Patch whose file this copy comes from. */
   originPatch: string;
   /** True when the viewed patch itself overrides or adds this section. */
@@ -185,6 +187,7 @@ function toResolved(
     status: section.meta.status,
     lastChecked: section.meta.last_checked,
     play: section.meta.play,
+    playBlocks: section.meta.play ? [r.html] : r.playBlocks,
     originPatch: origin,
     changedHere,
     body: section.body,

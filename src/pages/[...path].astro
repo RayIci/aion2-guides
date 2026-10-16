@@ -75,6 +75,7 @@ if (section) {
       items={guideView.items}
       crumbs={guideView.crumbs}
       patch={headerPatch}
+      playHref={withBase(`/${patch.meta.id}/play/${guideOf(section.id)}`)}
     >
       <PatchNotice patch={patch} liveHref={liveHref} />
       {/* Search index (Pagefind): only the patch-prefixed copy of each section, filterable by patch. */}

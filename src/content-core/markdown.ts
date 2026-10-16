@@ -1,4 +1,5 @@
-import type { Element, ElementContent } from 'hast';
+import type { Element, ElementContent, Root as HastRoot } from 'hast';
+import { toHtml } from 'hast-util-to-html';
 import type { ListItem, Paragraph, PhrasingContent, Root, RootContent, Text } from 'mdast';
 import rehypeStringify from 'rehype-stringify';
 import remarkDirective from 'remark-directive';
@@ -25,6 +26,8 @@ export interface RenderResult {
   /** Source ids in citation-number order (inline first-use order, then section-level). */
   sourceOrder: string[];
   checklistIds: string[];
+  /** HTML of each `:::play` block, in document order (for playing mode). */
+  playBlocks: string[];
   issues: string[];
 }
 
@@ -36,7 +39,7 @@ export async function renderSection(
   body: string,
   ctx: { sources: ReadonlyMap<string, Source>; sectionSources: string[] },
 ): Promise<RenderResult> {
-  const state: RenderResult = { html: '', claims: [], sourceOrder: [], checklistIds: [], issues: [] };
+  const state: RenderResult = { html: '', claims: [], sourceOrder: [], checklistIds: [], playBlocks: [], issues: [] };
   const numberOf = (id: string) => {
     let n = state.sourceOrder.indexOf(id);
     if (n === -1) n = state.sourceOrder.push(id) - 1;
@@ -54,6 +57,13 @@ export async function renderSection(
       restoreStrayDirectives(tree);
     })
     .use(remarkRehype)
+    .use(() => (tree: HastRoot) => {
+      visit(tree, 'element', (node: Element) => {
+        if (node.properties?.dataPlay === undefined) return;
+        state.playBlocks.push(toHtml(node));
+        return SKIP;
+      });
+    })
     .use(rehypeStringify)
     .process(body);
 

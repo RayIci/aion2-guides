@@ -1,0 +1,88 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { ArrowLeftIcon } from 'lucide-react';
+import Base from '../../../layouts/Base.astro';
+import PatchNotice from '../../../components/PatchNotice.astro';
+import { PlayPicker } from '@/components/site/play-picker';
+import { Empty, EmptyDescription, EmptyHeader, EmptyTitle } from '@/components/ui/empty';
+import type { PatchView } from '../../../content-core';
+import { getContent } from '../../../lib/content';
+import { guideEntry, guideTitle } from '../../../lib/guides';
+import { guidesIn } from '../../../lib/nav';
+import { patchNav } from '../../../lib/patches';
+import { playModel, type PlayGroup } from '../../../lib/play';
+import { withBase } from '../../../lib/url';
+
+export const getStaticPaths = (async () => {
+  const content = await getContent();
+  return content.patches.flatMap((patch) =>
+    guidesIn(patch.sections).map((guide) => ({ params: { patch: patch.meta.id, guide }, props: { patch, guide } })),
+  );
+}) satisfies GetStaticPaths;
+
+const { patch, guide } = Astro.props as { patch: PatchView; guide: string };
+const content = await getContent();
+const model = playModel(patch, guide, withBase);
+const title = guideTitle(patch, guide);
+const groups: { kind: string; group: PlayGroup }[] = [
+  ...model.stages.map((group) => ({ kind: 'stage', group })),
+  ...model.modes.map((group) => ({ kind: 'mode', group })),
+  ...(model.general.items.length ? [{ kind: 'general', group: model.general }] : []),
+];
+const nav = patchNav(content, patch, undefined, withBase);
+// The switcher should keep you in playing mode when you change patch.
+nav.options = nav.options.map((o) => ({ ...o, href: withBase(`/${o.id}/play/${guide}`) }));
+const empty = groups.length === 0;
+---
+<Base title={`Playing mode · ${title}`} patch={nav}>
+  <PatchNotice patch={patch} />
+  <div class="flex flex-col gap-6">
+    <div class="flex flex-col gap-1">
+      <a class="flex w-fit items-center gap-1 text-sm text-muted-foreground hover:text-foreground" href={withBase(`/${patch.meta.id}/${guideEntry(patch, guide)}`)}>
+        <ArrowLeftIcon className="size-4" /> Full guide
+      </a>
+      <h1 class="text-2xl font-semibold tracking-tight">{title}: playing mode</h1>
+    </div>
+    {
+      empty ? (
+        <Empty className="border">
+          <EmptyHeader>
+            <EmptyTitle>Nothing marked for playing mode yet</EmptyTitle>
+            <EmptyDescription>Rotations, macros and checklists show up here once the guide marks them with play blocks.</EmptyDescription>
+          </EmptyHeader>
+        </Empty>
+      ) : (
+        <PlayPicker
+          client:load
+          stages={model.stages.map((g) => ({ key: g.key, label: g.label }))}
+          modes={model.modes.map((g) => ({ key: g.key, label: g.label }))}
+          storageKey={`play:${guide}`}
+        />
+      )
+    }
+    {
+      groups.map(({ kind, group }, i) => (
+        <section
+          class="flex flex-col gap-6"
+          data-play-group={group.key}
+          data-play-kind={kind}
+          hidden={kind !== 'general' && i !== groups.findIndex((g) => g.kind === kind)}
+        >
+          {group.items.map((item) => (
+            <article class="flex flex-col gap-2">
+              <h2 class="text-sm font-medium text-muted-foreground">
+                {kind === 'general' || item.title === group.label ? '' : `${group.label} · `}
+                <a class="underline-offset-4 hover:text-foreground hover:underline" href={item.href}>
+                  {item.title}
+                </a>
+              </h2>
+              {item.blocks.map((html) => (
+                <div class="prose prose-neutral prose-lg max-w-none dark:prose-invert" data-section-id={item.id} set:html={html} />
+              ))}
+            </article>
+          ))}
+        </section>
+      ))
+    }
+  </div>
+</Base>
