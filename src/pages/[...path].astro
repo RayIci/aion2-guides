@@ -33,7 +33,7 @@ export const getStaticPaths = (async () => {
   return paths;
 }) satisfies GetStaticPaths;
 
-const { patch, section } = Astro.props;
+const { patch, section, prefixed } = Astro.props;
 const content = await getContent();
 const headerPatch = patchNav(content, patch, section?.id, withBase);
 const live = content.defaultPatch;
@@ -77,8 +77,16 @@ if (section) {
       patch={headerPatch}
     >
       <PatchNotice patch={patch} liveHref={liveHref} />
+      {/* Search index (Pagefind): only the patch-prefixed copy of each section, filterable by patch. */}
+      <div
+        data-pagefind-body={prefixed ? '' : undefined}
+      >
+      {/* Values come from attributes (`key[attr]`) so no text enters the index. */}
+      <span hidden data-pagefind-filter="patch[data-value]" data-value={patch.meta.id}></span>
+      <span hidden data-pagefind-meta="patch[data-value]" data-value={patch.meta.title}></span>
+      <span hidden data-pagefind-meta="guide[data-value]" data-value={guideView.title}></span>
       <header class="flex flex-col gap-3">
-        <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted-foreground">
+        <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted-foreground" data-pagefind-ignore>
           <Badge variant={STATUS[section.status].variant}>{STATUS[section.status].label}</Badge>
           <span>
             {section.changedHere
@@ -89,23 +97,26 @@ if (section) {
           </span>
           {section.lastChecked && <span>Last checked {section.lastChecked}</span>}
         </div>
-        <h1 class="text-3xl font-semibold tracking-tight text-balance">{section.title}</h1>
+        <h1 class="text-3xl font-semibold tracking-tight text-balance" data-pagefind-meta="title">{section.title}</h1>
         {section.sectionConfidence && (
-          <p class="flex items-center gap-2 text-sm text-muted-foreground">
+          <p class="flex items-center gap-2 text-sm text-muted-foreground" data-pagefind-ignore>
             Section sources
             <Badge variant={section.sectionConfidence}>{CONFIDENCE[section.sectionConfidence]}</Badge>
           </p>
         )}
       </header>
       {section.status === 'draft' && (
-        <Alert className="mt-6">
+        <Alert className="mt-6" data-pagefind-ignore>
           <InfoIcon />
           <AlertTitle>Draft</AlertTitle>
           <AlertDescription>This section hasn't been researched yet. Treat it as a placeholder.</AlertDescription>
         </Alert>
       )}
       <div class="prose prose-neutral mt-8 max-w-none dark:prose-invert" set:html={section.html} />
-      <SourceList sources={section.sources} />
+      </div>
+      <div data-pagefind-ignore>
+        <SourceList sources={section.sources} />
+      </div>
     </Guide>
   ) : (
     <Base title={patch.meta.title} patch={headerPatch}>
