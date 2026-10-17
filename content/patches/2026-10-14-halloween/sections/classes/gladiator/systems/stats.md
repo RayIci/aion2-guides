@@ -18,4 +18,26 @@ The Gladiator's base stats grow every level. These are the class's own numbers b
 
 From level 1 to 45 that is +55 Attack Bonus, +440 Defense Bonus and +4,602 HP [@gamingtools-gladiator-2026-10].
 
-What each stat does in combat, and the soft and hard caps, are not written yet [!unverified].
+## What each stat does
+
+Every point of a primary stat adds the amounts below; the client's tables stay linear up to 1,000 points [@gamingtools-systems-stat-conversion-2026-10].
+
+| Stat | Per point |
+|---|---|
+| Might | Attack +0.1% |
+| Dexterity | Evasion, Block and Critical Hit Resist +0.1% each |
+| Intelligence | Status Effect Chance +0.1% |
+| Constitution | HP +0.1% |
+| Precision | Accuracy and Critical Hit +0.1% each |
+| Willpower | Status Effect Resist +0.1% |
+
+The Daevanion boards add their own stats [@gamingtools-systems-stat-conversion-2026-10]:
+
+| Board stat | Per point |
+|---|---|
+| Justice (Nezekan) | Defense +0.1%, Perfect Chance +0.1% |
+| Destruction (Zikel) | Attack +0.1%, Perfect Resist +0.1% |
+| Freedom (Vaizel) | Accuracy +0.1%, Evasion +0.1% |
+| Death (Triniel) | Critical Hit +0.1%, Regeneration Penetration +0.1% |
+
+Hard caps are not listed in the data [!unverified].
