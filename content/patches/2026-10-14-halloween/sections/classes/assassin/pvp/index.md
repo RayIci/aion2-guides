@@ -7,7 +7,7 @@ last_checked: 2026-10-17
 :::quick{title="PvP in four lines"}
 1. **Gear:** the same gear as PvE; no separate PvP set exists in Season 1. Item-level-86 armor has the same stats whether it comes from a dungeon or a field boss [@gamingtools-item-database-2026-10].
 2. **Amulet:** swap to the **Fierce Battle Amulet** (+20% PvP Damage Boost) from the Ascension quests [@gamingtools-item-database-2026-10; @gamingtools-ascension-rewards-2026-10].
-3. **Preset:** set up a PvP preset once, from [Level 45: set up](/classes/assassin/setup#7-your-pvp-preset) [@aion2meta-assassin-2026-10].
+3. **Preset:** set up a PvP preset once, from [Level 45: set up](/classes/assassin/setup#pick-a-setup) [@aion2meta-assassin-2026-10].
 4. **When:** the Arena and the Battlefield open at level 45; the Abyss camps need item level 1,000 [@corpus-arena-guide-2026-10; @corpus-abyss-guide-2026-10].
 :::
 

@@ -4,94 +4,31 @@ order: 40
 status: researched
 last_checked: 2026-10-17
 ---
-:::quick{title="Do these once, in this order"}
+:::quick{title="Do these once"}
 1. **Macro key:** Settings → Key Settings → General → Macro, bind it to the **right mouse button** [@gamingtools-build-assassin-pve-2026-10; @corpus-macros-guide-2026-10].
-2. **Skill Queue on:** Settings → Combat → Controls. Without it, skills the macro presses during a cast are lost [@gamingtools-build-assassin-pve-2026-10].
-3. **Skill bar:** put your skills on the keys exactly as in the bar below (preset 1) [@gamingtools-build-assassin-pve-2026-10].
-4. **Skills:** raise **Heart Gore** first, then **Quick Slice**, then **Insignia Explosion** [@corpus-assassin-pve-build-2026-10; @aion2meta-assassin-2026-10; @gamingtools-build-assassin-pve-2026-10].
-5. **Stigmas:** **Illusive Clone**, **Swift Contract**, **Triniel's Dagger**, plus a fourth (see Stigmas) [@gamingtools-build-assassin-pve-2026-10; @corpus-assassin-pve-build-2026-10].
-6. **Defiance** on its own key: it isn't on the bar [@gamingtools-build-assassin-pve-2026-10]. Any free key works; 4 is a good spot [!opinion].
-7. **Fight:** hold **left mouse** (Quick Slice) and **right mouse** (the macro) together, and press **1** (Evasion Stance) yourself [@gamingtools-build-assassin-pve-2026-10; @corpus-assassin-pve-build-2026-10].
+2. **Skill Queue on:** Settings → Combat → Controls [@gamingtools-build-assassin-pve-2026-10].
+3. **Pick a setup** from the table below and follow its page. Try more than one: each page is a full configuration (skills, Stigmas, bar, macro, how to play) [!opinion].
+4. **Skill presets:** put each setup you use in its own skill preset, so switching is one click [@gamingtools-build-assassin-pve-2026-10; !opinion].
+5. **Defiance** on its own key in every setup [@gamingtools-build-assassin-pve-2026-10].
+6. **Amulet for PvP:** the Fierce Battle Amulet (+20% PvP Damage Boost) instead of the Revelation Amulet [@gamingtools-item-database-2026-10].
 :::
 
-## 1. Your skill bar
+## Pick a setup
 
-Preset 1, **Solo Farm**. Each key holds up to three skills; pressing it uses the **bottom** one that is ready, so the most important skill goes at the bottom [@corpus-macros-guide-2026-10; @gamingtools-build-assassin-pve-2026-10]. Keys 1–4 are empty in this layout [@gamingtools-build-assassin-pve-2026-10]; use them for potions and your own extras [!opinion].
+PvE setups share the same skills and Stigmas (below); they differ in how much the macro does. PvP setups change the skills too [!opinion].
 
-::skillbar{title="Preset 1: Solo Farm" keys="8=Insignia Explosion,Heart Gore,Storm Rampage,Savage Roar/macro; 5=Swift Contract,Illusive Clone,Triniel's Dagger/macro; 7=Whirlwind Slice,Flash Slice,Shadow Fall/macro; 6=Shadowstrike,Ambush/macro; 1=Evasion Stance/hand; E=Infiltrate/macro; LMB=Quick Slice/hand; RMB=Macro" cite="@gamingtools-build-assassin-pve-2026-10"}
+| Setup | The macro does | You press | Good for | Built from |
+|---|---|---|---|---|
+| [PvE A: full macro](/classes/assassin/setup/pve-full-macro) | Almost everything, buffs included | Your defensive key, the left mouse | Learning the class, farming | gaming.tools [@gamingtools-build-assassin-pve-2026-10] |
+| [PvE B: core-combo macro](/classes/assassin/setup/pve-core-macro) | Only your core damage row | Buffs, burst, gap closers, defence | Bosses, once you know the fights | Grobs via Corpus [@corpus-assassin-pve-build-2026-10; !opinion] |
+| [PvE C: no macro](/classes/assassin/setup/pve-no-macro) | Nothing | Everything, with combo rows per key | Full control | The row rules in Corpus's macro guide [@corpus-macros-guide-2026-10; !opinion] |
+| [PvP 1: Stealth lockdown (Fextralife PvP build)](/classes/assassin/setup/pvp-lockdown) | Damage after your control lands | Control, openers, defence | Abyss, skirmishes, duels | Fextralife [@fextralife-assassin-builds-2026-10; !opinion] |
+| [PvP 2: Ladder (top Korean players)](/classes/assassin/setup/pvp-ladder) | Damage rows | Buffs, control, defence | Arena, 1v1, burst fights | aion2-meta [@aion2meta-assassin-2026-10; !opinion] |
+| [PvP 3: your PvE bar + swaps](/classes/assassin/setup/pvp-pve-swap) | Same as your PvE setup | Same, plus the swapped Stigmas | Trying PvP without relearning | aion2-meta + Corpus [@aion2meta-assassin-2026-10; !opinion] |
 
-Evasion Stance (1) is yours to press right before a big hit [@gamingtools-build-assassin-pve-2026-10]. Infiltrate (E) is in the macro; it moves you behind the target [@gamingtools-build-assassin-pve-2026-10; @gamingtools-skill-assassin-infiltrate-2026-10].
+The skill bars for B, C and the PvP setups are this guide's layouts built from those sources' rows and rules; only setup A's bar is published as-is [!opinion].
 
-:::details{summary="Preset 2: Solo Single Target bar"}
-::skillbar{title="Preset 2: Solo Single Target" keys="8=Insignia Explosion,Heart Gore,Storm Rampage,Savage Roar/macro; 5=Swift Contract,Illusive Clone,Triniel's Dagger/macro; 6=Shadowstrike,Ambush,Flash Slice/macro; 7=Shadow Fall,Whirlwind Slice/macro; 1=Evasion Stance/hand; E=Infiltrate/macro; LMB=Quick Slice/hand; RMB=Macro" cite="@gamingtools-build-assassin-pve-2026-10"}
-:::
-
-:::details{summary="Preset 3: Group DPS bar"}
-::skillbar{title="Preset 3: Group DPS" keys="8=Insignia Explosion,Heart Gore,Storm Rampage,Savage Roar/macro; 5=Swift Contract,Illusive Clone,Triniel's Dagger/macro; 6=Shadowstrike,Ambush,Flash Slice/macro; 7=Whirlwind Slice,Shadow Fall/macro; 1=Evasion Stance/hand; E=Infiltrate/macro; LMB=Quick Slice/hand; RMB=Macro" cite="@gamingtools-build-assassin-pve-2026-10"}
-:::
-
-## 2. The macro
-
-::::play
-1. Open the skill menu, choose **Macro** in the top right, then **Add macro** [@corpus-macros-guide-2026-10].
-2. Add the **keys** (whole rows), not single skills: **6, 7, 8, 7, 8, 5, E** for Solo Farm [@gamingtools-build-assassin-pve-2026-10; @corpus-macros-guide-2026-10].
-3. Set every step's delay to **10 ms**, the lowest the game allows [@gamingtools-build-assassin-pve-2026-10; @corpus-macros-guide-2026-10].
-4. Keep Quick Slice (left mouse) out of the macro and hold it together with the macro key: the game weaves it in to cancel animations [@gamingtools-build-assassin-pve-2026-10; @corpus-macros-guide-2026-10].
-5. Manual input always beats the macro, so pressing **1** (Evasion Stance) mid-fight is safe [@gamingtools-build-assassin-pve-2026-10].
-
-:::details{summary="The macro steps for each preset"}
-**Solo Farm**
-
-| Step | Key | It tries |
-|---|---|---|
-| 1 | 6 | Shadowstrike → Ambush |
-| 2 | 7 | Whirlwind Slice → Flash Slice, Shadow Fall |
-| 3 | 8 | Insignia Explosion → Heart Gore, Storm Rampage, Savage Roar |
-| 4 | 7 | Whirlwind Slice → Flash Slice, Shadow Fall |
-| 5 | 8 | Insignia Explosion → Heart Gore, Storm Rampage, Savage Roar |
-| 6 | 5 | Swift Contract → Illusive Clone, Triniel's Dagger |
-| 7 | E | Infiltrate (key E) |
-
-[@gamingtools-build-assassin-pve-2026-10]
-
-**Solo Single Target**
-
-| Step | Key | It tries |
-|---|---|---|
-| 1 | 6 | Shadowstrike → Ambush, Flash Slice |
-| 2 | 7 | Shadow Fall → Whirlwind Slice |
-| 3 | 8 | Insignia Explosion → Heart Gore, Storm Rampage, Savage Roar |
-| 4 | 5 | Swift Contract → Illusive Clone, Triniel's Dagger |
-| 5 | 8 | Insignia Explosion → Heart Gore, Storm Rampage, Savage Roar |
-| 6 | 7 | Shadow Fall → Whirlwind Slice |
-| 7 | E | Infiltrate (key E) |
-
-[@gamingtools-build-assassin-pve-2026-10]
-
-**Group DPS**
-
-| Step | Key | It tries |
-|---|---|---|
-| 1 | 5 | Swift Contract → Illusive Clone, Triniel's Dagger |
-| 2 | 5 | Swift Contract → Illusive Clone, Triniel's Dagger |
-| 3 | 8 | Insignia Explosion → Heart Gore, Storm Rampage, Savage Roar |
-| 4 | 6 | Shadowstrike → Ambush, Flash Slice |
-| 5 | 7 | Whirlwind Slice → Shadow Fall |
-| 6 | 8 | Insignia Explosion → Heart Gore, Storm Rampage, Savage Roar |
-| 7 | 8 | Insignia Explosion → Heart Gore, Storm Rampage, Savage Roar |
-| 8 | E | Infiltrate (key E) |
-
-[@gamingtools-build-assassin-pve-2026-10]
-:::
-::::
-
-:::conflict{topic="How big the macro should be"}
-- **gaming.tools:** one macro over keys 5–8 and E, so Swift Contract, Illusive Clone and Triniel's Dagger (key 5) fire automatically [@gamingtools-build-assassin-pve-2026-10].
-- **Grobs (via Corpus):** a single row, Insignia Explosion → Heart Gore → Savage Roar (plus Savage Fang from 45), and the burst Stigmas pressed by hand: Illusive Clone and Swift Contract, Shadowstrike behind the boss, Triniel's Dagger, then hold the macro [@corpus-assassin-pve-build-2026-10; @corpus-macros-guide-2026-10].
-- Start with gaming.tools' full macro; move to pressing your burst by hand once you want to time it on the boss [!opinion].
-:::
-
-## 3. Skills: what to raise
+## PvE skills to raise
 
 Skill Points take a skill to level 10; levels above 10 come from the Daevanion boards (one per board, four in total), then Arcana and soulbinds. Specializations open at levels 8, 12 and 16, and you get a third slot at 20 [@corpus-assassin-pve-build-2026-10; @corpus-gladiator-daevanion-2026-10].
 
@@ -141,7 +78,7 @@ Skill Points take a skill to level 10; levels above 10 come from the Daevanion b
 [@gamingtools-build-assassin-pve-2026-10]
 :::
 
-## 4. Stigmas
+## PvE Stigmas
 
 Slot **Illusive Clone**, **Swift Contract** and **Triniel's Dagger**: gaming.tools, Grobs, aLuckyRO and 95–99% of top Korean players run all three [@gamingtools-build-assassin-pve-2026-10; @corpus-assassin-pve-build-2026-10; @aion2meta-assassin-2026-10]. Use Triniel's Dagger right after the other two: at level 10 it cuts the cooldowns already running [@corpus-assassin-pve-build-2026-10].
 
@@ -156,14 +93,14 @@ Slot **Illusive Clone**, **Swift Contract** and **Triniel's Dagger**: gaming.too
 - **Throw Shadowblade** (resets when an enemy dies): aLuckyRO for farming; 91% of top Korean players run it, in six slots [@corpus-assassin-pve-build-2026-10; @aion2meta-assassin-2026-10].
 :::
 
-## 5. Daevanion boards
+## Daevanion boards
 
 Each of the first four boards (Nezekan, Zikel, Vaizel, Triniel) adds one level to every Assassin active skill, which is how Heart Gore, Quick Slice and Insignia Explosion get past 10 [@corpus-assassin-pve-build-2026-10].
 
 - gaming.tools opens Nezekan (46 points), Zikel (32), Vaizel (4) and Triniel (3) at 45 and plans the rest for later [@gamingtools-build-assassin-pve-2026-10].
 - **Azphel** (opens at 45) has only PvP stats: fill the first four boards first [@corpus-gladiator-daevanion-2026-10].
 
-## 6. The three presets: when to switch
+## The three PvE presets: when to switch
 
 | Preset | Use it for | What changes |
 |---|---|---|
@@ -173,19 +110,7 @@ Each of the first four boards (Nezekan, Zikel, Vaizel, Triniel) adds one level t
 
 On a boss: Illusive Clone and Swift Contract, Shadowstrike behind it, Triniel's Dagger, then hold the macro and left click; reposition with Shadowstrike, Infiltrate or Flash Slice to stay behind [@corpus-assassin-pve-build-2026-10].
 
-## 7. Your PvP preset
-
-The gear is the same for PvE and PvP; what changes is the amulet, the Stigmas and how you press things [@gamingtools-item-database-2026-10; @aion2meta-assassin-2026-10].
-
-- **Amulet:** wear the **Fierce Battle Amulet** (+20% PvP Damage Boost) instead of the Revelation Amulet (+10% Weapon Damage Boost); both come from the Ascension quests and are otherwise the same [@gamingtools-item-database-2026-10; @gamingtools-ascension-rewards-2026-10].
-- **Stigmas:** top Korean PvP players keep Illusive Clone, Swift Contract, Triniel's Dagger and Throw Shadowblade, and add **Evasion Stance** (95%), **Shadow Walk** (94%) and **Savage Fang** (90%) in their extra slots [@aion2meta-assassin-2026-10]. aLuckyRO rates Spiral Slice, Shadow Walk and Aerial Bind as PvP Stigmas [@corpus-assassin-pve-build-2026-10]. With Global's four slots, keep Illusive Clone, Swift Contract and Triniel's Dagger and take Evasion Stance [!opinion].
-- **Skills:** PvP players push the same three (Heart Gore, Quick Slice, Insignia Explosion) and raise **Shadowstrike**, **Whirlwind Slice** and **Defiance** far more than in PvE [@aion2meta-assassin-2026-10].
-- **Keys:** keep the same bar and press Evasion Stance (1) and Defiance yourself [!opinion].
-- **Azphel board:** its PvP stats are what you fill after the first four boards [@corpus-gladiator-daevanion-2026-10].
-
-Each PvP mode's page has the details.
-
-## 8. Settings that help
+## Settings that help
 
 - **Boss Orientation Indicator:** Settings → Info Display → Combat → Display Boss Orientation Indicator. Set it to show the boss's back, so you know where to stand [@corpus-assassin-pve-build-2026-10].
-- **Skill Queue** stays on (step 2 above) [@gamingtools-build-assassin-pve-2026-10].
+- **Skill Queue** stays on [@gamingtools-build-assassin-pve-2026-10].

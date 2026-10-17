@@ -30,4 +30,6 @@ Levels 1–20 all need character level 22. Cost per level, in the data page’s 
 
 In gaming.tools' PvE build: Group DPS (Stigma, level 5), Solo Farm (Stigma, level 5), Solo Single Target (Stigma, level 5) [@gamingtools-build-assassin-pve-2026-10]. Where it goes on your bar: [Level 45: set up](/classes/assassin/setup). PvP: [PvP](/classes/assassin/pvp).
 
-**On your skill bar:** key 5, bottom slot, tried first, pressed by the macro, in all three PvE presets [@gamingtools-build-assassin-pve-2026-10]. Full bar: [Level 45: set up](/classes/assassin/setup#1-your-skill-bar).
+**On your skill bar:** key 5, bottom slot, tried first, pressed by the macro, in all three PvE presets [@gamingtools-build-assassin-pve-2026-10]. Full bar: [Level 45: set up](/classes/assassin/setup/pve-full-macro#your-skill-bar).
+
+**In the other setups:** [PvE B](/classes/assassin/setup/pve-core-macro): key 2, by hand; [PvE C](/classes/assassin/setup/pve-no-macro): key 2, by hand; [PvP 2](/classes/assassin/setup/pvp-ladder): key 2, by hand [!opinion].

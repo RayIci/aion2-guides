@@ -50,4 +50,6 @@ The data page lists learning up to skill level 10; the max skill level is 40 [@g
 
 In gaming.tools' PvE build: Group DPS 8 + 1 bonus, Solo Farm 10 + 1 bonus, Solo Single Target 8 + 1 bonus [@gamingtools-build-gladiator-pve-2026-10]. Where it goes on your bar: [Level 45: set up](/classes/gladiator/setup). PvP: [PvP](/classes/gladiator/pvp).
 
-**On your skill bar:** Solo Farm: key 7, middle slot; Solo Single Target: key 7, top slot; Group DPS: key 7, top slot [@gamingtools-build-gladiator-pve-2026-10]. Full bar: [Level 45: set up](/classes/gladiator/setup#1-your-skill-bar).
+**On your skill bar:** Solo Farm: key 7, middle slot; Solo Single Target: key 7, top slot; Group DPS: key 7, top slot [@gamingtools-build-gladiator-pve-2026-10]. Full bar: [Level 45: set up](/classes/gladiator/setup/pve-full-macro#your-skill-bar).
+
+**In the other setups:** [PvE B](/classes/gladiator/setup/pve-core-macro): key 6, by hand; [PvE C](/classes/gladiator/setup/pve-no-macro): key 6 (row 2), by hand; [PvP 1](/classes/gladiator/setup/pvp-lockdown): key 8 (row 2), by hand; [PvP 2](/classes/gladiator/setup/pvp-ladder): key 6 (row 2), macro [!opinion].

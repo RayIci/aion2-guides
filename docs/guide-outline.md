@@ -15,19 +15,13 @@ Organized by **where the player is**, not by game system (owner feedback, 2026-1
 ### Start here: `index`
 The class in one minute (role, where its damage comes from, how it plays; cited), then a "Where are you?" table linking each level / item-level range to its page. `play: false`.
 
-### Level 45 set-up: `setup`
-Everything configured once at 45, in one page, in this order:
-1. `:::quick` list: macro key (default action mode: right mouse), Skill Queue, bar, skills, Stigmas, Defiance key, how to fight.
-2. **Skill bar** for each preset (`::skillbar`): which skill on which key, bottom-first priority, macro vs by hand. Keys 1–8, Q, E, left/right mouse.
-3. **The macro**: how to create it, which keys in which order, delays, what stays manual; `:::conflict` where sources disagree on macro size.
-4. **Skills to raise**: priority, target level, Specializations, one line on why; conflicts on disputed picks; passives; the full per-preset table folded.
-5. **Stigmas**: the set, the levelling order, alternatives for the contested slot.
-6. **Daevanion**: skill, passive and stat nodes; Azphel's PvP stats.
-7. **Presets**: when to switch.
-8. **PvP preset**: amulet swap, PvP Stigmas and skill priorities, what to press by hand.
-9. Settings that help.
+### Level 45 set-up: `setup/…`
+Several complete setups per category, so the player can try different styles (owner request, 2026-10-17). Each setup page is a full configuration: who it's for, skills with Specializations, Stigmas, the skill bar (`::skillbar`), the macro, how to play.
 
-Every pick cites its sources; agreement of two independent ones (e.g. gaming.tools + Corpus) is Verified, a single source Community, our own reasoning `[!opinion]`. Disagreements go in `:::conflict` with each option.
+- `setup/index`: the one-time steps (macro key on right mouse in default action mode, Skill Queue, Defiance key, one skill preset per setup, PvP amulet), a "Pick a setup" table, then what all PvE setups share: skills to raise, Stigmas, Daevanion, when to switch presets, settings.
+- PvE: `setup/pve-full-macro` (A: the macro runs nearly everything; gaming.tools' published bar), `setup/pve-core-macro` (B: the macro holds only the core damage row; buffs, burst and defence by hand), `setup/pve-no-macro` (C: no macro, combo rows per key).
+- PvP: `setup/pvp-lockdown` (1: a control build from a Global PvP source), `setup/pvp-ladder` (2: what top players run, from pick-rate statistics), `setup/pvp-pve-swap` (3: the PvE bar with PvP Stigmas and amulet). PvP setups have their own skill levels, PvP Specializations (with the other source's picks to compare), Stigmas, bar and macro.
+- Only a bar a source publishes as-is counts as that source's; layouts built from a source's rows and rules are marked `[!opinion]`. Each skill page lists where the skill sits in every setup.
 
 ### Endgame stages: `endgame/…`
 At Lv 45 the **4th Ascension** unlocks the endgame: Abyss, Arena, Battlefield, Spacetime Rift, Transcendence, Nightmare, Ascension Trial, Sanctuary, Market, Season Missions, Duty Quests, Arcana, Dimensional Invasion, and Expedition **Conquest** difficulty [gamingtools-navigator-2026-10]. Tiers are cut by **item level**, using the Conquest gates (Tier 1 700, Tier 2 1400, Tier 3 2100, Tier 4 2800, Tier 5 3000) [gamingtools-navigator-2026-10] plus the community-reported gates (Abyss 1000; Ascension Trial 1000/1500/2000; Transcendence 1600/1900/2200/2500; Ludra 2800) [corpus-item-level-2026-10, raidrelay-gear-score-2026-10]:
@@ -46,7 +40,7 @@ Gear is shared with PvE in Season 1 (same stats at the same item level); only th
 
 - `pvp/index`: PvP in four lines (gear, amulet, preset, when), the modes, which are equalized.
 - `pvp/fundamentals`: CC types, CC breaks and resists, defensive cooldowns, PvP stats.
-- **One page per Global PvP mode**, each with a "Before you queue" `:::quick` (gear, preset, what to press by hand, the swap for this mode), the mode, the PvP Stigmas with data, combo and defence (`:::play`), tactics:
+- **One page per Global PvP mode**, each with a "Before you queue" `:::quick` (gear, which setup to start with and which to try next, what to press by hand, the swap for this mode), a "Setups for this mode" table, the mode, the PvP Stigmas with data, combo and defence (`:::play`), tactics:
   - `pvp/duel`: **Duel** (from the health bar; no deaths, no rewards) [game8-duel-2026-10].
   - `pvp/arena-of-solitude`: 1v1, 10 min, 3 lives [gamingtools-arena-solitude-2026-10].
   - `pvp/arena-of-cooperation`: 5v5, 10 min, 1 life [gamingtools-arena-cooperation-2026-10].

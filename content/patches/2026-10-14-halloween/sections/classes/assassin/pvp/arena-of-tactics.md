@@ -6,8 +6,8 @@ last_checked: 2026-10-17
 ---
 :::quick{title="Before you queue"}
 1. **Gear:** doesn't matter here, gear and skills are equalized [@corpus-battlefield-guide-2026-10].
-2. **Preset:** your PvP preset from [Level 45: set up](/classes/assassin/setup#7-your-pvp-preset), Stigmas **Illusive Clone**, **Swift Contract**, **Triniel's Dagger**, **Evasion Stance** [@aion2meta-assassin-2026-10; !opinion].
-3. **Press by hand:** Evasion Stance (1), your burst Stigmas and Defiance. Keep the rest of your PvE macro [@corpus-macros-guide-2026-10; !opinion].
+2. **Setup:** start with [PvP 3 (PvE bar + swaps)](/classes/assassin/setup/pvp-pve-swap): gear and skills are equalized, so a bar you already know matters most; also try [PvP 2 (Ladder)](/classes/assassin/setup/pvp-ladder) (with Throw Shadowblade to chase off the cart) [!opinion].
+3. **Press by hand:** the amber keys on your setup's skill bar: control, openers and defensive skills [@corpus-macros-guide-2026-10; !opinion].
 4. **For this mode:** Gear and skills are equalized here [@corpus-battlefield-guide-2026-10]. **Throw Shadowblade** (20 m, Slow) helps chase players off the cart [@gamingtools-skill-assassin-throw-shadowblade-2026-10; !opinion].
 :::
 
@@ -15,9 +15,15 @@ last_checked: 2026-10-17
 
 10v10 Relic cart on Odyle Shard Cradle, 10 minutes, 10s respawn, solo queue only. Participation: 1,000 Abyss Points and a Silver Medal of Merit; win: 3,000 and 2 medals (3 rewarded matches each per week). Open daily 11:00–14:00 and 19:00–21:00 [@gamingtools-arena-tactics-2026-10].
 
-## Your PvP Stigmas
+## Setups for this mode
 
-Top Korean PvP players run Illusive Clone, Swift Contract, Triniel's Dagger and Throw Shadowblade (96–99%) and add Evasion Stance (95%), Shadow Walk (94%) and Savage Fang (90%) [@aion2meta-assassin-2026-10]. Global has four slots, so this guide keeps the burst three and takes Evasion Stance for defence [!opinion].
+| Setup | Why here |
+|---|---|
+| [PvP 3 (PvE bar + swaps)](/classes/assassin/setup/pvp-pve-swap) | Gear and skills are equalized, so a bar you already know matters most |
+| [PvP 2 (Ladder)](/classes/assassin/setup/pvp-ladder) | With Throw Shadowblade to chase off the cart |
+| [All setups](/classes/assassin/setup#pick-a-setup) | Each one lists its skills, Stigmas, skill bar and macro |
+
+These picks per mode are this guide's reasoning [!opinion].
 
 :::details{summary="Every PvP Stigma candidate and what it does"}
 | Stigma | What it does in PvP | Source |

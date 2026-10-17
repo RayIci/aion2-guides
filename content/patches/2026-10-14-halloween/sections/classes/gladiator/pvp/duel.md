@@ -6,17 +6,23 @@ last_checked: 2026-10-17
 ---
 :::quick{title="Before you queue"}
 1. **Gear:** your PvE gear, with the **Fierce Battle Amulet** instead of the Revelation Amulet (+20% PvP Damage Boost) [@gamingtools-item-database-2026-10].
-2. **Preset:** your PvP preset from [Level 45: set up](/classes/gladiator/setup#7-your-pvp-preset), Stigmas **Lunge Stance**, **Rage Burst**, **Focused Block**, **Tenaciousness** [@aion2meta-gladiator-2026-10; !opinion].
-3. **Press by hand:** Focused Block (E), Tenaciousness (1) and Defiance. Keep the rest of your PvE macro [@corpus-macros-guide-2026-10; !opinion].
+2. **Setup:** start with [PvP 2 (Ladder)](/classes/gladiator/setup/pvp-ladder): Rage Burst makes Overhead Slam fire without a Knockdown, which matters 1v1; also try [PvP 1 (Lockdown)](/classes/gladiator/setup/pvp-lockdown) (to practise the lockdown chain) [!opinion].
+3. **Press by hand:** the amber keys on your setup's skill bar: control, openers and defensive skills [@corpus-macros-guide-2026-10; !opinion].
 :::
 
 ## The mode
 
 Duels start from **Challenge to Duel** on a player's health bar. Nobody dies (the winner brings the loser to about 10% HP), leaving the area for 10 seconds forfeits, and there are no rewards [@game8-duel-2026-10].
 
-## Your PvP Stigmas
+## Setups for this mode
 
-Top Korean PvP players run Lunge Stance, Zikel's Blessing, Rage Burst and Focused Block (99%+) and add Tenaciousness (98.5%) and Armor of Balance (90.8%) [@aion2meta-gladiator-2026-10]. Global has four slots, so this guide swaps Zikel's Blessing for Tenaciousness [!opinion].
+| Setup | Why here |
+|---|---|
+| [PvP 2 (Ladder)](/classes/gladiator/setup/pvp-ladder) | Rage Burst makes Overhead Slam fire without a Knockdown, which matters 1v1 |
+| [PvP 1 (Lockdown)](/classes/gladiator/setup/pvp-lockdown) | To practise the lockdown chain |
+| [All setups](/classes/gladiator/setup#pick-a-setup) | Each one lists its skills, Stigmas, skill bar and macro |
+
+These picks per mode are this guide's reasoning [!opinion].
 
 :::details{summary="Every PvP Stigma candidate and what it does"}
 | Stigma | What it does in PvP | Source |

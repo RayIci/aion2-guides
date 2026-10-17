@@ -40,4 +40,4 @@ Stigma skills are strong class-specific skills that you switch depending on the 
 | Wrath Wave | 60s | Deals 1068 + 175.5% Attack damage to up to 4 enemies within 5m of the caster and has a 50% chance to inflict Knockdown for 3s. | [@gamingtools-skill-wrath-wave-2026-10] |
 | Zikel's Blessing | 120s | Increases the caster's Attack by 20% and Accuracy by 100 for 10s. | [@gamingtools-skill-zikels-blessing-2026-10] |
 
-Which Stigmas to slot: [Level 45: set up](/classes/gladiator/setup#4-stigmas) and each [PvP](/classes/gladiator/pvp) mode page.
+Which Stigmas to slot: [Level 45: set up](/classes/gladiator/setup#pve-stigmas) and each [PvP](/classes/gladiator/pvp) mode page.

@@ -45,3 +45,5 @@ Learned automatically at character level 16, after the quest “Assassin” [@ga
 The data page lists learning up to skill level 10; the max skill level is 40 [@gamingtools-skill-assassin-defiance-2026-10].
 
 In gaming.tools' PvE build: Group DPS 1, Solo Farm 1, Solo Single Target 1 [@gamingtools-build-assassin-pve-2026-10]. Where it goes on your bar: [Level 45: set up](/classes/assassin/setup). PvP: [PvP](/classes/assassin/pvp).
+
+**In the other setups:** [PvE B](/classes/assassin/setup/pve-core-macro): key 4, by hand; [PvE C](/classes/assassin/setup/pve-no-macro): key 4, by hand; [PvP 1](/classes/assassin/setup/pvp-lockdown): key 4, by hand; [PvP 2](/classes/assassin/setup/pvp-ladder): key 4, by hand [!opinion].

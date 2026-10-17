@@ -12,4 +12,4 @@ Open-world PvE outside dungeons:
 - **Abyss Supply Requests** (from level 25): Emergency, Weekly and Regular collection tasks; hand in items for rewards [@gamingtools-navigator-2026-10].
 - **Duty Quests** (level 45): daily quests with a per-server, per-day limit; Commands let you take more [@gamingtools-navigator-2026-10]. Command rerolls cost 1,000 Kina, rising to 300,000 by the tenth [@gamingtools-systems-quest-limits-2026-10].
 
-For solo farming, use the **Solo Farm** preset from [Level 45: set up](/classes/assassin/setup#6-the-three-presets-when-to-switch) [@gamingtools-build-assassin-pve-2026-10].
+For solo farming, use the **Solo Farm** preset from [Level 45: set up](/classes/assassin/setup#the-three-pve-presets-when-to-switch) [@gamingtools-build-assassin-pve-2026-10].

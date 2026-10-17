@@ -16,7 +16,7 @@ last_checked: 2026-10-17
 | You are | Open | It tells you |
 |---|---|---|
 | Level 1–44 | [Leveling](/classes/assassin/leveling) | Skills, Stigmas and the macro for each bracket, with a checklist |
-| Just hit 45 | [Level 45: set up](/classes/assassin/setup) | Your skill bar, the macro key, which skills to raise, Stigmas, Daevanion, the PvP preset |
+| Just hit 45 | [Level 45: set up](/classes/assassin/setup) | Pick a setup to try: three for PvE (full macro, core-combo macro, no macro) and three for PvP, each with its skills, Stigmas, skill bar and macro |
 | Item level under 1,400 | [Stage 1](/classes/assassin/endgame/early) | Which gear to get, where it drops, what to run |
 | Item level 1,400–2,100 | [Stage 2](/classes/assassin/endgame/mid) | Same, for the Vakron and Urugugu gear |
 | Item level 2,100+ | [Stage 3](/classes/assassin/endgame/advanced) | Same, for the Horn Den and Fire Temple gear |

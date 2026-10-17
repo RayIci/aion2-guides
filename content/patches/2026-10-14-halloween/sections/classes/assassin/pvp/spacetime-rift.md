@@ -6,8 +6,8 @@ last_checked: 2026-10-17
 ---
 :::quick{title="Before you queue"}
 1. **Gear:** your PvE gear, with the **Fierce Battle Amulet** instead of the Revelation Amulet (+20% PvP Damage Boost) [@gamingtools-item-database-2026-10].
-2. **Preset:** your PvP preset from [Level 45: set up](/classes/assassin/setup#7-your-pvp-preset), Stigmas **Illusive Clone**, **Swift Contract**, **Triniel's Dagger**, **Evasion Stance** [@aion2meta-assassin-2026-10; !opinion].
-3. **Press by hand:** Evasion Stance (1), your burst Stigmas and Defiance. Keep the rest of your PvE macro [@corpus-macros-guide-2026-10; !opinion].
+2. **Setup:** start with [PvP 1 (Stealth lockdown)](/classes/assassin/setup/pvp-lockdown): Shadow Walk moves you through enemy territory; also try [PvP 3 (PvE bar + swaps)](/classes/assassin/setup/pvp-pve-swap) (for the PvE objectives) [!opinion].
+3. **Press by hand:** the amber keys on your setup's skill bar: control, openers and defensive skills [@corpus-macros-guide-2026-10; !opinion].
 4. **For this mode:** Take **Shadow Walk** to move through enemy territory unseen [@gamingtools-skill-assassin-shadow-walk-2026-10; !opinion].
 :::
 
@@ -15,9 +15,15 @@ last_checked: 2026-10-17
 
 Spacetime Rifts are portals that open at random intervals into the enemy faction's territory, for a limited time; enemy town guards and players can attack you [@gamingtools-navigator-2026-10]. Each Elyos server is paired with an Asmodian server for cross-faction modes like the Abyss and Spacetime Rifts [@nc-global-matchmaking-2026-10].
 
-## Your PvP Stigmas
+## Setups for this mode
 
-Top Korean PvP players run Illusive Clone, Swift Contract, Triniel's Dagger and Throw Shadowblade (96–99%) and add Evasion Stance (95%), Shadow Walk (94%) and Savage Fang (90%) [@aion2meta-assassin-2026-10]. Global has four slots, so this guide keeps the burst three and takes Evasion Stance for defence [!opinion].
+| Setup | Why here |
+|---|---|
+| [PvP 1 (Stealth lockdown)](/classes/assassin/setup/pvp-lockdown) | Shadow Walk moves you through enemy territory |
+| [PvP 3 (PvE bar + swaps)](/classes/assassin/setup/pvp-pve-swap) | For the PvE objectives |
+| [All setups](/classes/assassin/setup#pick-a-setup) | Each one lists its skills, Stigmas, skill bar and macro |
+
+These picks per mode are this guide's reasoning [!opinion].
 
 :::details{summary="Every PvP Stigma candidate and what it does"}
 | Stigma | What it does in PvP | Source |

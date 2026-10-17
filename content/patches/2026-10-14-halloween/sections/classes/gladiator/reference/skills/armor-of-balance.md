@@ -29,3 +29,5 @@ Learned through Stigma at character level 22, after the quest “Opening the Way
 Levels 1–20 all need character level 22. Cost per level, in the data page’s Stigma units: 5 levels at 1 stigma, 5 levels at 2 stigma, 5 levels at 4 stigma, 5 levels at 8 stigma [@gamingtools-skill-armor-of-balance-2026-10].
 
 Not in gaming.tools' PvE build. PvP: [PvP](/classes/gladiator/pvp).
+
+**In the other setups:** [PvP 1](/classes/gladiator/setup/pvp-lockdown): key E, by hand [!opinion].

@@ -45,3 +45,5 @@ Learned automatically at character level 16 [@gamingtools-skill-defiance-2026-10
 The data page lists learning up to skill level 10; the max skill level is 40 [@gamingtools-skill-defiance-2026-10].
 
 In gaming.tools' PvE build: Group DPS 1, Solo Farm 1, Solo Single Target 1 [@gamingtools-build-gladiator-pve-2026-10]. Where it goes on your bar: [Level 45: set up](/classes/gladiator/setup). PvP: [PvP](/classes/gladiator/pvp).
+
+**In the other setups:** [PvE B](/classes/gladiator/setup/pve-core-macro): key 4, by hand; [PvE C](/classes/gladiator/setup/pve-no-macro): key 4, by hand; [PvP 1](/classes/gladiator/setup/pvp-lockdown): key 4, by hand; [PvP 2](/classes/gladiator/setup/pvp-ladder): key 4, by hand [!opinion].

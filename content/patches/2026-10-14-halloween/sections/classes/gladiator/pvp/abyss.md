@@ -6,8 +6,8 @@ last_checked: 2026-10-17
 ---
 :::quick{title="Before you queue"}
 1. **Gear:** your PvE gear, with the **Fierce Battle Amulet** instead of the Revelation Amulet (+20% PvP Damage Boost) [@gamingtools-item-database-2026-10].
-2. **Preset:** your PvP preset from [Level 45: set up](/classes/gladiator/setup#7-your-pvp-preset), Stigmas **Lunge Stance**, **Rage Burst**, **Focused Block**, **Tenaciousness** [@aion2meta-gladiator-2026-10; !opinion].
-3. **Press by hand:** Focused Block (E), Tenaciousness (1) and Defiance. Keep the rest of your PvE macro [@corpus-macros-guide-2026-10; !opinion].
+2. **Setup:** start with [PvP 1 (Lockdown)](/classes/gladiator/setup/pvp-lockdown): Fextralife built it for the Abyss and small skirmishes; also try [PvP 2 (Ladder)](/classes/gladiator/setup/pvp-ladder) (when you roam with a healer) [!opinion].
+3. **Press by hand:** the amber keys on your setup's skill bar: control, openers and defensive skills [@corpus-macros-guide-2026-10; !opinion].
 4. **For this mode:** In big fights swap Focused Block for **Armor of Balance** (Impact-type Resist +50%); 91% of Korean PvP players carry it [@gamingtools-skill-armor-of-balance-2026-10; @aion2meta-gladiator-2026-10; !opinion].
 :::
 
@@ -15,9 +15,15 @@ last_checked: 2026-10-17
 
 The Abyss (Reshanta) is open faction-vs-faction PvP from level 45 (item level 1,000): Chaotic Lower, Middle and Upper Reshanta [@gamingtools-navigator-2026-10; @gamingtools-abyss-2026-10; @corpus-item-level-2026-10]. Stored entry time is capped at 7 hours [@nc-global-notes-2026-10-14], and Abyss points reset Wednesday 16:00 [@gamingtools-systems-weekly-resets-2026-10].
 
-## Your PvP Stigmas
+## Setups for this mode
 
-Top Korean PvP players run Lunge Stance, Zikel's Blessing, Rage Burst and Focused Block (99%+) and add Tenaciousness (98.5%) and Armor of Balance (90.8%) [@aion2meta-gladiator-2026-10]. Global has four slots, so this guide swaps Zikel's Blessing for Tenaciousness [!opinion].
+| Setup | Why here |
+|---|---|
+| [PvP 1 (Lockdown)](/classes/gladiator/setup/pvp-lockdown) | Fextralife built it for the Abyss and small skirmishes |
+| [PvP 2 (Ladder)](/classes/gladiator/setup/pvp-ladder) | When you roam with a healer |
+| [All setups](/classes/gladiator/setup#pick-a-setup) | Each one lists its skills, Stigmas, skill bar and macro |
+
+These picks per mode are this guide's reasoning [!opinion].
 
 :::details{summary="Every PvP Stigma candidate and what it does"}
 | Stigma | What it does in PvP | Source |

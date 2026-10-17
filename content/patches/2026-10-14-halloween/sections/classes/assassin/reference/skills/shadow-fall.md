@@ -48,4 +48,6 @@ The data page lists learning up to skill level 10; the max skill level is 40 [@g
 
 In gaming.tools' PvE build: Group DPS 8, Solo Farm 8, Solo Single Target 8 [@gamingtools-build-assassin-pve-2026-10]. Where it goes on your bar: [Level 45: set up](/classes/assassin/setup). PvP: [PvP](/classes/assassin/pvp).
 
-**On your skill bar:** Solo Farm: key 7, top slot; Solo Single Target: key 7, bottom slot, tried first; Group DPS: key 7, middle slot [@gamingtools-build-assassin-pve-2026-10]. Full bar: [Level 45: set up](/classes/assassin/setup#1-your-skill-bar).
+**On your skill bar:** Solo Farm: key 7, top slot; Solo Single Target: key 7, bottom slot, tried first; Group DPS: key 7, middle slot [@gamingtools-build-assassin-pve-2026-10]. Full bar: [Level 45: set up](/classes/assassin/setup/pve-full-macro#your-skill-bar).
+
+**In the other setups:** [PvE B](/classes/assassin/setup/pve-core-macro): key 7, by hand; [PvE C](/classes/assassin/setup/pve-no-macro): key 6 (bottom, tried first), by hand; [PvP 1](/classes/assassin/setup/pvp-lockdown): key 3, by hand; [PvP 2](/classes/assassin/setup/pvp-ladder): key 6 (row 2), macro [!opinion].

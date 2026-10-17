@@ -29,3 +29,5 @@ Learned through Stigma at character level 22, after the quest “Assassin” [@g
 Levels 1–20 all need character level 22. Cost per level, in the data page’s Stigma units: 5 levels at 1 stigma, 5 levels at 2 stigma, 5 levels at 4 stigma, 5 levels at 8 stigma [@gamingtools-skill-assassin-shadow-walk-2026-10].
 
 Not in gaming.tools' PvE build. PvP: [PvP](/classes/assassin/pvp).
+
+**In the other setups:** [PvP 1](/classes/assassin/setup/pvp-lockdown): key 1, by hand [!opinion].

@@ -6,8 +6,8 @@ last_checked: 2026-10-17
 ---
 :::quick{title="Before you queue"}
 1. **Gear:** your PvE gear, with the **Fierce Battle Amulet** instead of the Revelation Amulet (+20% PvP Damage Boost) [@gamingtools-item-database-2026-10].
-2. **Preset:** your PvP preset from [Level 45: set up](/classes/gladiator/setup#7-your-pvp-preset), Stigmas **Lunge Stance**, **Rage Burst**, **Focused Block**, **Tenaciousness** [@aion2meta-gladiator-2026-10; !opinion].
-3. **Press by hand:** Focused Block (E), Tenaciousness (1) and Defiance. Keep the rest of your PvE macro [@corpus-macros-guide-2026-10; !opinion].
+2. **Setup:** start with [PvP 1 (Lockdown)](/classes/gladiator/setup/pvp-lockdown): control and immunity to get out of a fight with guards; also try [PvP 3 (PvE bar + swaps)](/classes/gladiator/setup/pvp-pve-swap) (if you mostly do the PvE objectives) [!opinion].
+3. **Press by hand:** the amber keys on your setup's skill bar: control, openers and defensive skills [@corpus-macros-guide-2026-10; !opinion].
 4. **For this mode:** Bring **Fracturing Rush** to break away from guards [@gamingtools-skill-fracturing-rush-2026-10; !opinion].
 :::
 
@@ -15,9 +15,15 @@ last_checked: 2026-10-17
 
 Spacetime Rifts are portals that open at random intervals into the enemy faction's territory, for a limited time; enemy town guards and players can attack you [@gamingtools-navigator-2026-10]. Each Elyos server is paired with an Asmodian server for cross-faction modes like the Abyss and Spacetime Rifts [@nc-global-matchmaking-2026-10].
 
-## Your PvP Stigmas
+## Setups for this mode
 
-Top Korean PvP players run Lunge Stance, Zikel's Blessing, Rage Burst and Focused Block (99%+) and add Tenaciousness (98.5%) and Armor of Balance (90.8%) [@aion2meta-gladiator-2026-10]. Global has four slots, so this guide swaps Zikel's Blessing for Tenaciousness [!opinion].
+| Setup | Why here |
+|---|---|
+| [PvP 1 (Lockdown)](/classes/gladiator/setup/pvp-lockdown) | Control and immunity to get out of a fight with guards |
+| [PvP 3 (PvE bar + swaps)](/classes/gladiator/setup/pvp-pve-swap) | If you mostly do the PvE objectives |
+| [All setups](/classes/gladiator/setup#pick-a-setup) | Each one lists its skills, Stigmas, skill bar and macro |
+
+These picks per mode are this guide's reasoning [!opinion].
 
 :::details{summary="Every PvP Stigma candidate and what it does"}
 | Stigma | What it does in PvP | Source |

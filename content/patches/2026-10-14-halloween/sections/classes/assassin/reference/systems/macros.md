@@ -11,4 +11,4 @@ AION 2 macros press a list of quick slots in order; each quick slot casts the fi
 - The game says macro step order is not guaranteed, so a macro is a priority list, not a fixed rotation [@gamingtools-build-assassin-pve-2026-10].
 - Turn on Skill Queue (Settings → Combat → Controls), or steps pressed during a cast are lost [@gamingtools-build-assassin-pve-2026-10].
 
-Your macro for each preset: [Level 45: set up](/classes/assassin/setup#2-the-macro). PvP: each [PvP](/classes/assassin/pvp) mode page.
+Your macro for each preset: [Level 45: set up](/classes/assassin/setup/pve-full-macro#the-macro). PvP: each [PvP](/classes/assassin/pvp) mode page.

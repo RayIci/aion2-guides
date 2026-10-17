@@ -31,3 +31,5 @@ Learned through Stigma at character level 22, after the quest “Assassin” [@g
 Levels 1–20 all need character level 22. Cost per level, in the data page’s Stigma units: 5 levels at 1 stigma, 5 levels at 2 stigma, 5 levels at 4 stigma, 5 levels at 8 stigma [@gamingtools-skill-assassin-savage-fang-2026-10].
 
 Not in gaming.tools' PvE build. PvP: [PvP](/classes/assassin/pvp).
+
+**In the other setups:** [PvE B](/classes/assassin/setup/pve-core-macro): key 5 (bottom, tried first), macro [!opinion].

@@ -6,8 +6,8 @@ last_checked: 2026-10-17
 ---
 :::quick{title="Before you queue"}
 1. **Gear:** doesn't matter here, gear and skills are equalized [@corpus-battlefield-guide-2026-10].
-2. **Preset:** your PvP preset from [Level 45: set up](/classes/gladiator/setup#7-your-pvp-preset), Stigmas **Lunge Stance**, **Rage Burst**, **Focused Block**, **Tenaciousness** [@aion2meta-gladiator-2026-10; !opinion].
-3. **Press by hand:** Focused Block (E), Tenaciousness (1) and Defiance. Keep the rest of your PvE macro [@corpus-macros-guide-2026-10; !opinion].
+2. **Setup:** start with [PvP 3 (PvE bar + swaps)](/classes/gladiator/setup/pvp-pve-swap): gear and skills are equalized, so a bar you already know matters most; also try [PvP 1 (Lockdown)](/classes/gladiator/setup/pvp-lockdown) (with Wrath Wave for the cart) [!opinion].
+3. **Press by hand:** the amber keys on your setup's skill bar: control, openers and defensive skills [@corpus-macros-guide-2026-10; !opinion].
 4. **For this mode:** Gear and skills are equalized here, so Stigma choice matters more than item level [@corpus-battlefield-guide-2026-10]. **Wrath Wave** knocks down up to 4 players around the cart (60% of Korean PvP players) [@gamingtools-skill-wrath-wave-2026-10; @aion2meta-gladiator-2026-10; !opinion].
 :::
 
@@ -15,9 +15,15 @@ last_checked: 2026-10-17
 
 10v10 Relic cart on Odyle Shard Cradle, 10 minutes, 10s respawn, solo queue only. Participation: 1,000 Abyss Points and a Silver Medal of Merit; win: 3,000 and 2 medals (3 rewarded matches each per week). Open daily 11:00–14:00 and 19:00–21:00 [@gamingtools-arena-tactics-2026-10].
 
-## Your PvP Stigmas
+## Setups for this mode
 
-Top Korean PvP players run Lunge Stance, Zikel's Blessing, Rage Burst and Focused Block (99%+) and add Tenaciousness (98.5%) and Armor of Balance (90.8%) [@aion2meta-gladiator-2026-10]. Global has four slots, so this guide swaps Zikel's Blessing for Tenaciousness [!opinion].
+| Setup | Why here |
+|---|---|
+| [PvP 3 (PvE bar + swaps)](/classes/gladiator/setup/pvp-pve-swap) | Gear and skills are equalized, so a bar you already know matters most |
+| [PvP 1 (Lockdown)](/classes/gladiator/setup/pvp-lockdown) | With Wrath Wave for the cart |
+| [All setups](/classes/gladiator/setup#pick-a-setup) | Each one lists its skills, Stigmas, skill bar and macro |
+
+These picks per mode are this guide's reasoning [!opinion].
 
 :::details{summary="Every PvP Stigma candidate and what it does"}
 | Stigma | What it does in PvP | Source |
