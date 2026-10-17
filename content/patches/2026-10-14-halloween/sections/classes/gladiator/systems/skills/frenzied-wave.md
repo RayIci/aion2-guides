@@ -19,4 +19,4 @@ At skill level 1: Deals 245 + 125% Attack damage to up to 4 enemies within 5m of
 | Chain role | Chain Skill |
 | Follows | Crushing Wave |
 
-Which builds use it: see the PvE and PvP build pages (not written yet).
+Not in gaming.tools' PvE build; PvP picks are on each PvP mode's build page.

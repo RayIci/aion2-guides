@@ -17,4 +17,4 @@ At skill level 1: Deals 63 + 62% Attack damage to up to 4 enemies within 4m and 
 | Chain role | Chain Skill |
 | Follows | Rupture Strike |
 
-Which builds use it: see the PvE and PvP build pages (not written yet).
+Not in gaming.tools' PvE build; PvP picks are on each PvP mode's build page.

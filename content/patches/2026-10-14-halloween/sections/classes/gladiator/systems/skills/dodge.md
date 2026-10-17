@@ -26,4 +26,4 @@ Learned automatically at character level 1 [@gamingtools-skill-dodge-2026-10].
 
 The data page lists learning up to skill level 1; the max skill level is 1 [@gamingtools-skill-dodge-2026-10].
 
-Which builds use it: see the PvE and PvP build pages (not written yet).
+Not in gaming.tools' PvE build; PvP picks are on each PvP mode's build page.

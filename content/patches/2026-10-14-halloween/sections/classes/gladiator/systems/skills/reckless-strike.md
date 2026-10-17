@@ -15,4 +15,4 @@ At skill level 1: Deals 101 + 124% Attack damage to up to 4 enemies within 4m an
 | Target | Enemies, Rectangle 5.9 m, up to 4 targets |
 | Max skill level | 40 |
 
-Which builds use it: see the PvE and PvP build pages (not written yet).
+Not in gaming.tools' PvE build; PvP picks are on each PvP mode's build page.

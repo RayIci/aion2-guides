@@ -44,4 +44,4 @@ Learned automatically at character level 5 [@gamingtools-skill-sword-aura-rampag
 
 The data page lists learning up to skill level 10; the max skill level is 40 [@gamingtools-skill-sword-aura-rampage-2026-10].
 
-Which builds use it: see the PvE and PvP build pages (not written yet).
+In gaming.tools' PvE build: Group DPS 8, Solo Farm 8, Solo Single Target 8 [@gamingtools-build-gladiator-pve-2026-10]. PvP picks are on each PvP mode's build page.

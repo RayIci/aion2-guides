@@ -33,4 +33,4 @@ Learned automatically at character level 11 [@gamingtools-skill-identify-weaknes
 
 The data page lists learning up to skill level 10; the max skill level is 40 [@gamingtools-skill-identify-weakness-2026-10].
 
-Which builds use it: see the PvE and PvP build pages (not written yet).
+In gaming.tools' PvE build: Group DPS 8 + 2 bonus, Solo Farm 1 + 2 bonus, Solo Single Target 8 + 2 bonus [@gamingtools-build-gladiator-pve-2026-10]. PvP picks are on each PvP mode's build page.

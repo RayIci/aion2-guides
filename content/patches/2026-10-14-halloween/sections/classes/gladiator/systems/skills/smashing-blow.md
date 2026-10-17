@@ -18,4 +18,4 @@ At skill level 1: Deals 76 + 84.5% Attack damage to up to 4 enemies within 4m an
 | Chain role | Chain Skill |
 | Follows | Rending Blow |
 
-Which builds use it: see the PvE and PvP build pages (not written yet).
+Not in gaming.tools' PvE build; PvP picks are on each PvP mode's build page.

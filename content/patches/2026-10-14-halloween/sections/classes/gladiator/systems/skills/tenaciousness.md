@@ -28,4 +28,4 @@ Learned through Stigma at character level 22, after the quest “Opening the Way
 
 Levels 1–20 all need character level 22. Cost per level, in the data page’s Stigma units: 5 levels at 1 stigma, 5 levels at 2 stigma, 5 levels at 4 stigma, 5 levels at 8 stigma [@gamingtools-skill-tenaciousness-2026-10].
 
-Which builds use it: see the PvE and PvP build pages (not written yet).
+Not in gaming.tools' PvE build; PvP picks are on each PvP mode's build page.

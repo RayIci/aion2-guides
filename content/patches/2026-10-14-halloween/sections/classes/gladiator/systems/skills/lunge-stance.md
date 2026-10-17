@@ -28,4 +28,4 @@ Learned through Stigma at character level 22, after the quest “Opening the Way
 
 Levels 1–20 all need character level 22. Cost per level, in the data page’s Stigma units: 5 levels at 1 stigma, 5 levels at 2 stigma, 5 levels at 4 stigma, 5 levels at 8 stigma [@gamingtools-skill-lunge-stance-2026-10].
 
-Which builds use it: see the PvE and PvP build pages (not written yet).
+In gaming.tools' PvE build: Group DPS (Stigma, level 5), Solo Farm (Stigma, level 5), Solo Single Target (Stigma, level 5) [@gamingtools-build-gladiator-pve-2026-10]. PvP picks are on each PvP mode's build page.

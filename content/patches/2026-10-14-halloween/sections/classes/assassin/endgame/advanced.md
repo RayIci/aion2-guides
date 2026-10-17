@@ -1,0 +1,29 @@
+---
+title: "Advanced endgame"
+order: 3
+status: researched
+last_checked: 2026-10-17
+---
+Item level **2,100** and up.
+
+## What opens
+
+- **2,100:** Ferocious Horn Den (Exploration and Conquest) and Fire Temple Conquest [@corpus-item-level-2026-10; @raidrelay-gear-score-2026-10].
+- **2,200:** Transcendence stage 3, the first stage that drops Unique Arcana cards [@corpus-item-level-2026-10; @raidrelay-gear-score-2026-10].
+- **2,500:** Transcendence stage 4 and the highest Ascension Trial difficulty [@corpus-item-level-2026-10].
+- **2,800:** the Ludra raid, temporarily removed on Global [@corpus-item-level-2026-10; @nc-global-sanctuary-ludra-2026-10].
+
+## Priorities
+
+- **Ferocious Horn Den** drops Nuakum armor at item level 86; its Conquest pity is 28 cube openings, and the pity rewards can go toward a guard [@corpus-item-level-2026-10].
+- **Fire Temple** gives your main weapon at 2,100: an off-class Enraged Kromede weapon + 3 Fire Temple vouchers + 2,000,000 Kina make a Weapon Selection Chest [@raidrelay-gear-score-2026-10].
+- Order: Vakron armour and guard first, Urugugu accessories next, then the Fire Temple weapon, then Horn Den armour picks over its guard [@raidrelay-gear-score-2026-10].
+- Past 2,100, build **Combat Power** rather than chasing item level: Soul Binding, Manastones on final pieces, crafting your weapon; Amplify on Unique pieces adds 5 item level per level [@corpus-item-level-2026-10].
+- Farm Transcendence stage 4 for Unique Arcana [@corpus-item-level-2026-10].
+
+:::checklist{id="advanced-endgame" title="Advanced endgame goals"}
+- [ ] Fire Temple weapon {#weapon}
+- [ ] Nuakum armor from Horn Den {#nuakum}
+- [ ] Transcendence stage 4 cleared {#t4}
+- [ ] Item level 2,800 (Ludra, when it returns) {#ilvl2800}
+:::

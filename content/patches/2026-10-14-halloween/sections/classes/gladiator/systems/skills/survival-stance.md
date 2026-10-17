@@ -33,4 +33,4 @@ Learned automatically at character level 1 [@gamingtools-skill-survival-stance-2
 
 The data page lists learning up to skill level 10; the max skill level is 40 [@gamingtools-skill-survival-stance-2026-10].
 
-Which builds use it: see the PvE and PvP build pages (not written yet).
+In gaming.tools' PvE build: Group DPS 1, Solo Farm 1, Solo Single Target 1 [@gamingtools-build-gladiator-pve-2026-10]. PvP picks are on each PvP mode's build page.

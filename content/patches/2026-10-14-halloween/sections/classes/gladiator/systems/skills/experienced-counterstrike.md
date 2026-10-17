@@ -33,4 +33,4 @@ Learned automatically at character level 21 [@gamingtools-skill-experienced-coun
 
 The data page lists learning up to skill level 10; the max skill level is 40 [@gamingtools-skill-experienced-counterstrike-2026-10].
 
-Which builds use it: see the PvE and PvP build pages (not written yet).
+In gaming.tools' PvE build: Group DPS 10 + 3 bonus, Solo Farm 10 + 3 bonus, Solo Single Target 10 + 3 bonus [@gamingtools-build-gladiator-pve-2026-10]. PvP picks are on each PvP mode's build page.

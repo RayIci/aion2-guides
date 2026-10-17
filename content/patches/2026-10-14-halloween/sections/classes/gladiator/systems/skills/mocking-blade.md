@@ -46,4 +46,4 @@ Learned automatically at character level 3 [@gamingtools-skill-mocking-blade-202
 
 The data page lists learning up to skill level 10; the max skill level is 40 [@gamingtools-skill-mocking-blade-2026-10].
 
-Which builds use it: see the PvE and PvP build pages (not written yet).
+In gaming.tools' PvE build: Group DPS 6, Solo Farm 10, Solo Single Target 6 [@gamingtools-build-gladiator-pve-2026-10]. PvP picks are on each PvP mode's build page.

@@ -18,4 +18,4 @@ At skill level 1: Deals 653 + 107.25% Attack damage to a target within 20m. 5 St
 | Chain role | Chain Skill |
 | Follows | Blade Toss |
 
-Which builds use it: see the PvE and PvP build pages (not written yet).
+Not in gaming.tools' PvE build; PvP picks are on each PvP mode's build page.
