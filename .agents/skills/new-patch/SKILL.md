@@ -16,8 +16,10 @@ Bring the guide up to date with a game patch. Input: a patch version or "latest"
 
 4. **Write overrides.** Run `/research-section` for each affected section, writing into the new patch's folder as an override with `change.game_change` (what the game changed, cited) and `change.reason` (why the guide changed). Use a Removal for content that's gone. New content in the patch (new skills, maps, modes) gets new sections. Add them to `docs/guide-outline.md` if they're a new kind of section.
 
-5. **Overview.** Replace the draft in `patch.md` with the hand-written overview: what the patch means for each documented class and for farming/crafting, in a few paragraphs.
+5. **Media.** Once gaming.tools has the new client data, refresh it: `node scripts/media/fetch.mjs --refresh --list <paths>` for the changed items and maps (or delete `.cache/gt` and re-run), then `node scripts/media/build.mjs`. Drop chances, spawn counts, shop prices and recipes in `content/media/` change with it; list in the impact report which material pages moved their best spot. Done when the build passes.
 
-6. **Go live (only when the patch is released on Global and the owner confirms).** Re-check any overrides that were written from KR/TW notes against the Global notes, set this patch `status: live` and the old live patch `superseded`.
+6. **Overview.** Replace the draft in `patch.md` with the hand-written overview: what the patch means for each documented class and for farming/crafting, in a few paragraphs.
 
-7. **Validate and report.** Run the build. Report the impact list, the overrides and removals written, sections whose confidence dropped, and the open questions for the owner.
+7. **Go live (only when the patch is released on Global and the owner confirms).** Re-check any overrides that were written from KR/TW notes against the Global notes, set this patch `status: live` and the old live patch `superseded`.
+
+8. **Validate and report.** Run the build. Report the impact list, the overrides and removals written, sections whose confidence dropped, and the open questions for the owner.

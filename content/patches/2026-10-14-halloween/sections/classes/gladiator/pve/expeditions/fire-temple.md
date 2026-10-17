@@ -4,6 +4,15 @@ order: 3
 status: researched
 last_checked: 2026-10-17
 ---
+:::quick
+1. Opens at character level 37; Conquest at 2,100 [@gamingtools-navigator-2026-10; @corpus-item-level-2026-10].
+2. Costs 30 Odyle Energy (Exploration) or 40 Odyle Energy (Conquest); one reward claim per difficulty a week [@gamingtools-exp-fire-temple-exploration-2026-10].
+3. Exploration: Judicator armor; Conquest: Enraged Kromede accessories and a Gear Change Voucher (shown below) [@gamingtools-exp-fire-temple-exploration-2026-10; @gamingtools-exp-fire-temple-conquest-2026-10].
+4. Play it with the **Group DPS** preset [@gamingtools-build-gladiator-pve-2026-10].
+:::
+
+::map{map=fire-temple}
+
 [@gamingtools-exp-fire-temple-exploration-2026-10]
 
 | | Exploration | Conquest |
@@ -26,11 +35,15 @@ Item level to enter: Conquest at 2,100 [@corpus-item-level-2026-10; @raidrelay-g
 
 ## Exploration rewards
 
+::loadout{class="Gladiator" title="Exploration drops" items="Breastplate=Judicator Breastplate; Greaves=Judicator Greaves; Helm=Judicator Helm; Pauldrons=Judicator Pauldrons; Gloves=Judicator Gloves; Boots=Judicator Boots; Cloak=Judicator Cloak"}
+
 Ceiling items (as the data page lists them): Judicator Breastplate, Judicator Greaves, Judicator Helm, Judicator Pauldrons, Judicator Gloves, Judicator Boots, Judicator Cloak [@gamingtools-exp-fire-temple-exploration-2026-10].
 
 Always in the cube: Silentium (Bound) ×4, Kina (Bound) ×35000, Enhance Stone ×1200 [@gamingtools-exp-fire-temple-exploration-2026-10].
 
 ## Conquest rewards
+
+::loadout{class="Gladiator" title="Conquest drops" items="Necklace=Enraged Kromede Necklace; Earrings=Enraged Kromede Earrings; Ring=Enraged Kromede Ring"}
 
 Ceiling items (as the data page lists them): Gear Change Voucher: Fire Temple (Bound), Enraged Kromede Necklace, Enraged Kromede Earrings, Enraged Kromede Ring [@gamingtools-exp-fire-temple-conquest-2026-10].
 

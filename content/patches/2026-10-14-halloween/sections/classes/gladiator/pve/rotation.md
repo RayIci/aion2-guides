@@ -4,6 +4,12 @@ order: 2
 status: researched
 last_checked: 2026-10-17
 ---
+:::quick
+1. Hold left mouse (your generator) and the macro key together [@gamingtools-build-gladiator-pve-2026-10].
+2. The macro is a priority list: each slot casts its first ready skill [@gamingtools-build-gladiator-pve-2026-10].
+3. Read the Core loop once, then follow your preset's list below while you play [!opinion].
+:::
+
 The Gladiator fights with a held generator (left mouse) plus a macro that presses a fixed list of quick slots. Each quick slot casts the first ready skill in its list, so the lists below are priorities, not a strict order [@gamingtools-build-gladiator-pve-2026-10].
 
 ::::play

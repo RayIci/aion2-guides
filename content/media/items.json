@@ -5302,6 +5302,27 @@
    "Splendent Star Dragon Lord Orb"
   ]
  },
+ "Enraged Kromede Claymore": {
+  "id": "110130051",
+  "url": "https://aion2.gaming.tools/items/110130051",
+  "icon": "icon_equip_wp_l_gs_0041_t06",
+  "grade": "Unique",
+  "category": "gear / weapons / greatsword",
+  "tradable": false,
+  "drops": [],
+  "gathers": [],
+  "dungeons": [
+   "Fire Temple",
+   "Abyssal Forge: Ludra"
+  ],
+  "shops": [],
+  "recipes": [],
+  "usedIn": [
+   "Sync Stone (Unique) (Bound)",
+   "Transfer Stone (Unique) (Bound)",
+   "Fire Temple: Weapon Selection Chest (Bound)"
+  ]
+ },
  "Enraged Kromede Earrings": {
   "id": "310230053",
   "url": "https://aion2.gaming.tools/items/310230053",
@@ -9838,6 +9859,25 @@
    "Kobold Transformation Candy (Bound)"
   ]
  },
+ "Kromede Claymore": {
+  "id": "110130033",
+  "url": "https://aion2.gaming.tools/items/110130033",
+  "icon": "icon_wp_gs_0056_t06",
+  "grade": "Unique",
+  "category": "gear / weapons / greatsword",
+  "tradable": false,
+  "drops": [],
+  "gathers": [],
+  "dungeons": [
+   "Fire Temple"
+  ],
+  "shops": [],
+  "recipes": [],
+  "usedIn": [
+   "Sync Stone (Unique) (Bound)",
+   "Transfer Stone (Unique) (Bound)"
+  ]
+ },
  "Kromede Silver Dagger": {
   "id": "110330033",
   "url": "https://aion2.gaming.tools/items/110330033",
@@ -11957,6 +11997,55 @@
   ],
   "shops": [],
   "recipes": [],
+  "usedIn": [
+   "Sync Stone (Unique) (Bound)",
+   "Transfer Stone (Unique) (Bound)"
+  ]
+ },
+ "Nuakum Guard": {
+  "id": "115030053",
+  "url": "https://aion2.gaming.tools/items/115030053",
+  "icon": "icon_weapon_guarder_l_012",
+  "grade": "Unique",
+  "category": "gear / weapons / guarder",
+  "tradable": false,
+  "drops": [],
+  "gathers": [],
+  "dungeons": [
+   "Ferocious Horn Den",
+   "Abyssal Forge: Ludra"
+  ],
+  "shops": [],
+  "recipes": [
+   {
+    "faction": "Elyos",
+    "makes": 1,
+    "inputs": [
+     {
+      "name": "Gear Change Voucher: Ferocious Horn Den (Bound)",
+      "qty": 3
+     },
+     {
+      "name": "Kina (All)",
+      "qty": 2000000
+     }
+    ]
+   },
+   {
+    "faction": "Asmodians",
+    "makes": 1,
+    "inputs": [
+     {
+      "name": "Gear Change Voucher: Ferocious Horn Den (Bound)",
+      "qty": 3
+     },
+     {
+      "name": "Kina (All)",
+      "qty": 2000000
+     }
+    ]
+   }
+  ],
   "usedIn": [
    "Sync Stone (Unique) (Bound)",
    "Transfer Stone (Unique) (Bound)"

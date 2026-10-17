@@ -4,12 +4,19 @@ order: 1
 status: researched
 last_checked: 2026-10-17
 ---
+:::quick
+1. Keep your PvE skill levels; switch only the Stigmas [@gamingtools-navigator-2026-10].
+2. Slot **Savage Fang**, **Aerial Bind**, **Evasion Stance**, **Evasion Contract** [!opinion].
+3. Swap Evasion Contract for **Smoke Bomb** against melee classes that don't Slow or Root [!opinion].
+:::
+
 No vetted Assassin PvP build source exists yet, so the picks below are worked out from the skill data [!opinion].
 
 Keep the skill levels and Specializations from PvE → PvE build, and change the Stigmas: the game expects you to switch Stigmas between situations such as PvP and boss fights [@gamingtools-navigator-2026-10], and skill presets keep a separate PvP loadout [@gamingtools-build-assassin-pve-2026-10].
 
 Suggested 4 Stigmas: **Savage Fang**, **Aerial Bind**, **Evasion Stance**, **Evasion Contract**. Swap Evasion Contract for **Smoke Bomb** against melee classes that don't Slow or Root [!opinion].
 
+:::details{summary="What each candidate Stigma does"}
 | Stigma | What it does in PvP | Source |
 |---|---|---|
 | Savage Fang | Up to 4 enemies, engraves 5 Insignias for 10s (60s) | [@gamingtools-skill-assassin-savage-fang-2026-10] |
@@ -22,3 +29,4 @@ Suggested 4 Stigmas: **Savage Fang**, **Aerial Bind**, **Evasion Stance**, **Eva
 | Triniel's Dagger | +30% from behind; target's cooldowns +5% of their duration (45s) | [@gamingtools-skill-assassin-triniels-dagger-2026-10] |
 | Spiral Slice | 20 m rush, removes 1 buff, extra damage per buff removed (90s) | [@gamingtools-skill-assassin-spiral-slice-2026-10] |
 | Assault Ambush | Up to 4 enemies, 30% Blind for 5s, Defense up to +20% by targets hit (120s) | [@gamingtools-skill-assassin-assault-ambush-2026-10] |
+:::

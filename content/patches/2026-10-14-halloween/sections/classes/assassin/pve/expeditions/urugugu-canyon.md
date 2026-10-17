@@ -4,6 +4,15 @@ order: 2
 status: researched
 last_checked: 2026-10-17
 ---
+:::quick
+1. Opens at character level 30; Conquest at 1,400 [@gamingtools-navigator-2026-10; @corpus-item-level-2026-10].
+2. Costs 20 Odyle Energy (Exploration) or 40 Odyle Energy (Conquest); one reward claim per difficulty a week [@gamingtools-exp-urugugu-canyon-exploration-2026-10].
+3. Exploration: Faith armor; Conquest: Aulamus accessories and a Gear Change Voucher (shown below) [@gamingtools-exp-urugugu-canyon-exploration-2026-10; @gamingtools-exp-urugugu-canyon-conquest-2026-10].
+4. Play it with the **Group DPS** preset [@gamingtools-build-assassin-pve-2026-10].
+:::
+
+::map{map=urugugu-canyon}
+
 [@gamingtools-exp-urugugu-canyon-exploration-2026-10]
 
 | | Exploration | Conquest |
@@ -26,6 +35,8 @@ Item level to enter: Conquest at 1,400 [@corpus-item-level-2026-10; @raidrelay-g
 
 ## Exploration rewards
 
+::loadout{class="Assassin" title="Exploration drops" items="Weapon=Faith Dagger; Breastplate=Faith Breastplate; Greaves=Faith Greaves; Helm=Faith Helm; Pauldrons=Faith Pauldrons; Gloves=Faith Gloves; Boots=Faith Boots; Cloak=Faith Cloak"}
+
 Ceiling items (as the data page lists them): Faith Breastplate, Faith Greaves, Faith Helm, Faith Pauldrons, Faith Gloves, Faith Boots, Faith Cloak [@gamingtools-exp-urugugu-canyon-exploration-2026-10].
 
 Daggers in the reward cube: Faith Dagger (3.89%) [@gamingtools-exp-urugugu-canyon-exploration-2026-10].
@@ -33,6 +44,8 @@ Daggers in the reward cube: Faith Dagger (3.89%) [@gamingtools-exp-urugugu-canyo
 Always in the cube: Silentium (Bound) ×4, Kina (Bound) ×30000, Enhance Stone ×1100 [@gamingtools-exp-urugugu-canyon-exploration-2026-10].
 
 ## Conquest rewards
+
+::loadout{class="Assassin" title="Conquest drops" items="Weapon=Aulamus Dagger; Necklace=Aulamus Necklace; Earrings=Aulamus Earrings; Ring=Aulamus Ring"}
 
 Ceiling items (as the data page lists them): Gear Change Voucher: Urugugu Canyon (Bound), Aulamus Necklace, Aulamus Earrings, Aulamus Ring [@gamingtools-exp-urugugu-canyon-conquest-2026-10].
 

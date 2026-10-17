@@ -4,6 +4,15 @@ order: 3
 status: researched
 last_checked: 2026-10-17
 ---
+:::quick
+1. Make your main weapon from Fire Temple: an off-class Enraged Kromede weapon + 3 Fire Temple vouchers + 2,000,000 Kina give a Weapon Selection Chest [@raidrelay-gear-score-2026-10].
+2. Farm **Ferocious Horn Den** for Nuakum armor (item level 86); its Conquest pity is 28 cube openings [@corpus-item-level-2026-10].
+3. Past 2,100, build Combat Power: Soul Binding, Manastones on final pieces, Amplify on Unique pieces [@corpus-item-level-2026-10].
+4. Farm Transcendence stage 4 for Unique Arcana [@corpus-item-level-2026-10].
+:::
+
+::loadout{class="Gladiator" title="Advanced endgame" ilvl="2,100 +" items="Helm=Nuakum Helm; Pauldrons=Nuakum Pauldrons; Breastplate=Nuakum Breastplate; Gloves=Nuakum Gloves; Greaves=Nuakum Greaves; Boots=Nuakum Boots; Cloak=Nuakum Cloak; Weapon=Enraged Kromede Claymore; Guard=Nuakum Guard; Necklace=Enraged Kromede Necklace; Earrings=Enraged Kromede Earrings; Ring=Enraged Kromede Ring"}
+
 Item level **2,100** and up.
 
 ## What opens

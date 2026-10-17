@@ -4,6 +4,13 @@ order: 2
 status: researched
 last_checked: 2026-10-17
 ---
+:::quick
+1. Level it with the lowest recipe that still gives mastery, moving up as new recipes open (table below) [!opinion].
+2. Inputs for every recipe: [Recipes → Armorsmithing](/world/crafting/recipes/armorsmithing); every input links to where it comes from [@gamingtools-item-database-2026-10].
+3. Gear you can make and its full material path: [Gear crafting paths](/world/crafting/gear-paths) [!opinion].
+4. What sells for a profit right now: [Profit checks](/world/crafting/profit) [@gamingtools-crafting-calculator-2026-10].
+:::
+
 **Armorsmithing** makes Cloak, Gloves, Helm, Legs, Materials (Armorsmithing), Pauldrons, Shoes, Top [@gamingtools-crafting-calculator-2026-10].
 
 ## Recipes by mastery level
@@ -57,5 +64,3 @@ Upgrades of crafted pieces, made with Armorsmithing and Transfer Crafting: Splen
 ## Levelling path
 
 Craft the lowest-level recipe you can still level from, and move up each time a new recipe in the table opens [!opinion]. Mastery runs 1–100 [@gamingtools-systems-crafting-2026-10].
-
-Materials and costs for each recipe are on Crafting → Recipes, and what sells at a profit on Profit checks.

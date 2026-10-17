@@ -4,6 +4,13 @@ order: 1
 status: researched
 last_checked: 2026-10-17
 ---
+:::quick
+1. Pick the preset for what you are doing: **Solo Farm** for packs, **Solo Single Target** for tough single enemies, **Group DPS** in parties [@gamingtools-build-assassin-pve-2026-10].
+2. Slot the Stigmas: **Illusive Clone** (level 10), **Swift Contract** (level 5), **Triniel's Dagger** (level 5), **Evasion Stance** (level 5) [@gamingtools-build-assassin-pve-2026-10].
+3. Set the skill levels and Specializations from the table (open it below) [@gamingtools-build-assassin-pve-2026-10].
+4. Set that preset's macro from PvE macros [@gamingtools-build-assassin-pve-2026-10].
+:::
+
 Three level-45 presets from gaming.tools' Assassin endgame build, one per job: **Solo Farm**, **Solo Single Target** and **Group DPS** [@gamingtools-build-assassin-pve-2026-10]. All three share the same Daevanion boards; each preset has the same full skill and Stigma point totals, including the Ascension quest's Stigma Shard [@gamingtools-build-assassin-pve-2026-10].
 
 - **Solo Farm:** Use Savage Roar and Flash Slice across packs, then take area Whirlwind Slice openings. Keep your defensive stance ready while you build and spend Insignias. [@gamingtools-build-assassin-pve-2026-10]
@@ -14,6 +21,7 @@ Three level-45 presets from gaming.tools' Assassin endgame build, one per job: *
 
 Levels shown as "10 + 2 bonus" are learned levels plus bonus levels from the Daevanion boards. Gear and Arcana bonuses are not included [@gamingtools-build-assassin-pve-2026-10].
 
+:::details{summary="Skill levels and Specializations for all three presets"}
 | Skill | Solo Farm | Solo Single Target | Group DPS |
 |---|---|---|---|
 | Quick Slice | 10 + 1 bonus<br>+20% MP restored | 10 + 1 bonus<br>+20% MP restored | 10 + 1 bonus<br>+20% MP restored |
@@ -38,6 +46,7 @@ Levels shown as "10 + 2 bonus" are learned levels plus bonus levels from the Dae
 | Defense Break | 1 | 1 | 1 |
 | Revitalization Contract | 1 + 2 bonus | 1 + 2 bonus | 1 + 2 bonus |
 | Determination | 1 + 1 bonus | 1 + 1 bonus | 1 + 1 bonus |
+:::
 
 [@gamingtools-build-assassin-pve-2026-10]
 

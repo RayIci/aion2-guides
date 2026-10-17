@@ -4,6 +4,15 @@ order: 1
 status: researched
 last_checked: 2026-10-17
 ---
+:::quick
+1. Opens at character level 22; Conquest at 700 [@gamingtools-navigator-2026-10; @corpus-item-level-2026-10].
+2. Costs 20 Odyle Energy (Exploration) or 40 Odyle Energy (Conquest); one reward claim per difficulty a week [@gamingtools-exp-krao-cave-exploration-2026-10].
+3. Exploration: Red Agate armor; Conquest: Berk accessories and a Gear Change Voucher (shown below) [@gamingtools-exp-krao-cave-exploration-2026-10; @gamingtools-exp-krao-cave-conquest-2026-10].
+4. Play it with the **Group DPS** preset [@gamingtools-build-gladiator-pve-2026-10].
+:::
+
+::map{map=krao-cave}
+
 [@gamingtools-exp-krao-cave-exploration-2026-10]
 
 | | Exploration | Conquest |
@@ -26,6 +35,8 @@ Item level to enter: Conquest at 700 [@corpus-item-level-2026-10].
 
 ## Exploration rewards
 
+::loadout{class="Gladiator" title="Exploration drops" items="Weapon=Red Agate Greatsword; Breastplate=Red Agate Breastplate; Greaves=Red Agate Greaves; Helm=Red Agate Helm; Pauldrons=Red Agate Pauldrons; Gloves=Red Agate Gloves; Boots=Red Agate Boots; Cloak=Red Agate Cloak"}
+
 Ceiling items (as the data page lists them): Red Agate Breastplate, Red Agate Greaves, Red Agate Helm, Red Agate Pauldrons, Red Agate Gloves, Red Agate Boots, Red Agate Cloak [@gamingtools-exp-krao-cave-exploration-2026-10].
 
 Greatswords in the reward cube: Red Agate Greatsword (3.9%), Earth Greatsword (2.6%), Frontline Greatsword (1.3%) [@gamingtools-exp-krao-cave-exploration-2026-10].
@@ -33,6 +44,8 @@ Greatswords in the reward cube: Red Agate Greatsword (3.9%), Earth Greatsword (2
 Always in the cube: Silentium (Bound) ×4, Kina (Bound) ×25000, Enhance Stone ×1000 [@gamingtools-exp-krao-cave-exploration-2026-10].
 
 ## Conquest rewards
+
+::loadout{class="Gladiator" title="Conquest drops" items="Necklace=Berk Necklace; Earrings=Berk Earrings; Ring=Berk Ring"}
 
 Ceiling items (as the data page lists them): Gear Change Voucher: Krao Cave (Bound), Berk Necklace, Berk Earrings, Berk Ring [@gamingtools-exp-krao-cave-conquest-2026-10].
 

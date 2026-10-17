@@ -10,6 +10,7 @@ import type { Confidence, PatchMeta, Source } from './schema';
 export type { ContentError } from './load';
 export type { Confidence, PatchMeta, Source } from './schema';
 export type { Media } from './media';
+export { iconFor } from './media';
 
 export interface ResolvedSection {
   id: string;

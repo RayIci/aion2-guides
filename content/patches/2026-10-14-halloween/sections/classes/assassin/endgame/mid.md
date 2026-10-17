@@ -4,6 +4,15 @@ order: 2
 status: researched
 last_checked: 2026-10-17
 ---
+:::quick
+1. Pick a route below: Vakron Sky Island armor with all your Odyle Energy, or crafted accessories and weapon with alts [@corpus-item-level-2026-10].
+2. Trade 2 Vakron vouchers + 1,500,000 Kina for the **Vakron Guard** (Substance Morph, always succeeds) [@raidrelay-gear-score-2026-10].
+3. Fill all five Arcana slots in Transcendence stage 1 at 1,600, then clear stage 2 at 1,900 [@corpus-item-level-2026-10].
+4. Use the **Group DPS** preset in Transcendence and Expeditions [@gamingtools-build-assassin-pve-2026-10].
+:::
+
+::loadout{class="Assassin" title="Mid endgame: Vakron route" ilvl="1,400 → 2,100" items="Helm=Vakron Helm; Pauldrons=Vakron Pauldrons; Breastplate=Vakron Breastplate; Gloves=Vakron Gloves; Greaves=Vakron Greaves; Boots=Vakron Boots; Cloak=Vakron Cloak; Weapon=True Dragon Lord Dagger; Guard=Vakron Guard; Necklace=Aulamus Necklace; Earrings=Aulamus Earrings; Ring=Aulamus Ring"}
+
 Item level **1,400 to 2,100**, the "energy phase" [@corpus-item-level-2026-10].
 
 ## What opens

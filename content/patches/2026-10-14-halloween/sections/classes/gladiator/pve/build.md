@@ -4,6 +4,13 @@ order: 1
 status: researched
 last_checked: 2026-10-17
 ---
+:::quick
+1. Pick the preset for what you are doing: **Solo Farm** for packs, **Solo Single Target** for tough single enemies, **Group DPS** in parties [@gamingtools-build-gladiator-pve-2026-10].
+2. Slot the Stigmas: **Rage Burst** (level 5), **Lunge Stance** (level 5), **Zikel's Blessing** (level 10) and **Focused Block** (level 5) [@gamingtools-build-gladiator-pve-2026-10].
+3. Set the skill levels and Specializations from the table (open it below) [@gamingtools-build-gladiator-pve-2026-10].
+4. Set that preset's macro from PvE macros [@gamingtools-build-gladiator-pve-2026-10].
+:::
+
 Three level-45 presets from gaming.tools' Gladiator endgame build, one per job: **Solo Farm**, **Solo Single Target** and **Group DPS** [@gamingtools-build-gladiator-pve-2026-10]. All three share the same Daevanion boards; each preset has the full 203 Skill Points and 30 Stigma points (the 30 includes the Ascension quest's Stigma Shard) [@gamingtools-build-gladiator-pve-2026-10; @gamingtools-character-levels-2026-10].
 
 - **Solo Farm:** Knock enemies down and spread Overhead Slam across the pack. Use Mocking Blade and Crushing Wave to keep pressure on nearby enemies. [@gamingtools-build-gladiator-pve-2026-10]
@@ -14,6 +21,7 @@ Three level-45 presets from gaming.tools' Gladiator endgame build, one per job: 
 
 Levels shown as "10 + 2 bonus" are 10 learned levels plus bonus levels from the Daevanion boards. Gear and Arcana bonuses are not included [@gamingtools-build-gladiator-pve-2026-10].
 
+:::details{summary="Skill levels and Specializations for all three presets"}
 | Skill | Solo Farm | Solo Single Target | Group DPS |
 |---|---|---|---|
 | Keen Strike | 10 + 2 bonus<br>+20% MP restored; -1s Ruinous Blow cooldown on hit | 10 + 2 bonus<br>+20% MP restored; -1s Ruinous Blow cooldown on hit | 10 + 2 bonus<br>+20% MP restored; -1s Ruinous Blow cooldown on hit |
@@ -38,6 +46,7 @@ Levels shown as "10 + 2 bonus" are 10 learned levels plus bonus levels from the 
 | Impact Hit | 1 | 8 | 8 |
 | Destructive Impulse | 1 | 1 | 1 |
 | Survival Willpower | 1 | 1 | 1 |
+:::
 
 [@gamingtools-build-gladiator-pve-2026-10]
 

@@ -9,7 +9,7 @@ import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
 import { visit, SKIP } from 'unist-util-visit';
 import { deriveConfidence, type Citation } from './confidence';
-import { autoIcons, inlineItem, itemCards, mapFigure, type MediaContext } from './media';
+import { autoIcons, inlineItem, itemCards, loadout, mapFigure, type MediaContext } from './media';
 import { CONFIDENCE_LEVELS, type Confidence, type Source } from './schema';
 
 // Markdown → HTML for one section body, with the citation syntax from docs/content-model.md.
@@ -299,6 +299,12 @@ function renderMedia(
       const names = (attrs.names ?? '').split(';').map((s) => s.trim()).filter(Boolean);
       const { node: hast, missing } = itemCards(media, names, cite(media.media.meta.itemSource));
       for (const m of missing) state.issues.push(`::items: "${m}" is not in content/media/items.json or icons.json`);
+      node.data = { hName: hast.tagName, hProperties: hast.properties, hChildren: hast.children };
+      return SKIP;
+    }
+    if (node.name === 'loadout') {
+      const { node: hast, missing } = loadout(media, attrs, cite(media.media.meta.itemSource));
+      for (const m of missing) state.issues.push(`::loadout: no icon for "${m}" in content/media/icons.json`);
       node.data = { hName: hast.tagName, hProperties: hast.properties, hChildren: hast.children };
       return SKIP;
     }

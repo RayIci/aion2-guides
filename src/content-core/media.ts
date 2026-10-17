@@ -101,7 +101,7 @@ export interface MediaContext {
 function link(ctx: MediaContext, name: string, children: ElementContent[]): ElementContent[] {
   const href = ctx.pageFor?.(name);
   if (!href || href === ctx.selfPath) return children;
-  return [el('a', { href, className: ['gi-link'] }, children)];
+  return [el('a', { href, className: ['gi-link'], dataBased: '' }, children)];
 }
 
 type Props = Record<string, string | number | boolean | string[] | undefined>;
@@ -152,7 +152,8 @@ export function howToGet(card: ItemCard): string[] {
   for (const d of farm)
     lines.push(`Drops from ${d.npc} (level ${d.min === d.max ? d.min : `${d.min}–${d.max}`}) in ${d.places[0] ?? 'the open world'}: ${fmtChance(d.chance)} per kill`);
   if (card.gathers.length) lines.push(`Gathered from ${[...new Set(card.gathers.map((g) => g.node))].join(', ')} nodes`);
-  if (card.dungeons.length) lines.push(`From ${card.dungeons.join(', ')}`);
+  if (card.dungeons.length)
+    lines.push(`From ${card.dungeons.slice(0, 3).join(', ')}${card.dungeons.length > 3 ? ` and ${card.dungeons.length - 3} more` : ''}`);
   for (const s of card.shops.slice(0, 2)) lines.push(`Sold by ${s.vendor ?? s.shop}${s.faction ? ` (${s.faction})` : ''}${s.price ? `: ${s.price}` : ''}`);
   for (const r of card.recipes.slice(0, 1))
     lines.push(`Crafted with ${r.profession} ${r.mastery}: ${r.inputs.map((g) => `${g.name} ×${g.qty}`).join(', ')}`);
@@ -174,7 +175,7 @@ export function itemCards(ctx: MediaContext, names: string[], cite: () => Elemen
     if (key) head.push(iconEl(ctx, key, 'lg'));
     const title: ElementContent[] = [
       ctx.pageFor?.(name) && ctx.pageFor(name) !== ctx.selfPath
-        ? el('a', { href: ctx.pageFor(name)!, className: ['item-card__name'] }, [txt(name)])
+        ? el('a', { href: ctx.pageFor(name)!, className: ['item-card__name'], dataBased: '' }, [txt(name)])
         : card
           ? el('a', { href: card.url, className: ['item-card__name'] }, [txt(name)])
           : el('span', { className: ['item-card__name'] }, [txt(name)]),
@@ -186,6 +187,46 @@ export function itemCards(ctx: MediaContext, names: string[], cite: () => Elemen
     cards.push(el('article', { className: ['item-card'] }, body));
   }
   const node = el('div', { className: ['item-cards'], dataItemCards: '' }, [...cards, el('p', { className: ['item-cards__cite'] }, [txt('Game data '), cite()])]);
+  return { node, missing };
+}
+
+const LEFT = ['Helm', 'Pauldrons', 'Breastplate', 'Gloves', 'Greaves', 'Boots', 'Cloak'];
+const RIGHT = ['Weapon', 'Guard', 'Necklace', 'Earrings', 'Ring', 'Bracelet', 'Belt', 'Amulet', 'Rune'];
+
+/**
+ * `::loadout{class="Gladiator" items="Helm=Vakron Helm; Weapon=…"}`: the gear for one stage laid out
+ * like the in-game equipment window (armor left, class emblem centre, weapon and accessories right).
+ */
+export function loadout(ctx: MediaContext, attrs: Record<string, string | null | undefined>, cite: () => ElementContent): { node: Element; missing: string[] } {
+  const slots = new Map<string, string>();
+  for (const pair of (attrs.items ?? '').split(';')) {
+    const [slot, name] = pair.split('=').map((s) => s?.trim());
+    if (slot && name) slots.set(slot, name);
+  }
+  const missing: string[] = [];
+  const slotEl = (slot: string) => {
+    const name = slots.get(slot);
+    const key = name ? iconFor(ctx, name) : undefined;
+    if (name && !key) missing.push(name);
+    const icon = key ? iconEl(ctx, key, 'lg') : el('span', { className: ['loadout__empty'] });
+    const label = name ? link(ctx, name, [txt(name)]) : [txt('–')];
+    return el('li', { className: ['loadout__slot', name ? '' : 'loadout__slot--empty'].filter(Boolean) }, [
+      icon,
+      el('span', { className: ['loadout__text'] }, [el('span', { className: ['loadout__kind'] }, [txt(slot)]), el('span', { className: ['loadout__name'] }, label)]),
+    ]);
+  };
+  const cls = attrs.class ? ctx.media.icons.classes[attrs.class] : undefined;
+  const centre: ElementContent[] = [];
+  if (cls)
+    centre.push(el('img', { src: `${ctx.assetBase}img/icons/${cls}.webp`, alt: '', width: 96, height: 96, loading: 'lazy', className: ['loadout__class'] }));
+  if (attrs.title) centre.push(el('p', { className: ['loadout__title'] }, [txt(attrs.title)]));
+  if (attrs.ilvl) centre.push(el('p', { className: ['loadout__ilvl'] }, [txt(`Item level ${attrs.ilvl}`)]));
+  const node = el('figure', { className: ['loadout'], dataLoadout: '' }, [
+    el('ul', { className: ['loadout__col'] }, LEFT.filter((s) => slots.has(s) || !attrs.compact).map(slotEl)),
+    el('div', { className: ['loadout__centre'] }, centre),
+    el('ul', { className: ['loadout__col'] }, RIGHT.filter((s) => slots.has(s)).map(slotEl)),
+    el('figcaption', {}, [txt('Item names and icons from the game data '), cite()]),
+  ]);
   return { node, missing };
 }
 
@@ -261,8 +302,10 @@ export function autoIcons(tree: HastRoot, ctx: MediaContext) {
   visit(tree, 'element', (node: Element, index, parent) => {
     if (node.tagName === 'a') {
       // Site-absolute links in Markdown ("/world/materials/raw-leather") get the base path.
+      // Links we generated (data-based) already carry the base path.
       const href = String(node.properties?.href ?? '');
-      if (href.startsWith('/') && !href.startsWith('//')) node.properties = { ...node.properties, href: ctx.assetBase + href.slice(1) };
+      if (node.properties?.dataBased !== undefined) delete node.properties.dataBased;
+      else if (href.startsWith('/') && !href.startsWith('//')) node.properties = { ...node.properties, href: ctx.assetBase + href.slice(1) };
       // Names inside an existing link keep that link (the subtree is skipped).
       return SKIP;
     }

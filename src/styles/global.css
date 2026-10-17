@@ -284,7 +284,7 @@
   @apply size-12 rounded-md;
 }
 .gi-name {
-  @apply whitespace-nowrap;
+  overflow-wrap: anywhere;
 }
 .prose td > .gi:first-child,
 .prose li > .gi:first-child {
@@ -423,4 +423,45 @@
 html:not([data-sources='show']) .cite,
 html:not([data-sources='show']) .item-cards__cite {
   display: none;
+}
+
+/* ::loadout — gear laid out like the in-game equipment window. */
+.loadout {
+  @apply my-8 grid grid-cols-1 gap-4 rounded-lg bg-muted p-4 lg:grid-cols-[1fr_auto_1fr];
+}
+.loadout__col {
+  @apply m-0 flex list-none flex-col gap-2 p-0;
+}
+.loadout__slot {
+  @apply m-0 flex items-center gap-3 rounded-md bg-background/60 p-2;
+}
+.loadout__slot--empty {
+  @apply opacity-50;
+}
+.loadout__empty {
+  @apply inline-block size-12 shrink-0 rounded-md border border-dashed border-muted-foreground/40;
+}
+.loadout__text {
+  @apply flex min-w-0 flex-col leading-tight;
+}
+.loadout__kind {
+  @apply text-xs tracking-wide text-muted-foreground uppercase;
+}
+.loadout__name {
+  @apply text-[15px] font-medium;
+}
+.loadout__centre {
+  @apply order-first flex flex-col items-center justify-center gap-1 text-center lg:order-none lg:px-4;
+}
+.loadout__class {
+  @apply m-0 size-24 object-contain;
+}
+.loadout__title {
+  @apply m-0 font-semibold;
+}
+.loadout__ilvl {
+  @apply m-0 text-sm text-muted-foreground;
+}
+.loadout figcaption {
+  @apply col-span-full m-0 text-sm text-muted-foreground;
 }

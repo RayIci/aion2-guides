@@ -4,6 +4,15 @@ order: 1
 status: researched
 last_checked: 2026-10-17
 ---
+:::quick
+1. Get the two **Clash Runes** from their quest chests and take both to +1 [@corpus-item-level-2026-10].
+2. Finish the main story for a Unique weapon, plus the Ascension and Abyss quests for a guard and a bracelet [@corpus-item-level-2026-10].
+3. Make the **Noble Belt** and **Revelation Amulet** Unique from Stronghold and feather scrolls [@corpus-item-level-2026-10; @raidrelay-gear-score-2026-10].
+4. Weapon, guard and bracelet to +10 with one Manastone line each; save your Odyle Energy [@corpus-item-level-2026-10].
+:::
+
+::loadout{class="Gladiator" title="Early endgame" ilvl="45 → 1,400" items="Bracelet=Ascension Bracelet; Belt=Noble Belt; Amulet=Revelation Amulet; Rune=Clash Rune"}
+
 Level 45 to item level **1,400**. Most players hit 45 at 850–950 item level, depending on side quests [@corpus-item-level-2026-10].
 
 ## What opens

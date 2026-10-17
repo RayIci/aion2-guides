@@ -102,7 +102,7 @@ No section to write. The site builds it from overrides (see `docs/content-model.
 ## Farming & crafting: `world/…`
 
 ### Map atlas: `world/maps/<map-slug>`
-One per map (Poeta, Ishalgen, Verteron, Altgard, the Reshanta layers, and every other Global zone): level range, materials found there (gathered, looted, vendor), notable spots, farming routes that run through it, contested times/areas, links to external maps (ADR-0005).
+One per map (Poeta, Ishalgen, Verteron, Altgard, the Reshanta layers, and every other Global zone): level range, materials found there (gathered, looted, vendor), notable spots, farming routes that run through it, contested times/areas, the map itself with its areas named (`::map{map=…}`), field bosses, and links to external maps (ADR-0007).
 
 ### Materials: `world/materials/<material-slug>`
 One per material that matters (Enhance Stones, Amplify Stones, Stigma Shards, Daevanion Crystals, Wing Featherdown, Odyle Energy, Raw Leather, gathering materials…). For each:

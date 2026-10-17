@@ -4,6 +4,11 @@ order: 7
 status: researched
 last_checked: 2026-10-17
 ---
+:::quick
+1. Each material below has its own page with the best spot per faction, a map and a loop: **Odyle** [@gamingtools-item-database-2026-10].
+2. Level Proficient Handling and Delicate Touch first: they make every node faster [@gamingtools-systems-gathering-2026-10; !opinion].
+:::
+
 | Node | Faction | Gives | Where (placements) | Source |
 |---|---|---|---|---|
 | Odyle | Asmodians | Odyle, Fine Odyle, Pure Odyle, Radiant Odyle | Altgard (650) | [@gamingtools-gather-1550000-2026-10] |

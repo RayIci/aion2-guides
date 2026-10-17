@@ -4,6 +4,14 @@ order: 5
 status: researched
 last_checked: 2026-10-17
 ---
+:::quick
+1. Costs 40 Odyle Energy (Exploration) or 40 Odyle Energy (Conquest); one reward claim per difficulty a week [@gamingtools-exp-vakron-sky-island-exploration-2026-10].
+2. Exploration: Vakron armor; Conquest: Vakron armor and a Gear Change Voucher (shown below) [@gamingtools-exp-vakron-sky-island-exploration-2026-10; @gamingtools-exp-vakron-sky-island-conquest-2026-10].
+3. Play it with the **Group DPS** preset [@gamingtools-build-assassin-pve-2026-10].
+:::
+
+::map{map=vakron-sky-island}
+
 [@gamingtools-exp-vakron-sky-island-exploration-2026-10]
 
 | | Exploration | Conquest |
@@ -21,6 +29,8 @@ Item level to enter: Exploration and Conquest at 1,400 [@corpus-item-level-2026-
 
 ## Exploration rewards
 
+::loadout{class="Assassin" title="Exploration drops" items="Weapon=Unyielding Dagger; Breastplate=Vakron Breastplate; Greaves=Vakron Greaves; Helm=Vakron Helm; Pauldrons=Vakron Pauldrons; Gloves=Vakron Gloves; Boots=Vakron Boots; Cloak=Vakron Cloak"}
+
 Ceiling items (as the data page lists them): Vakron Breastplate, Vakron Greaves, Vakron Helm, Vakron Pauldrons, Vakron Gloves, Vakron Boots, Vakron Cloak [@gamingtools-exp-vakron-sky-island-exploration-2026-10].
 
 Daggers in the reward cube: Unyielding Dagger (3.22%) [@gamingtools-exp-vakron-sky-island-exploration-2026-10].
@@ -28,6 +38,8 @@ Daggers in the reward cube: Unyielding Dagger (3.22%) [@gamingtools-exp-vakron-s
 Always in the cube: Silentium (Bound) ×4, Kina (Bound) ×50000, Enhance Stone ×1400 [@gamingtools-exp-vakron-sky-island-exploration-2026-10].
 
 ## Conquest rewards
+
+::loadout{class="Assassin" title="Conquest drops" items="Breastplate=Vakron Breastplate; Greaves=Vakron Greaves; Helm=Vakron Helm; Pauldrons=Vakron Pauldrons; Gloves=Vakron Gloves; Boots=Vakron Boots; Cloak=Vakron Cloak"}
 
 Ceiling items (as the data page lists them): Gear Change Voucher: Vakron Sky Island (Bound), Vakron Breastplate, Vakron Greaves, Vakron Helm, Vakron Pauldrons, Vakron Gloves, Vakron Boots, Vakron Cloak [@gamingtools-exp-vakron-sky-island-conquest-2026-10].
 

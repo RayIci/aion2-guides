@@ -9,7 +9,7 @@ import PatchNotice from '../components/PatchNotice.astro';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Badge } from '@/components/ui/badge';
 import type { PatchView, ResolvedSection } from '../content-core';
-import { guideOf } from '../content-core';
+import { guideOf, iconFor } from '../content-core';
 import { getContent, sectionPath } from '../lib/content';
 import { guideEntry, guideTitle } from '../lib/guides';
 import { buildNav, label, toNavItems, type NavNode } from '../lib/nav';
@@ -50,6 +50,10 @@ const PATCH_STATUS = { staged: 'Staged, not released on Global yet', live: 'Live
 const href = (id: string) => withBase(`/${patch.meta.id}/${sectionPath(id)}`);
 
 // One confidence line per page, since inline badges are hidden by default.
+// Skill and item pages show the game icon next to their title.
+const titleIcon = section
+  ? iconFor({ media: content.media, assetBase: '', className: section.id.startsWith('classes/') ? section.id.split('/')[1] : undefined }, section.title)
+  : undefined;
 const claimCount = section?.claims.length ?? 0;
 const verifiedShare = claimCount ? Math.round((100 * (section?.claims.filter((c) => c.confidence === 'verified').length ?? 0)) / claimCount) : 0;
 const pageConfidence = !claimCount ? undefined : verifiedShare >= 80 ? 'verified' : verifiedShare >= 40 ? 'community' : 'unverified';
@@ -92,7 +96,10 @@ if (section) {
       <span hidden data-pagefind-meta="patch[data-value]" data-value={patch.meta.title}></span>
       <span hidden data-pagefind-meta="guide[data-value]" data-value={guideView.title}></span>
       <header class="flex flex-col gap-3">
-        <h1 class="text-3xl font-semibold tracking-tight text-balance" data-pagefind-meta="title">{section.title}</h1>
+        <h1 class="flex items-center gap-3 text-3xl font-semibold tracking-tight text-balance">
+          {titleIcon && <img class="size-12 shrink-0 rounded-md bg-muted object-contain" src={withBase(`img/icons/${titleIcon}.webp`)} alt="" width="48" height="48" />}
+          <span data-pagefind-meta="title">{section.title}</span>
+        </h1>
         <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted-foreground" data-pagefind-ignore>
           <Badge variant={STATUS[section.status].variant}>{STATUS[section.status].label}</Badge>
           <span>

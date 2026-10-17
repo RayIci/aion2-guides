@@ -21,7 +21,7 @@ export function HeaderControls({ patch }: { patch?: PatchNav }) {
         <>
           <SearchDialog patchId={patch.current} patchTitle={currentTitle ?? ""} />
           <PatchSwitcher current={patch.current} options={patch.options} />
-          <Button variant="ghost" size="sm" className="hidden xl:inline-flex" render={<a href={patch.changelogHref} />}>
+          <Button variant="ghost" size="sm" className="hidden 2xl:inline-flex" render={<a href={patch.changelogHref} />}>
             <HistoryIcon data-icon="inline-start" />
             Changelog
           </Button>

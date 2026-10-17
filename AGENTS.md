@@ -10,13 +10,14 @@ Product spec: `.scratch/site-v1/spec.md`. Vocabulary: `GLOSSARY.md`; use its ter
 - `docs/sourcing.md`: source hierarchy, confidence rule, how to register and cite a source.
 - `docs/guide-outline.md`: the required section tree. Use it to judge whether a guide is complete.
 - `docs/source-directory.md`: known sources by tier. Add to it as you find them.
+- `scripts/media/README.md`: how icons, item cards and maps are generated, and when to re-run it.
 
 ## Rules that hold everywhere
 
 - **Patches are the unit of change.** To change a section's content for patch P, write or edit P's override of it (with `change.game_change` + `change.reason`). Edit the older patch's copy only when you're fixing a mistake that was already wrong in that patch. In that case also check later patches for overrides of the same section (ADR-0002).
 - **Cite or mark.** Every claim gets `[@source-id]` or an honest `[!opinion]` / `[!unverified]`. Show disagreements as `:::conflict`. Never settle one silently.
 - **Global first.** KR/TW-only evidence is capped at Community confidence (ADR-0003).
-- **No game assets.** Text and outbound links only (ADR-0005).
+- **Game media only where it identifies something.** Icons and maps come from the client data via `scripts/media/` and are credited to NCSOFT (ADR-0007). No decorative art.
 - **UI is plain and utilitarian.** Text, lists and links with shadcn components (`src/components/ui`), or a small custom component when shadcn has nothing that fits. No decorative design: no hero art, pictures, video, scroll animations or themed looks. Interactive parts are React islands (ADR-0006).
 - **The build must pass.** The content validator runs on every build. Fix every error it reports rather than suppressing it.
 

@@ -97,19 +97,19 @@ export function GuideShell({ siteHref, guideTitle, patchLabel, items, crumbs, pa
         </SidebarFooter>
         <SidebarRail />
       </Sidebar>
-      <SidebarInset>
+      <SidebarInset className="min-w-0">
         <header className="sticky top-0 z-10 flex h-14 shrink-0 items-center gap-2 bg-background px-4">
           <SidebarTrigger className="-ml-1" />
-          <Breadcrumb className="min-w-0 flex-1">
-            <BreadcrumbList>
+          <Breadcrumb className="min-w-0 flex-1 overflow-hidden">
+            <BreadcrumbList className="flex-nowrap">
               {crumbs.map((crumb, i) => (
                 <React.Fragment key={`${crumb.title}-${i}`}>
-                  {i > 0 && <BreadcrumbSeparator className="hidden md:block" />}
-                  <BreadcrumbItem className={i < crumbs.length - 1 ? "hidden md:block" : undefined}>
+                  {i > 0 && <BreadcrumbSeparator className="hidden xl:block" />}
+                  <BreadcrumbItem className={i < crumbs.length - 1 ? "hidden xl:block" : "min-w-0 flex-1"}>
                     {crumb.href && i < crumbs.length - 1 ? (
                       <BreadcrumbLink href={crumb.href}>{crumb.title}</BreadcrumbLink>
                     ) : (
-                      <BreadcrumbPage className="truncate">{crumb.title}</BreadcrumbPage>
+                      <BreadcrumbPage className="block truncate">{crumb.title}</BreadcrumbPage>
                     )}
                   </BreadcrumbItem>
                 </React.Fragment>

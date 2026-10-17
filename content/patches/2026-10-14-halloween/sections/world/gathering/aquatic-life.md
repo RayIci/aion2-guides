@@ -4,6 +4,11 @@ order: 2
 status: researched
 last_checked: 2026-10-17
 ---
+:::quick
+1. Each material below has its own page with the best spot per faction, a map and a loop: **Conide**, **Pujery**, **Cypri**, **Inina** [@gamingtools-item-database-2026-10].
+2. Level Proficient Handling and Delicate Touch first: they make every node faster [@gamingtools-systems-gathering-2026-10; !opinion].
+:::
+
 | Node | Faction | Gives | Where (placements) | Source |
 |---|---|---|---|---|
 | Conide | Asmodians | Conide | Altgard (93) | [@gamingtools-gather-1550042-2026-10] |

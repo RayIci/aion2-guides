@@ -28,7 +28,7 @@ export function SourcesToggle() {
   return (
     <div className="flex items-center gap-2 px-1 sm:px-2" title="Show sources">
       <Switch id="sources-toggle" checked={shown} onCheckedChange={change} />
-      <Label htmlFor="sources-toggle" className="sr-only text-sm xl:not-sr-only">
+      <Label htmlFor="sources-toggle" className="sr-only text-sm 2xl:not-sr-only">
         Sources
       </Label>
     </div>
