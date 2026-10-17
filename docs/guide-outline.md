@@ -113,7 +113,7 @@ One per material that matters (Enhance Stones, Amplify Stones, Stigma Shards, Da
 5. Patch notes that affect it.
 
 ### Gathering: `world/gathering/…`
-`index` (how **Essence Extraction** works), then one page per gathering type: **Ore, Gem, Log, Herb, Cooking Ingredient, Odyle** [gamingtools-navigator-2026-10]. Each covers the leveling path by tier, best nodes per tier with spots, tools and buffs, time-to-level estimates, and the market listing restriction from 2026-10-14 [nc-global-notes-2026-10-14].
+`index` (how **Essence Extraction** works), then one page per gathering type: **Ore, Gem, Log, Herb, Fruit, Vegetable, Aquatic Life, Odyle** (the Global client's node types) [gamingtools-gather-1500004-2026-10]. Each covers the leveling path by tier, best nodes per tier with spots, tools and buffs, time-to-level estimates, and the market listing restriction from 2026-10-14 [nc-global-notes-2026-10-14].
 
 ### Crafting: `world/crafting/…`
 `index` (how crafting works, crafting progression), then one page per profession: **Blacksmithing, Armorsmithing, Handicrafting, Alchemy, Cooking** [gamingtools-navigator-2026-10]. Each covers the leveling path and `recipes` (key recipes, inputs, outputs). Then `profit`: **Profit checks** for the current patch (dated; prices go stale fast, so always give `last_checked`).

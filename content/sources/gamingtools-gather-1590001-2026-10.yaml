@@ -1,0 +1,11 @@
+id: gamingtools-gather-1590001-2026-10
+title: "Odyle gathering node (AION 2 Global database)"
+url: "https://aion2.gaming.tools/gatherables/1590001"
+type: data
+author: "gaming.tools"
+language: en
+region: global
+accessed: 2026-10-17
+about_patch: "Global client 2.0.7.0"
+derived_from: []
+notes: "Node grade, mastery, gathering results and placements per map. Read through a headless browser."
