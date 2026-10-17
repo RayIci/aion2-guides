@@ -55,8 +55,13 @@ const titleIcon = section
   ? iconFor({ media: content.media, assetBase: '', className: section.id.startsWith('classes/') ? section.id.split('/')[1] : undefined }, section.title)
   : undefined;
 const claimCount = section?.claims.length ?? 0;
-const verifiedShare = claimCount ? Math.round((100 * (section?.claims.filter((c) => c.confidence === 'verified').length ?? 0)) / claimCount) : 0;
-const pageConfidence = !claimCount ? undefined : verifiedShare >= 80 ? 'verified' : verifiedShare >= 40 ? 'community' : 'unverified';
+const share = (level: string) =>
+  claimCount ? Math.round((100 * (section?.claims.filter((c) => c.confidence === level).length ?? 0)) / claimCount) : 0;
+const verifiedShare = share('verified');
+const communityShare = share('community');
+const reasoningShare = claimCount ? 100 - verifiedShare - communityShare : 0;
+// The page badge: Verified when most claims are; Community when most are sourced at all; else Unverified.
+const pageConfidence = !claimCount ? undefined : verifiedShare >= 60 ? 'verified' : verifiedShare + communityShare >= 70 ? 'community' : 'unverified';
 
 let guideView: { title: string; items: ReturnType<typeof toNavItems>; crumbs: { title: string; href?: string }[] } | undefined;
 if (section) {
@@ -113,8 +118,10 @@ if (section) {
         </div>
         {pageConfidence && (
           <p class="flex flex-wrap items-center gap-2 text-sm text-muted-foreground" data-pagefind-ignore>
-            <Badge variant={pageConfidence}>{verifiedShare}% verified</Badge>
-            <span>{claimCount} cited claims. Turn on Sources in the header to see each one.</span>
+            <Badge variant="verified">{verifiedShare}% verified</Badge>
+            {communityShare > 0 && <Badge variant="community">{communityShare}% community</Badge>}
+            {reasoningShare > 0 && <Badge variant="unverified">{reasoningShare}% reasoning or gaps</Badge>}
+            <span>of {claimCount} claims. Turn on Sources in the header to see each one.</span>
           </p>
         )}
         {section.sectionConfidence && (

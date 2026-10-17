@@ -78,6 +78,25 @@ describe('game media blocks', () => {
     expect(h).toContain('glad.webp');
   });
 
+  it('draws the skill bar with priorities, modes and its own citation', async () => {
+    const g = await build({
+      'patches/1.0/sections/classes/gladiator/setup.md': section(
+        researched('Setup'),
+        ['## 1. Your skill bar', '', '::skillbar{title="Preset 1" keys="5=Keen Strike,Defiance/macro; E=Defiance/hand; RMB=Macro" cite="@db"}'].join('\n'),
+      ),
+    });
+    expect(errorsOf(g)).toEqual([]);
+    const h = html(g, 'classes/gladiator/setup');
+    expect(h).toContain('<h2 id="1-your-skill-bar">');
+    expect(h).toContain('sb-key sb-key--macro');
+    expect(h).toContain('sb-key sb-key--hand');
+    expect(h).toContain('sb-key sb-key--macro-key');
+    // Bottom-first in the list, top-first in the picture.
+    expect(h).toMatch(/tries <strong>Keen Strike<\/strong>, then <strong>Defiance<\/strong>/);
+    expect(h.indexOf('alt="Defiance"')).toBeLessThan(h.indexOf('alt="Keen Strike"'));
+    expect(g.defaultPatch!.sections[0].sources.map((s) => s.id)).toEqual(['db']);
+  });
+
   it('reports unknown names and map ids', async () => {
     const g = await build({
       'patches/1.0/sections/world/x.md': section(researched('X'), ['Text [@db].', '', '::items{names="Nope"}', '', '::map{id=missing}', '', ':item[Ghost]'].join('\n')),

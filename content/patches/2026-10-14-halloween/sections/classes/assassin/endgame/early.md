@@ -1,5 +1,5 @@
 ---
-title: "Early endgame"
+title: "Stage 1: item level 45 → 1,400"
 order: 1
 status: researched
 last_checked: 2026-10-17
@@ -11,7 +11,33 @@ last_checked: 2026-10-17
 4. Weapon, guard and bracelet to +10 with one Manastone line each; save your Odyle Energy [@corpus-item-level-2026-10].
 :::
 
-::loadout{class="Assassin" title="Early endgame" ilvl="45 → 1,400" items="Bracelet=Ascension Bracelet; Belt=Noble Belt; Amulet=Revelation Amulet; Rune=Clash Rune"}
+## Your gear this stage
+
+::loadout{class="Assassin" title="Stage 1" ilvl="45 → 1,400" items="Bracelet=Ascension Bracelet; Belt=Noble Belt; Amulet=Revelation Amulet; Rune=Clash Rune"}
+
+## How to get each piece
+
+| Piece | Where | What to do |
+|---|---|---|
+| Weapon | Main story | Finish the main story: its last quests give a Unique weapon you keep for a long time [@corpus-max-level-2026-10; @corpus-item-level-2026-10] |
+| Guard, Bracelet | Last Ascension and Abyss quests | Do them as they come; the bracelet is the Ascension Bracelet [@corpus-max-level-2026-10; @gamingtools-ascension-rewards-2026-10] |
+| Belt (Noble Belt) | Strongholds | Stronghold rewards give the belt scrolls that raise it to Unique [@corpus-item-level-2026-10; @raidrelay-gear-score-2026-10] |
+| Amulet (Revelation Amulet) | Feathers | Feathers give the amulet scrolls; take the Fierce Battle Amulet to Unique too if you will PvP [@corpus-item-level-2026-10; @gamingtools-item-database-2026-10] |
+| Clash Rune ×2 | Two quests with a Clash Rune chest | Equip both and take them to +1 (always succeeds; +2 can destroy the rune) [@corpus-item-level-2026-10] |
+| Item level from Daevanion | Green side quests, Sealed Dungeons | Every Daevanion point is one item level [@corpus-max-level-2026-10; @corpus-item-level-2026-10] |
+
+## What to run
+
+| Content | Opens at | Preset | Why |
+|---|---|---|---|
+| Side quests and [Sealed Dungeons](/classes/assassin/reference/content/open-world) | 45 | Solo Farm, Solo Single Target for bosses | Daevanion points = item level [@corpus-max-level-2026-10; @gamingtools-build-assassin-pve-2026-10] |
+| [Daily Dungeon](/classes/assassin/reference/content/daily-dungeon) | 45 | Solo Farm | Enhance Stones for belt and amulet; 14 entries a week on your main [@corpus-daily-weekly-2026-10] |
+| [Ascension Trial](/classes/assassin/reference/content/ascension-trial) Easy | item level 1,000 | Solo Single Target | 3 runs a week on every character [@corpus-daily-weekly-2026-10] |
+| [Krao Cave](/classes/assassin/reference/content/expeditions/krao-cave), [Draupnir](/classes/assassin/reference/content/expeditions/draupnir) Conquest | 700 | Group DPS | Only on alts: save your main's Odyle Energy for 1,400 [@corpus-max-level-2026-10; @corpus-expeditions-guide-2026-10] |
+
+## PvP
+
+The **Arena** (1v1 and 5v5) and the **Battlefield** open at 45; the Battlefield is equalized, so play it now for Abyss Points [@corpus-arena-guide-2026-10; @corpus-battlefield-guide-2026-10]. The **Abyss** opens at item level 1,000; its Abyss Points buy Stigma Shards [@corpus-abyss-guide-2026-10]. See [PvP](/classes/assassin/pvp).
 
 Level 45 to item level **1,400**. Most players hit 45 at 850–950 item level, depending on side quests [@corpus-item-level-2026-10].
 

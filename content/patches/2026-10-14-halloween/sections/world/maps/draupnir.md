@@ -5,7 +5,7 @@ status: researched
 last_checked: 2026-10-17
 ---
 :::quick
-1. Expedition. Entry, rewards and drops: [Gladiator](/classes/gladiator/pve/expeditions/draupnir) or [Assassin](/classes/assassin/pve/expeditions/draupnir) page [@gamingtools-navigator-2026-10].
+1. Expedition. Entry, rewards and drops: [Gladiator](/classes/gladiator/reference/content/expeditions/draupnir) or [Assassin](/classes/assassin/reference/content/expeditions/draupnir) page [@gamingtools-navigator-2026-10].
 :::
 
 ::map{map=draupnir}

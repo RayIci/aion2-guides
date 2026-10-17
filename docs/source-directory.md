@@ -63,10 +63,13 @@ None vetted yet. Vet each one against Data/Official sources before relying on it
 | Game8 | https://game8.co/games/Aion-2/ | global | Mechanics explainers (e.g. duels) | *vetted*. Other sites copy it (allthings.how), so copies are not independent. |
 | Corpus | https://corpus.gg/blog/aion-2/gear-score-guide | global | Item-level thresholds | *vetted*. Says it reads the client. |
 | Raid Relay | https://raidrelay.com/aion-2-gear-score-guide | global | Gear-score progression | *vetted*. Agrees with Corpus. |
+| Corpus class builds | https://corpus.gg/blog/aion-2/gladiator-pve-build (also assassin, macros, daevanion, expeditions, arena, abyss guides) | global | Builds, Stigmas, macros, Daevanion, where gear drops | *vetted*. Summarizes named YouTube creators (Grobs, aLuckyRO, Wakayashi, Madsin) with timestamps and shows disagreements. Independent of gaming.tools, so the two agreeing makes a pick Verified. |
+| aion2-meta.com | https://aion2-meta.com/guides/gladiator/ | kr (+ global stats) | PvE vs PvP pick rates for skills, Stigmas, passives | *usable*. Korean top-player statistics (AION2CAL), split PvE/PvP; Korea has 6 Stigma slots. Region kr, so Community at most. The only source with PvP build data so far. |
+| couga54 / aion2-guides.info | https://couga54.github.io/aion2-guides/en/gladiator/ | global | Builds citing creators | *unvetted*. The two sites are byte-identical, so count them as one source; daevaguides.com copies it. |
 | Playnews | https://www.playnews.gg/en/ | global | News recaps of official streams | *vetted*. Cite the VOD it quotes when possible. |
 | Inven AION 2 | https://aion2.inven.co.kr/ | kr | Deepest community: class boards Gladiator (검성) https://www.inven.co.kr/board/aion2/6448, Assassin (살성) https://www.inven.co.kr/board/aion2/6449, PvP https://www.inven.co.kr/board/aion2/6492 | KR only |
 | Reddit | (unconfirmed) | global | | Blocked our fetch (HTTP 403). The subreddit needs confirming by hand. |
 
 ## Avoid
 
-Gold and boost sellers that publish SEO guides (expcarry, eloboost24, skycoach, aoeah, mmogah, mmoexp, playerauctions, odealo) and AI-written guide farms (aion2-wiki.wiki, aion2guide.site and similar). Use them only if nothing else exists, and never as the sole source.
+Gold and boost sellers that publish SEO guides (expcarry, eloboost24, skycoach, aoeah, mmogah, mmoexp, playerauctions, odealo) and AI-written guide farms (aion2-wiki.wiki, aion2guide.site, aion2pilot.com and similar). Use them only if nothing else exists, and never as the sole source.

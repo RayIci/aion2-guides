@@ -10,31 +10,84 @@ Section ids follow `docs/content-model.md`. `<class>` is e.g. `gladiator`. Globa
 
 ## Class guide: `classes/<class>/`
 
-### Overview: `overview`
-Role, strengths/weaknesses, difficulty, playstyle, how it plays in PvE vs PvP, who should pick it, and a summary of how it performs in the current patch. `play: false`.
+Organized by **where the player is**, not by game system (owner feedback, 2026-10-17): the player should never have to assemble a plan from several system pages. Path pages say what to do; Reference pages hold the detail and are linked from the path.
 
-### Systems reference: `systems/…`
-Reference pages, true across every stage. Later stages link here instead of repeating it.
+### Start here: `index`
+The class in one minute (role, where its damage comes from, how it plays; cited), then a "Where are you?" table linking each level / item-level range to its page. `play: false`.
 
-- `systems/stats`: every stat that matters to the class, what it does, soft/hard caps, and the class's stats by level.
-- `systems/resource-and-chains`: the class resource (**MP** for Gladiator and Assassin; there's no separate class resource) and **Chain Skills** (opening skills that chain into follow-ups) [gamingtools-gladiator-2026-10, gamingtools-assassin-2026-10, gamingtools-keen-strike-2026-10].
-- `systems/skills/index`: skill list overview (Active, Passive, Stigma, Chain), how skills unlock, and **Skill Points**, including bonus SP from Wisdom Stones.
-- `systems/skills/<skill-slug>`: **one section per skill**: effect, per-level numbers, cooldown, cost, unlock level, **Specializations** (slots at skill level 8 / 12 / 20), which builds use it. Kept small on purpose, because balance patches hit single skills.
-- `systems/stigma`: **Stigma** skills, Stigma Shards, slots at character Lv 22 / 27 / 32 / 37, and which Stigmas to slot for PvE vs PvP [gamingtools-character-levels-2026-10, gamingtools-navigator-2026-10].
-- `systems/daevanion`: the **Daevanion** board: green nodes (passives), blue nodes (actives), orange nodes (stats), Daevanion Crystals/Fragments, points from Lv 12, and node priority for the class.
-- `systems/gear`: gear slots, grades and how to get them, item level and Combat Power, best-in-slot per stage (summary; stage pages give the targets). Global Season 1 has no Heroic gear [playnews-level-cap-2026-09].
-- `systems/enhancement`: **Enhancement** (Enhance Stones, rates, failure rules), **Amplify** past +15 (Amplify Stones), **Soul Binding**, plus **what to enhance first and how far, by stage**.
-- `systems/stones`: **Manastones**, **Soulstones** and **Theostones**: what each does, which to use for the class.
-- `systems/accessories`: accessories and their stat choices; belts and amulets are upgraded only through Substance Morph.
-- `systems/arcana`: **Arcana** relics (grails, parchments, compasses, bells, mirrors, scales) from Transcendence: item level, enhancing with duplicates.
-- `systems/substance-morph`: **Substance Morph**: converting materials, crystals and fragments into items, and its weekly caps.
-- `systems/wings`: **Wings** and flight: Flight Power, wing stats, quest wings by Ascension, Wing Featherdown morphs [nc-global-maint-2026-10-09].
-- `systems/pets`: **Pets**: mounts, type effects, Insight levels, **Genus Insight** (Cogni, Fera, Natura, Varian, Special), Pet Transformation with Empathy Candy, and which pets help the class [gamingtools-pet-collection-2026-10, fextralife-pet-guide-2026-10].
-- `systems/collections`: account and character stat sources: **Title** (3 equipped), **Achievements**, **Pantheon**, **Empyrean Lord's Monolith**, **Closet** skin collection bonuses [gamingtools-guild-collections-2026-10, nc-global-transfer-items-2026-10].
-- `systems/legion`: **Legion** (guild) level bonuses and Legion Hall.
-- `systems/consumables`: food, potions, scrolls and buffs for PvE and PvP.
-- `systems/ui-and-keybinds`: suggested keybinds, UI setup and settings that matter for the class.
-- `systems/macros`: how macros work in-game, and every macro the guide uses (in `:::macro` blocks).
+### Level 45 set-up: `setup`
+Everything configured once at 45, in one page, in this order:
+1. `:::quick` list: macro key (default action mode: right mouse), Skill Queue, bar, skills, Stigmas, Defiance key, how to fight.
+2. **Skill bar** for each preset (`::skillbar`): which skill on which key, bottom-first priority, macro vs by hand. Keys 1–8, Q, E, left/right mouse.
+3. **The macro**: how to create it, which keys in which order, delays, what stays manual; `:::conflict` where sources disagree on macro size.
+4. **Skills to raise**: priority, target level, Specializations, one line on why; conflicts on disputed picks; passives; the full per-preset table folded.
+5. **Stigmas**: the set, the levelling order, alternatives for the contested slot.
+6. **Daevanion**: skill, passive and stat nodes; Azphel's PvP stats.
+7. **Presets**: when to switch.
+8. **PvP preset**: amulet swap, PvP Stigmas and skill priorities, what to press by hand.
+9. Settings that help.
+
+Every pick cites its sources; agreement of two independent ones (e.g. gaming.tools + Corpus) is Verified, a single source Community, our own reasoning `[!opinion]`. Disagreements go in `:::conflict` with each option.
+
+### Endgame stages: `endgame/…`
+At Lv 45 the **4th Ascension** unlocks the endgame: Abyss, Arena, Battlefield, Spacetime Rift, Transcendence, Nightmare, Ascension Trial, Sanctuary, Market, Season Missions, Duty Quests, Arcana, Dimensional Invasion, and Expedition **Conquest** difficulty [gamingtools-navigator-2026-10]. Tiers are cut by **item level**, using the Conquest gates (Tier 1 700, Tier 2 1400, Tier 3 2100, Tier 4 2800, Tier 5 3000) [gamingtools-navigator-2026-10] plus the community-reported gates (Abyss 1000; Ascension Trial 1000/1500/2000; Transcendence 1600/1900/2200/2500; Ludra 2800) [corpus-item-level-2026-10, raidrelay-gear-score-2026-10]:
+
+- `endgame/index`: how item level works, links to the three stages, and the daily and weekly routine as checklists.
+- `endgame/early` (**Stage 1**: 45 → 1,400), `endgame/mid` (**Stage 2**: 1,400 → 2,100), `endgame/advanced` (**Stage 3**: 2,100+). Each stage page has:
+  1. `:::quick` steps.
+  2. **Your gear this stage** (`::loadout`, each slot with where it comes from).
+  3. **How to get each piece**: piece, where, exactly what to do (runs, guaranteed-reward counts, vouchers, Kina, crafting).
+  4. **What to run**: content, the item level it opens at, which preset, why; each linked to its Reference page.
+  5. **PvP** that opens at this stage.
+  6. What opens, routes and a checklist for the stage.
+
+### PvP: `pvp/…`
+Gear is shared with PvE in Season 1 (same stats at the same item level); only the amulet swaps (Fierce Battle Amulet). So PvP has no stages of its own: the endgame stages are the gear path, and each mode page says what to change.
+
+- `pvp/index`: PvP in four lines (gear, amulet, preset, when), the modes, which are equalized.
+- `pvp/fundamentals`: CC types, CC breaks and resists, defensive cooldowns, PvP stats.
+- **One page per Global PvP mode**, each with a "Before you queue" `:::quick` (gear, preset, what to press by hand, the swap for this mode), the mode, the PvP Stigmas with data, combo and defence (`:::play`), tactics:
+  - `pvp/duel`: **Duel** (from the health bar; no deaths, no rewards) [game8-duel-2026-10].
+  - `pvp/arena-of-solitude`: 1v1, 10 min, 3 lives [gamingtools-arena-solitude-2026-10].
+  - `pvp/arena-of-cooperation`: 5v5, 10 min, 1 life [gamingtools-arena-cooperation-2026-10].
+  - `pvp/arena-of-tactics`: 10v10 under equal conditions, Relic cart mode [gamingtools-arena-tactics-2026-10]. Open question: it may be the same content as **Battlefield**. Write one section until that's checked.
+  - `pvp/abyss`: **Abyss** (Reshanta: Chaotic Lower / Middle / Upper), Abyss Points, **Artifact Siege**, Abyss Corridor, entry time (7 h max stored) [gamingtools-abyss-2026-10, nc-global-notes-2026-10-14].
+  - `pvp/spacetime-rift`: **Spacetime Rift**, the open-world invasion of the enemy continent [nc-global-matchmaking-2026-10].
+- `pvp/matchups/<opposing-class>`: one per Global class (8, including the mirror): threats, what to save cooldowns for, the win condition.
+
+### Reference: `reference/…`
+Look-ups linked from the path pages; true across stages.
+
+- `reference/overview`: role, strengths and weaknesses, how it ranks (cited).
+- `reference/skills/index` and `reference/skills/<skill-slug>`: **one section per skill**: effect, numbers, cooldown, unlock, Specializations, which presets use it and **where it sits on the skill bar**.
+- `reference/systems/stats`: every stat that matters to the class, what it does, soft/hard caps, and the class's stats by level.
+- `reference/systems/resource-and-chains`: the class resource (**MP** for Gladiator and Assassin; there's no separate class resource) and **Chain Skills** (opening skills that chain into follow-ups) [gamingtools-gladiator-2026-10, gamingtools-assassin-2026-10, gamingtools-keen-strike-2026-10].
+- `reference/skills/index`: skill list overview (Active, Passive, Stigma, Chain), how skills unlock, and **Skill Points**, including bonus SP from Wisdom Stones.
+- `reference/skills/<skill-slug>`: **one section per skill**: effect, per-level numbers, cooldown, cost, unlock level, **Specializations** (slots at skill level 8 / 12 / 20), which builds use it. Kept small on purpose, because balance patches hit single skills.
+- `reference/systems/stigma`: **Stigma** skills, Stigma Shards, slots at character Lv 22 / 27 / 32 / 37, and which Stigmas to slot for PvE vs PvP [gamingtools-character-levels-2026-10, gamingtools-navigator-2026-10].
+- `reference/systems/daevanion`: the **Daevanion** board: green nodes (passives), blue nodes (actives), orange nodes (stats), Daevanion Crystals/Fragments, points from Lv 12, and node priority for the class.
+- `reference/systems/gear`: gear slots, grades and how to get them, item level and Combat Power, best-in-slot per stage (summary; stage pages give the targets). Global Season 1 has no Heroic gear [playnews-level-cap-2026-09].
+- `reference/systems/enhancement`: **Enhancement** (Enhance Stones, rates, failure rules), **Amplify** past +15 (Amplify Stones), **Soul Binding**, plus **what to enhance first and how far, by stage**.
+- `reference/systems/stones`: **Manastones**, **Soulstones** and **Theostones**: what each does, which to use for the class.
+- `reference/systems/accessories`: accessories and their stat choices; belts and amulets are upgraded only through Substance Morph.
+- `reference/systems/arcana`: **Arcana** relics (grails, parchments, compasses, bells, mirrors, scales) from Transcendence: item level, enhancing with duplicates.
+- `reference/systems/substance-morph`: **Substance Morph**: converting materials, crystals and fragments into items, and its weekly caps.
+- `reference/systems/wings`: **Wings** and flight: Flight Power, wing stats, quest wings by Ascension, Wing Featherdown morphs [nc-global-maint-2026-10-09].
+- `reference/systems/pets`: **Pets**: mounts, type effects, Insight levels, **Genus Insight** (Cogni, Fera, Natura, Varian, Special), Pet Transformation with Empathy Candy, and which pets help the class [gamingtools-pet-collection-2026-10, fextralife-pet-guide-2026-10].
+- `reference/systems/collections`: account and character stat sources: **Title** (3 equipped), **Achievements**, **Pantheon**, **Empyrean Lord's Monolith**, **Closet** skin collection bonuses [gamingtools-guild-collections-2026-10, nc-global-transfer-items-2026-10].
+- `reference/systems/legion`: **Legion** (guild) level bonuses and Legion Hall.
+- `reference/systems/consumables`: food, potions, scrolls and buffs for PvE and PvP.
+- `reference/systems/ui-and-keybinds`: suggested keybinds, UI setup and settings that matter for the class.
+- `reference/systems/macros`: how macros work in-game, and every macro the guide uses (in `:::macro` blocks).
+- `reference/content/…`: one page per kind of PvE content:
+- `reference/content/open-world`: field mobs, elites, field bosses, Dimensional Invasion, Sealed Dungeons and Strongholds.
+- `reference/content/expeditions/<dungeon-slug>`: one per **Expedition** (party dungeon, 1–5 players, Exploration and Conquest difficulties): Krao Cave, Urugugu Canyon, Fire Temple, Draupnir, Vakron Sky Island, Ferocious Horn Den [gamingtools-expeditions-2026-10]. Covers the role, the mechanics that matter to the class, and tips.
+- `reference/content/daily-dungeon`: **Unknown Fissure** (Lv 30, 14 tries a week, Enhance Stones).
+- `reference/content/transcendence`: **Transcendence** (5-player scored stages, Arcana).
+- `reference/content/nightmare`: **Nightmare** (solo seasonal boss ladder).
+- `reference/content/ascension-trial`: **Ascension Trial** (weekly solo time trial, Dungeon Debuffs).
+- `reference/content/sanctuary/<raid-slug>`: **Sanctuary** (10-player weekly raid). No raid is live at the Baseline: Ludra was removed from the launch build [nc-global-sanctuary-ludra-2026-10]. Leave the section out with that note until it returns.
+- `reference/content/party-role`: how the class fits in a party, and which party comps are good.
 
 ### Leveling: `leveling/…`
 One section per **Level bracket**. Max level on Global is **45** [playnews-level-cap-2026-09, fextralife-regions-2026-10; no Official written statement yet]. Brackets cut at the Ascensions, the zone change at 10 and the last Stigma slot [gamingtools-navigator-2026-10, gamingtools-character-levels-2026-10]:
@@ -59,40 +112,6 @@ Each bracket section has:
 5. Systems that unlock here and what to do with them right away.
 6. Common mistakes.
 7. `:::checklist` for leaving the bracket (`:::play`).
-
-### Endgame: `endgame/…`
-At Lv 45 the **4th Ascension** unlocks the endgame: Abyss, Arena, Battlefield, Spacetime Rift, Transcendence, Nightmare, Ascension Trial, Sanctuary, Market, Season Missions, Duty Quests, Arcana, Dimensional Invasion, and Expedition **Conquest** difficulty [gamingtools-navigator-2026-10]. Tiers are cut by **item level**, using the Conquest gates (Tier 1 700, Tier 2 1400, Tier 3 2100, Tier 4 2800, Tier 5 3000) [gamingtools-navigator-2026-10] plus the community-reported gates (Abyss 1000; Ascension Trial 1000/1500/2000; Transcendence 1600/1900/2200/2500; Ludra 2800) [corpus-item-level-2026-10, raidrelay-gear-score-2026-10]:
-
-- `endgame/index`: what endgame means for the class and how the tiers connect.
-- `endgame/early`: Lv 45, item level 700–1400. Conquest Tier 1, Abyss entry, Ascension Trial Easy.
-- `endgame/mid`: item level 1400–2100. Conquest Tier 2, Transcendence stages 1–2.
-- `endgame/advanced`: item level 2100+. Conquest Tier 3+, Transcendence 3–4, Sanctuary (when live).
-
-Each tier has the same seven parts as a bracket, plus: item-level targets, the content it opens up, the daily/weekly routine (Duty Quests, Season Missions, Daily Dungeon, Odyle Energy use), and the resource priorities (what to spend currency and materials on next).
-
-### PvE: `pve/…`
-- `pve/build`: skills, Specializations, Stigmas, Daevanion path, stat priority, gear setup.
-- `pve/rotation`: single target, AoE, burst windows, opener, Chain Skill usage (`:::play`).
-- `pve/macros`: (`:::play`).
-- `pve/open-world`: field mobs, elites, field bosses, Dimensional Invasion, Sealed Dungeons and Strongholds.
-- `pve/expeditions/<dungeon-slug>`: one per **Expedition** (party dungeon, 1–5 players, Exploration and Conquest difficulties): Krao Cave, Urugugu Canyon, Fire Temple, Draupnir, Vakron Sky Island, Ferocious Horn Den [gamingtools-expeditions-2026-10]. Covers the role, the mechanics that matter to the class, and tips.
-- `pve/daily-dungeon`: **Unknown Fissure** (Lv 30, 14 tries a week, Enhance Stones).
-- `pve/transcendence`: **Transcendence** (5-player scored stages, Arcana).
-- `pve/nightmare`: **Nightmare** (solo seasonal boss ladder).
-- `pve/ascension-trial`: **Ascension Trial** (weekly solo time trial, Dungeon Debuffs).
-- `pve/sanctuary/<raid-slug>`: **Sanctuary** (10-player weekly raid). No raid is live at the Baseline: Ludra was removed from the launch build [nc-global-sanctuary-ludra-2026-10]. Leave the section out with that note until it returns.
-- `pve/party-role`: how the class fits in a party, and which party comps are good.
-
-### PvP: `pvp/…`
-- `pvp/fundamentals`: CC types, CC breaks and resists, positioning, defensive cooldowns, PvP stats, PvP Stigma swaps.
-- One folder per **Global PvP mode**. Each has `build` (what differs from PvE, and why), `rotation` (openers, burst combo, defensive sequence; `:::play`), `macros` (`:::play`) and `tactics` (positioning, objectives, team role):
-  - `pvp/duel`: **Duel** (from the health bar; no deaths, no rewards) [game8-duel-2026-10].
-  - `pvp/arena-of-solitude`: 1v1, 10 min, 3 lives [gamingtools-arena-solitude-2026-10].
-  - `pvp/arena-of-cooperation`: 5v5, 10 min, 1 life [gamingtools-arena-cooperation-2026-10].
-  - `pvp/arena-of-tactics`: 10v10 under equal conditions, Relic cart mode [gamingtools-arena-tactics-2026-10]. Open question: it may be the same content as **Battlefield**. Write one section until that's checked.
-  - `pvp/abyss`: **Abyss** (Reshanta: Chaotic Lower / Middle / Upper), Abyss Points, **Artifact Siege**, Abyss Corridor, entry time (7 h max stored) [gamingtools-abyss-2026-10, nc-global-notes-2026-10-14].
-  - `pvp/spacetime-rift`: **Spacetime Rift**, the open-world invasion of the enemy continent [nc-global-matchmaking-2026-10].
-- `pvp/matchups/<opposing-class>`: one per Global class (8, including the mirror): threats, what to save cooldowns for, the win condition.
 
 ### Changelog surface
 No section to write. The site builds it from overrides (see `docs/content-model.md`).

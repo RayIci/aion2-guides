@@ -41,4 +41,4 @@ last_checked: 2026-10-17
 
 Willpower raises Status Effect Resist and Dexterity raises Critical Hit Resist; Zikel's board adds Perfect Resist [@gamingtools-systems-stat-conversion-2026-10]. PvP Damage Tolerance comes from passives such as Survival Stance [@gamingtools-skill-survival-stance-2026-10].
 
-Positioning and team play per mode are on each mode's tactics page.
+Positioning and team play per mode are on each mode's page.

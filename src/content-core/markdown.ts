@@ -9,7 +9,7 @@ import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
 import { visit, SKIP } from 'unist-util-visit';
 import { deriveConfidence, type Citation } from './confidence';
-import { autoIcons, inlineItem, itemCards, loadout, mapFigure, type MediaContext } from './media';
+import { autoIcons, inlineItem, itemCards, loadout, mapFigure, skillbar, type MediaContext } from './media';
 import { CONFIDENCE_LEVELS, type Confidence, type Source } from './schema';
 
 // Markdown → HTML for one section body, with the citation syntax from docs/content-model.md.
@@ -61,6 +61,15 @@ export async function renderSection(
     .use(remarkRehype)
     .use(() => (tree: HastRoot) => {
       if (ctx.media) autoIcons(tree, ctx.media);
+      // Headings get ids from their text, so pages can link to a part ("setup#7-your-pvp-preset").
+      const seen = new Set<string>();
+      visit(tree, 'element', (node: Element) => {
+        if (!/^h[2-4]$/.test(node.tagName) || node.properties?.id) return;
+        let id = slugify(toHtml(node.children).replace(/<[^>]+>/g, ''));
+        while (seen.has(id)) id += '-';
+        seen.add(id);
+        node.properties = { ...node.properties, id };
+      });
     })
     .use(() => (tree: HastRoot) => {
       visit(tree, 'element', (node: Element) => {
@@ -299,6 +308,25 @@ function renderMedia(
       const names = (attrs.names ?? '').split(';').map((s) => s.trim()).filter(Boolean);
       const { node: hast, missing } = itemCards(media, names, cite(media.media.meta.itemSource));
       for (const m of missing) state.issues.push(`::items: "${m}" is not in content/media/items.json or icons.json`);
+      node.data = { hName: hast.tagName, hProperties: hast.properties, hChildren: hast.children };
+      return SKIP;
+    }
+    if (node.name === 'skillbar') {
+      // Its own citation: `cite="@a; @b"` in the attributes, same syntax as inline citations.
+      let c: ElementContent | undefined;
+      if (attrs.cite) {
+        const { citation, issues } = parseCitation(attrs.cite);
+        state.issues.push(...issues);
+        for (const id of citation.sourceIds) if (!sources.has(id)) state.issues.push(`unknown source id "${id}"`);
+        const confidence = deriveConfidence(citation, sources);
+        state.claims.push({ confidence, opinion: citation.opinion });
+        const cn = citationNode(citation, confidence, citation.sourceIds.filter((id) => sources.has(id)).map(numberOf)) as unknown as {
+          data: { hName: string; hProperties: Record<string, unknown>; hChildren: ElementContent[] };
+        };
+        c = { type: 'element', tagName: cn.data.hName, properties: cn.data.hProperties, children: cn.data.hChildren } as Element;
+      }
+      const { node: hast, missing } = skillbar(media, attrs, c);
+      for (const m of missing) state.issues.push(`::skillbar: no icon for "${m}"`);
       node.data = { hName: hast.tagName, hProperties: hast.properties, hChildren: hast.children };
       return SKIP;
     }

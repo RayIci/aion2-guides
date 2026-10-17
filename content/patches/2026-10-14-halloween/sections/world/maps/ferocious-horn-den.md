@@ -5,7 +5,7 @@ status: researched
 last_checked: 2026-10-17
 ---
 :::quick
-1. Expedition. Entry, rewards and drops: [Gladiator](/classes/gladiator/pve/expeditions/ferocious-horn-den) or [Assassin](/classes/assassin/pve/expeditions/ferocious-horn-den) page [@gamingtools-navigator-2026-10].
+1. Expedition. Entry, rewards and drops: [Gladiator](/classes/gladiator/reference/content/expeditions/ferocious-horn-den) or [Assassin](/classes/assassin/reference/content/expeditions/ferocious-horn-den) page [@gamingtools-navigator-2026-10].
 :::
 
 ::map{map=ferocious-horn-den}

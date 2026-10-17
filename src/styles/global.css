@@ -465,3 +465,75 @@ html:not([data-sources='show']) .item-cards__cite {
 .loadout figcaption {
   @apply col-span-full m-0 text-sm text-muted-foreground;
 }
+
+/* ::skillbar — the quick-slot bar, laid out like the game's (bottom skill tried first). */
+.skillbar {
+  @apply my-8 flex flex-col gap-3 rounded-lg bg-muted p-4;
+}
+.sb-bar {
+  @apply flex items-end gap-1.5 overflow-x-auto pb-1;
+}
+.sb-key {
+  @apply flex min-w-12 shrink-0 flex-col items-center gap-1;
+}
+.sb-stack {
+  @apply flex min-h-12 flex-col justify-end gap-1 rounded-md p-1;
+}
+.sb-key--macro .sb-stack {
+  @apply bg-[oklch(0.62_0.13_235/0.35)];
+}
+.sb-key--hand .sb-stack {
+  @apply bg-[oklch(0.78_0.15_75/0.35)];
+}
+.sb-key--macro-key .sb-stack {
+  @apply bg-primary/25;
+}
+.sb-key--empty .sb-stack {
+  @apply border border-dashed border-muted-foreground/30;
+}
+.sb-icon {
+  @apply m-0 block size-10 rounded-[4px] bg-background object-contain;
+}
+.sb-icon--text,
+.sb-icon--macro {
+  @apply flex items-center justify-center overflow-hidden p-0.5 text-center text-[10px] leading-tight font-semibold;
+}
+.sb-label {
+  @apply text-sm font-semibold text-muted-foreground;
+}
+.sb-key--macro .sb-label {
+  @apply text-[oklch(0.72_0.13_235)];
+}
+.sb-key--hand .sb-label {
+  @apply text-[oklch(0.8_0.15_75)];
+}
+.sb-legend {
+  @apply m-0 flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-muted-foreground;
+}
+.sb-dot {
+  @apply ms-2 inline-block size-3 rounded-sm first:ms-0;
+}
+.sb-dot--macro {
+  @apply bg-[oklch(0.62_0.13_235/0.7)];
+}
+.sb-dot--hand {
+  @apply bg-[oklch(0.78_0.15_75/0.8)];
+}
+.sb-dot--macro-key {
+  @apply bg-primary/60;
+}
+.sb-list {
+  @apply m-0 flex flex-col gap-1 ps-5 text-[15px];
+}
+.sb-list li {
+  @apply m-0;
+}
+.sb-li-key {
+  @apply font-semibold;
+}
+.skillbar figcaption {
+  @apply text-sm text-muted-foreground;
+}
+.loadout__where {
+  @apply text-xs text-muted-foreground;
+}

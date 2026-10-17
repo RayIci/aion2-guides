@@ -93,7 +93,7 @@ export async function buildContent(contentDir: string, options: BuildOptions = {
     for (const s of patch.sections.values()) {
       if (s.meta.removed || s.id.endsWith('/index')) continue;
       const names = [s.meta.title, ...s.meta.aliases].filter((n): n is string => !!n);
-      const skill = /^classes\/([^/]+)\/systems\/skills\//.exec(s.id);
+      const skill = /^classes\/([^/]+)\/reference\/skills\//.exec(s.id);
       if (skill) {
         const m = skillPages.get(skill[1]) ?? new Map<string, string>();
         for (const n of names) m.set(n, pagePath(s.id));

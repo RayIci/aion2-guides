@@ -190,6 +190,21 @@ export function itemCards(ctx: MediaContext, names: string[], cite: () => Elemen
   return { node, missing };
 }
 
+/** One short line on where a gear piece comes from, from its item card. */
+export function gearSource(ctx: MediaContext, name: string): string | undefined {
+  const c = ctx.media.items[name];
+  if (!c) return undefined;
+  const live = c.dungeons.filter((d) => !/Ludra/.test(d));
+  if (live.length) return `From ${live.slice(0, 2).join(' or ')}`;
+  const craft = c.recipes.find((r) => r.profession);
+  if (craft) return `Crafted: ${craft.profession} ${craft.mastery}`;
+  if (c.recipes.length) return 'Substance Morph';
+  const d = c.drops[0];
+  if (d) return `Drops from ${d.npc}`;
+  if (c.shops.length) return `Sold by ${c.shops[0].vendor ?? c.shops[0].shop}`;
+  return undefined;
+}
+
 const LEFT = ['Helm', 'Pauldrons', 'Breastplate', 'Gloves', 'Greaves', 'Boots', 'Cloak'];
 const RIGHT = ['Weapon', 'Guard', 'Necklace', 'Earrings', 'Ring', 'Bracelet', 'Belt', 'Amulet', 'Rune'];
 
@@ -210,9 +225,14 @@ export function loadout(ctx: MediaContext, attrs: Record<string, string | null |
     if (name && !key) missing.push(name);
     const icon = key ? iconEl(ctx, key, 'lg') : el('span', { className: ['loadout__empty'] });
     const label = name ? link(ctx, name, [txt(name)]) : [txt('–')];
+    const where = name ? gearSource(ctx, name) : undefined;
     return el('li', { className: ['loadout__slot', name ? '' : 'loadout__slot--empty'].filter(Boolean) }, [
       icon,
-      el('span', { className: ['loadout__text'] }, [el('span', { className: ['loadout__kind'] }, [txt(slot)]), el('span', { className: ['loadout__name'] }, label)]),
+      el('span', { className: ['loadout__text'] }, [
+        el('span', { className: ['loadout__kind'] }, [txt(slot)]),
+        el('span', { className: ['loadout__name'] }, label),
+        ...(where ? [el('span', { className: ['loadout__where'] }, [txt(where)])] : []),
+      ]),
     ]);
   };
   const cls = attrs.class ? ctx.media.icons.classes[attrs.class] : undefined;
@@ -226,6 +246,78 @@ export function loadout(ctx: MediaContext, attrs: Record<string, string | null |
     el('div', { className: ['loadout__centre'] }, centre),
     el('ul', { className: ['loadout__col'] }, RIGHT.filter((s) => slots.has(s)).map(slotEl)),
     el('figcaption', {}, [txt('Item names and icons from the game data '), cite()]),
+  ]);
+  return { node, missing };
+}
+
+const BAR_KEYS = ['1', '2', '3', '4', '5', '6', '7', '8', 'Q', 'E', 'LMB', 'RMB'];
+const KEY_NAME: Record<string, string> = { LMB: 'Left mouse', RMB: 'Right mouse' };
+
+/**
+ * `::skillbar{title="…" keys="5=A,B,C/macro; E=D/hand; RMB=Macro" note="…" cite="@src"}`: the quick-slot
+ * bar. Each key lists its skills in priority order (the bottom row, tried first, comes first) and how it
+ * is pressed: `macro` (the macro presses it), `hand` (you press it) or `macro-key` (the macro itself).
+ */
+export function skillbar(ctx: MediaContext, attrs: Record<string, string | null | undefined>, cite?: ElementContent): { node: Element; missing: string[] } {
+  const keys = new Map<string, { skills: string[]; mode: string }>();
+  for (const part of (attrs.keys ?? '').split(';')) {
+    const m = /^\s*([^=]+?)\s*=\s*(.*?)\s*(?:\/\s*(macro|hand))?\s*$/.exec(part);
+    if (!m) continue;
+    const skills = m[2].split(',').map((s) => s.trim()).filter(Boolean);
+    keys.set(m[1].toUpperCase(), { skills, mode: skills[0] === 'Macro' ? 'macro-key' : (m[3] ?? 'hand') });
+  }
+  const missing: string[] = [];
+  const cols: ElementContent[] = [];
+  const list: ElementContent[] = [];
+  for (const k of BAR_KEYS) {
+    const e = keys.get(k);
+    const label = KEY_NAME[k] ?? k;
+    const stack: ElementContent[] = [];
+    if (e && e.mode !== 'macro-key')
+      // Shown top to bottom like the game: the last-priority skill on top, the first-tried at the bottom.
+      for (const s of [...e.skills].reverse()) {
+        const key = iconFor(ctx, s);
+        if (!key) missing.push(s);
+        stack.push(
+          key
+            ? el('img', { src: `${ctx.assetBase}img/icons/${key}.webp`, alt: s, title: s, width: 40, height: 40, loading: 'lazy', className: ['sb-icon'] })
+            : el('span', { className: ['sb-icon', 'sb-icon--text'], title: s }, [txt(s)]),
+        );
+      }
+    if (e?.mode === 'macro-key') stack.push(el('span', { className: ['sb-icon', 'sb-icon--macro'], title: 'Macro' }, [txt('Macro')]));
+    cols.push(
+      el('div', { className: ['sb-key', `sb-key--${e ? e.mode : 'empty'}`] }, [
+        el('div', { className: ['sb-stack'] }, stack),
+        el('span', { className: ['sb-label'] }, [txt(k === 'LMB' ? 'LMB' : k === 'RMB' ? 'RMB' : k)]),
+      ]),
+    );
+    if (e) {
+      const how = e.mode === 'macro-key' ? 'hold it: this is your macro key' : e.mode === 'macro' ? 'pressed by the macro' : 'press it yourself';
+      const order: ElementContent[] = [];
+      if (e.mode !== 'macro-key') {
+        order.push(txt(e.skills.length > 1 ? ': tries ' : ': '));
+        e.skills.forEach((s, i) => {
+          if (i) order.push(txt(', then '));
+          order.push(el('strong', {}, [txt(s)]));
+        });
+      }
+      list.push(el('li', {}, [el('span', { className: ['sb-li-key'] }, [txt(label)]), txt(` (${how})`), ...order]));
+    }
+  }
+  const legend = el('p', { className: ['sb-legend'] }, [
+    el('span', { className: ['sb-dot', 'sb-dot--macro'] }), txt('pressed by the macro '),
+    el('span', { className: ['sb-dot', 'sb-dot--hand'] }), txt('press it yourself '),
+    el('span', { className: ['sb-dot', 'sb-dot--macro-key'] }), txt('macro key. Each key tries its bottom skill first.'),
+  ]);
+  const caption: ElementContent[] = [];
+  if (attrs.title) caption.push(el('strong', {}, [txt(attrs.title)]), txt('. '));
+  if (attrs.note) caption.push(txt(attrs.note + ' '));
+  if (cite) caption.push(cite);
+  const node = el('figure', { className: ['skillbar'], dataSkillbar: '' }, [
+    el('div', { className: ['sb-bar'] }, cols),
+    legend,
+    el('ol', { className: ['sb-list'] }, list),
+    el('figcaption', {}, caption),
   ]);
   return { node, missing };
 }

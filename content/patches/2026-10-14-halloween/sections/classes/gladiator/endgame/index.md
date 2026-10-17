@@ -4,13 +4,36 @@ order: 40
 status: researched
 last_checked: 2026-10-17
 ---
+:::quick{title="How endgame works"}
+1. Endgame is driven by **item level**: it is the entry requirement for Expeditions, Transcendence and the raid [@corpus-item-level-2026-10].
+2. Set up once on [Level 45: set up](/classes/gladiator/setup), then follow the stages: each page says what gear to get, where, and what to run [!opinion].
+3. Don't spend Odyle Energy before item level 1,400 [@corpus-max-level-2026-10].
+4. Tick the routine below every day and every week [@corpus-daily-weekly-2026-10].
+:::
+
+:::checklist{id="daily" title="Every day"}
+- [ ] Five duty quests on your main (Journal → Duty) [@corpus-daily-weekly-2026-10] {#duty}
+- [ ] Odyle Energy below its cap on every character (560, 840 with a subscription) [@corpus-daily-weekly-2026-10] {#energy}
+- [ ] Nightmare tickets and Shugo Festival keys below their caps [@corpus-daily-weekly-2026-10] {#tickets}
+- [ ] Spacetime Rift, field bosses and supply requests if you are online [@corpus-daily-weekly-2026-10] {#online}
+:::
+
+:::checklist{id="weekly" title="Every week (resets Wednesday)"}
+- [ ] Three Ascension Trial runs on every character [@corpus-daily-weekly-2026-10] {#trial}
+- [ ] Daily Dungeon entries on your main (14 a week) [@corpus-daily-weekly-2026-10] {#daily-dungeon}
+- [ ] Odyle Energy crafts in Substance Morph: 20 on your main, 4 on each alt [@corpus-daily-weekly-2026-10] {#energy-crafts}
+- [ ] Weekly Command contracts, PvE and PvP [@corpus-daily-weekly-2026-10] {#contracts}
+- [ ] Three Battlefield wins on every character [@corpus-daily-weekly-2026-10] {#battlefield}
+- [ ] Abyss corridors when your faction holds artifacts [@corpus-daily-weekly-2026-10] {#corridors}
+:::
+
 Endgame starts at level 45 and is driven by **item level** (also called gear score): it is the entry requirement for Expeditions, Transcendence and the raid. Combat Power is a separate number that measures how strong you are [@corpus-item-level-2026-10]. Endgame proper starts at item level 2,100 [@raidrelay-gear-score-2026-10].
 
 | Tier | Item level | Main content |
 |---|---|---|
-| Early | 45 → 1,400 | Krao Cave and Draupnir Conquest (700), the Abyss and Ascension Trial Easy (1,000) |
-| Mid | 1,400 → 2,100 | Vakron Sky Island and Urugugu Canyon (1,400), Transcendence 1 and 2 (1,600 / 1,900) |
-| Advanced | 2,100 + | Fire Temple and Horn Den Conquest (2,100), Transcendence 3 and 4 (2,200 / 2,500), Ludra (2,800, not live) |
+| [Stage 1](/classes/gladiator/endgame/early) | 45 → 1,400 | Krao Cave and Draupnir Conquest (700), the Abyss and Ascension Trial Easy (1,000) |
+| [Stage 2](/classes/gladiator/endgame/mid) | 1,400 → 2,100 | Vakron Sky Island and Urugugu Canyon (1,400), Transcendence 1 and 2 (1,600 / 1,900) |
+| [Stage 3](/classes/gladiator/endgame/advanced) | 2,100 + | Fire Temple and Horn Den Conquest (2,100), Transcendence 3 and 4 (2,200 / 2,500), Ludra (2,800, not live) |
 
 [@corpus-item-level-2026-10; @raidrelay-gear-score-2026-10]
 
@@ -29,13 +52,6 @@ Endgame starts at level 45 and is driven by **item level** (also called gear sco
 
 [@corpus-item-level-2026-10]
 
-## Weekly routine
-
-- Party dungeons and Abyss points reset on **Wednesday at 16:00** server time [@gamingtools-systems-weekly-resets-2026-10].
-- Expedition cubes cost Odyle Energy (20–40 per run) and can be claimed once a week per difficulty [@gamingtools-exp-krao-cave-exploration-2026-10; @gamingtools-exp-krao-cave-conquest-2026-10].
-- Daily Dungeon: up to 14 runs a week [@gamingtools-navigator-2026-10].
-- Abyss entry time stores up to 7 hours [@nc-global-notes-2026-10-14].
-- Duty Quests every day [@gamingtools-navigator-2026-10].
 
 ## Odyle Energy rules creators agree on
 

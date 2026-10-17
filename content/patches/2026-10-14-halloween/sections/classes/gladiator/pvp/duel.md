@@ -1,0 +1,58 @@
+---
+title: "Duel"
+order: 2
+status: researched
+last_checked: 2026-10-17
+---
+:::quick{title="Before you queue"}
+1. **Gear:** your PvE gear, with the **Fierce Battle Amulet** instead of the Revelation Amulet (+20% PvP Damage Boost) [@gamingtools-item-database-2026-10].
+2. **Preset:** your PvP preset from [Level 45: set up](/classes/gladiator/setup#7-your-pvp-preset), Stigmas **Lunge Stance**, **Rage Burst**, **Focused Block**, **Tenaciousness** [@aion2meta-gladiator-2026-10; !opinion].
+3. **Press by hand:** Focused Block (E), Tenaciousness (1) and Defiance. Keep the rest of your PvE macro [@corpus-macros-guide-2026-10; !opinion].
+:::
+
+## The mode
+
+Duels start from **Challenge to Duel** on a player's health bar. Nobody dies (the winner brings the loser to about 10% HP), leaving the area for 10 seconds forfeits, and there are no rewards [@game8-duel-2026-10].
+
+## Your PvP Stigmas
+
+Top Korean PvP players run Lunge Stance, Zikel's Blessing, Rage Burst and Focused Block (99%+) and add Tenaciousness (98.5%) and Armor of Balance (90.8%) [@aion2meta-gladiator-2026-10]. Global has four slots, so this guide swaps Zikel's Blessing for Tenaciousness [!opinion].
+
+:::details{summary="Every PvP Stigma candidate and what it does"}
+| Stigma | What it does in PvP | Source |
+|---|---|---|
+| Forced Restraint | 75% chance to Seal for 5s: no skills, and Defiance can't remove it | [@gamingtools-skill-forced-restraint-2026-10; @gamingtools-systems-crowd-control-2026-10] |
+| Tenaciousness | 3s immunity to damage and status effects (150s cooldown) | [@gamingtools-skill-tenaciousness-2026-10] |
+| Armor of Balance | Impact-type Resist +50% for 10s (90s) | [@gamingtools-skill-armor-of-balance-2026-10] |
+| Focused Block | Guaranteed Parry, restores 110 MP and Stamina | [@gamingtools-skill-focused-block-2026-10] |
+| Blade Toss | 20 m hit: Defense −30% and Incoming Heal −50% for 10s | [@gamingtools-skill-blade-toss-2026-10] |
+| Fracturing Rush | 10 m charge through up to 4 enemies, 60% Root for 3s | [@gamingtools-skill-fracturing-rush-2026-10] |
+| Wrath Wave | Up to 4 enemies within 5 m, 50% Knockdown for 3s | [@gamingtools-skill-wrath-wave-2026-10] |
+| Rage Burst | Big single hit, Wounded (−10% Attack) and +5% PvP damage | [@gamingtools-skill-rage-burst-2026-10] |
+:::
+
+## Combo and defence
+
+::::play
+### Kill combo
+
+1. **Mocking Blade**: always knocks the target down for 3s [@gamingtools-skill-mocking-blade-2026-10].
+2. **Overhead Slam**: only hits a knocked-down target, your hardest hit [@gamingtools-skill-overhead-slam-2026-10].
+3. **Aerial Snare**: on a knocked-down target, 50% chance to launch it Airborne for 3s [@gamingtools-skill-aerial-snare-2026-10].
+4. **Rage Burst**: big hit, cuts the target's Attack by 10% and raises your PvP damage by 5% for 10s [@gamingtools-skill-rage-burst-2026-10].
+
+### Defence
+
+- Break Stun, Knockdown, Airborne, Grab, Frost or Fear with **Defiance**, which then makes you immune for 5s [@gamingtools-skill-defiance-2026-10].
+- Seal, Root and Sleep can't be broken by Defiance: use a Healing Potion for Seal and Root [@gamingtools-systems-crowd-control-2026-10].
+- **Focused Block** just before a big hit: guaranteed Parry [@gamingtools-skill-focused-block-2026-10].
+- **Tenaciousness** for 3s of immunity to damage and status effects, then extra PvP damage tolerance [@gamingtools-skill-tenaciousness-2026-10].
+::::
+
+Defiance removes Stun, Knockdown, Airborne, Grab, Frost and Fear, then grants 5 s of immunity, on a 60 s cooldown [@gamingtools-skill-defiance-2026-10].
+
+## Tactics
+
+- Practice combos and matchups without risk.
+- Your knockdown chain only works at 4 m; close the gap with Leaping Slam (20 m), Rush Strike (10 m) or Fracturing Rush (10 m) [@gamingtools-skill-leaping-slam-2026-10; @gamingtools-skill-rush-strike-2026-10; @gamingtools-skill-fracturing-rush-2026-10].
+- Watch for Seal and Root: keep a Healing Potion ready, since Defiance can't break them [@gamingtools-systems-crowd-control-2026-10].

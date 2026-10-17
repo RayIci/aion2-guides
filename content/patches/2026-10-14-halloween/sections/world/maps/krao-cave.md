@@ -5,7 +5,7 @@ status: researched
 last_checked: 2026-10-17
 ---
 :::quick
-1. Expedition. Entry, rewards and drops: [Gladiator](/classes/gladiator/pve/expeditions/krao-cave) or [Assassin](/classes/assassin/pve/expeditions/krao-cave) page [@gamingtools-navigator-2026-10].
+1. Expedition. Entry, rewards and drops: [Gladiator](/classes/gladiator/reference/content/expeditions/krao-cave) or [Assassin](/classes/assassin/reference/content/expeditions/krao-cave) page [@gamingtools-navigator-2026-10].
 :::
 
 ::map{map=krao-cave}

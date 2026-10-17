@@ -49,4 +49,4 @@ Shadowstrike always stuns for 3s and puts you behind the target; Shadow Fall onl
 
 Willpower raises Status Effect Resist and Dexterity raises Critical Hit Resist; Zikel's board adds Perfect Resist [@gamingtools-systems-stat-conversion-2026-10]. Revitalization Contract adds 17% Status Effect Resist, and Rear Smite 1.5% PvP Damage Boost [@gamingtools-skill-assassin-revitalization-contract-2026-10; @gamingtools-skill-assassin-rear-smite-2026-10].
 
-Positioning and team play per mode are on each mode's tactics page.
+Positioning and team play per mode are on each mode's page.
