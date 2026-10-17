@@ -29,6 +29,8 @@ export const sectionSchema = z.object({
   last_checked: date.optional(),
   sources: z.array(id).default([]),
   play: z.boolean().default(false),
+  /** Item or skill names this page is the guide page for, besides its title (links and icons find it by these). */
+  aliases: z.array(z.string().min(1)).default([]),
   change: z
     .object({
       game_change: z.string().min(1).optional(),

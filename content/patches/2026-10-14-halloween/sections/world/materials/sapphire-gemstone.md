@@ -3,27 +3,47 @@ title: "Sapphire Gemstone"
 order: 19
 status: researched
 last_checked: 2026-10-17
+aliases: ["Fine Sapphire Gemstone", "Pure Sapphire Gemstone", "Radiant Sapphire Gemstone", "Sapphire"]
 ---
-**Sapphire Gemstone** is gathered from Sapphire nodes (Gem, Novice, gathering mastery 1) [@gamingtools-gather-1500020-2026-10].
+:::quick
+1. Gather **Sapphire Gemstone** nodes (Gem, gathering mastery 1+) [@gamingtools-item-database-2026-10].
+2. **Elyos:** Verteron, around **Pilgrim's Ridge**. Follow the numbered loop on the map [!opinion].
+3. **Asmodians:** Altgard, around **Sanctum Outpost**. Follow the numbered loop on the map [!opinion].
+4. Higher mastery turns more nodes into the better grades on the card [@gamingtools-systems-gathering-2026-10; !opinion].
+:::
 
-::::play
-## Elyos
+::items{names="Sapphire Gemstone; Fine Sapphire Gemstone; Pure Sapphire Gemstone; Radiant Sapphire Gemstone"}
 
-**Best spot: Verteron**, 192 node placements, in Ellun River Midstream, Anguish Hill, Miros Post, Cohta Outpost, Pilgrim's Ridge, Verteron Fortress Ruins, Scarlet Forest, Sehna Outpost [@gamingtools-gather-1500020-2026-10].
+## Elyos: Verteron
 
-If those areas are busy, move on to Maktashan Outpost on the same map [@gamingtools-gather-1500020-2026-10].
+::map{id=sapphire-gemstone-verteron}
 
-## Asmodians
+192 Sapphire Gemstone nodes on Verteron [@gamingtools-gather-1500020-2026-10]. The densest group is around **Pilgrim's Ridge** (84 nodes); Scarlet Forest (66), Anguish Hill (18) are the next groups [@gamingtools-interactive-map-2026-10].
 
-**Best spot: Altgard**, 200 node placements, in Sanctum Outpost, Temporary Retreat, Sanctum Dumpsite, Zikel's Sanctum, Silent Hill, Dranactus, Watchtower Camp, Hidden Cave [@gamingtools-gather-1550020-2026-10].
+## Asmodians: Altgard
 
-If those areas are busy, move on to Lagta Fortress, Black Claw Village on the same map [@gamingtools-gather-1550020-2026-10].
+::map{id=sapphire-gemstone-altgard}
 
-## Route
+200 Sapphire Gemstone nodes on Altgard [@gamingtools-gather-1550020-2026-10]. The densest group is around **Sanctum Outpost** (70 nodes); Lagta Fortress (70), Dranactus (60) are the next groups [@gamingtools-interactive-map-2026-10].
 
-Loop the best spot's areas in order and gather every node you pass [!opinion]. Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node go faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].
-::::
+## What it's used for
 
-Higher-grade results and bonuses from the same nodes: Fine Sapphire Gemstone, Pure Sapphire Gemstone, Radiant Sapphire Gemstone [@gamingtools-gather-1500020-2026-10].
+- Sapphire Decoration
+- Sapphire Powder
+- Expert's Sapphire Ring
+- Expert's Truth Orb
+- Artisan's Sapphire Ring
+- Artisan's Truth Orb
+- Professional Alchemist's Scale (Bound)
+- True Dragon Lord Ring
+- White Dragon Lord Ring
+- Splendent White Dragon Lord Ring
+- Wise Dragon Lord Ring
+- Splendent Wise Dragon Lord Ring
+- Star Dragon Lord Ring
+- Dark Dragon Lord Ring
+- and 13 more
 
-Recipes whose shopping list includes Radiant Sapphire Gemstone / Pure Sapphire Gemstone / Sapphire Gemstone: Artisan's Sapphire Ring (Handicrafting), Artisan's Truth Orb (Alchemy), Professional Alchemist's Scale (Bound) (Alchemy), Sapphire Decoration (Handicrafting), Sapphire Decoration x10 (Handicrafting), Sapphire Powder x3 (Alchemy), Sapphire Powder x30 (Alchemy), Splendent White Dragon Lord Orb (Alchemy), Splendent White Dragon Lord Ring (Handicrafting), Splendent Wise Dragon Lord Orb (Alchemy), Splendent Wise Dragon Lord Ring (Handicrafting), Superior Courage Scroll (Alchemy), and 6 more [@gamingtools-crafting-calculator-2026-10]. Full lists: Crafting → Recipes.
+[@gamingtools-item-database-2026-10]
+
+Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].

@@ -4,7 +4,15 @@ order: 7
 status: researched
 last_checked: 2026-10-17
 ---
-Instance or special area.
+:::quick
+1. Expedition. Entry, rewards and drops: [Gladiator](/classes/gladiator/pve/expeditions/draupnir) or [Assassin](/classes/assassin/pve/expeditions/draupnir) page [@gamingtools-navigator-2026-10].
+:::
+
+::map{map=draupnir}
+
+## Gathering nodes
+
+Each node type links to the material it gives.
 
 | Node | Type | Placements | Areas | Source |
 |---|---|---|---|---|

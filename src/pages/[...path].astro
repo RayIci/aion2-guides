@@ -49,6 +49,11 @@ const PATCH_STATUS = { staged: 'Staged, not released on Global yet', live: 'Live
 
 const href = (id: string) => withBase(`/${patch.meta.id}/${sectionPath(id)}`);
 
+// One confidence line per page, since inline badges are hidden by default.
+const claimCount = section?.claims.length ?? 0;
+const verifiedShare = claimCount ? Math.round((100 * (section?.claims.filter((c) => c.confidence === 'verified').length ?? 0)) / claimCount) : 0;
+const pageConfidence = !claimCount ? undefined : verifiedShare >= 80 ? 'verified' : verifiedShare >= 40 ? 'community' : 'unverified';
+
 let guideView: { title: string; items: ReturnType<typeof toNavItems>; crumbs: { title: string; href?: string }[] } | undefined;
 if (section) {
   const guide = guideOf(section.id);
@@ -99,6 +104,12 @@ if (section) {
           </span>
           {section.lastChecked && <span>Last checked {section.lastChecked}</span>}
         </div>
+        {pageConfidence && (
+          <p class="flex flex-wrap items-center gap-2 text-sm text-muted-foreground" data-pagefind-ignore>
+            <Badge variant={pageConfidence}>{verifiedShare}% verified</Badge>
+            <span>{claimCount} cited claims. Turn on Sources in the header to see each one.</span>
+          </p>
+        )}
         {section.sectionConfidence && (
           <p class="flex items-center gap-2 text-sm text-muted-foreground" data-pagefind-ignore>
             Section sources
@@ -117,6 +128,7 @@ if (section) {
       </div>
       <div data-pagefind-ignore>
         <SourceList sources={section.sources} />
+        <p class="mt-10 text-sm text-muted-foreground">Game icons and maps © NCSOFT, taken from the game data via gaming.tools.</p>
       </div>
     </Guide>
   ) : (

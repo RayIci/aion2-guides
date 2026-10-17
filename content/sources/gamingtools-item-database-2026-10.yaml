@@ -1,0 +1,11 @@
+id: gamingtools-item-database-2026-10
+title: "AION 2 Global database: items, monsters, drop tables, shops and recipes (gaming.tools)"
+url: "https://aion2.gaming.tools/items"
+type: data
+author: "gaming.tools"
+language: en
+region: global
+accessed: 2026-10-17
+about_patch: "Global client 2.0.7.0"
+derived_from: []
+notes: "Read from the site's data files with scripts/media (headless browser; Cloudflare check). Item cards, drop chances, monster levels, spawn counts and shop prices come from here. Each card links to its item page."

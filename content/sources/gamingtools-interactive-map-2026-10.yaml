@@ -1,0 +1,11 @@
+id: gamingtools-interactive-map-2026-10
+title: "AION 2 Global interactive map: map images, node and monster positions (gaming.tools)"
+url: "https://aion2.gaming.tools/map"
+type: data
+author: "gaming.tools"
+language: en
+region: global
+accessed: 2026-10-17
+about_patch: "Global client 2.0.7.0"
+derived_from: []
+notes: "Map images are the game's world maps (NCSOFT), stitched from the site's tile packs by scripts/media/build.mjs. Positions are the client's spawn and node placements; gaming.tools marks monster coordinates as not yet verified in game. Circles and routes on our maps are computed from these positions, not taken from the source."

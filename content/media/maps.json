@@ -1,0 +1,1909 @@
+{
+ "20": {
+  "name": "Chaotic Lower Reshanta",
+  "slug": "chaotic-lower-reshanta",
+  "img": "img/maps/chaotic-lower-reshanta.webp",
+  "width": 1600,
+  "height": 1313,
+  "url": "https://aion2.gaming.tools/maps/20",
+  "subzones": [
+   {
+    "name": "Chaotic Lower Reshanta",
+    "x": 766,
+    "y": 668
+   },
+   {
+    "name": "Latesran Western Root",
+    "kind": "village",
+    "x": 311,
+    "y": 1123
+   },
+   {
+    "name": "Latesran Eastern Root",
+    "kind": "village",
+    "x": 1258,
+    "y": 185
+   },
+   {
+    "name": "Devastated Remnants",
+    "kind": "battlefield",
+    "x": 503,
+    "y": 908
+   },
+   {
+    "name": "Devastated Remnants - Dusk Battlefield",
+    "x": 565,
+    "y": 871
+   },
+   {
+    "name": "Devastated Remnants - Shade Island",
+    "x": 636,
+    "y": 992
+   },
+   {
+    "name": "Devastated Remnants - Weathered Outcrop",
+    "x": 429,
+    "y": 845
+   },
+   {
+    "name": "Devastated Remnants - Exile Island",
+    "x": 509,
+    "y": 734
+   },
+   {
+    "name": "Black Fragments Area",
+    "kind": "battlefield",
+    "x": 1034,
+    "y": 429
+   },
+   {
+    "name": "Black Fragments Area - Kration Conflict Zone",
+    "x": 985,
+    "y": 449
+   },
+   {
+    "name": "Black Fragments Area - Lonely Island",
+    "x": 952,
+    "y": 289
+   },
+   {
+    "name": "Black Fragments Area - Kibelium Fragment",
+    "x": 1131,
+    "y": 486
+   },
+   {
+    "name": "Black Fragments Area - Abandoned Island",
+    "x": 1074,
+    "y": 557
+   },
+   {
+    "name": "Sulfur Tree Island",
+    "kind": "battlefield",
+    "x": 401,
+    "y": 405
+   },
+   {
+    "name": "Sulfur Tree Island - Branding Island",
+    "x": 546,
+    "y": 400
+   },
+   {
+    "name": "Sulfur Tree Island - River of Rotten Sap",
+    "x": 249,
+    "y": 445
+   },
+   {
+    "name": "Sulfur Tree Island - Sulfur Swamp",
+    "x": 454,
+    "y": 297
+   },
+   {
+    "name": "Archipelago of Siel's Wings",
+    "kind": "battlefield",
+    "x": 1143,
+    "y": 985
+   },
+   {
+    "name": "Archipelago of Siel's Wings - Siel's Left Wing",
+    "x": 986,
+    "y": 1000
+   },
+   {
+    "name": "Archipelago of Siel's Wings - Siel's Right Wing",
+    "x": 1341,
+    "y": 936
+   },
+   {
+    "name": "Archipelago of Siel's Wings - Siel's Heart",
+    "x": 981,
+    "y": 1012
+   },
+   {
+    "name": "Archipelago of Siel's Wings - Grave of Steel",
+    "x": 1111,
+    "y": 803
+   },
+   {
+    "name": "Reshanta's Root",
+    "kind": "battlefield",
+    "x": 768,
+    "y": 671
+   }
+  ]
+ },
+ "1000": {
+  "name": "Poeta",
+  "slug": "poeta",
+  "img": "img/maps/poeta.webp",
+  "width": 1584,
+  "height": 1766,
+  "url": "https://aion2.gaming.tools/maps/1000",
+  "subzones": [
+   {
+    "name": "Poeta",
+    "x": 1046,
+    "y": 1029
+   },
+   {
+    "name": "Ishtar Castle",
+    "kind": "battlefield",
+    "x": 434,
+    "y": 1520
+   },
+   {
+    "name": "District 2 Surana Research Center",
+    "x": 360,
+    "y": 1530
+   },
+   {
+    "name": "District 2 Central Administration Office",
+    "x": 395,
+    "y": 1602
+   },
+   {
+    "name": "Red Canyon",
+    "kind": "battlefield",
+    "x": 1416,
+    "y": 880
+   },
+   {
+    "name": "Daminu Forest",
+    "kind": "battlefield",
+    "x": 817,
+    "y": 426
+   },
+   {
+    "name": "Clione Lake",
+    "x": 888,
+    "y": 310
+   },
+   {
+    "name": "Dawn Legion Forward Base",
+    "kind": "village",
+    "x": 1108,
+    "y": 657
+   },
+   {
+    "name": "Phoenix Sky Island",
+    "x": 707,
+    "y": 399
+   },
+   {
+    "name": "Migzatu Brigade Base",
+    "kind": "battlefield",
+    "x": 1195,
+    "y": 422
+   },
+   {
+    "name": "Migzatu Brigade Supply Depot",
+    "x": 1182,
+    "y": 254
+   },
+   {
+    "name": "Lacrima Cliff",
+    "kind": "battlefield",
+    "x": 831,
+    "y": 617
+   }
+  ]
+ },
+ "1010": {
+  "name": "Verteron",
+  "slug": "verteron",
+  "img": "img/maps/verteron.webp",
+  "width": 1600,
+  "height": 1663,
+  "url": "https://aion2.gaming.tools/maps/1010",
+  "subzones": [
+   {
+    "name": "Verteron",
+    "x": 908,
+    "y": 759
+   },
+   {
+    "name": "Dawn Legion Base",
+    "kind": "village",
+    "x": 560,
+    "y": 437
+   },
+   {
+    "name": "Dawn Legion Recovery Room",
+    "x": 531,
+    "y": 429
+   },
+   {
+    "name": "Crematorium",
+    "x": 613,
+    "y": 473
+   },
+   {
+    "name": "Cantas Valley",
+    "x": 662,
+    "y": 521
+   },
+   {
+    "name": "Caelid's Office",
+    "x": 549,
+    "y": 410
+   },
+   {
+    "name": "Dawn Legion Command Post",
+    "x": 533,
+    "y": 411
+   },
+   {
+    "name": "Eastern Cantas Valley",
+    "kind": "battlefield",
+    "x": 705,
+    "y": 515
+   },
+   {
+    "name": "Western Cantas Valley",
+    "kind": "battlefield",
+    "x": 554,
+    "y": 552
+   },
+   {
+    "name": "Ellun River Marsh",
+    "x": 860,
+    "y": 492
+   },
+   {
+    "name": "Marsh Outpost",
+    "kind": "village",
+    "x": 839,
+    "y": 556
+   },
+   {
+    "name": "Spirit's Rest",
+    "kind": "battlefield",
+    "x": 1005,
+    "y": 454
+   },
+   {
+    "name": "Contaminated Marsh",
+    "kind": "battlefield",
+    "x": 934,
+    "y": 517
+   },
+   {
+    "name": "Collapsed Verteron Barrier Tower",
+    "kind": "village",
+    "x": 896,
+    "y": 428
+   },
+   {
+    "name": "Marsh Legion Campsite",
+    "kind": "village",
+    "x": 896,
+    "y": 513
+   },
+   {
+    "name": "Hideout in Front of the Ruins",
+    "kind": "village",
+    "x": 786,
+    "y": 717
+   },
+   {
+    "name": "Ellun River Meadow",
+    "kind": "battlefield",
+    "x": 819,
+    "y": 584
+   },
+   {
+    "name": "Zumion Village",
+    "kind": "village",
+    "x": 1094,
+    "y": 783
+   },
+   {
+    "name": "Pilgrim's Ridge",
+    "kind": "battlefield",
+    "x": 918,
+    "y": 909
+   },
+   {
+    "name": "Eastern Altamia Highland",
+    "kind": "battlefield",
+    "x": 1299,
+    "y": 1018
+   },
+   {
+    "name": "Western Altamia Highland",
+    "kind": "battlefield",
+    "x": 1022,
+    "y": 929
+   },
+   {
+    "name": "Southern Altamia Highland",
+    "kind": "battlefield",
+    "x": 1008,
+    "y": 1217
+   },
+   {
+    "name": "Altamia Canyon",
+    "kind": "battlefield",
+    "x": 1180,
+    "y": 958
+   },
+   {
+    "name": "Rock Tomb Hill",
+    "kind": "battlefield",
+    "x": 996,
+    "y": 1046
+   },
+   {
+    "name": "Destroyed Temple Site",
+    "kind": "battlefield",
+    "x": 1269,
+    "y": 820
+   },
+   {
+    "name": "Contaminated Sanctum",
+    "kind": "battlefield",
+    "x": 1380,
+    "y": 850
+   },
+   {
+    "name": "Rock Hill Outpost",
+    "kind": "village",
+    "x": 1017,
+    "y": 937
+   },
+   {
+    "name": "Alert Observation Post",
+    "kind": "village",
+    "x": 1279,
+    "y": 861
+   },
+   {
+    "name": "Hill of Purification",
+    "kind": "village",
+    "x": 1393,
+    "y": 881
+   },
+   {
+    "name": "Purifying Altar",
+    "x": 1434,
+    "y": 827
+   },
+   {
+    "name": "Ancient Zumion Temple Site",
+    "kind": "battlefield",
+    "x": 1235,
+    "y": 910
+   },
+   {
+    "name": "Canyon Campsite",
+    "kind": "village",
+    "x": 1141,
+    "y": 954
+   },
+   {
+    "name": "Garden of the Illusion God",
+    "kind": "battlefield",
+    "x": 1273,
+    "y": 1311
+   },
+   {
+    "name": "Pilgrim's Rest",
+    "kind": "village",
+    "x": 1149,
+    "y": 1202
+   },
+   {
+    "name": "Ardus Shrine Entrance",
+    "x": 1263,
+    "y": 1248
+   },
+   {
+    "name": "Beast Hunter Campsite",
+    "kind": "village",
+    "x": 1045,
+    "y": 1116
+   },
+   {
+    "name": "Illusion Hideout",
+    "x": 1224,
+    "y": 981
+   },
+   {
+    "name": "Valley Outpost",
+    "kind": "village",
+    "x": 644,
+    "y": 529
+   },
+   {
+    "name": "Cantas Valley Base",
+    "kind": "village",
+    "x": 574,
+    "y": 609
+   },
+   {
+    "name": "Coastal Camp",
+    "kind": "village",
+    "x": 628,
+    "y": 668
+   },
+   {
+    "name": "Eastern Cantas Campsite",
+    "kind": "village",
+    "x": 703,
+    "y": 545
+   },
+   {
+    "name": "Steep Guard Post",
+    "kind": "village",
+    "x": 676,
+    "y": 494
+   },
+   {
+    "name": "Kizeri's Cave",
+    "x": 897,
+    "y": 946
+   },
+   {
+    "name": "Ellun River Midstream",
+    "kind": "battlefield",
+    "x": 759,
+    "y": 764
+   },
+   {
+    "name": "Verteron Fortress Ruins",
+    "kind": "battlefield",
+    "x": 872,
+    "y": 766
+   },
+   {
+    "name": "Northern Tolbas Forest",
+    "kind": "battlefield",
+    "x": 691,
+    "y": 889
+   },
+   {
+    "name": "Eastern Tolbas Forest",
+    "kind": "battlefield",
+    "x": 848,
+    "y": 964
+   },
+   {
+    "name": "Aullaeu Village",
+    "kind": "battlefield",
+    "x": 781,
+    "y": 1143
+   },
+   {
+    "name": "Forest of Exiles",
+    "kind": "battlefield",
+    "x": 719,
+    "y": 1114
+   },
+   {
+    "name": "Dundu's Rest",
+    "kind": "village",
+    "x": 808,
+    "y": 720
+   },
+   {
+    "name": "Collapsed Pillar",
+    "kind": "village",
+    "x": 881,
+    "y": 759
+   },
+   {
+    "name": "Dawn Legion Temporary Outpost",
+    "kind": "village",
+    "x": 845,
+    "y": 896
+   },
+   {
+    "name": "Wind Breeze Merchants HQ",
+    "kind": "village",
+    "x": 654,
+    "y": 872
+   },
+   {
+    "name": "Southern Shugo Station",
+    "kind": "village",
+    "x": 708,
+    "y": 932
+   },
+   {
+    "name": "Astin Mercenaries Base",
+    "kind": "village",
+    "x": 721,
+    "y": 1016
+   },
+   {
+    "name": "Eastern Shugo Station",
+    "kind": "village",
+    "x": 814,
+    "y": 922
+   },
+   {
+    "name": "Aullaeu Village Border",
+    "kind": "village",
+    "x": 843,
+    "y": 979
+   },
+   {
+    "name": "Abandoned Wind Breeze Office",
+    "kind": "village",
+    "x": 785,
+    "y": 1114
+   },
+   {
+    "name": "Pamos Farm",
+    "kind": "village",
+    "x": 712,
+    "y": 695
+   },
+   {
+    "name": "Illusion Cavaliers' Campsite",
+    "kind": "village",
+    "x": 855,
+    "y": 628
+   },
+   {
+    "name": "Ruin Exploration Campsite",
+    "kind": "village",
+    "x": 715,
+    "y": 749
+   },
+   {
+    "name": "Southern Tolbas Forest",
+    "kind": "battlefield",
+    "x": 646,
+    "y": 989
+   },
+   {
+    "name": "Night Dew Cave",
+    "kind": "village",
+    "x": 741,
+    "y": 1003
+   },
+   {
+    "name": "Anguish Hill",
+    "kind": "battlefield",
+    "x": 652,
+    "y": 735
+   },
+   {
+    "name": "Destroyed Abyss Gate",
+    "kind": "battlefield",
+    "x": 964,
+    "y": 734
+   },
+   {
+    "name": "Tolbas Forest",
+    "x": 700,
+    "y": 978
+   },
+   {
+    "name": "Northern Shugo Station",
+    "kind": "village",
+    "x": 732,
+    "y": 881
+   },
+   {
+    "name": "Kraka Footpath",
+    "kind": "battlefield",
+    "x": 1201,
+    "y": 636
+   },
+   {
+    "name": "Kraka Footpath Campsite",
+    "kind": "village",
+    "x": 1210,
+    "y": 751
+   },
+   {
+    "name": "Drana Plantation",
+    "kind": "battlefield",
+    "x": 1270,
+    "y": 546
+   },
+   {
+    "name": "Notos Legion Outpost",
+    "kind": "village",
+    "x": 1249,
+    "y": 622
+   },
+   {
+    "name": "Laborer's Rest Stop",
+    "kind": "village",
+    "x": 1160,
+    "y": 594
+   },
+   {
+    "name": "Drana Transport Hub",
+    "kind": "village",
+    "x": 1289,
+    "y": 576
+   },
+   {
+    "name": "Scarlet Forest",
+    "kind": "battlefield",
+    "x": 1146,
+    "y": 447
+   },
+   {
+    "name": "Scarlet Forest Observation Site",
+    "kind": "village",
+    "x": 1136,
+    "y": 439
+   },
+   {
+    "name": "Nahid Brigade Fortress",
+    "kind": "battlefield",
+    "x": 1373,
+    "y": 408
+   },
+   {
+    "name": "Drana Cultivation Area",
+    "kind": "battlefield",
+    "x": 1195,
+    "y": 562
+   },
+   {
+    "name": "Drana Processing Area",
+    "kind": "battlefield",
+    "x": 1264,
+    "y": 492
+   },
+   {
+    "name": "Eternal Isle",
+    "kind": "battlefield",
+    "x": 221,
+    "y": 1488
+   },
+   {
+    "name": "Sacrifice's Rest",
+    "x": 1086,
+    "y": 1305
+   },
+   {
+    "name": "Aullaeu Funeral Island",
+    "x": 527,
+    "y": 971
+   },
+   {
+    "name": "Crimson Isle",
+    "kind": "battlefield",
+    "x": 1189,
+    "y": 147
+   },
+   {
+    "name": "Crimson Isle Outpost",
+    "kind": "village",
+    "x": 1181,
+    "y": 192
+   },
+   {
+    "name": "Highland's End Campsite",
+    "kind": "village",
+    "x": 1088,
+    "y": 1250
+   },
+   {
+    "name": "Deserter Encampment",
+    "x": 930,
+    "y": 855
+   },
+   {
+    "name": "Romlon's Hideout",
+    "x": 1066,
+    "y": 623
+   },
+   {
+    "name": "Forest Shade Execution Site",
+    "x": 940,
+    "y": 1290
+   },
+   {
+    "name": "Renegade Hideout",
+    "x": 1034,
+    "y": 1165
+   },
+   {
+    "name": "Plateau Hill Base",
+    "x": 1245,
+    "y": 994
+   },
+   {
+    "name": "Ugaros Thieves Campsite",
+    "x": 773,
+    "y": 537
+   },
+   {
+    "name": "Miros Post",
+    "x": 686,
+    "y": 761
+   },
+   {
+    "name": "Poacher's Base",
+    "x": 602,
+    "y": 990
+   },
+   {
+    "name": "Gargos Thieves Campsite",
+    "x": 928,
+    "y": 978
+   },
+   {
+    "name": "Canyon Thieves Den",
+    "x": 1164,
+    "y": 912
+   },
+   {
+    "name": "Cohta Outpost",
+    "x": 915,
+    "y": 673
+   },
+   {
+    "name": "Mantasch Patrol Base",
+    "x": 1114,
+    "y": 678
+   },
+   {
+    "name": "Sehna Outpost",
+    "x": 1182,
+    "y": 401
+   },
+   {
+    "name": "Sabga Balaur Campsite",
+    "x": 1358,
+    "y": 622
+   },
+   {
+    "name": "Maktashan Outpost",
+    "x": 1077,
+    "y": 453
+   },
+   {
+    "name": "Mysterious Track",
+    "x": 97,
+    "y": 1478
+   },
+   {
+    "name": "Krall Command Post",
+    "x": 861,
+    "y": 758
+   },
+   {
+    "name": "Illusion Oratory",
+    "x": 843,
+    "y": 759
+   },
+   {
+    "name": "Kochi's Quarters",
+    "x": 651,
+    "y": 863
+   },
+   {
+    "name": "Astin's Secret Storage",
+    "x": 676,
+    "y": 997
+   },
+   {
+    "name": "Place of Aulamus",
+    "x": 801,
+    "y": 1187
+   }
+  ]
+ },
+ "1100": {
+  "name": "Ishalgen",
+  "slug": "ishalgen",
+  "img": "img/maps/ishalgen.webp",
+  "width": 1600,
+  "height": 710,
+  "url": "https://aion2.gaming.tools/maps/1100",
+  "subzones": [
+   {
+    "name": "Ishalgen",
+    "x": 805,
+    "y": 410
+   },
+   {
+    "name": "Fafnir Fortress",
+    "kind": "battlefield",
+    "x": 202,
+    "y": 334
+   },
+   {
+    "name": "Aldelle Hill",
+    "kind": "battlefield",
+    "x": 1061,
+    "y": 560
+   },
+   {
+    "name": "Aldelle Village",
+    "kind": "village",
+    "x": 1302,
+    "y": 337
+   },
+   {
+    "name": "Munihelle Forest",
+    "kind": "battlefield",
+    "x": 1357,
+    "y": 209
+   },
+   {
+    "name": "Tunapre Lake",
+    "x": 1373,
+    "y": 153
+   },
+   {
+    "name": "Azrakar Brigade Guard Camp",
+    "x": 1399,
+    "y": 484
+   },
+   {
+    "name": "In Front of Azrakar Brigade Prison Compound",
+    "x": 1274,
+    "y": 484
+   },
+   {
+    "name": "Duraro Vine Gorge",
+    "kind": "battlefield",
+    "x": 1381,
+    "y": 350
+   },
+   {
+    "name": "Azrakar Brigade Stationing Base",
+    "kind": "battlefield",
+    "x": 1360,
+    "y": 485
+   },
+   {
+    "name": "Anturn Cliff",
+    "kind": "battlefield",
+    "x": 1476,
+    "y": 279
+   },
+   {
+    "name": "Munihelle Forest Outskirts",
+    "x": 1325,
+    "y": 262
+   },
+   {
+    "name": "Witch's Cabin",
+    "x": 1363,
+    "y": 198
+   },
+   {
+    "name": "Abandoned Barracks Site",
+    "x": 1394,
+    "y": 413
+   }
+  ]
+ },
+ "1110": {
+  "name": "Altgard",
+  "slug": "altgard",
+  "img": "img/maps/altgard.webp",
+  "width": 1600,
+  "height": 1657,
+  "url": "https://aion2.gaming.tools/maps/1110",
+  "subzones": [
+   {
+    "name": "Altgard",
+    "x": 805,
+    "y": 775
+   },
+   {
+    "name": "Safe Haven",
+    "kind": "village",
+    "x": 580,
+    "y": 382
+   },
+   {
+    "name": "Shadow Hall",
+    "x": 602,
+    "y": 395
+   },
+   {
+    "name": "Dredgion Crash Site",
+    "kind": "battlefield",
+    "x": 706,
+    "y": 477
+   },
+   {
+    "name": "Galorik's Inspection Area",
+    "kind": "village",
+    "x": 534,
+    "y": 501
+   },
+   {
+    "name": "Quai Campsite",
+    "kind": "village",
+    "x": 495,
+    "y": 593
+   },
+   {
+    "name": "Calderon Canyon",
+    "kind": "battlefield",
+    "x": 593,
+    "y": 633
+   },
+   {
+    "name": "Nameless Cemetery",
+    "kind": "battlefield",
+    "x": 360,
+    "y": 511
+   },
+   {
+    "name": "Gravekeeper Camp",
+    "kind": "village",
+    "x": 379,
+    "y": 563
+   },
+   {
+    "name": "Neglected Crematorium",
+    "kind": "village",
+    "x": 315,
+    "y": 519
+   },
+   {
+    "name": "Crypt",
+    "x": 320,
+    "y": 435
+   },
+   {
+    "name": "Sanctum Outpost",
+    "kind": "battlefield",
+    "x": 340,
+    "y": 748
+   },
+   {
+    "name": "Fang Hideout",
+    "kind": "village",
+    "x": 407,
+    "y": 640
+   },
+   {
+    "name": "Silent Hill",
+    "kind": "battlefield",
+    "x": 298,
+    "y": 636
+   },
+   {
+    "name": "Temporary Retreat",
+    "kind": "village",
+    "x": 372,
+    "y": 744
+   },
+   {
+    "name": "Zikel's Sanctum",
+    "x": 251,
+    "y": 799
+   },
+   {
+    "name": "Watcher's Tent",
+    "kind": "village",
+    "x": 509,
+    "y": 676
+   },
+   {
+    "name": "Creion Campsite",
+    "kind": "village",
+    "x": 528,
+    "y": 583
+   },
+   {
+    "name": "Mire Campsite",
+    "kind": "village",
+    "x": 584,
+    "y": 659
+   },
+   {
+    "name": "Temporary Investigation Base",
+    "kind": "village",
+    "x": 630,
+    "y": 551
+   },
+   {
+    "name": "Searcher Rock",
+    "kind": "village",
+    "x": 665,
+    "y": 604
+   },
+   {
+    "name": "Canyon Dispatch Area",
+    "kind": "village",
+    "x": 654,
+    "y": 569
+   },
+   {
+    "name": "Tranein Highland",
+    "kind": "battlefield",
+    "x": 466,
+    "y": 785
+   },
+   {
+    "name": "Tranein Pond",
+    "kind": "battlefield",
+    "x": 465,
+    "y": 709
+   },
+   {
+    "name": "Munin's Bridge",
+    "kind": "battlefield",
+    "x": 562,
+    "y": 729
+   },
+   {
+    "name": "Minushan Site",
+    "kind": "village",
+    "x": 887,
+    "y": 779
+   },
+   {
+    "name": "Victorious Daeva's Statue",
+    "kind": "village",
+    "x": 841,
+    "y": 655
+   },
+   {
+    "name": "Faded Stump",
+    "kind": "village",
+    "x": 979,
+    "y": 535
+   },
+   {
+    "name": "Odar's Shade",
+    "kind": "village",
+    "x": 669,
+    "y": 778
+   },
+   {
+    "name": "Moslan Forest",
+    "kind": "battlefield",
+    "x": 675,
+    "y": 891
+   },
+   {
+    "name": "Elim's Rest",
+    "kind": "village",
+    "x": 676,
+    "y": 925
+   },
+   {
+    "name": "Forest Hideout",
+    "kind": "village",
+    "x": 768,
+    "y": 827
+   },
+   {
+    "name": "Collapsed Chasm",
+    "kind": "village",
+    "x": 644,
+    "y": 849
+   },
+   {
+    "name": "Nornir Assembly",
+    "kind": "village",
+    "x": 1017,
+    "y": 720
+   },
+   {
+    "name": "Dranactus",
+    "kind": "battlefield",
+    "x": 966,
+    "y": 331
+   },
+   {
+    "name": "Briskwind Shelter",
+    "kind": "village",
+    "x": 917,
+    "y": 454
+   },
+   {
+    "name": "Hidden Cave",
+    "kind": "village",
+    "x": 975,
+    "y": 226
+   },
+   {
+    "name": "Battlescar Mound",
+    "kind": "battlefield",
+    "x": 1062,
+    "y": 440
+   },
+   {
+    "name": "North Laborer's Tent",
+    "kind": "village",
+    "x": 933,
+    "y": 300
+   },
+   {
+    "name": "South Laborer's Tent",
+    "kind": "village",
+    "x": 933,
+    "y": 352
+   },
+   {
+    "name": "Uruthumheim",
+    "kind": "battlefield",
+    "x": 862,
+    "y": 749
+   },
+   {
+    "name": "Abandoned Site",
+    "kind": "village",
+    "x": 797,
+    "y": 772
+   },
+   {
+    "name": "Purifying Forest",
+    "kind": "battlefield",
+    "x": 993,
+    "y": 536
+   },
+   {
+    "name": "Guide Rest Stop",
+    "kind": "village",
+    "x": 991,
+    "y": 593
+   },
+   {
+    "name": "Root of the Sacred Tree Entrance",
+    "x": 961,
+    "y": 572
+   },
+   {
+    "name": "Healing Spring",
+    "kind": "village",
+    "x": 858,
+    "y": 621
+   },
+   {
+    "name": "Basfelt Ruins",
+    "kind": "battlefield",
+    "x": 1220,
+    "y": 517
+   },
+   {
+    "name": "Basfelt Waterfall",
+    "kind": "village",
+    "x": 1187,
+    "y": 421
+   },
+   {
+    "name": "Graverobber Campsite",
+    "kind": "village",
+    "x": 1194,
+    "y": 511
+   },
+   {
+    "name": "Destroyed Ruins",
+    "kind": "village",
+    "x": 1226,
+    "y": 469
+   },
+   {
+    "name": "Shulak Street Stall",
+    "kind": "village",
+    "x": 1171,
+    "y": 605
+   },
+   {
+    "name": "Mahindel Cliff",
+    "kind": "village",
+    "x": 1207,
+    "y": 731
+   },
+   {
+    "name": "Steel Hammer Base",
+    "kind": "village",
+    "x": 1216,
+    "y": 718
+   },
+   {
+    "name": "Steel Hammer Merchants HQ",
+    "kind": "village",
+    "x": 1278,
+    "y": 781
+   },
+   {
+    "name": "Mahindel River",
+    "kind": "battlefield",
+    "x": 1201,
+    "y": 711
+   },
+   {
+    "name": "Fafnite Deposit",
+    "kind": "battlefield",
+    "x": 1070,
+    "y": 904
+   },
+   {
+    "name": "Steel Hammer Workcamp",
+    "kind": "village",
+    "x": 1146,
+    "y": 923
+   },
+   {
+    "name": "Western Gribade Highland",
+    "kind": "battlefield",
+    "x": 1090,
+    "y": 1068
+   },
+   {
+    "name": "Idun's Lake",
+    "kind": "battlefield",
+    "x": 1258,
+    "y": 1043
+   },
+   {
+    "name": "Abandoned Campsite",
+    "kind": "village",
+    "x": 1104,
+    "y": 1002
+   },
+   {
+    "name": "Eastern Gribade Highland",
+    "kind": "battlefield",
+    "x": 1331,
+    "y": 990
+   },
+   {
+    "name": "Amunta's Hideout",
+    "kind": "village",
+    "x": 1287,
+    "y": 954
+   },
+   {
+    "name": "Black Claw Village",
+    "kind": "battlefield",
+    "x": 1087,
+    "y": 1267
+   },
+   {
+    "name": "Zemurru's Tomb",
+    "kind": "village",
+    "x": 1160,
+    "y": 1115
+   },
+   {
+    "name": "Secret Rendezvous Point",
+    "kind": "village",
+    "x": 1053,
+    "y": 1191
+   },
+   {
+    "name": "Kumrica's Cellar",
+    "kind": "village",
+    "x": 1042,
+    "y": 1213
+   },
+   {
+    "name": "Muqaka's Quarters",
+    "kind": "village",
+    "x": 1000,
+    "y": 1182
+   },
+   {
+    "name": "Lagta Fortress",
+    "kind": "battlefield",
+    "x": 769,
+    "y": 1227
+   },
+   {
+    "name": "Impetusium Square",
+    "kind": "battlefield",
+    "x": 1310,
+    "y": 1306
+   },
+   {
+    "name": "Collapsed Hall Of Fame",
+    "kind": "village",
+    "x": 1192,
+    "y": 1246
+   },
+   {
+    "name": "Fissure Cave",
+    "kind": "village",
+    "x": 1338,
+    "y": 522
+   },
+   {
+    "name": "Southern Gribade Highland",
+    "kind": "battlefield",
+    "x": 1227,
+    "y": 1091
+   },
+   {
+    "name": "Corrupted Forester Ruins",
+    "x": 818,
+    "y": 843
+   },
+   {
+    "name": "Blades Temporary Outpost",
+    "x": 526,
+    "y": 847
+   },
+   {
+    "name": "Logger's Rest Ruins",
+    "x": 626,
+    "y": 962
+   },
+   {
+    "name": "Graverobber Den",
+    "x": 432,
+    "y": 464
+   },
+   {
+    "name": "Sanctum Outskirts Watch",
+    "x": 311,
+    "y": 611
+   },
+   {
+    "name": "Rubek Thieves' Occupied Territory",
+    "x": 754,
+    "y": 469
+   },
+   {
+    "name": "Sanctum Dumpsite",
+    "x": 286,
+    "y": 808
+   },
+   {
+    "name": "Prison Cell",
+    "x": 424,
+    "y": 645
+   },
+   {
+    "name": "Watchtower Camp",
+    "x": 1017,
+    "y": 375
+   },
+   {
+    "name": "Immortal Isle",
+    "kind": "battlefield",
+    "x": 189,
+    "y": 1431
+   },
+   {
+    "name": "Forest Marauder Campsite",
+    "x": 1052,
+    "y": 494
+   },
+   {
+    "name": "Spirit Isle",
+    "kind": "battlefield",
+    "x": 1395,
+    "y": 133
+   },
+   {
+    "name": "Guide's Dwelling",
+    "kind": "village",
+    "x": 1450,
+    "y": 169
+   },
+   {
+    "name": "Flauke Legion Outpost",
+    "x": 1125,
+    "y": 606
+   },
+   {
+    "name": "Detlef Thieves Camp",
+    "x": 1116,
+    "y": 1085
+   },
+   {
+    "name": "Latrima Outpost",
+    "x": 1046,
+    "y": 329
+   },
+   {
+    "name": "Steel Hammer Temporary Trading Post",
+    "kind": "village",
+    "x": 1267,
+    "y": 1095
+   },
+   {
+    "name": "Granach's Hideout",
+    "x": 1364,
+    "y": 891
+   },
+   {
+    "name": "Wind Altar",
+    "x": 1049,
+    "y": 607
+   },
+   {
+    "name": "Fire Altar",
+    "x": 1044,
+    "y": 544
+   },
+   {
+    "name": "Earth Altar",
+    "x": 921,
+    "y": 495
+   },
+   {
+    "name": "Water Altar",
+    "x": 852,
+    "y": 533
+   },
+   {
+    "name": "Barahta Extermination Unit Outpost",
+    "x": 1345,
+    "y": 1073
+   },
+   {
+    "name": "Amurahta Surveillance Base",
+    "x": 1098,
+    "y": 1291
+   },
+   {
+    "name": "Andsha Forward Base",
+    "x": 1308,
+    "y": 1216
+   },
+   {
+    "name": "Outskirts Stall",
+    "kind": "village",
+    "x": 1156,
+    "y": 1284
+   },
+   {
+    "name": "Legion Base Ruins",
+    "x": 1372,
+    "y": 482
+   },
+   {
+    "name": "Mysterious Track",
+    "x": 92,
+    "y": 1420
+   }
+  ]
+ },
+ "600001": {
+  "name": "Krao Cave",
+  "slug": "krao-cave",
+  "img": "img/maps/krao-cave.webp",
+  "width": 885,
+  "height": 803,
+  "url": "https://aion2.gaming.tools/maps/600001",
+  "subzones": [
+   {
+    "name": "Krao Cave",
+    "x": 322,
+    "y": 478
+   },
+   {
+    "name": "Sealed Cave",
+    "x": 749,
+    "y": 121
+   },
+   {
+    "name": "Red Cavity",
+    "x": 681,
+    "y": 420
+   },
+   {
+    "name": "Weathered Testing Ground",
+    "x": 82,
+    "y": 456
+   }
+  ]
+ },
+ "600011": {
+  "name": "Urugugu Canyon",
+  "slug": "urugugu-canyon",
+  "img": "img/maps/urugugu-canyon.webp",
+  "width": 1168,
+  "height": 819,
+  "url": "https://aion2.gaming.tools/maps/600011",
+  "subzones": [
+   {
+    "name": "Urugugu Canyon",
+    "x": 666,
+    "y": 431
+   },
+   {
+    "name": "Urugugu Village",
+    "x": 277,
+    "y": 583
+   },
+   {
+    "name": "Windy Valley",
+    "x": 613,
+    "y": 391
+   },
+   {
+    "name": "Urugugu Temple",
+    "x": 873,
+    "y": 217
+   },
+   {
+    "name": "Auldor's Sanctum",
+    "x": 1028,
+    "y": 96
+   }
+  ]
+ },
+ "600021": {
+  "name": "Fire Temple",
+  "slug": "fire-temple",
+  "img": "img/maps/fire-temple.webp",
+  "width": 1038,
+  "height": 994,
+  "url": "https://aion2.gaming.tools/maps/600021",
+  "subzones": [
+   {
+    "name": "Fire Temple",
+    "x": 625,
+    "y": 524
+   },
+   {
+    "name": "Mirror Altar",
+    "x": 355,
+    "y": 912
+   },
+   {
+    "name": "Fire Corridor",
+    "x": 215,
+    "y": 635
+   },
+   {
+    "name": "Path of Atonement",
+    "x": 933,
+    "y": 178
+   },
+   {
+    "name": "Burning Temple",
+    "x": 539,
+    "y": 446
+   }
+  ]
+ },
+ "600031": {
+  "name": "Draupnir",
+  "slug": "draupnir",
+  "img": "img/maps/draupnir.webp",
+  "width": 1600,
+  "height": 1401,
+  "url": "https://aion2.gaming.tools/maps/600031",
+  "subzones": [
+   {
+    "name": "Draupnir",
+    "x": 436,
+    "y": 951
+   },
+   {
+    "name": "Unknown Abyss",
+    "x": 295,
+    "y": 833
+   },
+   {
+    "name": "Abyss Control Sector",
+    "x": 519,
+    "y": 1201
+   },
+   {
+    "name": "Phantasmal Sky",
+    "x": 116,
+    "y": 659
+   },
+   {
+    "name": "Meditation Room",
+    "x": 271,
+    "y": 94
+   },
+   {
+    "name": "Bakarma's Subspace",
+    "x": 1496,
+    "y": 657
+   }
+  ]
+ },
+ "600041": {
+  "name": "Dying Dramata's Nest",
+  "slug": "dying-dramatas-nest",
+  "img": "img/maps/dying-dramatas-nest.webp",
+  "width": 835,
+  "height": 927,
+  "url": "https://aion2.gaming.tools/maps/600041",
+  "subzones": [
+   {
+    "name": "Dying Dramata's Nest",
+    "x": 462,
+    "y": 499
+   },
+   {
+    "name": "Dramata's Cave Entrance",
+    "x": 92,
+    "y": 189
+   },
+   {
+    "name": "Dramata Underwater Cave",
+    "x": 213,
+    "y": 199
+   },
+   {
+    "name": "Dratona Hatchery",
+    "x": 406,
+    "y": 119
+   },
+   {
+    "name": "Dratona Breeding Ground",
+    "x": 536,
+    "y": 221
+   },
+   {
+    "name": "Dramata Valley",
+    "x": 460,
+    "y": 324
+   },
+   {
+    "name": "Dramata Valley Culvert",
+    "x": 547,
+    "y": 524
+   },
+   {
+    "name": "Durvati's Nest",
+    "x": 704,
+    "y": 764
+   }
+  ]
+ },
+ "600071": {
+  "name": "Vakron Sky Island",
+  "slug": "vakron-sky-island",
+  "img": "img/maps/vakron-sky-island.webp",
+  "width": 1021,
+  "height": 960,
+  "url": "https://aion2.gaming.tools/maps/600071",
+  "subzones": [
+   {
+    "name": "Vakron Sky Island",
+    "x": 287,
+    "y": 252
+   },
+   {
+    "name": "Sky Plains",
+    "x": 787,
+    "y": 699
+   },
+   {
+    "name": "Boulder Islands",
+    "x": 506,
+    "y": 493
+   },
+   {
+    "name": "Thamon Island",
+    "x": 512,
+    "y": 86
+   },
+   {
+    "name": "Spirit Altar",
+    "x": 239,
+    "y": 94
+   },
+   {
+    "name": "Tiere's Nest",
+    "x": 652,
+    "y": 512
+   },
+   {
+    "name": "Thamon's Area",
+    "x": 504,
+    "y": 167
+   },
+   {
+    "name": "Islands Windstream",
+    "x": 624,
+    "y": 432
+   }
+  ]
+ },
+ "600091": {
+  "name": "Ferocious Horn Den",
+  "slug": "ferocious-horn-den",
+  "img": "img/maps/ferocious-horn-den.webp",
+  "width": 1240,
+  "height": 1370,
+  "url": "https://aion2.gaming.tools/maps/600091",
+  "subzones": [
+   {
+    "name": "Ferocious Horn Den",
+    "x": 819,
+    "y": 360
+   },
+   {
+    "name": "Fera Surveillance Site",
+    "x": 384,
+    "y": 997
+   },
+   {
+    "name": "Twinkling Abyss",
+    "x": 909,
+    "y": 834
+   },
+   {
+    "name": "Requiem Altar",
+    "x": 937,
+    "y": 773
+   },
+   {
+    "name": "Mau's Resting Place",
+    "x": 984,
+    "y": 595
+   },
+   {
+    "name": "Abyssal Surface",
+    "x": 973,
+    "y": 303
+   },
+   {
+    "name": "Howling Throne",
+    "x": 1158,
+    "y": 90
+   }
+  ]
+ },
+ "600121": {
+  "name": "Cradle of Nihility",
+  "slug": "cradle-of-nihility",
+  "img": "img/maps/cradle-of-nihility.webp",
+  "width": 1366,
+  "height": 1230,
+  "url": "https://aion2.gaming.tools/maps/600121",
+  "subzones": [
+   {
+    "name": "Cradle of Nihility",
+    "x": 680,
+    "y": 638
+   },
+   {
+    "name": "Floating Dimension",
+    "x": 868,
+    "y": 1039
+   },
+   {
+    "name": "Distorted Spiral",
+    "x": 244,
+    "y": 698
+   },
+   {
+    "name": "Distorted Crystal Cave",
+    "x": 146,
+    "y": 492
+   },
+   {
+    "name": "Collapsed Cradle",
+    "x": 222,
+    "y": 150
+   }
+  ]
+ },
+ "600131": {
+  "name": "Hall of Illusion",
+  "slug": "hall-of-illusion",
+  "img": "img/maps/hall-of-illusion.webp",
+  "width": 569,
+  "height": 1048,
+  "url": "https://aion2.gaming.tools/maps/600131",
+  "subzones": [
+   {
+    "name": "Hall of Illusion",
+    "x": 246,
+    "y": 474
+   },
+   {
+    "name": "Hall of Glory",
+    "x": 360,
+    "y": 224
+   },
+   {
+    "name": "Mirror Corridor",
+    "x": 277,
+    "y": 320
+   },
+   {
+    "name": "Reflected Hall",
+    "x": 150,
+    "y": 175
+   },
+   {
+    "name": "Depths within the Mirror",
+    "x": 181,
+    "y": 645
+   },
+   {
+    "name": "Divided Sanctum",
+    "x": 280,
+    "y": 886
+   }
+  ]
+ },
+ "600141": {
+  "name": "Azure Breath Island",
+  "slug": "azure-breath-island",
+  "img": "img/maps/azure-breath-island.webp",
+  "width": 694,
+  "height": 902,
+  "url": "https://aion2.gaming.tools/maps/600141",
+  "subzones": [
+   {
+    "name": "Azure Breath Island",
+    "x": 401,
+    "y": 455
+   },
+   {
+    "name": "Azure Primeval Forest",
+    "x": 350,
+    "y": 568
+   },
+   {
+    "name": "Mushroom Colony",
+    "x": 346,
+    "y": 246
+   },
+   {
+    "name": "Moonlit Land",
+    "x": 605,
+    "y": 84
+   }
+  ]
+ },
+ "600144": {
+  "name": "Citadel of the Fallen Daeva",
+  "slug": "citadel-of-the-fallen-daeva",
+  "img": "img/maps/citadel-of-the-fallen-daeva.webp",
+  "width": 1600,
+  "height": 986,
+  "url": "https://aion2.gaming.tools/maps/600144",
+  "subzones": [
+   {
+    "name": "Citadel of the Fallen Daeva",
+    "x": 852,
+    "y": 529
+   },
+   {
+    "name": "Hall of Indomitability",
+    "x": 162,
+    "y": 227
+   },
+   {
+    "name": "Tarnished Ramparts",
+    "x": 412,
+    "y": 494
+   },
+   {
+    "name": "Execution's Crossing",
+    "x": 904,
+    "y": 377
+   },
+   {
+    "name": "Defiled Hall of Honor",
+    "x": 1473,
+    "y": 621
+   }
+  ]
+ }
+}

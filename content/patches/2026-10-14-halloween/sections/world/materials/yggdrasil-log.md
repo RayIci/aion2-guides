@@ -3,21 +3,40 @@ title: "Yggdrasil Log"
 order: 21
 status: researched
 last_checked: 2026-10-17
+aliases: ["Fine Yggdrasil Log", "Pure Yggdrasil Log", "Radiant Yggdrasil Log", "Yggdrasil"]
 ---
-**Yggdrasil Log** is gathered from Yggdrasil nodes (Log, Novice, gathering mastery 1) [@gamingtools-gather-1500012-2026-10].
+:::quick
+1. Gather **Yggdrasil Log** nodes (Log, gathering mastery 1+) [@gamingtools-item-database-2026-10].
+2. **Elyos:** Verteron, around **Contaminated Marsh**. Follow the numbered loop on the map [!opinion].
+3. Higher mastery turns more nodes into the better grades on the card [@gamingtools-systems-gathering-2026-10; !opinion].
+:::
 
-::::play
-## Elyos
+::items{names="Yggdrasil Log; Fine Yggdrasil Log; Pure Yggdrasil Log; Radiant Yggdrasil Log"}
 
-**Best spot: Verteron**, 125 node placements, in Southern Altamia Highland, Altamia Canyon, Ellun River Marsh, Collapsed Verteron Barrier Tower, Contaminated Marsh, Spirit's Rest, Ellun River Midstream, Forest of Exiles [@gamingtools-gather-1500012-2026-10].
+## Elyos: Verteron
 
-If those areas are busy, move on to Garden of the Illusion God on the same map [@gamingtools-gather-1500012-2026-10].
+::map{id=yggdrasil-log-verteron}
 
-## Route
+125 Yggdrasil Log nodes on Verteron [@gamingtools-gather-1500012-2026-10]. The densest group is around **Contaminated Marsh** (50 nodes); Forest of Exiles (18), Altamia Canyon (18) are the next groups [@gamingtools-interactive-map-2026-10].
 
-Loop the best spot's areas in order and gather every node you pass [!opinion]. Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node go faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].
-::::
+## What it's used for
 
-Higher-grade results and bonuses from the same nodes: Fine Yggdrasil Log, Pure Yggdrasil Log, Radiant Yggdrasil Log, Seed of Detection [@gamingtools-gather-1500012-2026-10].
+- Yggdrasil Wood
+- Yggdrasil Paper
+- Expert's Yggdrasil Bow
+- Expert's Yggdrasil Staff
+- Artisan's Yggdrasil Bow
+- Artisan's Yggdrasil Staff
+- Professional Handicrafter's Magnifying Glass (Bound)
+- True Dragon Lord Bow
+- White Dragon Lord Bow
+- Splendent White Dragon Lord Bow
+- Wise Dragon Lord Bow
+- Splendent Wise Dragon Lord Bow
+- True Dragon Lord Staff
+- White Dragon Lord Staff
+- and 3 more
 
-Recipes whose shopping list includes Radiant Yggdrasil Log / Yggdrasil Log / Pure Yggdrasil Log: Artisan's Yggdrasil Bow (Handicrafting), Artisan's Yggdrasil Staff (Handicrafting), Expert's Yggdrasil Staff (Handicrafting), Novice Handicrafter's Magnifying Glass (Bound) (Handicrafting), Professional Handicrafter's Magnifying Glass (Bound) (Handicrafting), Splendent White Dragon Lord Bow (Handicrafting), Splendent White Dragon Lord Staff (Handicrafting), Splendent Wise Dragon Lord Bow (Handicrafting), Splendent Wise Dragon Lord Staff (Handicrafting), Status Effect Resist Scroll (Alchemy), Superior Benediction Scroll (Alchemy), Superior Courage Scroll (Alchemy), and 13 more [@gamingtools-crafting-calculator-2026-10]. Full lists: Crafting → Recipes.
+[@gamingtools-item-database-2026-10]
+
+Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].

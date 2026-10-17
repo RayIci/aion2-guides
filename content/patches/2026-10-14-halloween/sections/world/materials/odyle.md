@@ -3,51 +3,47 @@ title: "Odyle"
 order: 13
 status: researched
 last_checked: 2026-10-17
+aliases: ["Fine Odyle", "Pure Odyle", "Radiant Odyle"]
 ---
-**Odyle** is gathered from Mysterious Odyle, Odyle, Splendent Odyle nodes (Odyle, Novice, gathering mastery 1) [@gamingtools-gather-1500000-2026-10].
+:::quick
+1. Gather **Odyle** nodes (Odyle, gathering mastery 1+) [@gamingtools-item-database-2026-10].
+2. **Elyos:** Verteron, around **Ellun River Midstream**. Follow the numbered loop on the map [!opinion].
+3. **Asmodians:** Altgard, around **Nameless Cemetery**. Follow the numbered loop on the map [!opinion].
+4. Higher mastery turns more nodes into the better grades on the card [@gamingtools-systems-gathering-2026-10; !opinion].
+:::
 
-::::play
-## Elyos
+::items{names="Odyle; Fine Odyle; Pure Odyle; Radiant Odyle"}
 
-**Best spot: Verteron**, 706 node placements, in Southern Altamia Highland, Rock Tomb Hill, Destroyed Temple Site, Contaminated Sanctum, Altamia Canyon, Western Cantas Valley, Eastern Cantas Valley, Ellun River Meadow [@gamingtools-gather-1500000-2026-10].
+## Elyos: Verteron
 
-Alternatives:
-- **Chaotic Lower Reshanta** (240 placements): Black Fragments Area, Devastated Remnants, Reshanta's Root, Sulfur Tree Island, Archipelago of Siel's Wings [@gamingtools-gather-1590001-2026-10]
-- **Krao Cave** (15 placements) [@gamingtools-gather-1500062-2026-10]
-- **Urugugu Canyon** (15 placements) [@gamingtools-gather-1500062-2026-10]
-- **Fire Temple** (15 placements) [@gamingtools-gather-1500062-2026-10]
-- **Draupnir** (15 placements) [@gamingtools-gather-1500062-2026-10]
-- **Vakron Sky Island** (15 placements) [@gamingtools-gather-1500062-2026-10]
-- **Ferocious Horn Den** (15 placements) [@gamingtools-gather-1500062-2026-10]
-- **Dying Dramata's Nest** (15 placements) [@gamingtools-gather-1500063-2026-10]
-- **Cradle of Nihility** (15 placements) [@gamingtools-gather-1500063-2026-10]
-- **Hall of Illusion** (15 placements) [@gamingtools-gather-1590002-2026-10]
-- **Azure Breath Island** (15 placements) [@gamingtools-gather-1590002-2026-10]
-- **Citadel of the Fallen Daeva** (15 placements) [@gamingtools-gather-1590002-2026-10]
+::map{id=odyle-verteron}
 
-## Asmodians
+706 Odyle nodes on Verteron [@gamingtools-gather-1500000-2026-10]. The densest group is around **Ellun River Midstream** (302 nodes); Eastern Cantas Valley (143) are the next groups [@gamingtools-interactive-map-2026-10].
 
-**Best spot: Altgard**, 650 node placements, in Safe Haven, Rubek Thieves' Occupied Territory, Dredgion Crash Site, Galorik's Inspection Area, Calderon Canyon, Nameless Cemetery, Neglected Crematorium, Graverobber Den [@gamingtools-gather-1550000-2026-10].
+## Asmodians: Altgard
 
-Alternatives:
-- **Chaotic Lower Reshanta** (240 placements): Black Fragments Area, Devastated Remnants, Reshanta's Root, Sulfur Tree Island, Archipelago of Siel's Wings [@gamingtools-gather-1590001-2026-10]
-- **Krao Cave** (15 placements) [@gamingtools-gather-1500062-2026-10]
-- **Urugugu Canyon** (15 placements) [@gamingtools-gather-1500062-2026-10]
-- **Fire Temple** (15 placements) [@gamingtools-gather-1500062-2026-10]
-- **Draupnir** (15 placements) [@gamingtools-gather-1500062-2026-10]
-- **Vakron Sky Island** (15 placements) [@gamingtools-gather-1500062-2026-10]
-- **Ferocious Horn Den** (15 placements) [@gamingtools-gather-1500062-2026-10]
-- **Dying Dramata's Nest** (15 placements) [@gamingtools-gather-1500063-2026-10]
-- **Cradle of Nihility** (15 placements) [@gamingtools-gather-1500063-2026-10]
-- **Hall of Illusion** (15 placements) [@gamingtools-gather-1590002-2026-10]
-- **Azure Breath Island** (15 placements) [@gamingtools-gather-1590002-2026-10]
-- **Citadel of the Fallen Daeva** (15 placements) [@gamingtools-gather-1590002-2026-10]
+::map{id=odyle-altgard}
 
-## Route
+650 Odyle nodes on Altgard [@gamingtools-gather-1550000-2026-10]. The densest group is around **Nameless Cemetery** (62 nodes); Nornir Assembly (36), Black Claw Village (33) are the next groups [@gamingtools-interactive-map-2026-10].
 
-Loop the best spot's areas in order and gather every node you pass [!opinion]. Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node go faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].
-::::
+## What it's used for
 
-Higher-grade results and bonuses from the same nodes: Fine Odyle, Pure Odyle, Radiant Odyle [@gamingtools-gather-1500000-2026-10].
+- Orichalcum Longsword
+- Orichalcum Greatsword
+- Orichalcum Dagger
+- Orichalcum Mace
+- Orichalcum Guard
+- Novice Blacksmith's Hammer (Bound)
+- Yggdrasil Bow
+- Yggdrasil Staff
+- Ruby Necklace
+- Diamond Earrings
+- Sapphire Ring
+- Dawn Bracelet
+- Novice Armorsmith's Fabric (Bound)
+- Asvata Bow
+- and 312 more
 
-Recipes whose shopping list includes Radiant Odyle / Odyle / Pure Odyle: Artisan's Diamond Earrings (Handicrafting), Artisan's Orichalcum Boots (Armorsmithing), Artisan's Orichalcum Breastplate (Armorsmithing), Artisan's Orichalcum Cloak (Armorsmithing), Artisan's Orichalcum Dagger (Blacksmithing), Artisan's Orichalcum Gloves (Armorsmithing), Artisan's Orichalcum Greatsword (Blacksmithing), Artisan's Orichalcum Greaves (Armorsmithing), Artisan's Orichalcum Guard (Blacksmithing), Artisan's Orichalcum Helm (Armorsmithing), Artisan's Orichalcum Longsword (Blacksmithing), Artisan's Orichalcum Mace (Blacksmithing), and 147 more [@gamingtools-crafting-calculator-2026-10]. Full lists: Crafting → Recipes.
+[@gamingtools-item-database-2026-10]
+
+Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].

@@ -3,27 +3,47 @@ title: "Diamond Gemstone"
 order: 8
 status: researched
 last_checked: 2026-10-17
+aliases: ["Fine Diamond Gemstone", "Pure Diamond Gemstone", "Radiant Diamond Gemstone", "Diamond"]
 ---
-**Diamond Gemstone** is gathered from Diamond nodes (Gem, Novice, gathering mastery 1) [@gamingtools-gather-1500021-2026-10].
+:::quick
+1. Gather **Diamond Gemstone** nodes (Gem, gathering mastery 1+) [@gamingtools-item-database-2026-10].
+2. **Elyos:** Verteron, around **Drana Plantation**. Follow the numbered loop on the map [!opinion].
+3. **Asmodians:** Altgard, around **Nameless Cemetery**. Follow the numbered loop on the map [!opinion].
+4. Higher mastery turns more nodes into the better grades on the card [@gamingtools-systems-gathering-2026-10; !opinion].
+:::
 
-::::play
-## Elyos
+::items{names="Diamond Gemstone; Fine Diamond Gemstone; Pure Diamond Gemstone; Radiant Diamond Gemstone"}
 
-**Best spot: Verteron**, 192 node placements, in Drana Cultivation Area, Drana Plantation, Drana Processing Area, Drana Transport Hub, Ellun River Marsh, Contaminated Marsh, Spirit's Rest, Collapsed Verteron Barrier Tower [@gamingtools-gather-1500021-2026-10].
+## Elyos: Verteron
 
-If those areas are busy, move on to Aullaeu Village on the same map [@gamingtools-gather-1500021-2026-10].
+::map{id=diamond-gemstone-verteron}
 
-## Asmodians
+192 Diamond Gemstone nodes on Verteron [@gamingtools-gather-1500021-2026-10]. The densest group is around **Drana Plantation** (66 nodes); Ellun River Marsh (66), Aullaeu Village (60) are the next groups [@gamingtools-interactive-map-2026-10].
 
-**Best spot: Altgard**, 200 node placements, in Nameless Cemetery, Crypt, Silent Hill, Abandoned Site, Uruthumheim, Fafnite Deposit, Steel Hammer Workcamp [@gamingtools-gather-1550021-2026-10].
+## Asmodians: Altgard
 
-If those areas are busy, move on to Crypt, Silent Hill, Abandoned Site, Uruthumheim, Fafnite Deposit on the same map [@gamingtools-gather-1550021-2026-10].
+::map{id=diamond-gemstone-altgard}
 
-## Route
+200 Diamond Gemstone nodes on Altgard [@gamingtools-gather-1550021-2026-10]. The densest group is around **Nameless Cemetery** (70 nodes); Fafnite Deposit (70), Uruthumheim (60) are the next groups [@gamingtools-interactive-map-2026-10].
 
-Loop the best spot's areas in order and gather every node you pass [!opinion]. Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node go faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].
-::::
+## What it's used for
 
-Higher-grade results and bonuses from the same nodes: Fine Diamond Gemstone, Pure Diamond Gemstone, Radiant Diamond Gemstone [@gamingtools-gather-1500021-2026-10].
+- Diamond Decoration
+- Diamond Powder
+- Expert's Diamond Earrings
+- Artisan's Diamond Earrings
+- Professional Alchemist's Scale (Bound)
+- True Dragon Lord Earrings
+- White Dragon Lord Earrings
+- Splendent White Dragon Lord Earrings
+- Wise Dragon Lord Earrings
+- Splendent Wise Dragon Lord Earrings
+- Star Dragon Lord Earrings
+- Dark Dragon Lord Earrings
+- Splendent Dark Dragon Lord Earrings
+- Ebony Dragon Lord Earrings
+- and 1 more
 
-Recipes whose shopping list includes Diamond Gemstone / Radiant Diamond Gemstone / Pure Diamond Gemstone: Artisan's Diamond Earrings (Handicrafting), Diamond Decoration (Handicrafting), Diamond Decoration x10 (Handicrafting), Diamond Powder x3 (Alchemy), Diamond Powder x30 (Alchemy), Professional Alchemist's Scale (Bound) (Alchemy), Splendent White Dragon Lord Earrings (Handicrafting), Splendent Wise Dragon Lord Earrings (Handicrafting), Status Effect Resist Scroll (Alchemy), Superior Benediction Scroll (Alchemy), True Dragon Lord Earrings (Handicrafting), White Dragon Lord Earrings (Handicrafting), and 1 more [@gamingtools-crafting-calculator-2026-10]. Full lists: Crafting → Recipes.
+[@gamingtools-item-database-2026-10]
+
+Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].

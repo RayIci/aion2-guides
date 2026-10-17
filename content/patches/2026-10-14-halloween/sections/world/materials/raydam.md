@@ -4,18 +4,24 @@ order: 17
 status: researched
 last_checked: 2026-10-17
 ---
-**Raydam** is gathered from Raydam nodes (Fruit, Novice, gathering mastery 1) [@gamingtools-gather-1550040-2026-10].
+:::quick
+1. Gather **Raydam** nodes (Fruit, gathering mastery 1+) [@gamingtools-item-database-2026-10].
+2. **Asmodians:** Altgard, around **Tranein Pond**. Follow the numbered loop on the map [!opinion].
+3. Higher mastery turns more nodes into the better grades on the card [@gamingtools-systems-gathering-2026-10; !opinion].
+:::
 
-::::play
-## Asmodians
+::items{names="Raydam"}
 
-**Best spot: Altgard**, 96 node placements, in Dredgion Crash Site, Safe Haven, Calderon Canyon, Tranein Highland, Silent Hill, Tranein Pond, Sanctum Outpost, Eastern Gribade Highland [@gamingtools-gather-1550040-2026-10].
+## Asmodians: Altgard
 
-If those areas are busy, move on to Barahta Extermination Unit Outpost, Southern Gribade Highland on the same map [@gamingtools-gather-1550040-2026-10].
+::map{id=raydam-altgard}
 
-## Route
+96 Raydam nodes on Altgard [@gamingtools-gather-1550040-2026-10]. The densest group is around **Tranein Pond** (52 nodes); Eastern Gribade Highland (11) are the next groups [@gamingtools-interactive-map-2026-10].
 
-Loop the best spot's areas in order and gather every node you pass [!opinion]. Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node go faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].
-::::
+## What it's used for
 
-No crafting recipe's shopping list includes it directly at current prices; it may still feed a crafted intermediate [@gamingtools-crafting-calculator-2026-10].
+- Dark Dragon's Chopped Steak
+
+[@gamingtools-item-database-2026-10]
+
+Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].

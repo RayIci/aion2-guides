@@ -3,21 +3,29 @@ title: "Calendula"
 order: 4
 status: researched
 last_checked: 2026-10-17
+aliases: ["Fresh Calendula"]
 ---
-**Calendula** is gathered from Calendula nodes (Herb, Novice, gathering mastery 1) [@gamingtools-gather-1550033-2026-10].
+:::quick
+1. Gather **Calendula** nodes (Herb, gathering mastery 1+) [@gamingtools-item-database-2026-10].
+2. **Asmodians:** Altgard, around **Sanctum Outpost**. Follow the numbered loop on the map [!opinion].
+3. Higher mastery turns more nodes into the better grades on the card [@gamingtools-systems-gathering-2026-10; !opinion].
+:::
 
-::::play
-## Asmodians
+::items{names="Calendula; Fresh Calendula"}
 
-**Best spot: Altgard**, 108 node placements, in Silent Hill, Sanctum Outpost, Purifying Forest, Tranein Highland, Zemurru's Tomb, Black Claw Village [@gamingtools-gather-1550033-2026-10].
+## Asmodians: Altgard
 
-If those areas are busy, move on to Sanctum Outpost, Purifying Forest, Tranein Highland, Zemurru's Tomb, Black Claw Village on the same map [@gamingtools-gather-1550033-2026-10].
+::map{id=calendula-altgard}
 
-## Route
+108 Calendula nodes on Altgard [@gamingtools-gather-1550033-2026-10]. The densest group is around **Sanctum Outpost** (57 nodes); Black Claw Village (30), Purifying Forest (18) are the next groups [@gamingtools-interactive-map-2026-10].
 
-Loop the best spot's areas in order and gather every node you pass [!opinion]. Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node go faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].
-::::
+## What it's used for
 
-Higher-grade results and bonuses from the same nodes: Fresh Calendula, Life Crystal [@gamingtools-gather-1550033-2026-10].
+- Wind Serum
+- Mana Potion
+- Superior Wind Serum
+- Superior Healing Potion
 
-No crafting recipe's shopping list includes it directly at current prices; it may still feed a crafted intermediate [@gamingtools-crafting-calculator-2026-10].
+[@gamingtools-item-database-2026-10]
+
+Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].

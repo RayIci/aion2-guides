@@ -28,6 +28,8 @@ const fullTitle = title === 'AION 2 Guides' ? title : `${title} · AION 2 Guides
         const t = localStorage.getItem('theme');
         const dark = t === 'light' ? false : t === 'system' ? matchMedia('(prefers-color-scheme: dark)').matches : true;
         document.documentElement.classList.toggle('dark', dark);
+        // Citations stay hidden unless the reader turned them on (SourcesToggle).
+        document.documentElement.dataset.sources = localStorage.getItem('sources') === 'show' ? 'show' : 'hide';
       } catch {}
     </script>
   </head>
@@ -45,7 +47,7 @@ const fullTitle = title === 'AION 2 Guides' ? title : `${title} · AION 2 Guides
             <slot />
           </main>
           <footer class="mx-auto w-full max-w-3xl px-4 pb-10 text-sm text-muted-foreground md:px-8">
-            Fan-made guide for AION 2 (Global / NA-EU). Not affiliated with NCSOFT. Every claim links to its source.
+            Fan-made guide for AION 2 (Global / NA-EU). Not affiliated with NCSOFT. Every claim links to its source (turn on Sources in the header). Game icons and maps © NCSOFT, taken from the game data via gaming.tools.
           </footer>
         </>
       )

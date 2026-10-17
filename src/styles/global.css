@@ -272,3 +272,155 @@
   @apply mt-1 flex items-center justify-between gap-2 text-[15px] text-muted-foreground tabular-nums;
 }
 
+
+/* Game media (ADR-0007): icons, item cards, maps, quick steps and "more detail" blocks. */
+.gi {
+  @apply m-0 inline-block shrink-0 rounded-[4px] bg-muted object-contain align-[-0.35em];
+}
+.gi--sm {
+  @apply me-1.5 size-6;
+}
+.gi--lg {
+  @apply size-12 rounded-md;
+}
+.gi-name {
+  @apply whitespace-nowrap;
+}
+.prose td > .gi:first-child,
+.prose li > .gi:first-child {
+  @apply align-[-0.4em];
+}
+
+.item-cards {
+  @apply my-6 grid gap-3 sm:grid-cols-2;
+}
+.item-card {
+  @apply flex flex-col gap-2 rounded-lg bg-muted p-4;
+}
+.item-card__head {
+  @apply flex items-center gap-3;
+}
+.item-card__title {
+  @apply flex min-w-0 flex-col;
+}
+.item-card__name {
+  @apply font-semibold text-foreground no-underline hover:underline;
+}
+.item-card__grade {
+  @apply text-sm text-muted-foreground;
+}
+.grade--rare {
+  @apply text-[oklch(0.72_0.17_145)];
+}
+.grade--legendary {
+  @apply text-[oklch(0.7_0.14_245)];
+}
+.grade--unique {
+  @apply text-[oklch(0.78_0.15_75)];
+}
+.grade--epic {
+  @apply text-[oklch(0.68_0.18_305)];
+}
+.item-card__how {
+  @apply m-0 flex list-none flex-col gap-1 p-0 text-[15px] leading-snug;
+}
+.item-card__how li {
+  @apply m-0 p-0;
+}
+.item-cards__cite {
+  @apply col-span-full m-0 text-sm text-muted-foreground;
+}
+
+.gmap {
+  @apply my-8;
+}
+.gmap__frame {
+  @apply relative overflow-hidden rounded-lg bg-muted;
+}
+.gmap__frame img {
+  @apply m-0 block h-auto w-full;
+}
+.gmap__svg {
+  @apply pointer-events-none absolute inset-0 size-full;
+}
+.gmap__pt {
+  fill: oklch(0.65 0.22 25);
+  stroke: white;
+  stroke-width: 1;
+}
+.gmap__area {
+  fill: none;
+  stroke-width: 3;
+  stroke-dasharray: 8 6;
+}
+.gmap__area--best {
+  stroke: oklch(0.85 0.17 90);
+}
+.gmap__area--alt {
+  stroke: oklch(0.9 0 0 / 0.75);
+}
+.gmap__route {
+  fill: none;
+  stroke: oklch(0.85 0.17 90);
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.gmap__stop {
+  fill: oklch(0.25 0 0);
+  stroke: oklch(0.85 0.17 90);
+  stroke-width: 2;
+}
+.gmap__stop-n {
+  fill: white;
+  font-weight: 700;
+  text-anchor: middle;
+}
+.gmap__label,
+.gmap__zone {
+  fill: white;
+  font-weight: 700;
+  text-anchor: middle;
+  paint-order: stroke;
+  stroke: oklch(0.2 0 0 / 0.85);
+  stroke-width: 4px;
+}
+.gmap__zone {
+  font-weight: 600;
+  stroke-width: 3px;
+}
+.gmap figcaption {
+  @apply mt-2 text-sm text-muted-foreground;
+}
+
+.quick {
+  @apply my-6 flex flex-col gap-2 rounded-lg border-s-4 border-primary bg-muted px-6 py-5;
+}
+.quick > * {
+  @apply my-0;
+}
+.quick__title {
+  @apply text-sm font-semibold tracking-wide text-muted-foreground uppercase;
+}
+.quick ol,
+.quick ul {
+  @apply my-0 flex flex-col gap-1.5;
+}
+.quick li {
+  @apply my-0;
+}
+
+.more {
+  @apply my-6 rounded-lg bg-muted/60 px-5 py-3;
+}
+.more > summary {
+  @apply m-0 cursor-pointer font-medium;
+}
+.more[open] > summary {
+  @apply mb-3;
+}
+
+/* Sources are hidden until the reader turns them on (header toggle; src/scripts/enhance.ts). */
+html:not([data-sources='show']) .cite,
+html:not([data-sources='show']) .item-cards__cite {
+  display: none;
+}

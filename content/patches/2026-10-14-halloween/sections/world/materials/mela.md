@@ -4,18 +4,24 @@ order: 11
 status: researched
 last_checked: 2026-10-17
 ---
-**Mela** is gathered from Mela nodes (Fruit, Novice, gathering mastery 1) [@gamingtools-gather-1500040-2026-10].
+:::quick
+1. Gather **Mela** nodes (Fruit, gathering mastery 1+) [@gamingtools-item-database-2026-10].
+2. **Elyos:** Verteron, around **Western Cantas Valley**. Follow the numbered loop on the map [!opinion].
+3. Higher mastery turns more nodes into the better grades on the card [@gamingtools-systems-gathering-2026-10; !opinion].
+:::
 
-::::play
-## Elyos
+::items{names="Mela"}
 
-**Best spot: Verteron**, 96 node placements, in Western Altamia Highland, Southern Altamia Highland, Altamia Canyon, Western Cantas Valley, Eastern Tolbas Forest [@gamingtools-gather-1500040-2026-10].
+## Elyos: Verteron
 
-If those areas are busy, move on to Southern Altamia Highland, Altamia Canyon, Western Cantas Valley, Eastern Tolbas Forest on the same map [@gamingtools-gather-1500040-2026-10].
+::map{id=mela-verteron}
 
-## Route
+96 Mela nodes on Verteron [@gamingtools-gather-1500040-2026-10]. The densest group is around **Western Cantas Valley** (36 nodes); Western Altamia Highland (30), Eastern Tolbas Forest (30) are the next groups [@gamingtools-interactive-map-2026-10].
 
-Loop the best spot's areas in order and gather every node you pass [!opinion]. Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node go faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].
-::::
+## What it's used for
 
-Recipes whose shopping list includes Mela: Professional Chef's Seasoning (Bound) (Cooking), White Dragon's Chopped Steak (Cooking) [@gamingtools-crafting-calculator-2026-10]. Full lists: Crafting → Recipes.
+- White Dragon's Chopped Steak
+
+[@gamingtools-item-database-2026-10]
+
+Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].

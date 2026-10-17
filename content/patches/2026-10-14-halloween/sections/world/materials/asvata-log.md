@@ -3,21 +3,40 @@ title: "Asvata Log"
 order: 2
 status: researched
 last_checked: 2026-10-17
+aliases: ["Fine Asvata Log", "Pure Asvata Log", "Radiant Asvata Log", "Asvata"]
 ---
-**Asvata Log** is gathered from Asvata nodes (Log, Novice, gathering mastery 1) [@gamingtools-gather-1550012-2026-10].
+:::quick
+1. Gather **Asvata Log** nodes (Log, gathering mastery 1+) [@gamingtools-item-database-2026-10].
+2. **Asmodians:** Altgard, around **Nameless Cemetery**. Follow the numbered loop on the map [!opinion].
+3. Higher mastery turns more nodes into the better grades on the card [@gamingtools-systems-gathering-2026-10; !opinion].
+:::
 
-::::play
-## Asmodians
+::items{names="Asvata Log; Fine Asvata Log; Pure Asvata Log; Radiant Asvata Log"}
 
-**Best spot: Altgard**, 158 node placements, in Nameless Cemetery, Silent Hill, Tranein Highland, Crypt, Sanctum Outpost, Moslan Forest, Purifying Forest, Southern Gribade Highland [@gamingtools-gather-1550012-2026-10].
+## Asmodians: Altgard
 
-If those areas are busy, move on to Black Claw Village on the same map [@gamingtools-gather-1550012-2026-10].
+::map{id=asvata-log-altgard}
 
-## Route
+158 Asvata Log nodes on Altgard [@gamingtools-gather-1550012-2026-10]. The densest group is around **Nameless Cemetery** (63 nodes); Purifying Forest (43), Black Claw Village (41) are the next groups [@gamingtools-interactive-map-2026-10].
 
-Loop the best spot's areas in order and gather every node you pass [!opinion]. Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node go faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].
-::::
+## What it's used for
 
-Higher-grade results and bonuses from the same nodes: Fine Asvata Log, Pure Asvata Log, Radiant Asvata Log, Seed of Detection [@gamingtools-gather-1550012-2026-10].
+- Asvata Wood
+- Asvata Paper
+- Expert's Asvata Bow
+- Expert's Asvata Staff
+- Artisan's Asvata Bow
+- Artisan's Asvata Staff
+- Professional Handicrafter's Magnifying Glass (Bound)
+- Star Dragon Lord Bow
+- Dark Dragon Lord Bow
+- Splendent Dark Dragon Lord Bow
+- Ebony Dragon Lord Bow
+- Splendent Ebony Dragon Lord Bow
+- Star Dragon Lord Staff
+- Dark Dragon Lord Staff
+- and 3 more
 
-No crafting recipe's shopping list includes it directly at current prices; it may still feed a crafted intermediate [@gamingtools-crafting-calculator-2026-10].
+[@gamingtools-item-database-2026-10]
+
+Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].

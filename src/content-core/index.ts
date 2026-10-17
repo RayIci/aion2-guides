@@ -1,6 +1,7 @@
 import { deriveFromSources } from './confidence';
 import { loadContent, type ContentError, type RawPatch, type RawSection } from './load';
 import { renderSection, type RenderedClaim, type RenderResult } from './markdown';
+import { loadMedia, type Media, type MediaContext } from './media';
 import type { Confidence, PatchMeta, Source } from './schema';
 
 // The content core: the one interface the site build reads content through.
@@ -8,6 +9,7 @@ import type { Confidence, PatchMeta, Source } from './schema';
 
 export type { ContentError } from './load';
 export type { Confidence, PatchMeta, Source } from './schema';
+export type { Media } from './media';
 
 export interface ResolvedSection {
   id: string;
@@ -69,11 +71,44 @@ export interface ContentGraph {
   defaultPatch: PatchView | undefined;
   sources: ReadonlyMap<string, Source>;
   sourcesWithoutArchive: Source[];
+  media: Media;
   errors: ContentError[];
 }
 
-export async function buildContent(contentDir: string): Promise<ContentGraph> {
+export interface BuildOptions {
+  /** Prefix for media URLs in rendered HTML (the site's base path, ending in "/"). */
+  assetBase?: string;
+}
+
+export async function buildContent(contentDir: string, options: BuildOptions = {}): Promise<ContentGraph> {
   const raw = await loadContent(contentDir);
+  const media = await loadMedia(contentDir);
+  const assetBase = options.assetBase ?? '/';
+  // Guide pages for names: class skill pages per class, then world pages (materials etc.), by title and aliases.
+  const pagePath = (id: string) => assetBase + id.replace(/(^|\/)index$/, '');
+  const worldPages = new Map<string, string>();
+  const skillPages = new Map<string, Map<string, string>>();
+  for (const patch of raw.patches)
+    for (const s of patch.sections.values()) {
+      if (s.meta.removed || s.id.endsWith('/index')) continue;
+      const names = [s.meta.title, ...s.meta.aliases].filter((n): n is string => !!n);
+      const skill = /^classes\/([^/]+)\/systems\/skills\//.exec(s.id);
+      if (skill) {
+        const m = skillPages.get(skill[1]) ?? new Map<string, string>();
+        for (const n of names) m.set(n, pagePath(s.id));
+        skillPages.set(skill[1], m);
+      } else if (s.id.startsWith('world/materials/')) for (const n of names) worldPages.set(n, pagePath(s.id));
+    }
+  const mediaFor = (sectionId: string): MediaContext => {
+    const className = sectionId.startsWith('classes/') ? sectionId.split('/')[1] : undefined;
+    return {
+      media,
+      assetBase,
+      className,
+      pageFor: (name) => (className && skillPages.get(className)?.get(name)) ?? worldPages.get(name),
+      selfPath: pagePath(sectionId),
+    };
+  };
   const errors = [...raw.errors];
   const sources = raw.sources as ReadonlyMap<string, Source & { file: string }>;
 
@@ -96,7 +131,7 @@ export async function buildContent(contentDir: string): Promise<ContentGraph> {
   for (const patch of ordered) {
     const isBaseline = !patch.meta.parent;
     for (const section of patch.sections.values()) {
-      const r = await renderSection(section.body, { sources, sectionSources: section.meta.sources });
+      const r = await renderSection(section.body, { sources, sectionSources: section.meta.sources, media: mediaFor(section.id) });
       rendered.set(section, r);
       for (const issue of r.issues) errors.push({ file: section.file, message: issue });
       lookupSources(section.meta.sources, section.file, 'sources');
@@ -162,6 +197,7 @@ export async function buildContent(contentDir: string): Promise<ContentGraph> {
     defaultPatch,
     sources,
     sourcesWithoutArchive: [...sources.values()].filter((s) => !s.archived_url),
+    media,
     errors,
   };
 }

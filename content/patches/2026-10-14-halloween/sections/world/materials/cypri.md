@@ -4,19 +4,28 @@ order: 7
 status: researched
 last_checked: 2026-10-17
 ---
-**Cypri** is gathered from Cypri nodes (Aquatic Life, Novice, gathering mastery 1) [@gamingtools-gather-1500043-2026-10].
+:::quick
+1. Gather **Cypri** nodes (Aquatic Life, gathering mastery 1+) [@gamingtools-item-database-2026-10].
+2. **Elyos:** Verteron, around **Tolbas Forest**. Follow the numbered loop on the map [!opinion].
+3. Higher mastery turns more nodes into the better grades on the card [@gamingtools-systems-gathering-2026-10; !opinion].
+:::
 
-::::play
-## Elyos
+::items{names="Cypri"}
 
-**Best spot: Verteron**, 85 node placements, in Southern Altamia Highland, Altamia Canyon, Western Cantas Valley, Kraka Footpath, Forest of Exiles, Eastern Tolbas Forest [@gamingtools-gather-1500043-2026-10].
+## Elyos: Verteron
 
-Alternatives:
-- **Verteron** (23 placements): Ellun River Midstream, Eastern Tolbas Forest, Tolbas Forest, Southern Tolbas Forest [@gamingtools-gather-1500061-2026-10]
+::map{id=cypri-verteron}
 
-## Route
+108 Cypri nodes on Verteron [@gamingtools-gather-1500043-2026-10; @gamingtools-gather-1500061-2026-10]. The densest group is around **Tolbas Forest** (29 nodes); Western Cantas Valley (24), Southern Altamia Highland (12) are the next groups [@gamingtools-interactive-map-2026-10].
 
-Loop the best spot's areas in order and gather every node you pass [!opinion]. Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node go faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].
-::::
+## What it's used for
 
-Recipes whose shopping list includes Cypri: Artisan's Grilled Cypri (Cooking), Artisan's Steamed Cypri (Cooking), Grilled Cypri (Cooking), Steamed Cypri (Cooking), White Dragon's Seafood Pasta (Cooking) [@gamingtools-crafting-calculator-2026-10]. Full lists: Crafting → Recipes.
+- White Dragon's Seafood Pasta
+- Artisan's Steamed Cypri
+- Artisan's Grilled Cypri
+- Steamed Cypri
+- Grilled Cypri
+
+[@gamingtools-item-database-2026-10]
+
+Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].

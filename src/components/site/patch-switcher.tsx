@@ -30,7 +30,7 @@ export function PatchSwitcher({ current, options }: { current: string; options: 
         if (target && value !== current) window.location.assign(target.href)
       }}
     >
-      <SelectTrigger size="sm" aria-label="Patch" className="max-w-44 sm:max-w-80">
+      <SelectTrigger size="sm" aria-label="Patch" className="max-w-40 xl:max-w-80">
         <SelectValue className="truncate" />
       </SelectTrigger>
       <SelectContent align="end" alignItemWithTrigger={false} className="w-auto min-w-(--anchor-width) max-w-[min(24rem,calc(100vw-2rem))]">

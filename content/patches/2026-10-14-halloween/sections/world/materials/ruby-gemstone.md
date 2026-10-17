@@ -3,27 +3,47 @@ title: "Ruby Gemstone"
 order: 18
 status: researched
 last_checked: 2026-10-17
+aliases: ["Fine Ruby Gemstone", "Pure Ruby Gemstone", "Radiant Ruby Gemstone", "Ruby"]
 ---
-**Ruby Gemstone** is gathered from Ruby nodes (Gem, Novice, gathering mastery 1) [@gamingtools-gather-1500022-2026-10].
+:::quick
+1. Gather **Ruby Gemstone** nodes (Gem, gathering mastery 1+) [@gamingtools-item-database-2026-10].
+2. **Elyos:** Verteron, around **Verteron Fortress Ruins**. Follow the numbered loop on the map [!opinion].
+3. **Asmodians:** Altgard, around **Basfelt Ruins**. Follow the numbered loop on the map [!opinion].
+4. Higher mastery turns more nodes into the better grades on the card [@gamingtools-systems-gathering-2026-10; !opinion].
+:::
 
-::::play
-## Elyos
+::items{names="Ruby Gemstone; Fine Ruby Gemstone; Pure Ruby Gemstone; Radiant Ruby Gemstone"}
 
-**Best spot: Verteron**, 196 node placements, in Southern Altamia Highland, Garden of the Illusion God, Pilgrim's Rest, Verteron Fortress Ruins, Destroyed Abyss Gate, Collapsed Pillar [@gamingtools-gather-1500022-2026-10].
+## Elyos: Verteron
 
-If those areas are busy, move on to Garden of the Illusion God, Pilgrim's Rest, Verteron Fortress Ruins, Destroyed Abyss Gate, Collapsed Pillar on the same map [@gamingtools-gather-1500022-2026-10].
+::map{id=ruby-gemstone-verteron}
 
-## Asmodians
+196 Ruby Gemstone nodes on Verteron [@gamingtools-gather-1500022-2026-10]. The densest group is around **Verteron Fortress Ruins** (51 nodes); Southern Altamia Highland (23), Eastern Altamia Highland (14) are the next groups [@gamingtools-interactive-map-2026-10].
 
-**Best spot: Altgard**, 190 node placements, in Tranein Highland, Calderon Canyon, Dredgion Crash Site, Nameless Cemetery, Silent Hill, Mire Campsite, Basfelt Ruins, Battlescar Mound [@gamingtools-gather-1550022-2026-10].
+## Asmodians: Altgard
 
-If those areas are busy, move on to Graverobber Campsite, Legion Base Ruins, Fissure Cave on the same map [@gamingtools-gather-1550022-2026-10].
+::map{id=ruby-gemstone-altgard}
 
-## Route
+190 Ruby Gemstone nodes on Altgard [@gamingtools-gather-1550022-2026-10]. The densest group is around **Basfelt Ruins** (111 nodes); Calderon Canyon (70) are the next groups [@gamingtools-interactive-map-2026-10].
 
-Loop the best spot's areas in order and gather every node you pass [!opinion]. Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node go faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].
-::::
+## What it's used for
 
-Higher-grade results and bonuses from the same nodes: Fine Ruby Gemstone, Pure Ruby Gemstone, Radiant Ruby Gemstone, Splendent Ruby (Bound) [@gamingtools-gather-1500022-2026-10].
+- Ruby Decoration
+- Ruby Powder
+- Expert's Ruby Necklace
+- Expert's Truth Spellbook
+- Artisan's Ruby Necklace
+- Artisan's Truth Spellbook
+- Professional Alchemist's Scale (Bound)
+- True Dragon Lord Necklace
+- White Dragon Lord Necklace
+- Splendent White Dragon Lord Necklace
+- Wise Dragon Lord Necklace
+- Splendent Wise Dragon Lord Necklace
+- Star Dragon Lord Necklace
+- Dark Dragon Lord Necklace
+- and 13 more
 
-Recipes whose shopping list includes Radiant Ruby Gemstone / Pure Ruby Gemstone / Ruby Gemstone: Artisan's Ruby Necklace (Handicrafting), Artisan's Truth Spellbook (Alchemy), Professional Alchemist's Scale (Bound) (Alchemy), Ruby Decoration (Handicrafting), Ruby Decoration x10 (Handicrafting), Ruby Powder x3 (Alchemy), Ruby Powder x30 (Alchemy), Splendent True Dragon Lord Necklace (Handicrafting), Splendent White Dragon Lord Necklace (Handicrafting), Splendent White Dragon Lord Spellbook (Alchemy), Splendent Wise Dragon Lord Necklace (Handicrafting), Splendent Wise Dragon Lord Spellbook (Alchemy), and 6 more [@gamingtools-crafting-calculator-2026-10]. Full lists: Crafting → Recipes.
+[@gamingtools-item-database-2026-10]
+
+Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].

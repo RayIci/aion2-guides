@@ -4,18 +4,28 @@ order: 9
 status: researched
 last_checked: 2026-10-17
 ---
-**Inina** is gathered from Inina nodes (Aquatic Life, Novice, gathering mastery 1) [@gamingtools-gather-1500042-2026-10].
+:::quick
+1. Gather **Inina** nodes (Aquatic Life, gathering mastery 1+) [@gamingtools-item-database-2026-10].
+2. **Elyos:** Verteron, around **Eastern Tolbas Forest**. Follow the numbered loop on the map [!opinion].
+3. Higher mastery turns more nodes into the better grades on the card [@gamingtools-systems-gathering-2026-10; !opinion].
+:::
 
-::::play
-## Elyos
+::items{names="Inina"}
 
-**Best spot: Verteron**, 100 node placements, in Altamia Canyon, Ellun River Midstream, Northern Tolbas Forest, Kraka Footpath, Southern Tolbas Forest, Tolbas Forest, Eastern Tolbas Forest [@gamingtools-gather-1500042-2026-10].
+## Elyos: Verteron
 
-If those areas are busy, move on to Ellun River Midstream, Northern Tolbas Forest, Kraka Footpath, Southern Tolbas Forest, Tolbas Forest on the same map [@gamingtools-gather-1500042-2026-10].
+::map{id=inina-verteron}
 
-## Route
+100 Inina nodes on Verteron [@gamingtools-gather-1500042-2026-10]. The densest group is around **Eastern Tolbas Forest** (33 nodes); Ellun River Midstream (31), Kraka Footpath (18) are the next groups [@gamingtools-interactive-map-2026-10].
 
-Loop the best spot's areas in order and gather every node you pass [!opinion]. Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node go faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].
-::::
+## What it's used for
 
-Recipes whose shopping list includes Inina: Artisan's Inina Pasta (Cooking), Inina Pasta (Cooking), Novice Chef's Seasoning (Bound) (Cooking), Professional Chef's Seasoning (Bound) (Cooking), White Dragon's Beef Wellington (Cooking), White Dragon's Seafood Pasta (Cooking) [@gamingtools-crafting-calculator-2026-10]. Full lists: Crafting → Recipes.
+- White Dragon's Beef Wellington
+- White Dragon's Seafood Pasta
+- Artisan's Inina Pasta
+- Inina Pasta
+- Novice Chef's Seasoning (Bound)
+
+[@gamingtools-item-database-2026-10]
+
+Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].

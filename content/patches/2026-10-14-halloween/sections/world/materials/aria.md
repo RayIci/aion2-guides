@@ -3,21 +3,30 @@ title: "Aria"
 order: 1
 status: researched
 last_checked: 2026-10-17
+aliases: ["Fresh Aria"]
 ---
-**Aria** is gathered from Aria nodes (Herb, Novice, gathering mastery 1) [@gamingtools-gather-1500032-2026-10].
+:::quick
+1. Gather **Aria** nodes (Herb, gathering mastery 1+) [@gamingtools-item-database-2026-10].
+2. **Elyos:** Verteron, around **Western Cantas Valley**. Follow the numbered loop on the map [!opinion].
+3. Higher mastery turns more nodes into the better grades on the card [@gamingtools-systems-gathering-2026-10; !opinion].
+:::
 
-::::play
-## Elyos
+::items{names="Aria; Fresh Aria"}
 
-**Best spot: Verteron**, 156 node placements, in Western Altamia Highland, Rock Tomb Hill, Southern Altamia Highland, Western Cantas Valley, Eastern Cantas Valley, Kraka Footpath, Northern Tolbas Forest, Southern Tolbas Forest [@gamingtools-gather-1500032-2026-10].
+## Elyos: Verteron
 
-If those areas are busy, move on to Eastern Tolbas Forest on the same map [@gamingtools-gather-1500032-2026-10].
+::map{id=aria-verteron}
 
-## Route
+156 Aria nodes on Verteron [@gamingtools-gather-1500032-2026-10]. The densest group is around **Western Cantas Valley** (60 nodes); Northern Tolbas Forest (48), Western Altamia Highland (23) are the next groups [@gamingtools-interactive-map-2026-10].
 
-Loop the best spot's areas in order and gather every node you pass [!opinion]. Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node go faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].
-::::
+## What it's used for
 
-Higher-grade results and bonuses from the same nodes: Fresh Aria, Life Crystal [@gamingtools-gather-1500032-2026-10].
+- Wind Serum
+- Superior Life Potion
+- Life Serum (Bound)
+- Superior Life Serum
+- Superior Wind Serum
 
-Recipes whose shopping list includes Fresh Aria / Aria: Life Serum (Bound) (Alchemy), Superior Life Potion (Alchemy), Superior Life Serum (Alchemy), Superior Wind Serum (Alchemy), Wind Serum (Alchemy) [@gamingtools-crafting-calculator-2026-10]. Full lists: Crafting → Recipes.
+[@gamingtools-item-database-2026-10]
+
+Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].

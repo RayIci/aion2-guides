@@ -4,7 +4,15 @@ order: 12
 status: researched
 last_checked: 2026-10-17
 ---
-Instance or special area.
+:::quick
+1. Instance or special area.
+:::
+
+::map{map=hall-of-illusion}
+
+## Gathering nodes
+
+Each node type links to the material it gives.
 
 | Node | Type | Placements | Areas | Source |
 |---|---|---|---|---|

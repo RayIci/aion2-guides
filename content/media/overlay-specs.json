@@ -1,0 +1,986 @@
+[
+ {
+  "id": "aria-verteron",
+  "map": "1010",
+  "title": "Aria nodes",
+  "gatherables": [
+   "1500032"
+  ],
+  "zones": [
+   "Eastern Cantas Valley",
+   "Eastern Tolbas Forest",
+   "Kraka Footpath",
+   "Northern Tolbas Forest",
+   "Rock Tomb Hill",
+   "Southern Altamia Highland",
+   "Southern Tolbas Forest",
+   "Western Altamia Highland",
+   "Western Cantas Valley"
+  ]
+ },
+ {
+  "id": "asvata-log-altgard",
+  "map": "1110",
+  "title": "Asvata Log nodes",
+  "gatherables": [
+   "1550012"
+  ],
+  "zones": [
+   "Black Claw Village",
+   "Crypt",
+   "Moslan Forest",
+   "Nameless Cemetery",
+   "Purifying Forest",
+   "Sanctum Outpost",
+   "Silent Hill",
+   "Southern Gribade Highland",
+   "Tranein Highland"
+  ]
+ },
+ {
+  "id": "azpha-altgard",
+  "map": "1110",
+  "title": "Azpha nodes",
+  "gatherables": [
+   "1550032"
+  ],
+  "zones": [
+   "Black Claw Village",
+   "Dredgion Crash Site",
+   "Eastern Gribade Highland",
+   "Fafnite Deposit",
+   "Forest Hideout",
+   "Galorik's Inspection Area",
+   "Moslan Forest",
+   "Southern Gribade Highland",
+   "Steel Hammer Workcamp",
+   "Temporary Investigation Base",
+   "Western Gribade Highland",
+   "Zemurru's Tomb"
+  ]
+ },
+ {
+  "id": "calendula-altgard",
+  "map": "1110",
+  "title": "Calendula nodes",
+  "gatherables": [
+   "1550033"
+  ],
+  "zones": [
+   "Black Claw Village",
+   "Purifying Forest",
+   "Sanctum Outpost",
+   "Silent Hill",
+   "Tranein Highland",
+   "Zemurru's Tomb"
+  ]
+ },
+ {
+  "id": "conide-altgard",
+  "map": "1110",
+  "title": "Conide nodes",
+  "gatherables": [
+   "1550042"
+  ],
+  "zones": [
+   "Fafnite Deposit",
+   "Idun's Lake",
+   "Moslan Forest",
+   "Odar's Shade",
+   "Southern Gribade Highland",
+   "Tranein Pond",
+   "Western Gribade Highland"
+  ]
+ },
+ {
+  "id": "coriolus-verteron",
+  "map": "1010",
+  "title": "Coriolus nodes",
+  "gatherables": [
+   "1500041"
+  ],
+  "zones": [
+   "Aullaeu Village",
+   "Contaminated Marsh",
+   "Contaminated Sanctum",
+   "Destroyed Temple Site",
+   "Eastern Altamia Highland",
+   "Ellun River Marsh"
+  ]
+ },
+ {
+  "id": "cypri-verteron",
+  "map": "1010",
+  "title": "Cypri nodes",
+  "gatherables": [
+   "1500043",
+   "1500061"
+  ],
+  "zones": [
+   "Altamia Canyon",
+   "Eastern Tolbas Forest",
+   "Ellun River Midstream",
+   "Forest of Exiles",
+   "Kraka Footpath",
+   "Southern Altamia Highland",
+   "Southern Tolbas Forest",
+   "Tolbas Forest",
+   "Western Cantas Valley"
+  ]
+ },
+ {
+  "id": "diamond-gemstone-verteron",
+  "map": "1010",
+  "title": "Diamond Gemstone nodes",
+  "gatherables": [
+   "1500021"
+  ],
+  "zones": [
+   "Aullaeu Village",
+   "Collapsed Verteron Barrier Tower",
+   "Contaminated Marsh",
+   "Drana Cultivation Area",
+   "Drana Plantation",
+   "Drana Processing Area",
+   "Drana Transport Hub",
+   "Ellun River Marsh",
+   "Spirit's Rest"
+  ]
+ },
+ {
+  "id": "diamond-gemstone-altgard",
+  "map": "1110",
+  "title": "Diamond Gemstone nodes",
+  "gatherables": [
+   "1550021"
+  ],
+  "zones": [
+   "Abandoned Site",
+   "Crypt",
+   "Fafnite Deposit",
+   "Nameless Cemetery",
+   "Silent Hill",
+   "Steel Hammer Workcamp",
+   "Uruthumheim"
+  ]
+ },
+ {
+  "id": "inina-verteron",
+  "map": "1010",
+  "title": "Inina nodes",
+  "gatherables": [
+   "1500042"
+  ],
+  "zones": [
+   "Altamia Canyon",
+   "Eastern Tolbas Forest",
+   "Ellun River Midstream",
+   "Kraka Footpath",
+   "Northern Tolbas Forest",
+   "Southern Tolbas Forest",
+   "Tolbas Forest"
+  ]
+ },
+ {
+  "id": "kukuru-verteron",
+  "map": "1010",
+  "title": "Kukuru nodes",
+  "gatherables": [
+   "1500045"
+  ],
+  "zones": [
+   "Eastern Cantas Valley",
+   "Ellun River Meadow",
+   "Forest of Exiles",
+   "Garden of the Illusion God",
+   "Pilgrim's Ridge",
+   "Southern Altamia Highland",
+   "Ugaros Thieves Campsite"
+  ]
+ },
+ {
+  "id": "mela-verteron",
+  "map": "1010",
+  "title": "Mela nodes",
+  "gatherables": [
+   "1500040"
+  ],
+  "zones": [
+   "Altamia Canyon",
+   "Eastern Tolbas Forest",
+   "Southern Altamia Highland",
+   "Western Altamia Highland",
+   "Western Cantas Valley"
+  ]
+ },
+ {
+  "id": "morfa-altgard",
+  "map": "1110",
+  "title": "Morfa nodes",
+  "gatherables": [
+   "1550041"
+  ],
+  "zones": [
+   "Eastern Gribade Highland",
+   "Fafnite Deposit",
+   "Minushan Site",
+   "Nameless Cemetery",
+   "Uruthumheim"
+  ]
+ },
+ {
+  "id": "odyle-verteron",
+  "map": "1010",
+  "title": "Odyle nodes",
+  "gatherables": [
+   "1500000"
+  ],
+  "zones": [
+   "Altamia Canyon",
+   "Anguish Hill",
+   "Aullaeu Village",
+   "Collapsed Verteron Barrier Tower",
+   "Contaminated Marsh",
+   "Contaminated Sanctum",
+   "Dawn Legion Base",
+   "Destroyed Abyss Gate",
+   "Destroyed Temple Site",
+   "Drana Cultivation Area",
+   "Drana Processing Area",
+   "Eastern Cantas Valley",
+   "Eastern Tolbas Forest",
+   "Ellun River Marsh",
+   "Ellun River Meadow",
+   "Ellun River Midstream",
+   "Forest of Exiles",
+   "Garden of the Illusion God",
+   "Kraka Footpath",
+   "Krall Command Post",
+   "Northern Tolbas Forest",
+   "Pilgrim's Ridge",
+   "Rock Tomb Hill",
+   "Scarlet Forest",
+   "Southern Altamia Highland",
+   "Southern Tolbas Forest",
+   "Spirit's Rest",
+   "Ugaros Thieves Campsite",
+   "Verteron Fortress Ruins",
+   "Western Cantas Valley",
+   "Zumion Village"
+  ]
+ },
+ {
+  "id": "odyle-altgard",
+  "map": "1110",
+  "title": "Odyle nodes",
+  "gatherables": [
+   "1550000"
+  ],
+  "zones": [
+   "Abandoned Campsite",
+   "Basfelt Ruins",
+   "Basfelt Waterfall",
+   "Battlescar Mound",
+   "Black Claw Village",
+   "Briskwind Shelter",
+   "Calderon Canyon",
+   "Collapsed Hall Of Fame",
+   "Crypt",
+   "Dranactus",
+   "Dredgion Crash Site",
+   "Eastern Gribade Highland",
+   "Fafnite Deposit",
+   "Fang Hideout",
+   "Forest Hideout",
+   "Galorik's Inspection Area",
+   "Graverobber Den",
+   "Guide Rest Stop",
+   "Idun's Lake",
+   "Impetusium Square",
+   "Lagta Fortress",
+   "Mahindel Cliff",
+   "Mahindel River",
+   "Minushan Site",
+   "Moslan Forest",
+   "Nameless Cemetery",
+   "Neglected Crematorium",
+   "Nornir Assembly",
+   "Purifying Forest",
+   "Root of the Sacred Tree Entrance",
+   "Rubek Thieves' Occupied Territory",
+   "Safe Haven",
+   "Sanctum Outpost",
+   "Sanctum Outskirts Watch",
+   "Silent Hill",
+   "Southern Gribade Highland",
+   "Steel Hammer Merchants HQ",
+   "Steel Hammer Workcamp",
+   "Tranein Highland",
+   "Uruthumheim",
+   "Western Gribade Highland",
+   "Zemurru's Tomb",
+   "Zikel's Sanctum"
+  ]
+ },
+ {
+  "id": "ohkra-altgard",
+  "map": "1110",
+  "title": "Ohkra nodes",
+  "gatherables": [
+   "1550045"
+  ],
+  "zones": [
+   "Black Claw Village",
+   "Purifying Forest",
+   "Sanctum Outpost",
+   "Silent Hill"
+  ]
+ },
+ {
+  "id": "orichalcum-ore-verteron",
+  "map": "1010",
+  "title": "Orichalcum Ore nodes",
+  "gatherables": [
+   "1500004"
+  ],
+  "zones": [
+   "Anguish Hill",
+   "Aullaeu Village",
+   "Contaminated Sanctum",
+   "Destroyed Abyss Gate",
+   "Destroyed Temple Site",
+   "Eastern Altamia Highland",
+   "Eastern Cantas Valley",
+   "Eastern Tolbas Forest",
+   "Ellun River Meadow",
+   "Ellun River Midstream",
+   "Forest of Exiles",
+   "Kraka Footpath",
+   "Krall Command Post",
+   "Northern Tolbas Forest",
+   "Pamos Farm",
+   "Pilgrim's Ridge",
+   "Rock Tomb Hill",
+   "Romlon's Hideout",
+   "Ruin Exploration Campsite",
+   "Scarlet Forest",
+   "Southern Tolbas Forest",
+   "Verteron Fortress Ruins",
+   "Western Altamia Highland",
+   "Western Cantas Valley"
+  ]
+ },
+ {
+  "id": "orichalcum-ore-altgard",
+  "map": "1110",
+  "title": "Orichalcum Ore nodes",
+  "gatherables": [
+   "1550004"
+  ],
+  "zones": [
+   "Altgard",
+   "Barahta Extermination Unit Outpost",
+   "Basfelt Ruins",
+   "Basfelt Waterfall",
+   "Calderon Canyon",
+   "Dranactus",
+   "Dredgion Crash Site",
+   "Eastern Gribade Highland",
+   "Fafnite Deposit",
+   "Forest Marauder Campsite",
+   "Graverobber Den",
+   "Legion Base Ruins",
+   "Mahindel River",
+   "Moslan Forest",
+   "Nameless Cemetery",
+   "Neglected Crematorium",
+   "North Laborer's Tent",
+   "Rubek Thieves' Occupied Territory",
+   "Safe Haven",
+   "Sanctum Outpost",
+   "Silent Hill",
+   "Southern Gribade Highland",
+   "Steel Hammer Workcamp",
+   "Tranein Highland",
+   "Uruthumheim",
+   "Western Gribade Highland",
+   "Zemurru's Tomb"
+  ]
+ },
+ {
+  "id": "pujery-altgard",
+  "map": "1110",
+  "title": "Pujery nodes",
+  "gatherables": [
+   "1550043"
+  ],
+  "zones": [
+   "Idun's Lake",
+   "Moslan Forest",
+   "Odar's Shade",
+   "Tranein Pond"
+  ]
+ },
+ {
+  "id": "raydam-altgard",
+  "map": "1110",
+  "title": "Raydam nodes",
+  "gatherables": [
+   "1550040"
+  ],
+  "zones": [
+   "Barahta Extermination Unit Outpost",
+   "Calderon Canyon",
+   "Dredgion Crash Site",
+   "Eastern Gribade Highland",
+   "Safe Haven",
+   "Sanctum Outpost",
+   "Silent Hill",
+   "Southern Gribade Highland",
+   "Tranein Highland",
+   "Tranein Pond"
+  ]
+ },
+ {
+  "id": "ruby-gemstone-verteron",
+  "map": "1010",
+  "title": "Ruby Gemstone nodes",
+  "gatherables": [
+   "1500022"
+  ],
+  "zones": [
+   "Collapsed Pillar",
+   "Destroyed Abyss Gate",
+   "Garden of the Illusion God",
+   "Pilgrim's Rest",
+   "Southern Altamia Highland",
+   "Verteron Fortress Ruins"
+  ]
+ },
+ {
+  "id": "ruby-gemstone-altgard",
+  "map": "1110",
+  "title": "Ruby Gemstone nodes",
+  "gatherables": [
+   "1550022"
+  ],
+  "zones": [
+   "Basfelt Ruins",
+   "Battlescar Mound",
+   "Calderon Canyon",
+   "Dredgion Crash Site",
+   "Fissure Cave",
+   "Graverobber Campsite",
+   "Legion Base Ruins",
+   "Mire Campsite",
+   "Nameless Cemetery",
+   "Silent Hill",
+   "Tranein Highland"
+  ]
+ },
+ {
+  "id": "sapphire-gemstone-verteron",
+  "map": "1010",
+  "title": "Sapphire Gemstone nodes",
+  "gatherables": [
+   "1500020"
+  ],
+  "zones": [
+   "Anguish Hill",
+   "Cohta Outpost",
+   "Ellun River Midstream",
+   "Maktashan Outpost",
+   "Miros Post",
+   "Pilgrim's Ridge",
+   "Scarlet Forest",
+   "Sehna Outpost",
+   "Verteron Fortress Ruins"
+  ]
+ },
+ {
+  "id": "sapphire-gemstone-altgard",
+  "map": "1110",
+  "title": "Sapphire Gemstone nodes",
+  "gatherables": [
+   "1550020"
+  ],
+  "zones": [
+   "Black Claw Village",
+   "Dranactus",
+   "Hidden Cave",
+   "Lagta Fortress",
+   "Sanctum Dumpsite",
+   "Sanctum Outpost",
+   "Silent Hill",
+   "Temporary Retreat",
+   "Watchtower Camp",
+   "Zikel's Sanctum"
+  ]
+ },
+ {
+  "id": "targena-verteron",
+  "map": "1010",
+  "title": "Targena nodes",
+  "gatherables": [
+   "1500033"
+  ],
+  "zones": [
+   "Aullaeu Village",
+   "Contaminated Sanctum",
+   "Destroyed Temple Site",
+   "Eastern Altamia Highland",
+   "Eastern Cantas Valley",
+   "Forest of Exiles",
+   "Ugaros Thieves Campsite"
+  ]
+ },
+ {
+  "id": "yggdrasil-log-verteron",
+  "map": "1010",
+  "title": "Yggdrasil Log nodes",
+  "gatherables": [
+   "1500012"
+  ],
+  "zones": [
+   "Altamia Canyon",
+   "Collapsed Verteron Barrier Tower",
+   "Contaminated Marsh",
+   "Ellun River Marsh",
+   "Ellun River Midstream",
+   "Forest of Exiles",
+   "Garden of the Illusion God",
+   "Southern Altamia Highland",
+   "Spirit's Rest"
+  ]
+ },
+ {
+  "id": "raw-leather-verteron",
+  "map": "1010",
+  "title": "Hill Tog spawns",
+  "npcs": [
+   "2100819"
+  ],
+  "zones": [
+   "Kraka Footpath"
+  ]
+ },
+ {
+  "id": "raw-leather-altgard",
+  "map": "1110",
+  "title": "Red Shell Mole spawns",
+  "npcs": [
+   "2400002"
+  ],
+  "zones": [
+   "Dredgion Crash Site"
+  ]
+ },
+ {
+  "id": "raw-leather-chaotic-lower-reshanta",
+  "map": "20",
+  "title": "Abyss Swarm spawns",
+  "npcs": [
+   "2600001"
+  ],
+  "zones": [
+   "Devastated Remnants"
+  ]
+ },
+ {
+  "id": "fresh-raw-meat-verteron",
+  "map": "1010",
+  "title": "Hill Tog spawns",
+  "npcs": [
+   "2100819"
+  ],
+  "zones": [
+   "Kraka Footpath"
+  ]
+ },
+ {
+  "id": "fresh-raw-meat-altgard",
+  "map": "1110",
+  "title": "Red Shell Mole spawns",
+  "npcs": [
+   "2400002"
+  ],
+  "zones": [
+   "Dredgion Crash Site"
+  ]
+ },
+ {
+  "id": "fresh-raw-meat-chaotic-lower-reshanta",
+  "map": "20",
+  "title": "Abyss Search Party Karnif spawns",
+  "npcs": [
+   "2600014"
+  ],
+  "zones": [
+   "Black Fragments Area"
+  ]
+ },
+ {
+  "id": "fresh-fruit-verteron",
+  "map": "1010",
+  "title": "Highland Odyle Sparkie spawns",
+  "npcs": [
+   "2100753"
+  ],
+  "zones": [
+   "Southern Altamia Highland",
+   "Western Altamia Highland"
+  ]
+ },
+ {
+  "id": "fresh-fruit-altgard",
+  "map": "1110",
+  "title": "Faded Papis spawns",
+  "npcs": [
+   "2000926"
+  ],
+  "zones": [
+   "Amunta's Hideout",
+   "Basfelt Ruins",
+   "Eastern Gribade Highland",
+   "Flauke Legion Outpost",
+   "Mahindel Cliff",
+   "Mahindel River",
+   "Moslan Forest",
+   "Munin's Bridge",
+   "Nameless Cemetery",
+   "Safe Haven",
+   "Sanctum Dumpsite",
+   "Sanctum Outpost",
+   "Silent Hill",
+   "Southern Gribade Highland",
+   "Tranein Highland",
+   "Tranein Pond",
+   "Uruthumheim"
+  ]
+ },
+ {
+  "id": "fresh-fruit-chaotic-lower-reshanta",
+  "map": "20",
+  "title": "Abyss Nasty Nepenthes spawns",
+  "npcs": [
+   "2600049"
+  ],
+  "zones": [
+   "Archipelago of Siel's Wings"
+  ]
+ },
+ {
+  "id": "soft-balaur-meat-verteron",
+  "map": "1010",
+  "title": "Drakan Guard spawns",
+  "npcs": [
+   "2101000"
+  ],
+  "zones": [
+   "Nahid Brigade Fortress"
+  ]
+ },
+ {
+  "id": "soft-balaur-meat-altgard",
+  "map": "1110",
+  "title": "Lagta Brigade Researcher spawns",
+  "npcs": [
+   "2400657"
+  ],
+  "zones": [
+   "Lagta Fortress"
+  ]
+ },
+ {
+  "id": "soft-balaur-meat-chaotic-lower-reshanta",
+  "map": "20",
+  "title": "Abyss Draconute Captain spawns",
+  "npcs": [
+   "2600040"
+  ],
+  "zones": [
+   "Sulfur Tree Island"
+  ]
+ },
+ {
+  "id": "spiritstone-verteron",
+  "map": "1010",
+  "title": "Eternal Kerubiel spawns",
+  "npcs": [
+   "2101077"
+  ],
+  "zones": [
+   "Eternal Isle"
+  ]
+ },
+ {
+  "id": "spiritstone-altgard",
+  "map": "1110",
+  "title": "Faded Papis spawns",
+  "npcs": [
+   "2000926"
+  ],
+  "zones": [
+   "Amunta's Hideout",
+   "Basfelt Ruins",
+   "Eastern Gribade Highland",
+   "Flauke Legion Outpost",
+   "Mahindel Cliff",
+   "Mahindel River",
+   "Moslan Forest",
+   "Munin's Bridge",
+   "Nameless Cemetery",
+   "Safe Haven",
+   "Sanctum Dumpsite",
+   "Sanctum Outpost",
+   "Silent Hill",
+   "Southern Gribade Highland",
+   "Tranein Highland",
+   "Tranein Pond",
+   "Uruthumheim"
+  ]
+ },
+ {
+  "id": "spiritstone-chaotic-lower-reshanta",
+  "map": "20",
+  "title": "Abyss Odyle Mutated Insectoid spawns",
+  "npcs": [
+   "2600046"
+  ],
+  "zones": [
+   "Archipelago of Siel's Wings"
+  ]
+ },
+ {
+  "id": "refining-stone-verteron",
+  "map": "1010",
+  "title": "Eternal Kerubiel spawns",
+  "npcs": [
+   "2101077"
+  ],
+  "zones": [
+   "Eternal Isle"
+  ]
+ },
+ {
+  "id": "refining-stone-altgard",
+  "map": "1110",
+  "title": "Varg Warrior spawns",
+  "npcs": [
+   "2400108"
+  ],
+  "zones": [
+   "Sanctum Outpost"
+  ]
+ },
+ {
+  "id": "refining-stone-chaotic-lower-reshanta",
+  "map": "20",
+  "title": "Abyss Odyle Mutated Insectoid spawns",
+  "npcs": [
+   "2600046"
+  ],
+  "zones": [
+   "Archipelago of Siel's Wings"
+  ]
+ },
+ {
+  "id": "experts-refining-stone-verteron",
+  "map": "1010",
+  "title": "Eternal Kerubiel spawns",
+  "npcs": [
+   "2101077"
+  ],
+  "zones": [
+   "Eternal Isle"
+  ]
+ },
+ {
+  "id": "experts-refining-stone-altgard",
+  "map": "1110",
+  "title": "Faded Papis spawns",
+  "npcs": [
+   "2000926"
+  ],
+  "zones": [
+   "Amunta's Hideout",
+   "Basfelt Ruins",
+   "Eastern Gribade Highland",
+   "Flauke Legion Outpost",
+   "Mahindel Cliff",
+   "Mahindel River",
+   "Moslan Forest",
+   "Southern Gribade Highland",
+   "Uruthumheim"
+  ]
+ },
+ {
+  "id": "experts-refining-stone-chaotic-lower-reshanta",
+  "map": "20",
+  "title": "Abyss Odyle Mutated Insectoid spawns",
+  "npcs": [
+   "2600046"
+  ],
+  "zones": [
+   "Archipelago of Siel's Wings"
+  ]
+ },
+ {
+  "id": "artisans-refining-stone-altgard",
+  "map": "1110",
+  "title": "Faded Papis spawns",
+  "npcs": [
+   "2000926"
+  ],
+  "zones": [
+   "Amunta's Hideout",
+   "Basfelt Ruins",
+   "Eastern Gribade Highland",
+   "Flauke Legion Outpost",
+   "Mahindel Cliff",
+   "Mahindel River",
+   "Southern Gribade Highland"
+  ]
+ },
+ {
+  "id": "artisans-refining-stone-chaotic-lower-reshanta",
+  "map": "20",
+  "title": "Abyss Odyle Mutated Insectoid spawns",
+  "npcs": [
+   "2600046"
+  ],
+  "zones": [
+   "Archipelago of Siel's Wings"
+  ]
+ },
+ {
+  "id": "balaurs-essence-chaotic-lower-reshanta",
+  "map": "20",
+  "title": "Watcher Kaira spawns",
+  "npcs": [
+   "2600089"
+  ],
+  "zones": [
+   "Archipelago of Siel's Wings",
+   "Black Fragments Area",
+   "Devastated Remnants",
+   "Sulfur Tree Island"
+  ]
+ },
+ {
+  "id": "silver-fragment-of-merit-altgard",
+  "map": "1110",
+  "title": "Varg Warrior spawns",
+  "npcs": [
+   "2400108"
+  ],
+  "zones": []
+ },
+ {
+  "id": "silver-fragment-of-merit-chaotic-lower-reshanta",
+  "map": "20",
+  "title": "Abyss Odyle Mutated Insectoid spawns",
+  "npcs": [
+   "2600046"
+  ],
+  "zones": []
+ },
+ {
+  "id": "reshanta-aura-altgard",
+  "map": "1110",
+  "title": "Varg Warrior spawns",
+  "npcs": [
+   "2400108"
+  ],
+  "zones": []
+ },
+ {
+  "id": "reshanta-aura-chaotic-lower-reshanta",
+  "map": "20",
+  "title": "Abyss Odyle Mutated Insectoid spawns",
+  "npcs": [
+   "2600046"
+  ],
+  "zones": []
+ },
+ {
+  "id": "bosses-altgard",
+  "map": "1110",
+  "title": "Field bosses",
+  "npcs": [
+   "2400017",
+   "2400074",
+   "2400140",
+   "2400141",
+   "2400212",
+   "2400223",
+   "2400274",
+   "2400335",
+   "2400353",
+   "2400358",
+   "2400419",
+   "2400424",
+   "2400425",
+   "2400474",
+   "2400504",
+   "2400593",
+   "2400607",
+   "2400608",
+   "2400659",
+   "2400709",
+   "2400800",
+   "2101131",
+   "2101122",
+   "2101120"
+  ],
+  "markers": true
+ },
+ {
+  "id": "bosses-chaotic-lower-reshanta",
+  "map": "20",
+  "title": "Field bosses",
+  "npcs": [
+   "2600068",
+   "2600089",
+   "2600084",
+   "2600084",
+   "2600084",
+   "2600096",
+   "2600097",
+   "2600098"
+  ],
+  "markers": true
+ },
+ {
+  "id": "bosses-verteron",
+  "map": "1010",
+  "title": "Field bosses",
+  "npcs": [
+   "2100003",
+   "2100040",
+   "2100050",
+   "2100076",
+   "2100077",
+   "2100079",
+   "2100141",
+   "2100177",
+   "2100178",
+   "2100582",
+   "2100617",
+   "2100661",
+   "2100708",
+   "2100718",
+   "2100876",
+   "2100877",
+   "2100988",
+   "2100989",
+   "2100991",
+   "2101016",
+   "2101074",
+   "2101120",
+   "2101122",
+   "2101131"
+  ],
+  "markers": true
+ }
+]

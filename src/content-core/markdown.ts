@@ -9,6 +9,7 @@ import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
 import { visit, SKIP } from 'unist-util-visit';
 import { deriveConfidence, type Citation } from './confidence';
+import { autoIcons, inlineItem, itemCards, mapFigure, type MediaContext } from './media';
 import { CONFIDENCE_LEVELS, type Confidence, type Source } from './schema';
 
 // Markdown → HTML for one section body, with the citation syntax from docs/content-model.md.
@@ -37,7 +38,7 @@ const BADGE_LABEL: Record<Confidence, string> = { verified: 'Verified', communit
 
 export async function renderSection(
   body: string,
-  ctx: { sources: ReadonlyMap<string, Source>; sectionSources: string[] },
+  ctx: { sources: ReadonlyMap<string, Source>; sectionSources: string[]; media?: MediaContext },
 ): Promise<RenderResult> {
   const state: RenderResult = { html: '', claims: [], sourceOrder: [], checklistIds: [], playBlocks: [], issues: [] };
   const numberOf = (id: string) => {
@@ -54,9 +55,13 @@ export async function renderSection(
       transformCitations(tree, ctx.sources, state, numberOf);
       collectChecklists(tree, state);
       renderBlocks(tree, body, state);
+      if (ctx.media) renderMedia(tree, ctx.media, ctx.sources, state, numberOf);
       restoreStrayDirectives(tree);
     })
     .use(remarkRehype)
+    .use(() => (tree: HastRoot) => {
+      if (ctx.media) autoIcons(tree, ctx.media);
+    })
     .use(() => (tree: HastRoot) => {
       visit(tree, 'element', (node: Element) => {
         if (node.properties?.dataPlay === undefined) return;
@@ -99,7 +104,8 @@ function transformCitations(
     const replacement: PhrasingContent[] = [];
     let last = 0;
     for (const match of node.value.matchAll(CITATION)) {
-      if (match.index > last) replacement.push({ type: 'text', value: node.value.slice(last, match.index) });
+      // The space before a citation belongs to it, so hiding citations leaves no gap before the full stop.
+      if (match.index > last) replacement.push({ type: 'text', value: node.value.slice(last, match.index).replace(/\s+$/, '') });
       last = match.index + match[0].length;
 
       const { citation, issues } = parseCitation(match[1]);
@@ -176,7 +182,7 @@ function collectChecklists(tree: Root, state: RenderResult) {
   });
 }
 
-const BLOCKS = new Set(['conflict', 'checklist', 'play', 'macro']);
+const BLOCKS = new Set(['conflict', 'checklist', 'play', 'macro', 'quick', 'details']);
 
 /**
  * The container blocks from docs/content-model.md, turned into plain semantic HTML.
@@ -209,6 +215,21 @@ function renderBlocks(tree: Root, body: string, state: RenderResult) {
       node.data = { hName: 'div', hProperties: { className: ['checklist'], dataChecklist: attrs.id ?? '' } };
     } else if (node.name === 'play') {
       node.data = { hName: 'div', hProperties: { className: ['play-block'], dataPlay: '' } };
+    } else if (node.name === 'quick') {
+      // The short "what to do" list at the top of a page; it also shows in playing mode.
+      node.children.unshift({
+        type: 'paragraph',
+        data: { hProperties: { className: ['quick__title'] } },
+        children: [{ type: 'text', value: attrs.title ?? 'Quick steps' }],
+      });
+      node.data = { hName: 'section', hProperties: { className: ['quick', 'play-block'], dataPlay: '', dataQuick: '' } };
+    } else if (node.name === 'details') {
+      node.children.unshift({
+        type: 'paragraph',
+        data: { hName: 'summary' },
+        children: [{ type: 'text', value: attrs.summary ?? 'More detail' }],
+      });
+      node.data = { hName: 'details', hProperties: { className: ['more'] } };
     } else if (node.name === 'macro') {
       // Keep the macro text exactly as written: the source lines between the fences.
       const start = node.position?.start.offset ?? 0;
@@ -241,12 +262,66 @@ function renderBlocks(tree: Root, body: string, state: RenderResult) {
 }
 
 /**
+ * Media directives (ADR-0007): `:item[Name]` inline, `::items{names="A; B"}` cards and
+ * `::map{id=…}` / `::map{map=…}` figures. Cards and maps cite the media sources themselves.
+ */
+function renderMedia(
+  tree: Root,
+  media: MediaContext,
+  sources: ReadonlyMap<string, Source>,
+  state: RenderResult,
+  numberOf: (id: string) => number,
+) {
+  const cite = (id: string) => () => {
+    const citation: Citation = { sourceIds: id ? [id] : [], caps: [], opinion: false };
+    if (id && !sources.has(id)) state.issues.push(`media source "${id}" (content/media/meta.json) is not registered`);
+    const confidence = deriveConfidence(citation, sources);
+    state.claims.push({ confidence, opinion: false });
+    const node = citationNode(citation, confidence, id && sources.has(id) ? [numberOf(id)] : []) as unknown as {
+      data: { hName: string; hProperties: Record<string, unknown>; hChildren: ElementContent[] };
+    };
+    return { type: 'element', tagName: node.data.hName, properties: node.data.hProperties, children: node.data.hChildren } as Element;
+  };
+  visit(tree, (node, index, parent) => {
+    if (node.type === 'textDirective' && node.name === 'item') {
+      const name = plainText(node);
+      const hast = inlineItem(media, name);
+      if (!hast) {
+        state.issues.push(`:item[${name}]: no icon for this name in content/media/icons.json`);
+        return;
+      }
+      node.data = { hName: hast.tagName, hProperties: hast.properties, hChildren: hast.children };
+      return SKIP;
+    }
+    if (node.type !== 'leafDirective' || !parent || index === undefined) return;
+    const attrs = node.attributes ?? {};
+    if (node.name === 'items') {
+      const names = (attrs.names ?? '').split(';').map((s) => s.trim()).filter(Boolean);
+      const { node: hast, missing } = itemCards(media, names, cite(media.media.meta.itemSource));
+      for (const m of missing) state.issues.push(`::items: "${m}" is not in content/media/items.json or icons.json`);
+      node.data = { hName: hast.tagName, hProperties: hast.properties, hChildren: hast.children };
+      return SKIP;
+    }
+    if (node.name === 'map') {
+      const hast = mapFigure(media, attrs, cite(media.media.meta.mapSource));
+      if (!hast) {
+        state.issues.push(`::map: unknown ${attrs.id ? `overlay id "${attrs.id}"` : `map "${attrs.map}"`}`);
+        return;
+      }
+      node.data = { hName: hast.tagName, hProperties: hast.properties, hChildren: hast.children };
+      return SKIP;
+    }
+  });
+}
+
+/**
  * remark-directive also parses things like "Note:this" as text directives. Our syntax only
  * uses container directives (`:::name`), so put any text/leaf directive back as literal text.
  */
 function restoreStrayDirectives(tree: Root) {
   visit(tree, (node, index, parent) => {
     if ((node.type !== 'textDirective' && node.type !== 'leafDirective') || !parent || index === undefined) return;
+    if (node.data?.hName) return;
     const prefix = node.type === 'textDirective' ? ':' : '::';
     const restored: RootContent[] = [{ type: 'text', value: prefix + node.name }, ...(node.children as RootContent[])];
     (parent.children as RootContent[]).splice(index, 1, ...restored);

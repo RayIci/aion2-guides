@@ -4,18 +4,28 @@ order: 16
 status: researched
 last_checked: 2026-10-17
 ---
-**Pujery** is gathered from Pujery nodes (Aquatic Life, Novice, gathering mastery 1) [@gamingtools-gather-1550043-2026-10].
+:::quick
+1. Gather **Pujery** nodes (Aquatic Life, gathering mastery 1+) [@gamingtools-item-database-2026-10].
+2. **Asmodians:** Altgard, around **Idun's Lake**. Follow the numbered loop on the map [!opinion].
+3. Higher mastery turns more nodes into the better grades on the card [@gamingtools-systems-gathering-2026-10; !opinion].
+:::
 
-::::play
-## Asmodians
+::items{names="Pujery"}
 
-**Best spot: Altgard**, 105 node placements, in Tranein Pond, Moslan Forest, Odar's Shade, Idun's Lake [@gamingtools-gather-1550043-2026-10].
+## Asmodians: Altgard
 
-If those areas are busy, move on to Moslan Forest, Odar's Shade, Idun's Lake on the same map [@gamingtools-gather-1550043-2026-10].
+::map{id=pujery-altgard}
 
-## Route
+105 Pujery nodes on Altgard [@gamingtools-gather-1550043-2026-10]. The densest group is around **Idun's Lake** (75 nodes); Moslan Forest (18), Tranein Pond (12) are the next groups [@gamingtools-interactive-map-2026-10].
 
-Loop the best spot's areas in order and gather every node you pass [!opinion]. Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node go faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].
-::::
+## What it's used for
 
-No crafting recipe's shopping list includes it directly at current prices; it may still feed a crafted intermediate [@gamingtools-crafting-calculator-2026-10].
+- Dark Dragon's Seafood Pasta
+- Artisan's Steamed Pujery
+- Artisan's Grilled Pujery
+- Steamed Pujery
+- Grilled Pujery
+
+[@gamingtools-item-database-2026-10]
+
+Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].
