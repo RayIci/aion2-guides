@@ -50,4 +50,4 @@ Loop the best spot's areas in order and gather every node you pass [!opinion]. E
 
 Higher-grade results and bonuses from the same nodes: Fine Odyle, Pure Odyle, Radiant Odyle [@gamingtools-gather-1500000-2026-10].
 
-Recipes that use it: see Crafting.
+Recipes whose shopping list includes Radiant Odyle / Odyle / Pure Odyle: Artisan's Diamond Earrings (Handicrafting), Artisan's Orichalcum Boots (Armorsmithing), Artisan's Orichalcum Breastplate (Armorsmithing), Artisan's Orichalcum Cloak (Armorsmithing), Artisan's Orichalcum Dagger (Blacksmithing), Artisan's Orichalcum Gloves (Armorsmithing), Artisan's Orichalcum Greatsword (Blacksmithing), Artisan's Orichalcum Greaves (Armorsmithing), Artisan's Orichalcum Guard (Blacksmithing), Artisan's Orichalcum Helm (Armorsmithing), Artisan's Orichalcum Longsword (Blacksmithing), Artisan's Orichalcum Mace (Blacksmithing), and 147 more [@gamingtools-crafting-calculator-2026-10]. Full lists: Crafting → Recipes.

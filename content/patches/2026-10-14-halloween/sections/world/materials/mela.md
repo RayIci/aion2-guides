@@ -18,4 +18,4 @@ If those areas are busy, move on to Southern Altamia Highland, Altamia Canyon, W
 Loop the best spot's areas in order and gather every node you pass [!opinion]. Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node go faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].
 ::::
 
-Recipes that use it: see Crafting.
+Recipes whose shopping list includes Mela: Professional Chef's Seasoning (Bound) (Cooking), White Dragon's Chopped Steak (Cooking) [@gamingtools-crafting-calculator-2026-10]. Full lists: Crafting → Recipes.

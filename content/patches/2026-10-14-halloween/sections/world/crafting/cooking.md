@@ -34,4 +34,4 @@ last_checked: 2026-10-17
 
 Craft the lowest-level recipe you can still level from, and move up each time a new recipe in the table opens [!opinion]. Mastery runs 1–100 [@gamingtools-systems-crafting-2026-10].
 
-Materials and costs for each recipe are on Crafting → Recipes and Profit checks.
+Materials and costs for each recipe are on Crafting → Recipes, and what sells at a profit on Profit checks.

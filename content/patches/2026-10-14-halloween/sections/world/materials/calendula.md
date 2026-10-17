@@ -20,4 +20,4 @@ Loop the best spot's areas in order and gather every node you pass [!opinion]. E
 
 Higher-grade results and bonuses from the same nodes: Fresh Calendula, Life Crystal [@gamingtools-gather-1550033-2026-10].
 
-Recipes that use it: see Crafting.
+No crafting recipe's shopping list includes it directly at current prices; it may still feed a crafted intermediate [@gamingtools-crafting-calculator-2026-10].

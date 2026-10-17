@@ -26,4 +26,4 @@ Loop the best spot's areas in order and gather every node you pass [!opinion]. E
 
 Higher-grade results and bonuses from the same nodes: Fine Sapphire Gemstone, Pure Sapphire Gemstone, Radiant Sapphire Gemstone [@gamingtools-gather-1500020-2026-10].
 
-Recipes that use it: see Crafting.
+Recipes whose shopping list includes Radiant Sapphire Gemstone / Pure Sapphire Gemstone / Sapphire Gemstone: Artisan's Sapphire Ring (Handicrafting), Artisan's Truth Orb (Alchemy), Professional Alchemist's Scale (Bound) (Alchemy), Sapphire Decoration (Handicrafting), Sapphire Decoration x10 (Handicrafting), Sapphire Powder x3 (Alchemy), Sapphire Powder x30 (Alchemy), Splendent White Dragon Lord Orb (Alchemy), Splendent White Dragon Lord Ring (Handicrafting), Splendent Wise Dragon Lord Orb (Alchemy), Splendent Wise Dragon Lord Ring (Handicrafting), Superior Courage Scroll (Alchemy), and 6 more [@gamingtools-crafting-calculator-2026-10]. Full lists: Crafting → Recipes.

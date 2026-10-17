@@ -19,4 +19,4 @@ Alternatives:
 Loop the best spot's areas in order and gather every node you pass [!opinion]. Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node go faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].
 ::::
 
-Recipes that use it: see Crafting.
+Recipes whose shopping list includes Cypri: Artisan's Grilled Cypri (Cooking), Artisan's Steamed Cypri (Cooking), Grilled Cypri (Cooking), Steamed Cypri (Cooking), White Dragon's Seafood Pasta (Cooking) [@gamingtools-crafting-calculator-2026-10]. Full lists: Crafting → Recipes.

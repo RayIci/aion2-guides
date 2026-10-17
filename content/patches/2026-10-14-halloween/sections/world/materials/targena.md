@@ -20,4 +20,4 @@ Loop the best spot's areas in order and gather every node you pass [!opinion]. E
 
 Higher-grade results and bonuses from the same nodes: Fresh Targena, Life Crystal [@gamingtools-gather-1500033-2026-10].
 
-Recipes that use it: see Crafting.
+Recipes whose shopping list includes Targena / Fresh Targena: Mana Potion (Alchemy), Superior Healing Potion (Alchemy), Superior Wind Serum (Alchemy), Wind Serum (Alchemy) [@gamingtools-crafting-calculator-2026-10]. Full lists: Crafting → Recipes.

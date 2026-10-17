@@ -20,4 +20,4 @@ Loop the best spot's areas in order and gather every node you pass [!opinion]. E
 
 Higher-grade results and bonuses from the same nodes: Fresh Aria, Life Crystal [@gamingtools-gather-1500032-2026-10].
 
-Recipes that use it: see Crafting.
+Recipes whose shopping list includes Fresh Aria / Aria: Life Serum (Bound) (Alchemy), Superior Life Potion (Alchemy), Superior Life Serum (Alchemy), Superior Wind Serum (Alchemy), Wind Serum (Alchemy) [@gamingtools-crafting-calculator-2026-10]. Full lists: Crafting → Recipes.

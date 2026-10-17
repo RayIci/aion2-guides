@@ -4,6 +4,10 @@
 
 **Blocked by:** 25
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Every Global map has a `researched` atlas page
+- [x] Every Global map has a `researched` atlas page
+
+## Comments
+
+2026-10-17: Done. Started before the owner review in 25, on the owner's instruction to finish the project. World index plus 14 map pages (level range, gatherable materials with node counts per map, links to the gaming.tools interactive map), all researched from the gaming.tools gathering database.

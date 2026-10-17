@@ -18,4 +18,4 @@ If those areas are busy, move on to Ellun River Midstream, Northern Tolbas Fores
 Loop the best spot's areas in order and gather every node you pass [!opinion]. Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node go faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].
 ::::
 
-Recipes that use it: see Crafting.
+Recipes whose shopping list includes Inina: Artisan's Inina Pasta (Cooking), Inina Pasta (Cooking), Novice Chef's Seasoning (Bound) (Cooking), Professional Chef's Seasoning (Bound) (Cooking), White Dragon's Beef Wellington (Cooking), White Dragon's Seafood Pasta (Cooking) [@gamingtools-crafting-calculator-2026-10]. Full lists: Crafting → Recipes.

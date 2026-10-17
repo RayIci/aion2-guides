@@ -20,4 +20,4 @@ Loop the best spot's areas in order and gather every node you pass [!opinion]. E
 
 Higher-grade results and bonuses from the same nodes: Fine Yggdrasil Log, Pure Yggdrasil Log, Radiant Yggdrasil Log, Seed of Detection [@gamingtools-gather-1500012-2026-10].
 
-Recipes that use it: see Crafting.
+Recipes whose shopping list includes Radiant Yggdrasil Log / Yggdrasil Log / Pure Yggdrasil Log: Artisan's Yggdrasil Bow (Handicrafting), Artisan's Yggdrasil Staff (Handicrafting), Expert's Yggdrasil Staff (Handicrafting), Novice Handicrafter's Magnifying Glass (Bound) (Handicrafting), Professional Handicrafter's Magnifying Glass (Bound) (Handicrafting), Splendent White Dragon Lord Bow (Handicrafting), Splendent White Dragon Lord Staff (Handicrafting), Splendent Wise Dragon Lord Bow (Handicrafting), Splendent Wise Dragon Lord Staff (Handicrafting), Status Effect Resist Scroll (Alchemy), Superior Benediction Scroll (Alchemy), Superior Courage Scroll (Alchemy), and 13 more [@gamingtools-crafting-calculator-2026-10]. Full lists: Crafting → Recipes.

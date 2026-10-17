@@ -26,4 +26,4 @@ Loop the best spot's areas in order and gather every node you pass [!opinion]. E
 
 Higher-grade results and bonuses from the same nodes: Fine Orichalcum Ore, Pure Orichalcum Ore, Radiant Orichalcum Ore [@gamingtools-gather-1500004-2026-10].
 
-Recipes that use it: see Crafting.
+Recipes whose shopping list includes Radiant Orichalcum Ore / Pure Orichalcum Ore / Orichalcum Ore: Artisan's Orichalcum Boots (Armorsmithing), Artisan's Orichalcum Breastplate (Armorsmithing), Artisan's Orichalcum Cloak (Armorsmithing), Artisan's Orichalcum Dagger (Blacksmithing), Artisan's Orichalcum Gloves (Armorsmithing), Artisan's Orichalcum Greatsword (Blacksmithing), Artisan's Orichalcum Greaves (Armorsmithing), Artisan's Orichalcum Guard (Blacksmithing), Artisan's Orichalcum Helm (Armorsmithing), Artisan's Orichalcum Longsword (Blacksmithing), Artisan's Orichalcum Mace (Blacksmithing), Artisan's Orichalcum Pauldrons (Armorsmithing), and 69 more [@gamingtools-crafting-calculator-2026-10]. Full lists: Crafting → Recipes.

@@ -4,6 +4,10 @@
 
 **Blocked by:** 26
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Every gathering profession `researched`
+- [x] Every gathering profession `researched`
+
+## Comments
+
+2026-10-17: Done. Gathering index plus 8 pages (Ore, Gem, Log, Herb, Fruit, Vegetable, Aquatic Life, Odyle): mastery tiers, nodes by level, Essence Extraction skills. Time-to-level estimates are [!unverified]: no source measures them.

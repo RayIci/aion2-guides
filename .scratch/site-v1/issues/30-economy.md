@@ -4,6 +4,10 @@
 
 **Blocked by:** 29
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] All three sections `researched`
+- [x] All three sections `researched`
+
+## Comments
+
+2026-10-17: Done. Economy index, Kina methods, market, sinks, and Daeva Pass and membership. The Kina methods ranking is an [!opinion] built from the cited rewards; earnings per hour are not measured.

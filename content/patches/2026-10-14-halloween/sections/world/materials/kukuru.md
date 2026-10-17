@@ -18,4 +18,4 @@ If those areas are busy, move on to Eastern Cantas Valley, Ugaros Thieves Campsi
 Loop the best spot's areas in order and gather every node you pass [!opinion]. Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node go faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].
 ::::
 
-Recipes that use it: see Crafting.
+Recipes whose shopping list includes Kukuru: Artisan's Kukuru Fried Meat (Cooking), Kukuru Fried Meat (Cooking), Professional Chef's Seasoning (Bound) (Cooking), White Dragon's Beef Wellington (Cooking) [@gamingtools-crafting-calculator-2026-10]. Full lists: Crafting → Recipes.

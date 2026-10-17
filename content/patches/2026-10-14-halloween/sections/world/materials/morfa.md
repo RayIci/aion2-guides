@@ -18,4 +18,4 @@ If those areas are busy, move on to Uruthumheim, Minushan Site, Fafnite Deposit,
 Loop the best spot's areas in order and gather every node you pass [!opinion]. Essence Extraction skills (Proficient Handling, Delicate Touch, Lady Luck) make each node go faster [@gamingtools-systems-gathering-2026-10]. Loop time and yield per hour are not measured yet [!unverified].
 ::::
 
-Recipes that use it: see Crafting.
+No crafting recipe's shopping list includes it directly at current prices; it may still feed a crafted intermediate [@gamingtools-crafting-calculator-2026-10].

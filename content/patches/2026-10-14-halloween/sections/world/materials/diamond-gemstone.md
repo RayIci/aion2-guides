@@ -26,4 +26,4 @@ Loop the best spot's areas in order and gather every node you pass [!opinion]. E
 
 Higher-grade results and bonuses from the same nodes: Fine Diamond Gemstone, Pure Diamond Gemstone, Radiant Diamond Gemstone [@gamingtools-gather-1500021-2026-10].
 
-Recipes that use it: see Crafting.
+Recipes whose shopping list includes Diamond Gemstone / Radiant Diamond Gemstone / Pure Diamond Gemstone: Artisan's Diamond Earrings (Handicrafting), Diamond Decoration (Handicrafting), Diamond Decoration x10 (Handicrafting), Diamond Powder x3 (Alchemy), Diamond Powder x30 (Alchemy), Professional Alchemist's Scale (Bound) (Alchemy), Splendent White Dragon Lord Earrings (Handicrafting), Splendent Wise Dragon Lord Earrings (Handicrafting), Status Effect Resist Scroll (Alchemy), Superior Benediction Scroll (Alchemy), True Dragon Lord Earrings (Handicrafting), White Dragon Lord Earrings (Handicrafting), and 1 more [@gamingtools-crafting-calculator-2026-10]. Full lists: Crafting → Recipes.
