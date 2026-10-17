@@ -9,7 +9,7 @@ import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
 import { visit, SKIP } from 'unist-util-visit';
 import { deriveConfidence, type Citation } from './confidence';
-import { autoIcons, inlineItem, itemCards, loadout, mapFigure, skillbar, type MediaContext } from './media';
+import { autoIcons, daevanion, inlineItem, itemCards, loadout, mapFigure, skillbar, type MediaContext } from './media';
 import { CONFIDENCE_LEVELS, type Confidence, type Source } from './schema';
 
 // Markdown → HTML for one section body, with the citation syntax from docs/content-model.md.
@@ -327,6 +327,15 @@ function renderMedia(
       }
       const { node: hast, missing } = skillbar(media, attrs, c);
       for (const m of missing) state.issues.push(`::skillbar: no icon for "${m}"`);
+      node.data = { hName: hast.tagName, hProperties: hast.properties, hChildren: hast.children };
+      return SKIP;
+    }
+    if (node.name === 'daevanion') {
+      const { node: hast, issue } = daevanion(media, attrs, (id) => cite(id)());
+      if (issue || !hast) {
+        state.issues.push(issue ?? '::daevanion failed');
+        return;
+      }
       node.data = { hName: hast.tagName, hProperties: hast.properties, hChildren: hast.children };
       return SKIP;
     }

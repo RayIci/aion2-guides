@@ -72,3 +72,7 @@ Add only the blue keys, in order, delay 10 ms. Keep control, openers and defensi
 3. Hold the macro: key 5 for Insignia Explosion and Heart Gore, key 6 for Whirlwind Slice and Shadow Fall on the stunned target [@gamingtools-skill-assassin-shadow-fall-2026-10; !opinion].
 4. Defiance (4) only on the control that leads into a kill [@fextralife-assassin-builds-2026-10].
 ::::
+
+## Daevanion
+
+Your boards are shared with your PvE presets [@gamingtools-build-assassin-pve-2026-10]. For PvP, add **Azphel** (PvP stats) once the first four boards are done: [Daevanion boards](/classes/assassin/setup/daevanion#azphel-pvp) [@aion2meta-assassin-2026-10].

@@ -25,3 +25,13 @@ node scripts/media/build.mjs          # fetches what is missing, then writes eve
 - **Overlays:** each spec gives `id`, `map`, `title` and the positions to plot: `gatherables` (node ids), `npcs` (monster ids) or `places` (`{x, y}` world coordinates). `zones` limits the area names used for labels to the ones the data lists. `markers: true` draws named dots instead of spots and a route. The best spot is the densest group of positions; the loop is a nearest-neighbour tour through it.
 - **Refresh after a patch:** delete the affected files in `.cache/gt/` (or all of it) and re-run. Delete `public/img/maps/o/` first if overlays changed, since existing crops are overwritten but stale ones are not removed.
 - Coordinates: world `x`/`y` map linearly onto the stitched image through the map's `bounds` (checked against gaming.tools' own map).
+
+## Build data scraped from guide sites (not game media)
+
+`content/media/daevanion.json` (board layouts, gaming.tools' level-45 plan, aion2-meta's node order) and the setup pages' skill bars come from three one-off scrapers:
+
+- `scrape-gt-boards.mjs`: gaming.tools build pages' Daevanion boards (each node's label and whether it is opened now or later).
+- `scrape-meta-boards.mjs`: aion2-meta.com's numbered node order per board (with cost and the share of top players) and its in-game macro text.
+- `scrape-gt-quickslots.mjs`: gaming.tools' quick-slot bar per preset.
+
+The two sites' board layouts were checked cell by cell and match. To refresh after a patch: run the scrapers, then rebuild `daevanion.json` with the same shape (boards from aion2-meta's nodes, `plans.gamingtools.now/later` as [row, col] lists, `plans.aion2meta.order` keyed "row,col").

@@ -36,3 +36,7 @@ Grobs's macro is one row: Insignia Explosion, Heart Gore, Savage Roar while leve
 4. Hold right mouse (the macro) and left mouse (Quick Slice) together; reposition with Q or Flash Slice (E) to stay behind [@corpus-assassin-pve-build-2026-10].
 5. Storm Rampage (6) only on a staggered target, when Illusive Clone and Swift Contract are on cooldown [@corpus-assassin-pve-build-2026-10].
 ::::
+
+## Daevanion
+
+The same boards for every setup: [Daevanion boards](/classes/assassin/setup/daevanion) [@gamingtools-build-assassin-pve-2026-10].

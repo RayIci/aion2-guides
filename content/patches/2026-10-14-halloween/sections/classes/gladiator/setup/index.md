@@ -22,11 +22,12 @@ PvE setups share the same skills and Stigmas (below); they differ in how much th
 | [PvE A: full macro](/classes/gladiator/setup/pve-full-macro) | Almost everything, buffs included | Your defensive key, the left mouse | Learning the class, farming | gaming.tools [@gamingtools-build-gladiator-pve-2026-10] |
 | [PvE B: core-combo macro](/classes/gladiator/setup/pve-core-macro) | Only your core damage row | Buffs, burst, gap closers, defence | Bosses, once you know the fights | Grobs via Corpus [@corpus-gladiator-pve-build-2026-10; !opinion] |
 | [PvE C: no macro](/classes/gladiator/setup/pve-no-macro) | Nothing | Everything, with combo rows per key | Full control | The row rules in Corpus's macro guide [@corpus-macros-guide-2026-10; !opinion] |
+| [PvE D: two keys](/classes/gladiator/setup/pve-two-key) | Your damage slot | A buff button for the burst window, defence, movement | Bosses with set burst windows | aion2-meta [@aion2meta-gladiator-2026-10; !opinion] |
 | [PvP 1: Lockdown (Fextralife PvP build)](/classes/gladiator/setup/pvp-lockdown) | Damage after your control lands | Control, openers, defence | Abyss, skirmishes, duels | Fextralife [@fextralife-gladiator-builds-2026-10; !opinion] |
 | [PvP 2: Ladder (top Korean players)](/classes/gladiator/setup/pvp-ladder) | Damage rows | Buffs, control, defence | Arena, 1v1, burst fights | aion2-meta [@aion2meta-gladiator-2026-10; !opinion] |
 | [PvP 3: your PvE bar + swaps](/classes/gladiator/setup/pvp-pve-swap) | Same as your PvE setup | Same, plus the swapped Stigmas | Trying PvP without relearning | aion2-meta + Corpus [@aion2meta-gladiator-2026-10; !opinion] |
 
-The skill bars for B, C and the PvP setups are this guide's layouts built from those sources' rows and rules; only setup A's bar is published as-is [!opinion].
+The skill bars for B, C, D and the PvP setups are this guide's layouts built from those sources' rows and rules; only setup A's bar is published as-is [!opinion].
 
 ## PvE skills to raise
 
@@ -97,11 +98,7 @@ Level them: **Rage Burst to 5** (15 s shorter cooldown), **Focused Block to 5** 
 
 ## Daevanion boards
 
-Each of the first four boards (Nezekan, Zikel, Vaizel, Triniel) adds one level to every Gladiator active skill. Take the **Overhead Slam** and **Rending Blow** nodes first, then Ruinous Blow and Sword Aura Rampage, plus the passive nodes for Experienced Counterstrike, Attack Preparation, Impact Hit and Murderous Burst [@corpus-gladiator-daevanion-2026-10].
-
-- **Orange stat nodes:** start Nezekan with Combat Speed and Zikel with Damage Boost; leave Vaizel's Critical Damage and Triniel's Multi-Hit for later (aLuckyRO) [@corpus-gladiator-daevanion-2026-10].
-- gaming.tools spends the 136 points at 45 as Nezekan 43, Zikel 10, Vaizel 13, Triniel 22 and saves the rest for Multi-Hit on Triniel [@gamingtools-build-gladiator-pve-2026-10].
-- **Azphel** (opens at 45) has only PvP stats: fill the first four boards first [@corpus-gladiator-daevanion-2026-10].
+Shared by every setup and preset. Node-by-node plans with the boards drawn: [Daevanion boards](/classes/gladiator/setup/daevanion) [@gamingtools-build-gladiator-pve-2026-10].
 
 ## The three PvE presets: when to switch
 

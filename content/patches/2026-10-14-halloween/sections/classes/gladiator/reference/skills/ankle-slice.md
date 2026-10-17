@@ -50,3 +50,4 @@ In gaming.tools' PvE build: Group DPS 1, Solo Farm 1, Solo Single Target 1 [@gam
 **On your skill bar:** key 6, bottom slot, tried first, pressed by the macro, in all three PvE presets [@gamingtools-build-gladiator-pve-2026-10]. Full bar: [Level 45: set up](/classes/gladiator/setup/pve-full-macro#your-skill-bar).
 
 **In the other setups:** [PvP 1](/classes/gladiator/setup/pvp-lockdown): key 8 (bottom, tried first), by hand; [PvP 2](/classes/gladiator/setup/pvp-ladder): key 8, by hand [!opinion].
+

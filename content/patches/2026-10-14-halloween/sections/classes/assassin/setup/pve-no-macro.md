@@ -24,3 +24,7 @@ last_checked: 2026-10-17
 2. Spam 5: Insignia Explosion when it's up, else Heart Gore after a crit, else Savage Roar to build Insignias [@corpus-macros-guide-2026-10; !opinion].
 3. Keep left mouse held for Quick Slice: it cancels animations and lowers Insignia Explosion's cooldown at 16 [@corpus-assassin-pve-build-2026-10].
 ::::
+
+## Daevanion
+
+The same boards for every setup: [Daevanion boards](/classes/assassin/setup/daevanion) [@gamingtools-build-assassin-pve-2026-10].

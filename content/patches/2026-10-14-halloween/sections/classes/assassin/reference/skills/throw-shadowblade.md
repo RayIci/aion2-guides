@@ -31,4 +31,4 @@ Levels 1–20 all need character level 22. Cost per level, in the data page’s 
 
 Not in gaming.tools' PvE build. PvP: [PvP](/classes/assassin/pvp).
 
-**In the other setups:** [PvP 2](/classes/assassin/setup/pvp-ladder): key E, by hand [!opinion].
+**In the other setups:** [PvE D](/classes/assassin/setup/pve-two-key): key E, by hand; [PvP 2](/classes/assassin/setup/pvp-ladder): key E, by hand [!opinion].

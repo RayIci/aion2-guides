@@ -50,4 +50,5 @@ In gaming.tools' PvE build: Group DPS 10 + 1 bonus, Solo Farm 10 + 1 bonus, Solo
 
 **On your skill bar:** left mouse, press it yourself, in all three PvE presets [@gamingtools-build-assassin-pve-2026-10]. Full bar: [Level 45: set up](/classes/assassin/setup/pve-full-macro#your-skill-bar).
 
-**In the other setups:** [PvE B](/classes/assassin/setup/pve-core-macro): left mouse, by hand; [PvE C](/classes/assassin/setup/pve-no-macro): left mouse, by hand; [PvP 1](/classes/assassin/setup/pvp-lockdown): left mouse, by hand; [PvP 2](/classes/assassin/setup/pvp-ladder): left mouse, by hand [!opinion].
+**In the other setups:** [PvE B](/classes/assassin/setup/pve-core-macro): left mouse, by hand; [PvE C](/classes/assassin/setup/pve-no-macro): left mouse, by hand; [PvE D](/classes/assassin/setup/pve-two-key): left mouse, by hand; [PvP 1](/classes/assassin/setup/pvp-lockdown): left mouse, by hand; [PvP 2](/classes/assassin/setup/pvp-ladder): left mouse, by hand [!opinion].
+

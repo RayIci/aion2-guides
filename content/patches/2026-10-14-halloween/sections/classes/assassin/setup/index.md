@@ -22,11 +22,12 @@ PvE setups share the same skills and Stigmas (below); they differ in how much th
 | [PvE A: full macro](/classes/assassin/setup/pve-full-macro) | Almost everything, buffs included | Your defensive key, the left mouse | Learning the class, farming | gaming.tools [@gamingtools-build-assassin-pve-2026-10] |
 | [PvE B: core-combo macro](/classes/assassin/setup/pve-core-macro) | Only your core damage row | Buffs, burst, gap closers, defence | Bosses, once you know the fights | Grobs via Corpus [@corpus-assassin-pve-build-2026-10; !opinion] |
 | [PvE C: no macro](/classes/assassin/setup/pve-no-macro) | Nothing | Everything, with combo rows per key | Full control | The row rules in Corpus's macro guide [@corpus-macros-guide-2026-10; !opinion] |
+| [PvE D: two keys](/classes/assassin/setup/pve-two-key) | Your damage slot | A buff button for the burst window, defence, movement | Bosses with set burst windows | aion2-meta [@aion2meta-assassin-2026-10; !opinion] |
 | [PvP 1: Stealth lockdown (Fextralife PvP build)](/classes/assassin/setup/pvp-lockdown) | Damage after your control lands | Control, openers, defence | Abyss, skirmishes, duels | Fextralife [@fextralife-assassin-builds-2026-10; !opinion] |
 | [PvP 2: Ladder (top Korean players)](/classes/assassin/setup/pvp-ladder) | Damage rows | Buffs, control, defence | Arena, 1v1, burst fights | aion2-meta [@aion2meta-assassin-2026-10; !opinion] |
 | [PvP 3: your PvE bar + swaps](/classes/assassin/setup/pvp-pve-swap) | Same as your PvE setup | Same, plus the swapped Stigmas | Trying PvP without relearning | aion2-meta + Corpus [@aion2meta-assassin-2026-10; !opinion] |
 
-The skill bars for B, C and the PvP setups are this guide's layouts built from those sources' rows and rules; only setup A's bar is published as-is [!opinion].
+The skill bars for B, C, D and the PvP setups are this guide's layouts built from those sources' rows and rules; only setup A's bar is published as-is [!opinion].
 
 ## PvE skills to raise
 
@@ -95,10 +96,7 @@ Slot **Illusive Clone**, **Swift Contract** and **Triniel's Dagger**: gaming.too
 
 ## Daevanion boards
 
-Each of the first four boards (Nezekan, Zikel, Vaizel, Triniel) adds one level to every Assassin active skill, which is how Heart Gore, Quick Slice and Insignia Explosion get past 10 [@corpus-assassin-pve-build-2026-10].
-
-- gaming.tools opens Nezekan (46 points), Zikel (32), Vaizel (4) and Triniel (3) at 45 and plans the rest for later [@gamingtools-build-assassin-pve-2026-10].
-- **Azphel** (opens at 45) has only PvP stats: fill the first four boards first [@corpus-gladiator-daevanion-2026-10].
+Shared by every setup and preset. Node-by-node plans with the boards drawn: [Daevanion boards](/classes/assassin/setup/daevanion) [@gamingtools-build-assassin-pve-2026-10].
 
 ## The three PvE presets: when to switch
 

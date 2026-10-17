@@ -51,4 +51,5 @@ In gaming.tools' PvE build: Group DPS 10 + 1 bonus, Solo Farm 10 + 1 bonus, Solo
 
 **On your skill bar:** Solo Farm: key 8, top slot; Solo Single Target: key 8, fourth slot; Group DPS: key 8, fourth slot [@gamingtools-build-gladiator-pve-2026-10]. Full bar: [Level 45: set up](/classes/gladiator/setup/pve-full-macro#your-skill-bar).
 
-**In the other setups:** [PvE B](/classes/gladiator/setup/pve-core-macro): key 5 (row 3), macro; [PvE C](/classes/gladiator/setup/pve-no-macro): key 5 (row 2), by hand; [PvP 1](/classes/gladiator/setup/pvp-lockdown): key 5 (row 3), macro; [PvP 2](/classes/gladiator/setup/pvp-ladder): key 5 (row 3), macro [!opinion].
+**In the other setups:** [PvE B](/classes/gladiator/setup/pve-core-macro): key 5 (row 3), macro; [PvE C](/classes/gladiator/setup/pve-no-macro): key 5 (row 2), by hand; [PvE D](/classes/gladiator/setup/pve-two-key): key 5 (row 2), macro; [PvP 1](/classes/gladiator/setup/pvp-lockdown): key 5 (row 3), macro; [PvP 2](/classes/gladiator/setup/pvp-ladder): key 5 (row 3), macro [!opinion].
+

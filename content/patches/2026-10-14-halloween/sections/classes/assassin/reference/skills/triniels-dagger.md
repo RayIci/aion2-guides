@@ -34,4 +34,5 @@ In gaming.tools' PvE build: Group DPS (Stigma, level 5), Solo Farm (Stigma, leve
 
 **On your skill bar:** key 5, top slot, pressed by the macro, in all three PvE presets [@gamingtools-build-assassin-pve-2026-10]. Full bar: [Level 45: set up](/classes/assassin/setup/pve-full-macro#your-skill-bar).
 
-**In the other setups:** [PvE B](/classes/assassin/setup/pve-core-macro): key 3, by hand; [PvE C](/classes/assassin/setup/pve-no-macro): key 3, by hand; [PvP 2](/classes/assassin/setup/pvp-ladder): key 3, by hand [!opinion].
+**In the other setups:** [PvE B](/classes/assassin/setup/pve-core-macro): key 3, by hand; [PvE C](/classes/assassin/setup/pve-no-macro): key 3, by hand; [PvE D](/classes/assassin/setup/pve-two-key): key 2, by hand; [PvP 2](/classes/assassin/setup/pvp-ladder): key 3, by hand [!opinion].
+

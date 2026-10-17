@@ -81,3 +81,7 @@ Add only the blue keys, in order, delay 10 ms. Keep control, openers and defensi
 4. **Extend:** Aerial Snare (3) to launch it Airborne, then the Forced Fall chain; Ankle Slice (8) after a block for another Knockdown [@fextralife-gladiator-builds-2026-10].
 5. **Defend:** Armor of Balance (E) before you dive in; Tenaciousness (7) as the emergency reset; Defiance (4) only for hard control (Stun, Knockdown, Airborne, Fear) [@fextralife-gladiator-builds-2026-10].
 ::::
+
+## Daevanion
+
+Your boards are shared with your PvE presets [@gamingtools-build-gladiator-pve-2026-10]. For PvP, add **Azphel** (PvP stats) once the first four boards are done: [Daevanion boards](/classes/gladiator/setup/daevanion#azphel-pvp) [@aion2meta-gladiator-2026-10].

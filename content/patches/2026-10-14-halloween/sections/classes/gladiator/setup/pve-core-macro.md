@@ -36,3 +36,7 @@ Grobs's macro is one row: Rage Burst, then Overhead Slam, then Rending Blow. It 
 4. Hold right mouse (the macro) and left mouse (Keen Strike) together; once Rending Blow is at 16, Grobs holds only the macro [@corpus-gladiator-pve-build-2026-10].
 5. Packs: Crushing Wave (6); a knockdown from Mocking Blade (7) opens Overhead Slam outside Rage Burst; Sword Aura Rampage (8) only on a staggered target [@gamingtools-skill-mocking-blade-2026-10; @gamingtools-skill-sword-aura-rampage-2026-10; !opinion].
 ::::
+
+## Daevanion
+
+The same boards for every setup: [Daevanion boards](/classes/gladiator/setup/daevanion) [@gamingtools-build-gladiator-pve-2026-10].

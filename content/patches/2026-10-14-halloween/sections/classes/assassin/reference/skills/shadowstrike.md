@@ -50,4 +50,5 @@ In gaming.tools' PvE build: Group DPS 8, Solo Farm 8, Solo Single Target 8 [@gam
 
 **On your skill bar:** key 6, bottom slot, tried first, pressed by the macro, in all three PvE presets [@gamingtools-build-assassin-pve-2026-10]. Full bar: [Level 45: set up](/classes/assassin/setup/pve-full-macro#your-skill-bar).
 
-**In the other setups:** [PvE B](/classes/assassin/setup/pve-core-macro): key Q (bottom, tried first), by hand; [PvE C](/classes/assassin/setup/pve-no-macro): key Q (bottom, tried first), by hand; [PvP 1](/classes/assassin/setup/pvp-lockdown): key 2, by hand; [PvP 2](/classes/assassin/setup/pvp-ladder): key Q (bottom, tried first), by hand [!opinion].
+**In the other setups:** [PvE B](/classes/assassin/setup/pve-core-macro): key Q (bottom, tried first), by hand; [PvE C](/classes/assassin/setup/pve-no-macro): key Q (bottom, tried first), by hand; [PvE D](/classes/assassin/setup/pve-two-key): key Q, by hand; [PvP 1](/classes/assassin/setup/pvp-lockdown): key 2, by hand; [PvP 2](/classes/assassin/setup/pvp-ladder): key Q (bottom, tried first), by hand [!opinion].
+

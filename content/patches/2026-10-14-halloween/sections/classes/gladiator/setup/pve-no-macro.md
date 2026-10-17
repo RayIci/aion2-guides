@@ -25,3 +25,7 @@ last_checked: 2026-10-17
 3. On packs, 6 knocks them down (Mocking Blade) or sweeps (Crushing Wave), then 5 again [!opinion].
 4. Keep left mouse held for Keen Strike between presses [@gamingtools-build-gladiator-pve-2026-10].
 ::::
+
+## Daevanion
+
+The same boards for every setup: [Daevanion boards](/classes/gladiator/setup/daevanion) [@gamingtools-build-gladiator-pve-2026-10].

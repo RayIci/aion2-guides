@@ -75,3 +75,7 @@ Add only the blue keys, in order, delay 10 ms. Keep control, openers and defensi
 3. Focused Block (E) on their big hit; Mocking Blade (3) and Aerial Snare (7) for control [@gamingtools-skill-focused-block-2026-10; !opinion].
 4. Defiance (4) only on the control that leads into a kill [@fextralife-gladiator-builds-2026-10].
 ::::
+
+## Daevanion
+
+Your boards are shared with your PvE presets [@gamingtools-build-gladiator-pve-2026-10]. For PvP, add **Azphel** (PvP stats) once the first four boards are done: [Daevanion boards](/classes/gladiator/setup/daevanion#azphel-pvp) [@aion2meta-gladiator-2026-10].

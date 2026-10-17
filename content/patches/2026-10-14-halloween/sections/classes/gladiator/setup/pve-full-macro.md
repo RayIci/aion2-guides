@@ -92,3 +92,7 @@ Rush Strike (Q) is in the macro, but it needs a Dodge first, so it fires after y
 :::
 
 Skills, Stigmas and Daevanion: [Level 45: set up](/classes/gladiator/setup#pve-skills-to-raise) [!opinion].
+
+## Daevanion
+
+The same boards for every setup: [Daevanion boards](/classes/gladiator/setup/daevanion) [@gamingtools-build-gladiator-pve-2026-10].

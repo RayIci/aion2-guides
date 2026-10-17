@@ -34,4 +34,5 @@ In gaming.tools' PvE build: Group DPS (Stigma, level 5), Solo Farm (Stigma, leve
 
 **On your skill bar:** Solo Farm: key 7, top slot; Solo Single Target: key 7, middle slot; Group DPS: key 7, bottom slot, tried first [@gamingtools-build-gladiator-pve-2026-10]. Full bar: [Level 45: set up](/classes/gladiator/setup/pve-full-macro#your-skill-bar).
 
-**In the other setups:** [PvE B](/classes/gladiator/setup/pve-core-macro): key 5 (bottom, tried first), macro; [PvE C](/classes/gladiator/setup/pve-no-macro): key 7, by hand; [PvP 2](/classes/gladiator/setup/pvp-ladder): key 5 (bottom, tried first), macro [!opinion].
+**In the other setups:** [PvE B](/classes/gladiator/setup/pve-core-macro): key 5 (bottom, tried first), macro; [PvE C](/classes/gladiator/setup/pve-no-macro): key 7, by hand; [PvE D](/classes/gladiator/setup/pve-two-key): key 1 (row 3), by hand; [PvP 2](/classes/gladiator/setup/pvp-ladder): key 5 (bottom, tried first), macro [!opinion].
+

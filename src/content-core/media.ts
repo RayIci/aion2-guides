@@ -46,7 +46,23 @@ export interface Overlay {
   labels?: { x: number; y: number; text: string }[];
 }
 
+export interface DaevanionBoard {
+  size: number;
+  opens: number | null;
+  crystals: number;
+  nodes: { r: number; c: number; name: string; tip: string; cost: number | null; type: string }[];
+}
+
+export interface DaevanionPlans {
+  boards: Record<string, DaevanionBoard>;
+  plans: {
+    gamingtools: { source: string; title: string; budget: number; now: Record<string, [number, number][]>; later: Record<string, [number, number][]>; notes: string[] };
+    aion2meta: { source: string; title: string; order: Record<string, Record<string, number>>; shares: Record<string, Record<string, string>>; defaults: Record<string, number> };
+  };
+}
+
 export interface Media {
+  daevanion: Record<string, DaevanionPlans>;
   icons: {
     items: Record<string, string>;
     skills: Record<string, Record<string, string>>;
@@ -62,6 +78,7 @@ export interface Media {
 }
 
 export const emptyMedia = (): Media => ({
+  daevanion: {},
   icons: { items: {}, skills: {}, nodes: {}, npcs: {}, classes: {} },
   items: {},
   maps: {},
@@ -83,6 +100,7 @@ export async function loadMedia(contentDir: string): Promise<Media> {
   media.items = (await read('items')) ?? {};
   media.maps = (await read('maps')) ?? {};
   media.overlays = (await read('overlays')) ?? {};
+  media.daevanion = (await read('daevanion')) ?? {};
   media.meta = { ...media.meta, ...((await read('meta')) ?? {}) };
   return media;
 }
@@ -320,6 +338,112 @@ export function skillbar(ctx: MediaContext, attrs: Record<string, string | null 
     el('figcaption', {}, caption),
   ]);
   return { node, missing };
+}
+
+/**
+ * `::daevanion{class="gladiator" plan="gamingtools|aion2meta" boards="Nezekan,Zikel"}`: the boards as in the
+ * game, with the plan's nodes highlighted (and numbered, for an ordered plan), plus a written list.
+ */
+export function daevanion(ctx: MediaContext, attrs: Record<string, string | null | undefined>, cite: (id: string) => ElementContent): { node?: Element; issue?: string } {
+  const data = ctx.media.daevanion[attrs.class ?? ''];
+  if (!data) return { issue: `::daevanion: no Daevanion data for class "${attrs.class}"` };
+  const planId = (attrs.plan ?? 'gamingtools') as 'gamingtools' | 'aion2meta';
+  const plan = data.plans[planId];
+  if (!plan) return { issue: `::daevanion: unknown plan "${attrs.plan}"` };
+  const names = (attrs.boards ?? Object.keys(data.boards).join(',')).split(',').map((s) => s.trim()).filter(Boolean);
+  const klass = attrs.class ? attrs.class[0].toUpperCase() + attrs.class.slice(1) : '';
+  const startIcon = ctx.media.icons.classes[klass];
+  const out: ElementContent[] = [];
+  for (const b of names) {
+    const board = data.boards[b];
+    if (!board) return { issue: `::daevanion: unknown board "${b}"` };
+    const at = new Map(board.nodes.map((n) => [`${n.r},${n.c}`, n]));
+    const state = new Map<string, string>();
+    const order = new Map<string, number>();
+    if (planId === 'gamingtools') {
+      const g = data.plans.gamingtools;
+      for (const [r, c] of g.now[b] ?? []) state.set(`${r},${c}`, 'now');
+      for (const [r, c] of g.later[b] ?? []) state.set(`${r},${c}`, 'later');
+    } else {
+      const m = data.plans.aion2meta;
+      // Highlight the nodes that fit a points budget for this board: `budget="Nezekan=68,…"`, else the source's default view.
+      const budgets = new Map((attrs.budget ?? '').split(',').filter(Boolean).map((s) => s.split('=').map((x) => x.trim()) as [string, string]));
+      const budget = budgets.has(b) ? Number(budgets.get(b)) : (m.defaults[b] ?? 0);
+      let spent = 0;
+      const steps = Object.entries(m.order[b] ?? {}).sort((x, y) => x[1] - y[1]);
+      for (const [k, n] of steps) {
+        order.set(k, n);
+        const cost = at.get(k)?.cost ?? 0;
+        if (spent + cost <= budget) (spent += cost), state.set(k, 'now');
+      }
+    }
+    const cells: ElementContent[] = [];
+    for (let r = 0; r < board.size; r++)
+      for (let c = 0; c < board.size; c++) {
+        const k = `${r},${c}`;
+        const n = at.get(k);
+        if (!n) {
+          cells.push(el('span', { className: ['dv-e'] }));
+          continue;
+        }
+        if (n.type === 'start') {
+          cells.push(el('span', { className: ['dv-n', 'dv-n--start'], title: 'Start: the board opens outwards from here' }, startIcon ? [el('img', { src: `${ctx.assetBase}img/icons/${startIcon}.webp`, alt: '', loading: 'lazy' })] : []));
+          continue;
+        }
+        const s = state.get(k);
+        const num = order.get(k);
+        const title = `${num ? `#${num} · ` : ''}${n.name} (${n.cost} point${n.cost === 1 ? '' : 's'}): ${n.tip}${s === 'now' ? ' · take it' : s === 'later' ? ' · later' : ''}`;
+        const kids: ElementContent[] = [el('img', { src: `${ctx.assetBase}img/icons/dv-node-${n.type}.webp`, alt: '', loading: 'lazy' })];
+        if (num && s) kids.push(el('b', {}, [txt(String(num))]));
+        cells.push(el('span', { className: ['dv-n', `dv-n--${n.type}`, s ? `dv-n--${s}` : ''].filter(Boolean), title }, kids));
+      }
+    // The written plan for this board: what to take, grouped, in order.
+    const picked = board.nodes.filter((n) => state.get(`${n.r},${n.c}`) === 'now');
+    const pts = picked.reduce((a, n) => a + (n.cost ?? 0), 0);
+    let list: ElementContent[];
+    if (planId === 'gamingtools') {
+      const groups = new Map<string, { n: number; cost: number; type: string }>();
+      for (const n of picked) {
+        const key = n.tip;
+        const g = groups.get(key) ?? { n: 0, cost: 0, type: n.type };
+        g.n++, (g.cost += n.cost ?? 0), groups.set(key, g);
+      }
+      const rank: Record<string, number> = { legend: 0, unique: 1, rare: 2, common: 3 };
+      list = [...groups.entries()]
+        .sort((a, b) => rank[a[1].type] - rank[b[1].type] || b[1].cost - a[1].cost)
+        .map(([tip, g]) => el('li', {}, [el('span', { className: ['dv-dot', `dv-dot--${g.type}`] }), txt(`${tip}${g.n > 1 ? ` ×${g.n}` : ''} (${g.cost} pt)`)]));
+    } else {
+      list = picked
+        .map((n) => ({ n, o: order.get(`${n.r},${n.c}`) ?? 0 }))
+        .sort((a, b) => a.o - b.o)
+        .slice(0, 20)
+        .map(({ n, o }) => el('li', {}, [el('span', { className: ['dv-dot', `dv-dot--${n.type}`] }), txt(`#${o} ${n.tip} (${n.cost} pt, ${data.plans.aion2meta.shares[b]?.[`${n.r},${n.c}`] ?? '?'} of top players)`)]));
+    }
+    const later = planId === 'gamingtools' ? (data.plans.gamingtools.later[b] ?? []).length : 0;
+    out.push(
+      el('div', { className: ['dv-board'] }, [
+        el('p', { className: ['dv-title'] }, [
+          el('strong', {}, [txt(b)]),
+          txt(` · opens at level ${board.opens ?? '?'} · ${board.crystals} points to complete · this plan: ${pts} points${later ? `, ${later} more node${later > 1 ? 's' : ''} later` : ''}`),
+        ]),
+        el('div', { className: ['dv-grid'], style: `grid-template-columns:repeat(${board.size},minmax(0,1fr))` }, cells),
+        el('details', { className: ['dv-list'] }, [
+          el('summary', {}, [txt(planId === 'gamingtools' ? `Nodes to take on ${b}` : `First ${Math.min(20, picked.length)} steps on ${b}`)]),
+          el('ul', {}, list),
+        ]),
+      ]),
+    );
+  }
+  const notes = planId === 'gamingtools' ? data.plans.gamingtools.notes : [];
+  const legend = el('p', { className: ['dv-legend'] }, [
+    el('span', { className: ['dv-dot', 'dv-dot--legend'] }), txt('skill +1 '),
+    el('span', { className: ['dv-dot', 'dv-dot--rare'] }), txt('passive '),
+    el('span', { className: ['dv-dot', 'dv-dot--unique'] }), txt('big stat '),
+    el('span', { className: ['dv-dot', 'dv-dot--common'] }), txt('small stat. '),
+    txt(planId === 'gamingtools' ? 'Gold ring: take it now; dashed: planned for later points.' : 'Numbers: the order to open them in, from the centre; gold ring: what the points budget below reaches.'),
+  ]);
+  const caption: ElementContent[] = [el('strong', {}, [txt(plan.title)]), txt('. '), ...notes.map((n) => txt(n + ' ')), txt('Hover a node for what it gives. '), cite(plan.source)];
+  return { node: el('figure', { className: ['dv'], dataDaevanion: planId }, [legend, ...out, el('figcaption', {}, caption)]) };
 }
 
 /** `::map{id=…}` (an overlay) or `::map{map=…}` (a whole map with area names). */

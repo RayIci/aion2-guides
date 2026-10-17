@@ -19,3 +19,7 @@ The gear is the same for PvE and PvP; what changes is the amulet, the Stigmas an
 - **Azphel board:** its PvP stats are what you fill after the first four boards [@corpus-gladiator-daevanion-2026-10].
 
 Each [PvP](/classes/gladiator/pvp) mode page says which setup fits it.
+
+## Daevanion
+
+Your boards are shared with your PvE presets [@gamingtools-build-gladiator-pve-2026-10]. For PvP, add **Azphel** (PvP stats) once the first four boards are done: [Daevanion boards](/classes/gladiator/setup/daevanion#azphel-pvp) [@aion2meta-gladiator-2026-10].

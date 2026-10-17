@@ -537,3 +537,74 @@ html:not([data-sources='show']) .item-cards__cite {
 .loadout__where {
   @apply text-xs text-muted-foreground;
 }
+
+/* ::daevanion — the boards with a plan's nodes highlighted. */
+.dv {
+  @apply my-8 flex flex-col gap-5 rounded-lg bg-muted p-4;
+}
+.dv-board {
+  @apply flex flex-col gap-2;
+}
+.dv-title {
+  @apply m-0 text-sm text-muted-foreground;
+}
+.dv-title strong {
+  @apply text-base text-foreground;
+}
+.dv-grid {
+  @apply grid w-full max-w-[460px] gap-[3px];
+}
+.dv-e {
+  @apply aspect-square;
+}
+.dv-n {
+  @apply relative flex aspect-square items-center justify-center rounded-[4px] bg-background/40 opacity-45;
+}
+.dv-n img {
+  @apply m-0 size-full object-contain;
+}
+.dv-n--now {
+  @apply opacity-100 outline-2 outline-[oklch(0.82_0.16_85)];
+}
+.dv-n--later {
+  @apply opacity-90 outline-2 outline-dashed outline-[oklch(0.72_0.13_235)];
+}
+.dv-n--start {
+  @apply opacity-100;
+}
+.dv-n b {
+  @apply absolute inset-0 flex items-center justify-center text-[10px] font-bold text-white [text-shadow:0_0_3px_#000,0_0_3px_#000];
+}
+.dv-list {
+  @apply max-w-[460px] text-sm;
+}
+.dv-list summary {
+  @apply cursor-pointer font-medium;
+}
+.dv-list ul {
+  @apply my-2 flex list-none flex-col gap-1 p-0;
+}
+.dv-list li {
+  @apply m-0 flex items-center gap-2 p-0;
+}
+.dv-dot {
+  @apply inline-block size-2.5 shrink-0 rounded-sm;
+}
+.dv-dot--legend {
+  @apply bg-[oklch(0.65_0.13_240)];
+}
+.dv-dot--rare {
+  @apply bg-[oklch(0.65_0.15_150)];
+}
+.dv-dot--unique {
+  @apply bg-[oklch(0.7_0.17_45)];
+}
+.dv-dot--common {
+  @apply bg-muted-foreground;
+}
+.dv-legend {
+  @apply m-0 flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-muted-foreground;
+}
+.dv figcaption {
+  @apply text-sm text-muted-foreground;
+}

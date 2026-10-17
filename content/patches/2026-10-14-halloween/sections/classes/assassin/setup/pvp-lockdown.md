@@ -79,3 +79,7 @@ Add only the blue keys, in order, delay 10 ms. Keep control, openers and defensi
 4. **Burst:** Illusive Clone (7) only once the control has landed [@fextralife-assassin-builds-2026-10].
 5. **Defend:** Evasion Contract (E) against Slows and Roots; Defiance (4) only for hard control; when they use Defiance, back off until their immunity ends [@fextralife-assassin-builds-2026-10].
 ::::
+
+## Daevanion
+
+Your boards are shared with your PvE presets [@gamingtools-build-assassin-pve-2026-10]. For PvP, add **Azphel** (PvP stats) once the first four boards are done: [Daevanion boards](/classes/assassin/setup/daevanion#azphel-pvp) [@aion2meta-assassin-2026-10].

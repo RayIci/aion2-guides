@@ -91,3 +91,7 @@ Evasion Stance (1) is yours to press right before a big hit [@gamingtools-build-
 :::
 
 Skills, Stigmas and Daevanion: [Level 45: set up](/classes/assassin/setup#pve-skills-to-raise) [!opinion].
+
+## Daevanion
+
+The same boards for every setup: [Daevanion boards](/classes/assassin/setup/daevanion) [@gamingtools-build-assassin-pve-2026-10].

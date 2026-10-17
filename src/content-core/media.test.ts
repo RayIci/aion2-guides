@@ -6,6 +6,19 @@ const researched = (title: string, extra: Record<string, unknown> = {}) => ({ ti
 
 const MEDIA = {
   'media/meta.json': JSON.stringify({ itemSource: 'db', mapSource: 'map' }),
+  'media/daevanion.json': JSON.stringify({
+    gladiator: {
+      boards: { Nezekan: { size: 3, opens: 12, crystals: 6, nodes: [
+        { r: 1, c: 1, name: 'Nezekan', tip: 'Start', cost: null, type: 'start' },
+        { r: 0, c: 1, name: 'Attack', tip: 'Attack +3', cost: 1, type: 'common' },
+        { r: 1, c: 2, name: 'Keen Strike', tip: 'Keen Strike +1', cost: 3, type: 'legend' },
+      ] } },
+      plans: {
+        gamingtools: { source: 'db', title: 'Plan A', budget: 4, now: { Nezekan: [[0, 1]] }, later: { Nezekan: [[1, 2]] }, notes: [] },
+        aion2meta: { source: 'map', title: 'Plan B', order: { Nezekan: { '0,1': 1, '1,2': 2 } }, shares: { Nezekan: { '0,1': '90%', '1,2': '80%' } }, defaults: { Nezekan: 1 } },
+      },
+    },
+  }),
   'media/icons.json': JSON.stringify({
     items: { 'Raw Leather': 'leather', 'Strong Leather': 'strong' },
     skills: { assassin: { Defiance: 'as-def' }, gladiator: { Defiance: 'gl-def', 'Keen Strike': 'keen' } },
@@ -95,6 +108,23 @@ describe('game media blocks', () => {
     expect(h).toMatch(/tries <strong>Keen Strike<\/strong>, then <strong>Defiance<\/strong>/);
     expect(h.indexOf('alt="Defiance"')).toBeLessThan(h.indexOf('alt="Keen Strike"'));
     expect(g.defaultPatch!.sections[0].sources.map((s) => s.id)).toEqual(['db']);
+  });
+
+  it('draws Daevanion boards with a plan highlighted, or an order numbered within a budget', async () => {
+    const g = await build({
+      'patches/1.0/sections/classes/gladiator/setup/daevanion.md': section(
+        researched('Daevanion'),
+        ['::daevanion{class="gladiator" plan="gamingtools" boards="Nezekan"}', '', '::daevanion{class="gladiator" plan="aion2meta" boards="Nezekan" budget="Nezekan=4"}'].join('\n'),
+      ),
+    });
+    expect(errorsOf(g)).toEqual([]);
+    const h = html(g, 'classes/gladiator/setup/daevanion');
+    expect(h).toContain('dv-n dv-n--common dv-n--now');
+    expect(h).toContain('dv-n dv-n--legend dv-n--later');
+    // Plan B with a 4-point budget takes both nodes (1 + 3 points) and numbers them.
+    expect((h.match(/dv-n--now/g) ?? []).length).toBe(3);
+    expect(h).toContain('<b>2</b>');
+    expect(h).toContain('#2 Keen Strike +1 (3 pt, 80% of top players)');
   });
 
   it('reports unknown names and map ids', async () => {
