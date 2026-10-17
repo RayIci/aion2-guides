@@ -4,6 +4,10 @@
 
 **Blocked by:** 13
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] All four sections `researched` with checklists and cited gear targets
+- [x] All four sections `researched` with checklists and cited gear targets
+
+## Comments
+
+2026-10-17: Done; see the commit log for sources. Remaining gaps are marked `[!unverified]` on the pages.

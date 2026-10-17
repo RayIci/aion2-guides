@@ -4,11 +4,11 @@
 
 **Blocked by:** 12
 
-**Status:** in-progress
+**Status:** done
 
-- [ ] Every overview/systems section is `researched` and the build passes
-- [ ] Every skill page has effect, numbers, cooldown, unlock and upgrades, cited
-- [ ] Coverage report shows the share of Verified claims; gaps listed for the owner
+- [x] Every overview/systems section is `researched` and the build passes
+- [x] Every skill page has effect, numbers, cooldown, unlock and upgrades, cited
+- [x] Coverage report shows the share of Verified claims; gaps listed for the owner
 
 ## Comments
 
@@ -18,3 +18,5 @@
 - Still draft: `systems/gear`, `stones`, `accessories`, `consumables`, `ui-and-keybinds`, `macros`. These need the gaming.tools item database and vetted creator sources.
 - Open `[!unverified]` gaps: what each stat does and its caps; Daevanion node priority; wing stats beyond Flight Power; which pets help a Gladiator; enhancement priorities by stage; PvE/PvP standing in the overview; Arcana coming from Transcendence (from the research report, not yet re-checked).
 - The new gaming.tools sources have no Wayback snapshots yet.
+
+2026-10-17: Done. All systems pages are researched, including gear (expedition greatsword drops, ceiling items, the crafted line), stones (Manastone/Theostone/Clash Rune values, Soulbind), accessories, consumables and enhancement (the client's success chances: 100% to +10, then 65/50/35/25/20%).

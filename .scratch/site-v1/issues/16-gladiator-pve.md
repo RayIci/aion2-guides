@@ -4,6 +4,10 @@
 
 **Blocked by:** 13
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Every PvE section `researched`; rotation and macros in `:::play` / `:::macro`
+- [x] Every PvE section `researched`; rotation and macros in `:::play` / `:::macro`
+
+## Comments
+
+2026-10-17: Done; see the commit log for sources. Remaining gaps are marked `[!unverified]` on the pages.
