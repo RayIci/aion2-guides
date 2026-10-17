@@ -1,6 +1,9 @@
 ---
 title: "Arena of Cooperation: macros"
 order: 3
-status: draft
+status: researched
+last_checked: 2026-10-17
 ---
-Not researched yet.
+No vetted PvP macro exists yet. Start from the **Group DPS** macro on PvE → PvE macros and put your PvP Stigmas on its slots [@gamingtools-build-gladiator-pve-2026-10; !opinion].
+
+Keep Defiance, Focused Block and Tenaciousness out of the macro and press them by hand, since manual input always takes priority and timing them is the whole point [@gamingtools-build-gladiator-pve-2026-10; !opinion].
