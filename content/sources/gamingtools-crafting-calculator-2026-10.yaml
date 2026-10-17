@@ -1,0 +1,11 @@
+id: gamingtools-crafting-calculator-2026-10
+title: "Crafting Calculator (AION 2 Global database, Siel EU Elyos market prices)"
+url: "https://aion2.gaming.tools/crafting-calculator"
+type: data
+author: "gaming.tools"
+language: en
+region: global
+accessed: 2026-10-17
+about_patch: "Global client 2.0.7.0"
+derived_from: []
+notes: "Read through a headless browser (Cloudflare check). Market prices are a snapshot from the Siel (Europe, Elyos) server on 2026-10-17."
